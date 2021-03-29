@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542EAB57261281EB008645CB /* InventoryItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* InventoryItemDetailedView.swift */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
 		5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */; };
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542EAB56261281EB008645CB /* InventoryItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItemDetailedView.swift; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element_CompoundApp.swift; sourceTree = "<group>"; };
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
+				542EAB56261281EB008645CB /* InventoryItemDetailedView.swift */,
 				5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				5439CE99260FF37C00DCC5A6 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
+				542EAB57261281EB008645CB /* InventoryItemDetailedView.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

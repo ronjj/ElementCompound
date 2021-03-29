@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InventoryListView: View {
     
-   let camera: CameraItem
+    let camera: CameraItem
     let computer: ComputerItem
     
     var body: some View {
@@ -17,27 +17,30 @@ struct InventoryListView: View {
             List{
                 Section(header: Text("Cameras")){
                     ForEach(MockData.cameras) { camera in
-                        HStack {
-                            Image(camera.imageURL)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 120, height: 90)
-                              
-                            
-                            
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(camera.name)
-                                    .font(.title2)
-                                    .fontWeight(.medium)
+                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer)) {
+                            HStack {
+                                Image(camera.imageURL)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 120, height: 90)
+                                    .cornerRadius(10)
+                                  
                                 
-                                Text(camera.shortDescription)
-                                    .foregroundColor(.secondary)
-                                    .fontWeight(.semibold)
+                                
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text(camera.name)
+                                        .font(.title2)
+                                        .fontWeight(.medium)
+                                    
+                                    Text(camera.shortDescription)
+                                        .foregroundColor(.secondary)
+                                        .fontWeight(.semibold)
+                                }
+                                .padding(5)
+                                
                             }
-                            .padding(5)
-                            
+                            .padding(7)
                         }
-                        .padding(5)
                     }
                 }
            
@@ -48,6 +51,7 @@ struct InventoryListView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 120, height: 90)
+                                .cornerRadius(10)
                                 
                             VStack(alignment: .leading, spacing: 5) {
                                 Text(computer.name)
