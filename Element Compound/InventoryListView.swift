@@ -22,8 +22,10 @@ struct InventoryListView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 120, height: 90)
-                                .cornerRadius(8)
-                            VStack {
+                              
+                            
+                            
+                            VStack(alignment: .leading, spacing: 5) {
                                 Text(camera.name)
                                     .font(.title2)
                                     .fontWeight(.medium)
@@ -32,7 +34,10 @@ struct InventoryListView: View {
                                     .foregroundColor(.secondary)
                                     .fontWeight(.semibold)
                             }
+                            .padding(5)
+                            
                         }
+                        .padding(5)
                     }
                 }
            
@@ -43,8 +48,8 @@ struct InventoryListView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 120, height: 90)
-                                .cornerRadius(8)
-                            VStack {
+                                
+                            VStack(alignment: .leading, spacing: 5) {
                                 Text(computer.name)
                                     .font(.title2)
                                     .fontWeight(.medium)
@@ -53,10 +58,13 @@ struct InventoryListView: View {
                                     .foregroundColor(.secondary)
                                     .fontWeight(.semibold)
                             }
+                            .padding(5)
                         }
+                        .padding(5)
                     }
                 }
             }
+            .listStyle(SidebarListStyle())
             .navigationTitle("Equipment List")
         }
     }
