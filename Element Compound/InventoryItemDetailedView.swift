@@ -12,6 +12,8 @@ struct InventoryItemDetailedView: View {
     
     let camera: CameraItem
     let computer: ComputerItem
+    let audio: AudioItem
+    let misc: MiscItem
     
     
     var body: some View {
@@ -55,6 +57,7 @@ struct InventoryItemDetailedView: View {
 
 struct InventoryItemDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryItemDetailedView(camera: MockData.sampleCamera, computer: MockData.sampleComputer)
+        InventoryItemDetailedView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
     }
 }
+

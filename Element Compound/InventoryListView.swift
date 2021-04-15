@@ -11,13 +11,15 @@ struct InventoryListView: View {
     
     let camera: CameraItem
     let computer: ComputerItem
+    let audio: AudioItem
+    let misc: MiscItem
     
     var body: some View {
         NavigationView {
             List{
                 Section(header: Text("Cameras")){
                     ForEach(MockData.cameras) { camera in
-                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer)) {
+                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer, audio: audio, misc: misc)) {
                             HStack {
                                 Image(camera.imageURL)
                                     .resizable()
@@ -46,6 +48,7 @@ struct InventoryListView: View {
            
                 Section(header: Text("Computers")){
                     ForEach(MockData.computers) { computer in
+                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer, audio: audio, misc: misc)) {
                         HStack {
                             Image(computer.imageURL)
                                 .resizable()
@@ -65,6 +68,55 @@ struct InventoryListView: View {
                             .padding(5)
                         }
                         .padding(5)
+                        }
+                    }
+                }
+                
+                Section(header: Text("Audio")){
+                    ForEach(MockData.audios) { audio in
+                        HStack {
+                            Image(audio.imageURL)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 120, height: 90)
+                                .cornerRadius(10)
+                                
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(audio.name)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                Text(audio.shortDescription)
+                                    .foregroundColor(.secondary)
+                                    .fontWeight(.semibold)
+                            }
+                            .padding(5)
+                        }
+                        .padding(5)
+                    }
+                }
+                
+                Section(header: Text("Misc")){
+                    ForEach(MockData.miscs) { misc in
+                        HStack {
+                            Image(misc.imageURL)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 120, height: 90)
+                                .cornerRadius(10)
+                                
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(misc.name)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                Text(misc.shortDescription)
+                                    .foregroundColor(.secondary)
+                                    .fontWeight(.semibold)
+                            }
+                            .padding(5)
+                        }
+                        .padding(5)
                     }
                 }
             }
@@ -76,7 +128,7 @@ struct InventoryListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer)
+        InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
     }
 }
 
