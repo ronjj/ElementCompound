@@ -1,4 +1,11 @@
 //
+//  MiscItemDetailedView.swift
+//  Element Compound
+//
+//  Created by Ronald Jabouin on 4/15/21.
+//
+
+//
 //  InventoryItemDetailedView.swift
 //  Element Compound
 //
@@ -7,38 +14,32 @@
 
 import SwiftUI
 
-struct InventoryItemDetailedView: View {
+struct MiscItemDetailedView: View {
     
     
-    let camera: CameraItem
-    let computer: ComputerItem
-    let audio: AudioItem
     let misc: MiscItem
-    
+   
     
     var body: some View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
                     VStack(alignment: .leading, spacing: 20) {
-                        Image(camera.imageURL)
+                        Image(misc.imageURL)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .cornerRadius(10)
                          
-                           
-                         
-                        
-                        Text(camera.name)
+                        Text(misc.name)
                             .font(.largeTitle)
                             .fontWeight(.heavy)
                         
-                        Text(camera.longDescription)
+                        Text(misc.longDescription)
                             .font(.headline)
                             .multilineTextAlignment(.leading)
                             .padding(.bottom, 20)
                         
-                        Text("Tutorials for \(camera.name)")
+                        Text("Tutorials for \(misc.name)")
                         Rectangle()
                         Rectangle()
                             
@@ -46,7 +47,7 @@ struct InventoryItemDetailedView: View {
                     }
                     .padding(.horizontal, 20)
                     .frame(maxWidth: 640, alignment: .center)
-                    .navigationBarTitle(camera.name, displayMode: .inline)
+                    .navigationBarTitle(misc.name, displayMode: .inline)
                     .navigationBarHidden(true)
                   
                 }
@@ -55,9 +56,9 @@ struct InventoryItemDetailedView: View {
     }
 }
 
-struct InventoryItemDetailedView_Previews: PreviewProvider {
+struct MiscItemDetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryItemDetailedView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
+        MiscItemDetailedView(misc: MockData.sampleMisc)
     }
 }
 

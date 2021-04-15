@@ -19,7 +19,7 @@ struct InventoryListView: View {
             List{
                 Section(header: Text("Cameras")){
                     ForEach(MockData.cameras) { camera in
-                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer, audio: audio, misc: misc)) {
+                        NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
                             HStack {
                                 Image(camera.imageURL)
                                     .resizable()
@@ -48,7 +48,7 @@ struct InventoryListView: View {
            
                 Section(header: Text("Computers")){
                     ForEach(MockData.computers) { computer in
-                        NavigationLink(destination: InventoryItemDetailedView(camera: camera, computer: computer, audio: audio, misc: misc)) {
+                        NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
                         HStack {
                             Image(computer.imageURL)
                                 .resizable()
@@ -74,6 +74,7 @@ struct InventoryListView: View {
                 
                 Section(header: Text("Audio")){
                     ForEach(MockData.audios) { audio in
+                        NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
                         HStack {
                             Image(audio.imageURL)
                                 .resizable()
@@ -94,10 +95,12 @@ struct InventoryListView: View {
                         }
                         .padding(5)
                     }
+                    }
                 }
                 
                 Section(header: Text("Misc")){
                     ForEach(MockData.miscs) { misc in
+                        NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
                         HStack {
                             Image(misc.imageURL)
                                 .resizable()
@@ -118,6 +121,7 @@ struct InventoryListView: View {
                         }
                         .padding(5)
                     }
+                }
                 }
             }
             .listStyle(SidebarListStyle())
