@@ -20,11 +20,7 @@ struct InventoryListView: View {
                 Section(header: Text("Cameras")){
                     ForEach(MockData.cameras) { camera in
                         NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
-                            
-                            
                             InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
-                            
-                            
                             .padding(7)
                         }
                     }
@@ -33,11 +29,8 @@ struct InventoryListView: View {
                 Section(header: Text("Computers")){
                     ForEach(MockData.computers) { computer in
                         NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
-                            
-                            
                             InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription)
-                        
-                        .padding(5)
+                                .padding(5)
                         }
                     }
                 }
@@ -45,10 +38,9 @@ struct InventoryListView: View {
                 Section(header: Text("Audio")){
                     ForEach(MockData.audios) { audio in
                         NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
-                            
                             InventoryListCellView(image: audio.imageURL, title: audio.name, description: audio.shortDescription)
-                        .padding(5)
-                    }
+                                .padding(5)
+                        }
                     }
                 }
                 
@@ -56,18 +48,18 @@ struct InventoryListView: View {
                     ForEach(MockData.miscs) { misc in
                         NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
                             InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription)
-                      
+  
                         }
                         .padding(5)
                     }
                 }
-                }
-            .navigationTitle("Equipment List")
             }
-            .listStyle(SidebarListStyle())
-            
+            .navigationTitle("Equipment List")
         }
+        .listStyle(SidebarListStyle())
     }
+}
+
 
 
 struct ContentView_Previews: PreviewProvider {

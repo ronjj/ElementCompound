@@ -22,6 +22,7 @@ struct CameraItemDetailedView: View {
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .cornerRadius(10)
+                            .frame(width: 300, height: 225)
                          
                         Text(camera.name)
                             .font(.largeTitle)

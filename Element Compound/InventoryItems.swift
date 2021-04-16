@@ -56,43 +56,43 @@ struct MockData {
 
     
     static let cameras = [
-        CameraItem(name: "Lumix GH5s", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Sony A7SII", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Lumix GH4", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Lumix GH5", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Ricoh Theta 360", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Osmo Pocket", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        CameraItem(name: "Osmo Pocket Gen 2", shortDescription: "", longDescription: "", imageURL: "placeholder")
+        CameraItem(name: "Lumix GH5s", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Sony A7SII", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Lumix GH4", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Lumix GH5", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Ricoh Theta 360", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Osmo Pocket", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        CameraItem(name: "Osmo Pocket Gen 2", shortDescription: "", longDescription: "", imageURL: "questionmark")
         
     ]
     
     static let computers = [
-        ComputerItem(name: "iMac Pro", shortDescription: "", longDescription: "", imageURL: "placeholder")    ]
+        ComputerItem(name: "iMac Pro", shortDescription: "", longDescription: "", imageURL: "questionmark")    ]
     
     static let audios = [
-        AudioItem(name: "RODE CasterPro", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "RODE PodMic", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "Shure MV7", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "Shure SM7b", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "Shotgun Mic", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "ZOOM", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "RODE Lapel Mic", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "XLR Cable", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "Headphones", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        AudioItem(name: "MixPre", shortDescription: "", longDescription: "", imageURL: "placeholder")
+        AudioItem(name: "RODE CasterPro", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "RODE PodMic", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "Shure MV7", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "Shure SM7b", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "Shotgun Mic", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "ZOOM", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "RODE Lapel Mic", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "XLR Cable", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "Headphones", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        AudioItem(name: "MixPre", shortDescription: "", longDescription: "", imageURL: "questionmark")
     ]
     
     static let miscs = [
-        MiscItem(name: "DJI Mavic", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "DJI Mavic Mini 2", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Ronin S", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Ronin", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Batteries", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Adapters/Dongles", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "SD Cards", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Micro SD Card", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "USB C Cable", shortDescription: "", longDescription: "", imageURL: "placeholder"),
-        MiscItem(name: "Extension Cable", shortDescription: "", longDescription: "", imageURL: "placeholder")
+        MiscItem(name: "DJI Mavic", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "DJI Mavic Mini 2", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Ronin S", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Ronin", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Batteries", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Adapters/Dongles", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "SD Cards", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Micro SD Card", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "USB C Cable", shortDescription: "", longDescription: "", imageURL: "questionmark"),
+        MiscItem(name: "Extension Cable", shortDescription: "", longDescription: "", imageURL: "questionmark")
       
     ]
 }
