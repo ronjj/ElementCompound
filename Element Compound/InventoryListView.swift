@@ -20,27 +20,11 @@ struct InventoryListView: View {
                 Section(header: Text("Cameras")){
                     ForEach(MockData.cameras) { camera in
                         NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
-                            HStack {
-                                Image(camera.imageURL)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 120, height: 90)
-                                    .cornerRadius(10)
-                                  
-                                
-                                
-                                VStack(alignment: .leading, spacing: 5) {
-                                    Text(camera.name)
-                                        .font(.title2)
-                                        .fontWeight(.medium)
-                                    
-                                    Text(camera.shortDescription)
-                                        .foregroundColor(.secondary)
-                                        .fontWeight(.semibold)
-                                }
-                                .padding(5)
-                                
-                            }
+                            
+                            
+                            InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
+                            
+                            
                             .padding(7)
                         }
                     }
@@ -49,24 +33,10 @@ struct InventoryListView: View {
                 Section(header: Text("Computers")){
                     ForEach(MockData.computers) { computer in
                         NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
-                        HStack {
-                            Image(computer.imageURL)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 120, height: 90)
-                                .cornerRadius(10)
-                                
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(computer.name)
-                                    .font(.title2)
-                                    .fontWeight(.medium)
-                                
-                                Text(computer.shortDescription)
-                                    .foregroundColor(.secondary)
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(5)
-                        }
+                            
+                            
+                            InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription)
+                        
                         .padding(5)
                         }
                     }
@@ -75,24 +45,8 @@ struct InventoryListView: View {
                 Section(header: Text("Audio")){
                     ForEach(MockData.audios) { audio in
                         NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
-                        HStack {
-                            Image(audio.imageURL)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 120, height: 90)
-                                .cornerRadius(10)
-                                
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(audio.name)
-                                    .font(.title2)
-                                    .fontWeight(.medium)
-                                
-                                Text(audio.shortDescription)
-                                    .foregroundColor(.secondary)
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(5)
-                        }
+                            
+                            InventoryListCellView(image: audio.imageURL, title: audio.name, description: audio.shortDescription)
                         .padding(5)
                     }
                     }
@@ -101,34 +55,20 @@ struct InventoryListView: View {
                 Section(header: Text("Misc")){
                     ForEach(MockData.miscs) { misc in
                         NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
-                        HStack {
-                            Image(misc.imageURL)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 120, height: 90)
-                                .cornerRadius(10)
-                                
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text(misc.name)
-                                    .font(.title2)
-                                    .fontWeight(.medium)
-                                
-                                Text(misc.shortDescription)
-                                    .foregroundColor(.secondary)
-                                    .fontWeight(.semibold)
-                            }
-                            .padding(5)
+                            InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription)
+                      
                         }
                         .padding(5)
                     }
                 }
                 }
+            .navigationTitle("Equipment List")
             }
             .listStyle(SidebarListStyle())
-            .navigationTitle("Equipment List")
+            
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
