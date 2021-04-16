@@ -11,7 +11,7 @@ import SwiftUI
 struct Element_CompoundApp: App {
     var body: some Scene {
         WindowGroup {
-            InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
+            TabViewItem()
         }
     }
 }

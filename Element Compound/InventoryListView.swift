@@ -136,27 +136,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-/*
- NavigationView{
-     List(MockData.cameras) { camera in
-         HStack {
-             Image(camera.imageURL)
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
-                 .frame(width: 120, height: 90)
-                 .cornerRadius(8)
-             VStack {
-                 Text(camera.name)
-                     .font(.title2)
-                     .fontWeight(.medium)
-                 
-                 Text(camera.shortDescription)
-                     .foregroundColor(.secondary)
-                     .fontWeight(.semibold)
-             }
-         }
-     }
-     .navigationTitle("Equipment")
- }
 
- */
