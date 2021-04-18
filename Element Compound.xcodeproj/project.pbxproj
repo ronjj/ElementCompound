@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
 		5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */; };
-		5435EAE2262BA67B008078F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5435EAE1262BA67B008078F1 /* AppDelegate.swift */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
 		5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */; };
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
@@ -21,6 +20,8 @@
 		543E7BA7262A1976004FDF51 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA6262A1976004FDF51 /* TabView.swift */; };
 		543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA9262A1F96004FDF51 /* SettingsView.swift */; };
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
+		54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8C262BB6310040A559 /* AppDelegate.swift */; };
+		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
 		54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */; };
@@ -30,7 +31,6 @@
 /* Begin PBXFileReference section */
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
 		5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5435EAE1262BA67B008078F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element_CompoundApp.swift; sourceTree = "<group>"; };
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
@@ -44,6 +44,8 @@
 		543E7BA6262A1976004FDF51 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		543E7BA9262A1F96004FDF51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
+		54AEEB8C262BB6310040A559 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscItemDetailedView.swift; sourceTree = "<group>"; };
@@ -97,14 +99,15 @@
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				543E7B9D262A1732004FDF51 /* HomeView.swift */,
+				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
+				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				543E7BA9262A1F96004FDF51 /* SettingsView.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				5439CE99260FF37C00DCC5A6 /* Info.plist */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
-				5435EAE1262BA67B008078F1 /* AppDelegate.swift */,
 			);
 			path = "Element Compound";
 			sourceTree = "<group>";
@@ -275,8 +278,9 @@
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
+				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
-				5435EAE2262BA67B008078F1 /* AppDelegate.swift in Sources */,
+				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
 				54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */,

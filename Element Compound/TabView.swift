@@ -10,11 +10,11 @@ import SwiftUI
 struct TabViewItem: View {
     var body: some View {
         TabView{
-//            HomeView()
-//              .tabItem{
-//                  Image(systemName:"house")
-//                  Text("Home")
-//              }
+            HomeView()
+              .tabItem{
+                  Image(systemName:"house")
+                  Text("Home")
+              }
             
             InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
             .tabItem{
