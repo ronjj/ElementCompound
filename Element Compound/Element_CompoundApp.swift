@@ -15,7 +15,8 @@ struct Element_CompoundApp: App {
         delegate
     var body: some Scene {
         WindowGroup {
-            TabViewItem()
+            LoginView()
+//            TabViewItem()
         }
     }
 }
