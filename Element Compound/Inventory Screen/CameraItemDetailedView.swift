@@ -29,7 +29,7 @@ struct CameraItemDetailedView: View {
                             .fontWeight(.heavy)
                         
                         Text(camera.longDescription)
-                            .font(.headline)
+                            .font(.body)
                             .multilineTextAlignment(.leading)
                             .padding(.bottom, 20)
                         
