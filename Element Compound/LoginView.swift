@@ -8,46 +8,53 @@
 
 
 import SwiftUI
+import Firebase
 import GoogleSignIn
 
 
 struct LoginView: View {
+    
+    @AppStorage ("log_Status") var status = true
+
+
     var body: some View {
-        VStack{
-            Text("Element Compound")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .offset(y: 250)
-        
-           WrappedViewController()
-            .padding(0)
 
+            VStack{
+                Text("Element Compound")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .offset(y: 250)
             
-            Text("*Sign In With School Account")
-                .foregroundColor(.secondary)
-                .font(.caption)
+               WrappedViewController()
+                .padding(0)
+
+                
+                Text("*Sign In With School Account")
+                    .foregroundColor(.secondary)
+                    .font(.caption)
+    
         }
+
+        
+        
+        
+//        if (status==true) {
+//                 HomeView()
+//               }
+//               else{
+//                   LoginView()
+//               }
+            }
     }
-}
 
 
 
-//            google().frame(width: 240, height: 150)
 
-//struct google : UIViewRepresentable {
-//
-//
-//    func makeUIView(context: UIViewRepresentableContext<google>) -> GIDSignInButton {
-//
-//        let button = GIDSignInButton()
-//        button.colorScheme = .dark
-//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
-//        return button
-//    }
-//    func updateUIView(_ uiView: GIDSignInButton, context: UIViewRepresentableContext<google>) {
-//
-//    }
-//}
+
+
+
+
+
 
 struct WrappedViewController: UIViewControllerRepresentable {
 
@@ -111,6 +118,7 @@ class LoginViewController: UIViewController {
     @objc func buttonAction(sender: UIButton!) {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.signIn()
+        
     }
 }
 
@@ -134,3 +142,22 @@ extension UIButton {
         self.imageView?.contentMode = .scaleAspectFit
     }
 }
+
+
+
+//            google().frame(width: 240, height: 150)
+
+//struct google : UIViewRepresentable {
+//
+//
+//    func makeUIView(context: UIViewRepresentableContext<google>) -> GIDSignInButton {
+//
+//        let button = GIDSignInButton()
+//        button.colorScheme = .dark
+//        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.last?.rootViewController
+//        return button
+//    }
+//    func updateUIView(_ uiView: GIDSignInButton, context: UIViewRepresentableContext<google>) {
+//
+//    }
+//}

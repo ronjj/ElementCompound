@@ -62,7 +62,7 @@ struct InventoryListView: View {
 
 
 
-struct ContentView_Previews: PreviewProvider {
+struct InventoryListView_Previews: PreviewProvider {
     static var previews: some View {
         InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
     }

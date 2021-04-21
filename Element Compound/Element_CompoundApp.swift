@@ -11,13 +11,16 @@ import GoogleSignIn
 
 @main
 struct Element_CompoundApp: App {
+   
     @UIApplicationDelegateAdaptor(AppDelegate.self) var
         delegate
+ 
     var body: some Scene {
-        WindowGroup {
-            LoginView()
-//            TabViewItem()
-        }
+            WindowGroup {
+                ContentView()
+       // TabViewItem()
+                
+           
     }
 }
 
@@ -25,7 +28,7 @@ struct Element_CompoundApp: App {
 
 //@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
-
+    @AppStorage ("log_Status") var status = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -33,12 +36,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
         FirebaseApp.configure()
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
+     
         return true
     }
 
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
+      //
+
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -59,9 +65,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
                 
                 print((err?.localizedDescription)!)
                 return
+            } else {
+                print("user=" + (res?.user.email)!)
+                withAnimation(.easeInOut) {
+                    self.status = true
+                }
             }
             
-            print("user=" + (res?.user.email)!)
+            
+            
+        
         }
     }
 
@@ -83,7 +96,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func signOut(){
+        let firebaseAuth = Auth.auth()
+       do {
+         try firebaseAuth.signOut()
+       } catch let signOutError as NSError {
+         print ("Error signing out: %@", signOutError)
+       }
+    }
 
 
 }
 
+}

@@ -20,6 +20,7 @@
 		543E7BA7262A1976004FDF51 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA6262A1976004FDF51 /* TabView.swift */; };
 		543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA9262A1F96004FDF51 /* SettingsView.swift */; };
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
+		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
 		54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8C262BB6310040A559 /* AppDelegate.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
@@ -44,6 +45,7 @@
 		543E7BA6262A1976004FDF51 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		543E7BA9262A1F96004FDF51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
+		548C3F8C2630BED600EFD1C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54AEEB8C262BB6310040A559 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				543E7B9D262A1732004FDF51 /* HomeView.swift */,
+				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
@@ -277,6 +280,7 @@
 			files = (
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
+				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
