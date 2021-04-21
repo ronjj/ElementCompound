@@ -9,10 +9,8 @@ import SwiftUI
 
 struct CameraItemDetailedView: View {
     
-    
     let camera: CameraItem
    
-    
     var body: some View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
@@ -29,9 +27,12 @@ struct CameraItemDetailedView: View {
                             .fontWeight(.heavy)
                         
                         Text(camera.longDescription)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
                             .font(.body)
                             .multilineTextAlignment(.leading)
                             .padding(.bottom, 20)
+                         
                         
                         Text("Tutorials for \(camera.name)")
                         Rectangle()

@@ -35,7 +35,9 @@ struct MiscItemDetailedView: View {
                             .fontWeight(.heavy)
                         
                         Text(misc.longDescription)
-                            .font(.headline)
+                            .lineLimit(nil)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .font(.body)
                             .multilineTextAlignment(.leading)
                             .padding(.bottom, 20)
                         
