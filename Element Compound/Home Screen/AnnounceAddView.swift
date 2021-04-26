@@ -18,18 +18,18 @@ struct AnnounceAddView: View {
             Form {
                 TextField("Enter Message", text: $text)
             }
-            .navigationTitle("Create New Announcement")
-            .navigationBarItems(leading:
-                                    Button(action: {
-                                        let item = AnnouncementItem(text: self.text)
-                                        self.announcements.items.append(item)
-                                        self.presentationMode.wrappedValue.dismiss()
-                                    }) {
-                                        Text("Done")
-                                    }
+            .navigationTitle("Create Announcement")
+                .font(.body)
+            .navigationBarItems(trailing:
+                Button(action: {
+                    let item = AnnouncementItem(text: self.text)
+                    self.announcements.items.append(item)
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Save")
+                }
             )
         }
-       
     }
     
     struct AnnounceAddView_Previews: PreviewProvider {

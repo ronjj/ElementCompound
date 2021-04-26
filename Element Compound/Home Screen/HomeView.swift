@@ -21,20 +21,17 @@ struct HomeView: View {
                         VStack(alignment: .leading){
                             Text(item.text)
                                 .font(.headline)
-                            
                         }
                     }
                 }
             }
             .navigationTitle("Home")
-            
-            
             .navigationBarItems(trailing:
-                                    Button(action: {
-                                        self.showingAddView = true
-                                    }) {
-                                        Image(systemName: "plus")
-                                    }
+                Button(action: {
+                    self.showingAddView = true
+                }) {
+                    Image(systemName: "plus")
+                }
             )
             .sheet(isPresented: $showingAddView) {
                 AnnounceAddView(announcements: self.announcements)
@@ -43,11 +40,6 @@ struct HomeView: View {
         }
     }
 }
-
-
-
-
-
 
 
 struct HomeView_Previews: PreviewProvider {

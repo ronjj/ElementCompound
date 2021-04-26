@@ -22,11 +22,11 @@ struct TabViewItem: View {
                 Text("Equipment")
             }
             
-            ProjectsView()
-              .tabItem{
-                  Image(systemName:"note.text")
-                  Text("Projects")
-              }
+//            ProjectsView()
+//              .tabItem{
+//                  Image(systemName:"note.text")
+//                  Text("Projects")
+//              }
             
 //            CoursesView()
 //              .tabItem{
