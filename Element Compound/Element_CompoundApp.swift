@@ -55,9 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
         return
       }
 
+        // Perform any operations on signed in user here.
+        
       guard let authentication = user.authentication else { return }
       let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                         accessToken: authentication.accessToken)
+
 
         Auth.auth().signIn(with: credential) { (res, err) in
             
@@ -71,10 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
                     self.status = true
                 }
             }
-            
-            
-            
-        
         }
     }
 
