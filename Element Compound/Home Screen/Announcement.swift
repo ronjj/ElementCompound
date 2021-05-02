@@ -6,14 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
-struct AnnouncementItem: Identifiable{
-    let id = UUID()
-    let text: String
+
+struct Announcement: Identifiable, Codable{
+    @DocumentID var id: String? = UUID().uuidString
+    var message: String
   //  let date: Date
     
+    enum CodingKeys: String, CodingKey {
+        case message
+    }
 }
 
-class Announcements: ObservableObject {
-   @Published var items = [AnnouncementItem]()
-}
+//class Announcements: ObservableObject {
+//   @Published var items = [AnnouncementItem]()
+//}
+

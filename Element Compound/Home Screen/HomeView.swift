@@ -7,43 +7,57 @@
 
 import SwiftUI
 import Firebase
+import FirebaseFirestore
 
 struct HomeView: View {
     
     @State private var showingAddView = false
-    @ObservedObject var announcements = Announcements()
+    @ObservedObject private var viewModel = AnnouncementsViewModel()
+    //@ObservedObject var announcements = Announcements()
     
     var body: some View {
         NavigationView {
             List{
-                ForEach(announcements.items) { item in
-                    HStack{
-                        VStack(alignment: .leading){
-                            Text(item.text)
-                                .font(.headline)
+                Section(header: Text("Announcements")) {
+                    ForEach(viewModel.announcements) { announcement in
+                        VStack{
+                            HStack{
+                                Text(announcement.message)
+                                  .font(.headline)
+                                }
+                            }
                         }
                     }
+                Section(header: Text("Rules")) {
+
+                    }
                 }
+            .onAppear() {
+                self.viewModel.fetchData()
             }
             .navigationTitle("Home")
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.showingAddView = true
-                }) {
-                    Image(systemName: "plus")
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        self.showingAddView = true
+                    }) {
+                        Image(systemName: "plus")
+                    }
                 }
-            )
-            .sheet(isPresented: $showingAddView) {
-                AnnounceAddView(announcements: self.announcements)
-                
             }
         }
     }
 }
 
+//            .sheet(isPresented: $showingAddView) {
+//                AnnounceAddView(announcements: self.announcements)
+//            }
+        
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(announcements: Announcements())
+        HomeView()
     }
 }
+

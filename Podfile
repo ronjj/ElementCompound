@@ -6,8 +6,10 @@ target 'Element Compound' do
   use_frameworks!
 
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'Firebase/Analytics'
 pod 'GoogleSignIn'
-
+pod 'FirebaseFirestoreSwift'
 
   # Pods for Element Compound
 

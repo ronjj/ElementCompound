@@ -25,7 +25,6 @@ struct InventoryListView: View {
                     .padding(.top, 15)
                     .padding(.bottom, 5)
                 
-    
                 
                 List{
                     Section(header: Text("Cameras")){
