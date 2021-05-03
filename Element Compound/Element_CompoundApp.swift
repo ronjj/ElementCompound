@@ -67,7 +67,7 @@ struct Element_CompoundApp: App {
                 } else {
                     print("user=" + (res?.user.email)!)
                     withAnimation(.easeInOut) {
-                        self.status = true
+                    self.status = true
                     }
                 }
             }

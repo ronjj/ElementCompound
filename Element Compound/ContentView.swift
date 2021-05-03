@@ -14,20 +14,22 @@ struct ContentView: View {
     var body: some View {
         
         ZStack{
-//            if status {
-//                TabViewItem()
-//            }
-//            else{
-//                LoginView()
-//            }
-            if Auth.auth().currentUser?.uid != nil {
-
+            if status {
                 TabViewItem()
-                
-                }else {
-                    LoginView()
-                }
+            }
+            else{
+                LoginView()
+            }
+//            if Auth.auth().currentUser?.uid != nil {
+//
+//                TabViewItem()
+//
+//                }else {
+//                    LoginView()
+//                }
         }
+       
+
     }
 }
 

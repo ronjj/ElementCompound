@@ -16,7 +16,7 @@ struct AnnouncementCardView: View {
     var body: some View {
         VStack{
             HStack{
-                Text((Auth.auth().currentUser?.displayName!)!)
+                Text("Mr. Luo")
                 Spacer()
                 Text("1/5/21")
             }

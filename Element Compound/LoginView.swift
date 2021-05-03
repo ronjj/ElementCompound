@@ -29,6 +29,7 @@ struct LoginView: View {
             Text("*Sign In With School Account")
                 .foregroundColor(.secondary)
                 .font(.caption)
+                .offset( y: -300)
         }
     }
 }

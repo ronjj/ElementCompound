@@ -29,21 +29,11 @@ struct HomeView2: View {
                         Image(systemName: "plus")
                     }
                 }
-                
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button(action: {
-                        presentInfoScreen.toggle()
-                    }) {
-                        Image(systemName: "info.circle")
-                    }
-                }
             }
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
             }
-            .sheet(isPresented: $presentInfoScreen){
-                InfoScreen()
-            }
+
             .onAppear(){
                 self.viewModel.fetchData()
             }
