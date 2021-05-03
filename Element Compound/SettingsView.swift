@@ -46,19 +46,22 @@ struct SettingsView: View {
                 }
                 .listStyle(InsetGroupedListStyle())
                 .navigationBarTitle("Settings")
-            }
-       
-        .toolbar {
-            
-            ToolbarItemGroup(placement: .navigationBarLeading) {
-                Button(action: {
-                presentInfoScreen.toggle()
-                    
-                }) {
-                    Image(systemName: "info.circle")
+                .sheet(isPresented: $presentInfoScreen){
+                    InfoScreen()
+                }
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button(action: {
+                        presentInfoScreen = true
+                            
+                        }) {
+                            Image(systemName: "info.circle")
+                        }
+                    }
                 }
             }
-        }
+       
+      
         }
     }
     

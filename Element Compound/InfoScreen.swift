@@ -15,13 +15,12 @@ struct InfoScreen: View {
     var body: some View {
         NavigationView{
             List{
-                Section(header: Text("Club Rules")) {
-                    Text("club rules")
-                }
-                
                 Section(header: Text("Important Links")) {
-                    Text("Link 1")
-                    Text("Link 2")
+                    Link("Chaminade Website",
+                          destination: URL(string: "https://www.chaminade-hs.org")!)
+
+                    Link("Element Website",
+                          destination: URL(string: "https://www.element.chaminade-hs.org")!)
                 }
             }
             .navigationTitle("Club Information")
