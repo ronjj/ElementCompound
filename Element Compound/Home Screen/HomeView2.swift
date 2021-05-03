@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView2: View {
     @ObservedObject var viewModel = AnnouncementsViewModel()
     @State private var presentAddNewAnnouncement = false
+    @State private var presentInfoScreen = false
     
     
     var body: some View {
@@ -22,16 +23,26 @@ struct HomeView2: View {
             .navigationBarTitle("Home")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    
                     Button(action: {
                         presentAddNewAnnouncement.toggle()
                     }) {
                         Image(systemName: "plus")
                     }
                 }
+                
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentInfoScreen.toggle()
+                    }) {
+                        Image(systemName: "info.circle")
+                    }
+                }
             }
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
+            }
+            .sheet(isPresented: $presentInfoScreen){
+                InfoScreen()
             }
             .onAppear(){
                 self.viewModel.fetchData()
@@ -45,3 +56,4 @@ struct HomeView2_Previews: PreviewProvider {
         HomeView2()
     }
 }
+

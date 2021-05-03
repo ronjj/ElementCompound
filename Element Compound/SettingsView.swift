@@ -18,17 +18,7 @@ struct SettingsView: View {
                     Section(header: Text("Account Info")){
                         Text("Logged in As\n \(Auth.auth().currentUser?.email ?? "Not Logged In")")
                     }
-                    
-                    Section(header: Text("Sign Out")){
-                        Button(action: {
-                            logOut()
-                           
-                        }) {
-                            Text("Sign Out Of Account")
-                        }
-                    }
                 }
-
             }
         .navigationBarTitle("Settings")
                 }
