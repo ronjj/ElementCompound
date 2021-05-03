@@ -40,11 +40,11 @@ struct TabViewItem: View {
 //                  Text("Courses")
 //            }
             
-//           SettingsView()
-//              .tabItem{
-//                  Image(systemName:"gear")
-//                  Text("Settings")
-//            }
+           SettingsView()
+              .tabItem{
+                  Image(systemName:"gear")
+                  Text("Settings")
+            }
         }
     }
 }

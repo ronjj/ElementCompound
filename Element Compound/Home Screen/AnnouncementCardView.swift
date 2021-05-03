@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import GoogleSignIn
 
 struct AnnouncementCardView: View {
     @ObservedObject private var viewModel = AnnouncementsViewModel()
@@ -15,14 +16,13 @@ struct AnnouncementCardView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Mr.Luo")
+                Text((Auth.auth().currentUser?.displayName!)!)
                 Spacer()
                 Text("1/5/21")
             }
-       
             
             HStack{
-                Text("Advisor")
+            //    Text("Advisor")
                 Spacer()
                 Text("12:30pm")
             }

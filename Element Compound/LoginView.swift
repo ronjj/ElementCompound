@@ -36,12 +36,6 @@ struct LoginView: View {
 
 
 
-
-
-
-
-
-
 struct WrappedViewController: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> LoginViewController {

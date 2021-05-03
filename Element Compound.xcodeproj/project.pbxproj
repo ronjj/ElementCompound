@@ -117,7 +117,6 @@
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
-				54BBA4C826320B300021536D /* SearchBar.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
@@ -143,6 +142,7 @@
 		543E7BEE262A754E004FDF51 /* Inventory Screen */ = {
 			isa = PBXGroup;
 			children = (
+				54BBA4C826320B300021536D /* SearchBar.swift */,
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
 				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
 				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,

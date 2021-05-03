@@ -37,7 +37,7 @@ struct AnnouncementEditView: View {
                     Button(action: {
                         handleDoneTapped()
                     }) {
-                        Text("Done")
+                        Text("Send")
                     }
                 }
             }

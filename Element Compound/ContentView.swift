@@ -6,18 +6,27 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage ("log_Status") var status = false
     var body: some View {
         
         ZStack{
-            if status {
+//            if status {
+//                TabViewItem()
+//            }
+//            else{
+//                LoginView()
+//            }
+            if Auth.auth().currentUser?.uid != nil {
+
                 TabViewItem()
-            }
-            else{
-                LoginView()
-            }
+                
+                }else {
+                    LoginView()
+                }
         }
     }
 }

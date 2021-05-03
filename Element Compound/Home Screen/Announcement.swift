@@ -12,10 +12,12 @@ import FirebaseFirestoreSwift
 struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
-  //  let date: Date
+ 
+ 
     
     enum CodingKeys: String, CodingKey {
         case message
+    
     }
 }
 
