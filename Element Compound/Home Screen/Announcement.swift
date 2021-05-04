@@ -7,16 +7,20 @@
 
 import SwiftUI
 import FirebaseFirestoreSwift
+import Firebase
+import GoogleSignIn
 
 
 struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
+    var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
  
  
     
     enum CodingKeys: String, CodingKey {
         case message
+        case sender
     
     }
 }

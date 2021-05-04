@@ -16,7 +16,7 @@ struct AnnouncementCardView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("Mr. Luo")
+                Text(announcement.sender)
                 Spacer()
                 Text("1/5/21")
             }

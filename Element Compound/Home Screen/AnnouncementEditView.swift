@@ -22,7 +22,6 @@ struct AnnouncementEditView: View {
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
                 }
-             
             }
             .navigationTitle("New Announcement")
             .toolbar {
