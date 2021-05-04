@@ -21,12 +21,22 @@ struct Announcement: Identifiable, Codable{
            formatter.dateFormat = "MM/dd/YYYY"
            return formatter.string(from: dateEvent)
        }
+        var timeString: String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+            formatter.timeZone = NSTimeZone(name: "EDT") as TimeZone?
+            return formatter.string(from: dateEvent)
+        }
+
+       
+
 
     
     enum CodingKeys: String, CodingKey {
         case message
         case sender
         case dateEvent
+     
   
     
     }

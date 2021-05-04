@@ -24,7 +24,7 @@ struct AnnouncementCardView: View {
             HStack{
             //  Text("Advisor")
                 Spacer()
-                Text("12:30pm")
+                Text(announcement.timeString)
             }
          
             Text(announcement.message)
