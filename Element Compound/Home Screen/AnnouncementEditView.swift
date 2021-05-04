@@ -39,6 +39,7 @@ struct AnnouncementEditView: View {
                     }) {
                         Text("Send")
                     }
+                    .disabled(!viewModel.modified)
                 }
             }
         }

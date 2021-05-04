@@ -23,6 +23,7 @@ struct InfoScreen: View {
                           destination: URL(string: "https://www.element.chaminade-hs.org")!)
                 }
             }
+            .listStyle(InsetGroupedListStyle())
             .navigationTitle("Club Information")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {

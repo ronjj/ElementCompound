@@ -7,12 +7,26 @@
 
 import Foundation
 import Firebase
+import Combine
 
 class AnnoucnementViewModel: ObservableObject{
     @Published var announcement: Announcement = Announcement(message: "")
+    @Published var modified = false
     
     private var db = Firestore.firestore()
     
+    private var cancellables = Set<AnyCancellable>()
+    
+    init(announcement: Announcement = Announcement(message: "")) {
+        self.announcement = announcement
+        
+        self.$announcement
+            .dropFirst()
+            .sink{ [weak self] announcement in
+                self?.modified = true
+            }
+            .store(in: &cancellables)
+    }
     
     func addAnnouncement(announcement: Announcement){
         do {
