@@ -23,7 +23,7 @@ struct Announcement: Identifiable, Codable{
        }
         var timeString: String {
             let formatter = DateFormatter()
-            formatter.dateFormat = "HH:mm"
+            formatter.dateFormat = "h:mm a"
             formatter.timeZone = NSTimeZone(name: "EDT") as TimeZone?
             return formatter.string(from: dateEvent)
         }
