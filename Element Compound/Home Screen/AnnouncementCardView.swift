@@ -18,11 +18,11 @@ struct AnnouncementCardView: View {
             HStack{
                 Text(announcement.sender)
                 Spacer()
-                Text("1/5/21")
+                Text(announcement.dateString)
             }
             
             HStack{
-            //    Text("Advisor")
+            //  Text("Advisor")
                 Spacer()
                 Text("12:30pm")
             }
