@@ -18,12 +18,16 @@ struct SettingsView: View {
     var body: some View {
         NavigationView{
                 List{
-                    Section(header: Text("Account Info")){
-                        Text("Logged in As: \(Auth.auth().currentUser?.email ?? "Not Logged In")")
+                    Section(header: Text("Display Name")){
+                        Text("\(Auth.auth().currentUser?.displayName ?? "Not Logged In")")
                     }
                     
-                    Section(header: Text("App Info")){
-                        Text("Version: 0.0.0")
+                    Section(header: Text("Email")){
+                        Text("\(Auth.auth().currentUser?.email ?? "Not Logged In")")
+                    }
+                    
+                    Section(header: Text("Version")){
+                        Text("0.0.0")
                     }
                     
                     //Buttons
