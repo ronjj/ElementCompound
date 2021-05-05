@@ -6,19 +6,32 @@
 //
 
 import SwiftUI
+import Firebase
+import GoogleSignIn
 
 struct HomeView2: View {
     @ObservedObject var viewModel = AnnouncementsViewModel()
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
+    @AppStorage ("role_Status") var role = false
+    @State private var buttonDisabled = true
+    
+    
+
     
     
     var body: some View {
         NavigationView{
             List{
-                ForEach(viewModel.announcements) { announcement in
-                    AnnouncementCardView(announcement: announcement)
+                Section(header: Text("Announcements")){
+                    ForEach(viewModel.announcements) { announcement in
+                        AnnouncementCardView(announcement: announcement)
+                    }
                 }
+                Section(header: Text("My Projects")) {
+                    
+                }
+               
             }
             .navigationBarTitle("Home")
             .toolbar {
@@ -30,6 +43,7 @@ struct HomeView2: View {
                     }
                 }
             }
+      
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
             }
@@ -37,13 +51,14 @@ struct HomeView2: View {
             .onAppear(){
                 self.viewModel.fetchData()
             }
+            
         }
     }
 }
 
-struct HomeView2_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView2()
-    }
-}
+//struct HomeView2_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView2()
+//    }
+//}
 

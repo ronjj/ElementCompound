@@ -28,6 +28,7 @@ struct SearchBar: View {
                         if isEditing {
                             Button(action: {
                                 self.text = ""
+                                
                             }) {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
@@ -37,6 +38,7 @@ struct SearchBar: View {
                     }
                 )
                 .padding(.horizontal, 10)
+                
                 .onTapGesture {
                     self.isEditing = true
                 }

@@ -25,10 +25,11 @@ struct InventoryListView: View {
                     .padding(.top, 15)
                     .padding(.bottom, 5)
                 
+                    // .contains(searchText)
                 
                 List{
                     Section(header: Text("Cameras")){
-                        ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { camera in
+                        ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
                             NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
                                 InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
                                     .padding(7)
@@ -37,7 +38,7 @@ struct InventoryListView: View {
                     }
                     
                     Section(header: Text("Computers")){
-                        ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { computer in
+                        ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in
                             NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
                                 InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription)
                                     .padding(5)
@@ -46,7 +47,7 @@ struct InventoryListView: View {
                     }
                     
                     Section(header: Text("Audio")){
-                        ForEach(MockData.audios.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { audio in
+                        ForEach(MockData.audios.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { audio in
                             NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
                                 InventoryListCellView(image: audio.imageURL, title: audio.name, description: audio.shortDescription)
                                     .padding(5)
@@ -55,7 +56,7 @@ struct InventoryListView: View {
                     }
                     
                     Section(header: Text("Misc")){
-                        ForEach(MockData.miscs.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { misc in
+                        ForEach(MockData.miscs.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { misc in
                             NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
                                 InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription)
                                 

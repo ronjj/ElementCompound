@@ -28,17 +28,11 @@ struct Announcement: Identifiable, Codable{
             return formatter.string(from: dateEvent)
         }
 
-       
 
-
-    
     enum CodingKeys: String, CodingKey {
         case message
         case sender
         case dateEvent
-     
-  
-    
     }
 }
 

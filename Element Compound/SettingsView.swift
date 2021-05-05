@@ -12,7 +12,9 @@ import GoogleSignIn
 struct SettingsView: View {
     
     @State private var presentInfoScreen = false
+    @State private var presentRoleScreen = false
     @AppStorage ("log_Status") var status = true
+
     
     
     var body: some View {
@@ -30,6 +32,7 @@ struct SettingsView: View {
                         Text("0.0.0")
                     }
                     
+                    
                     //Buttons
                     Section{
                         
@@ -46,13 +49,16 @@ struct SettingsView: View {
                             Text("Sign Out")
                         }
                     }
-                    
                 }
                 .listStyle(InsetGroupedListStyle())
+                
                 .navigationBarTitle("Settings")
+                
                 .sheet(isPresented: $presentInfoScreen){
                     InfoScreen()
                 }
+                
+                
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button(action: {
