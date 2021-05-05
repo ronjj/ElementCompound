@@ -17,7 +17,7 @@ struct InventoryListCellView: View {
         HStack(spacing: 20) {
             Image(image)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 90)
+                .frame(width: 100, height: 100)
                 .cornerRadius(8)
                 
             VStack(alignment: .leading, spacing: 5) {

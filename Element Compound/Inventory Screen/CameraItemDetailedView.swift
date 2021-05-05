@@ -17,10 +17,10 @@ struct CameraItemDetailedView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Image(camera.imageURL)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(10)
-                        .frame(width: 300, height: 225)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 350, height: 200)
+                        .cornerRadius(8)
+                    
                     
                     VStack(alignment: .leading, spacing: 20) {
                    
@@ -50,7 +50,7 @@ struct CameraItemDetailedView: View {
                             
                     }
                     .padding(.horizontal, 20)
-                    .frame(maxWidth: 640, alignment: .center)
+                    .frame(maxWidth: 600, alignment: .center)
                     .navigationBarTitle(camera.name, displayMode: .inline)
                     .navigationBarHidden(true)
                   

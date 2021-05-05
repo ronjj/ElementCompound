@@ -19,9 +19,9 @@ struct AudioItemDetailedView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Image(audio.imageURL)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .cornerRadius(10)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 350, height: 200)
+                        .cornerRadius(8)
                     
                     VStack(alignment: .leading, spacing: 20) {
                         Text(audio.name)
@@ -41,7 +41,7 @@ struct AudioItemDetailedView: View {
                             
                     }
                     .padding(.horizontal, 20)
-                    .frame(maxWidth: 640, alignment: .center)
+                    .frame(maxWidth: 600, alignment: .center)
                     .navigationBarTitle(audio.name, displayMode: .inline)
                     .navigationBarHidden(true)
                   
