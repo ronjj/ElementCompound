@@ -15,11 +15,14 @@ struct ComputerItemDetailedView: View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
+                    
+                    Image(computer.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(10)
+                    
                     VStack(alignment: .leading, spacing: 20) {
-                        Image(computer.imageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(10)
+                      
                          
                         Text(computer.name)
                             .font(.largeTitle)

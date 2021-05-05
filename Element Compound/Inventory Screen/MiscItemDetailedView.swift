@@ -24,11 +24,15 @@ struct MiscItemDetailedView: View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
+                    
+                    Image(misc.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(10)
+                    
+                    
                     VStack(alignment: .leading, spacing: 20) {
-                        Image(misc.imageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(10)
+                      
                          
                         Text(misc.name)
                             .font(.largeTitle)

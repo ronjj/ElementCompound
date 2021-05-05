@@ -15,12 +15,15 @@ struct CameraItemDetailedView: View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
+                    
+                    Image(camera.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(10)
+                        .frame(width: 300, height: 225)
+                    
                     VStack(alignment: .leading, spacing: 20) {
-                        Image(camera.imageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(10)
-                            .frame(width: 300, height: 225)
+                   
                          
                         Text(camera.name)
                             .font(.largeTitle)
@@ -37,6 +40,12 @@ struct CameraItemDetailedView: View {
                         Text("Tutorials for \(camera.name)")
                         Rectangle()
                         Rectangle()
+                        
+                        Section(header: Text("General Information")){
+                            Link("User Manual PDF",
+                                  destination: URL(string: "https://www.google.com")!)
+                            Text("Date Purchased: ")
+                        }
                             
                             
                     }

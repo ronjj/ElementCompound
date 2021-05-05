@@ -17,12 +17,13 @@ struct AudioItemDetailedView: View {
         NavigationView{
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
+                    
+                    Image(audio.imageURL)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .cornerRadius(10)
+                    
                     VStack(alignment: .leading, spacing: 20) {
-                        Image(audio.imageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .cornerRadius(10)
-                         
                         Text(audio.name)
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -37,7 +38,6 @@ struct AudioItemDetailedView: View {
                         Text("Tutorials for \(audio.name)")
                         Rectangle()
                         Rectangle()
-                            
                             
                     }
                     .padding(.horizontal, 20)

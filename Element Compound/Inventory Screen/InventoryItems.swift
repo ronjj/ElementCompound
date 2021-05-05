@@ -14,6 +14,7 @@ struct CameraItem: Identifiable{
     let longDescription: String
     let imageURL: String
     
+    
 }
 
 
@@ -56,11 +57,11 @@ struct MockData {
 
     
     static let cameras = [
-        CameraItem(name: "Lumix GH4", shortDescription: "Basic camera for video recording.", longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.", imageURL: "questionmark"),
+        CameraItem(name: "Lumix GH4", shortDescription: "Basic camera for video recording.", longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.", imageURL: "soccerball"),
         
-        CameraItem(name: "Lumix GH5", shortDescription: "4K camera for video recording.", longDescription: "The professional level GH5 from LUMIX delivers high quality 4K video with its improved design from the GH4. The mirrorless camera delivers crisp video, while in-camera stabilization provides smooth movement, and the in-camera ", imageURL: "questionmark"),
+        CameraItem(name: "Lumix GH5", shortDescription: "4K camera for video recording.", longDescription: "The professional level GH5 from LUMIX delivers high quality 4K video with its improved design from the GH4. The mirrorless camera delivers crisp video, while in-camera stabilization provides smooth movement, and the in-camera ", imageURL: "black"),
         
-        CameraItem(name: "Lumix GH5s", shortDescription: "Optimized 4K camera for video recording.", longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.", imageURL: "questionmark"),
+        CameraItem(name: "Lumix GH5s", shortDescription: "Optimized 4K camera for video recording.", longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.", imageURL: "soccerball"),
         
         CameraItem(name: "Sony A7SII", shortDescription: "High end 4K video camera.", longDescription: "The Sony A7SII is the elite camera of Element. With built-in stabilization technology, the A7SII delivers smooth 4K video. The camera microphone records basic audio. The ultra-sensitive filter gives the camera dynamic performance in most lighting conditions. The A7SII also records full pixel readouts, amplifying video quality for the editing room.", imageURL: "questionmark"),
         
