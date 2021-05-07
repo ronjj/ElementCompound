@@ -97,7 +97,7 @@ struct MockData {
         
         AudioItem(name: "XLR Cable", shortDescription: "XLR multi-use cable", longDescription: "A regular XLR calbe, often used for a mutltitude of audio equipment", imageURL: "questionmark"),
         
-        AudioItem(name: "Headphones", shortDescription: " AudioTechnica brand headphones. ", longDescription: " Our over ear headphones are high quality audio devices. Approved for podcast recording and sound mixing, you won’t miss a beat with these.", imageURL: "questionmark"),
+        AudioItem(name: "Headphones", shortDescription: "AudioTechnica brand headphones. ", longDescription: " Our over ear headphones are high quality audio devices. Approved for podcast recording and sound mixing, you won’t miss a beat with these.", imageURL: "questionmark"),
         
         AudioItem(name: "MixPre", shortDescription: "Professional audio recorder for filmmaking", longDescription: "The MixPre is a recording device that delivers professional audio quality for filmmaking. With more tracks and easy sound manipulation, the MixPre is the best audio device for filmmaking.", imageURL: "questionmark")
     ]

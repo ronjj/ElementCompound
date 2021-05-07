@@ -29,18 +29,18 @@ struct SettingsView: View {
                     }
                     
                     Section(header: Text("Version")){
-                        Text("0.0.0")
+                        Text("0.1.0")
                     }
                     
                     
                     //Buttons
                     Section{
                         
-                        Button(action: {
-                            //
-                        }) {
-                            Text("Contact The Developer")
-                        }
+//                        Button(action: {
+//                            //Add functionality here
+//                        }) {
+//                            Text("Contact The Developer")
+//                        }
                         
                         Button(action: {
                             signOut()

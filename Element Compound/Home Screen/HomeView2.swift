@@ -28,9 +28,9 @@ struct HomeView2: View {
                         AnnouncementCardView(announcement: announcement)
                     }
                 }
-                Section(header: Text("My Projects")) {
-                    
-                }
+//                Section(header: Text("My Projects")) {
+//                    Can uncomment this section once I finish the projects part of the app
+//                }
                
             }
             .navigationBarTitle("Home")

@@ -41,11 +41,7 @@ struct CameraItemDetailedView: View {
                         Rectangle()
                         Rectangle()
                         
-                        Section(header: Text("General Information")){
-                            Link("User Manual PDF",
-                                  destination: URL(string: "https://www.google.com")!)
-                            Text("Date Purchased: ")
-                        }
+
                             
                             
                     }
