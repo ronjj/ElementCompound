@@ -18,14 +18,12 @@ struct InventoryListView: View {
     let misc: MiscItem
     
     var body: some View {
-        
         NavigationView {
+            
             VStack{
                 SearchBar(text: $searchText)
                     .padding(.top, 15)
                     .padding(.bottom, 5)
-                
-                    // .contains(searchText)
                 
                 List{
                     Section(header: Text("Cameras")){

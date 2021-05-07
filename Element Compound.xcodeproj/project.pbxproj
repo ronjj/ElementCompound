@@ -15,7 +15,6 @@
 		5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE97260FF37C00DCC5A6 /* Preview Assets.xcassets */; };
 		5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */; };
 		543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */; };
-		543E7B9E262A1732004FDF51 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7B9D262A1732004FDF51 /* HomeView.swift */; };
 		543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA0262A1766004FDF51 /* CoursesView.swift */; };
 		543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA3262A1773004FDF51 /* ProjectsView.swift */; };
 		543E7BA7262A1976004FDF51 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA6262A1976004FDF51 /* TabView.swift */; };
@@ -32,7 +31,6 @@
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
-		54D9A6FA26334EF10053BE6B /* AnnounceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9A6F926334EF10053BE6B /* AnnounceAddView.swift */; };
 		54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2442B263F922000D1B693 /* InfoScreen.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
@@ -51,7 +49,6 @@
 		5439CE99260FF37C00DCC5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItems.swift; sourceTree = "<group>"; };
 		543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewModel.swift; sourceTree = "<group>"; };
-		543E7B9D262A1732004FDF51 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		543E7BA0262A1766004FDF51 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		543E7BA3262A1773004FDF51 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 		543E7BA6262A1976004FDF51 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -68,7 +65,6 @@
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
-		54D9A6F926334EF10053BE6B /* AnnounceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnounceAddView.swift; sourceTree = "<group>"; };
 		54E2442B263F922000D1B693 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
@@ -123,12 +119,12 @@
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
-				54E2442B263F922000D1B693 /* InfoScreen.swift */,
+				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
-				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				543E7BA9262A1F96004FDF51 /* SettingsView.swift */,
+				54E2442B263F922000D1B693 /* InfoScreen.swift */,
 				544099A12642333C007EBF4A /* RoleScreen.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
@@ -150,14 +146,14 @@
 		543E7BEE262A754E004FDF51 /* Inventory Screen */ = {
 			isa = PBXGroup;
 			children = (
-				54BBA4C826320B300021536D /* SearchBar.swift */,
-				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
-				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
-				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
-				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
-				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
-				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */,
+				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
+				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
+				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
+				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
+				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
+				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
+				54BBA4C826320B300021536D /* SearchBar.swift */,
 			);
 			path = "Inventory Screen";
 			sourceTree = "<group>";
@@ -165,6 +161,11 @@
 		54BBA4CC2632168A0021536D /* Announcements */ = {
 			isa = PBXGroup;
 			children = (
+				54BBA4CE263216EA0021536D /* Announcement.swift */,
+				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
+				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
+				5493327F263C5295001C1D24 /* AnnouncementEditView.swift */,
+				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
 			);
 			path = Announcements;
 			sourceTree = "<group>";
@@ -172,15 +173,8 @@
 		54BBA4CD263216AF0021536D /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				543E7B9D262A1732004FDF51 /* HomeView.swift */,
 				54933278263C51C6001C1D24 /* HomeView2.swift */,
 				5440999D26422081007EBF4A /* Users.swift */,
-				54BBA4CE263216EA0021536D /* Announcement.swift */,
-				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
-				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
-				5493327F263C5295001C1D24 /* AnnouncementEditView.swift */,
-				54D9A6F926334EF10053BE6B /* AnnounceAddView.swift */,
-				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
 				54BBA4CC2632168A0021536D /* Announcements */,
 			);
 			path = "Home Screen";
@@ -342,11 +336,9 @@
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
 				54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */,
-				54D9A6FA26334EF10053BE6B /* AnnounceAddView.swift in Sources */,
 				542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */,
 				54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */,
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
-				543E7B9E262A1732004FDF51 /* HomeView.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
 				5440999E26422081007EBF4A /* Users.swift in Sources */,

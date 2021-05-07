@@ -10,15 +10,14 @@ import Firebase
 import GoogleSignIn
 
 struct HomeView2: View {
+    
+    @AppStorage ("role_Status") var role = false
     @ObservedObject var viewModel = AnnouncementsViewModel()
+
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
-    @AppStorage ("role_Status") var role = false
     @State private var buttonDisabled = true
-    
-    
-
-    
+  
     
     var body: some View {
         NavigationView{
