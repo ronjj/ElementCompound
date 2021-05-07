@@ -18,7 +18,7 @@ struct AudioItemDetailedView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .center, spacing: 20) {
                     
-                    Image(audio.imageURL)
+                    Image(audio.bigImageURL)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 200)
                         .cornerRadius(8)
