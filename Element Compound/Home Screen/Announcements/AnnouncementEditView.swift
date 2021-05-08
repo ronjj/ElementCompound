@@ -40,6 +40,7 @@ struct AnnouncementEditView: View {
                     }
                     .disabled(!viewModel.modified)
                 }
+                
             }
         }
     }
