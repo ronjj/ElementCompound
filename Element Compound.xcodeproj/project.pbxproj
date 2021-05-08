@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
 		5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
 		5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +125,7 @@
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
+				5429AF84264628EF00422295 /* MailView.swift */,
 				543E7BA9262A1F96004FDF51 /* SettingsView.swift */,
 				54E2442B263F922000D1B693 /* InfoScreen.swift */,
 				544099A12642333C007EBF4A /* RoleScreen.swift */,
@@ -332,6 +335,7 @@
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
+				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,

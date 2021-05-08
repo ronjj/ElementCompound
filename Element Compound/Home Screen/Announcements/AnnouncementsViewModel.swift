@@ -11,11 +11,8 @@ import FirebaseFirestoreSwift
 
 class AnnouncementsViewModel:ObservableObject {
     @Published var announcements = [Announcement]()
-  
     
     private var db = Firestore.firestore()
-    
-   
     
     func fetchData() {
         db.collection("announcements").addSnapshotListener { (querySnapshot, error) in

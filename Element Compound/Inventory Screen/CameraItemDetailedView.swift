@@ -23,8 +23,7 @@ struct CameraItemDetailedView: View {
                     
                     
                     VStack(alignment: .leading, spacing: 20) {
-                   
-                         
+
                         Text(camera.name)
                             .font(.largeTitle)
                             .fontWeight(.heavy)
@@ -40,9 +39,7 @@ struct CameraItemDetailedView: View {
                         Text("Tutorials for \(camera.name)")
                         Rectangle()
                         Rectangle()
-                        
-
-                            
+       
                             
                     }
                     .padding(.horizontal, 20)

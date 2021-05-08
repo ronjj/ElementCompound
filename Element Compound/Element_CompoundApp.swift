@@ -31,7 +31,6 @@ struct Element_CompoundApp: App {
     class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
         @AppStorage ("log_Status") var status = false
         
-        
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.
             GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID

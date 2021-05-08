@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InventoryListView: View {
     
-    
     @State var searchText = ""
     
     let camera: CameraItem
