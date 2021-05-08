@@ -45,7 +45,7 @@ struct MailView: UIViewControllerRepresentable {
             
             if result == .sent {
             AudioServicesPlayAlertSound(SystemSoundID(1001))
-//            let alert = UIAlertController(title: "Thank You", message: "Your feedback has been sent.", preferredStyle: .alert)
+//                let alert = UIAlertController(title: "Thank You", message: "Your feedback has been sent.", preferredStyle: .alert)
 //                            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
 //                            alert.addAction(okAction)
 //                            self.present(alert, animated: true, completion: nil)

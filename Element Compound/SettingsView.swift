@@ -56,7 +56,9 @@ struct SettingsView: View {
                         
                     
                         
-                    }.onTapGesture {
+                    }
+                    .frame(height: 50)
+                    .onTapGesture {
 //                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
                         if MFMailComposeViewController.canSendMail() {
                             self.isShowingMailView.toggle()
@@ -66,7 +68,6 @@ struct SettingsView: View {
                             self.alertNoMail.toggle()
                         }
                     }
-                    //            .disabled(!MFMailComposeViewController.canSendMail())
                     .sheet(isPresented: $isShowingMailView) {
                         MailView(result: self.$result)
                     }
