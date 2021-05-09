@@ -111,16 +111,29 @@ struct MockData {
     
     
     static let miscs = [
-        MiscItem(name: "DJI Mavic", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "DJI Mavic Mini 2", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Ronin", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Ronin S", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Batteries", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Adapters/Dongles", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "SD Cards", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Micro SD Card", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "USB C Cable", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black"),
-        MiscItem(name: "Extension Cable", shortDescription: "", longDescription: "", imageURL: "black", bigImageURL: "black")
+        MiscItem(name: "DJI Mavic Pro", shortDescription: "High-quality video drone", longDescription: "The DJI Mavic Pro is a high-end video drone for getting cinematic shoots in the air.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "DJI Mavic Mini 2", shortDescription: "Compact video drone", longDescription: "The DJI Mavic Mini 2 is the ideal drone for on-the-go filming. Small yet powerful, the Mini 2 delivers quality video with a smaller load out. ", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Ronin", shortDescription: "Mobile camera gimbal.", longDescription: "The DJI Ronin is a camera gimbal that stabilizes your camera. The Ronin creates super smooth video for cinematic and high-quality videos.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Ronin S", shortDescription: "Optimized mobile camera gimbal.", longDescription: "This compact and improved Ronin offers a smaller build with even more features to aid filming.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Batteries", shortDescription: "For multiple items.", longDescription: "All batteries for our equipment are sorted by equipment type. Please recharge all batteries and return them to their proper location.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Tripods", shortDescription: "Stabilizers for cameras and microphones.", longDescription: "We have multiple tripods for both cameras and mics. Tripods are stationary stands for when you need to capture one moment or angle. ", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Mic Stands", shortDescription: "Podcast microphone stands.", longDescription: "Miscellaneous podcast stands to keep your mics in place. Our stands elevate your podcast experience to be more professional ", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Adapters/Dongles", shortDescription: "Miscellaneous computer and equipment adaptors", longDescription: "Each adaptor or dongle can be used to connect with certain equipment or wires.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "SD Cards", shortDescription: "Memory cards", longDescription: "Element often stores our audio and footage on SD cards for short-term movement before we download our work. Used in cameras and audio recorders", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Micro SD Card", shortDescription: "Mini memory cards.", longDescription: "Used in DJI Osmo and Mavic models, as well as miscellaneous equipment.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "USB C Cable", shortDescription: "Common equipment cable.", longDescription: "Often used in Apple products or computer products.", imageURL: "black", bigImageURL: "black"),
+        
+        MiscItem(name: "Extension Cable", shortDescription: "Electrical extension cord.", longDescription: "Used for recording and filming. Two 50 foot cables.", imageURL: "black", bigImageURL: "black")
       
     ]
 }
