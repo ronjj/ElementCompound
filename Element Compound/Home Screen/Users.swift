@@ -10,12 +10,16 @@ import Firebase
 import GoogleSignIn
 
 
-//struct Users{
-//    let officers = 
-//}
+struct Users{
+    let officers = ["Ronald Jabouin", "Thomas Breslin"]
+    let advisors = ["Mr. Shuchao Luo", "Bro. Thomas Terrill, S.M"]
+}
 
-//func UserInfo() {
-//    let user = Auth.auth().currentUser
+func UserInfo() {
+    let user = Auth.auth().currentUser
+    if user?.uid == "FQfZNTWXb2SEfHDuFJwm9iU7LdI2" {
+        return
+    }
 //    if let user = user {
 //      // The user's ID, unique to the Firebase project.
 //      // Do NOT use this value to authenticate with your backend server,
@@ -30,8 +34,8 @@ import GoogleSignIn
 //      }
 //      // ...
 //    }
-//}
-//
+}
+
 //class allowedUsers: ObservableObject{
 //    let Ronald : UserInfo.user.email = "2"
 //}

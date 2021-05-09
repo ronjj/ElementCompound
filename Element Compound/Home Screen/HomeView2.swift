@@ -13,7 +13,6 @@ struct HomeView2: View {
     
     @AppStorage ("role_Status") var role = false
     @ObservedObject var viewModel = AnnouncementsViewModel()
-
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
     @State private var buttonDisabled = true
@@ -49,15 +48,35 @@ struct HomeView2: View {
 
             .onAppear(){
                 self.viewModel.fetchData()
+    
+                
             }
             
         }
     }
+//    mutating func getRole()  {
+//      if Auth.auth().currentUser?.email == "22420rj@chaminade-hs.org" {
+//          announcement.role = "Officer"
+//      } else if Auth.auth().currentUser?.email == "22102tb@chaminade-hs.org" {
+//          announcement.role = "Officer"
+//      } else if Auth.auth().currentUser?.email == "sluo@chaminade-hs.org" {
+//          announcement.role = "Advisor"
+//      } else if Auth.auth().currentUser?.email == "tterill@chaminade-hs.org" {
+//          announcement.role = "Advisor"
+//      } else {
+//          announcement.role = "Member"
+//      }
+//  }
 }
 
-//struct HomeView2_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeView2()
-//    }
-//}
+
+
+
+struct HomeView2_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView2()
+    }
+}
+
+
 

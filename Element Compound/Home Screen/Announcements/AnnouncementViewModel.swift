@@ -10,7 +10,7 @@ import Firebase
 import Combine
 
 class AnnoucnementViewModel: ObservableObject{
-    @Published var announcement: Announcement = Announcement(message: "", sender: Auth.auth().currentUser?.displayName ?? "N/A", dateEvent: Date())
+    @Published var announcement: Announcement = Announcement(message: "",  sender: Auth.auth().currentUser?.displayName ?? "N/A", dateEvent: Date())
     @Published var modified = false
     
     private var db = Firestore.firestore()
@@ -27,6 +27,7 @@ class AnnoucnementViewModel: ObservableObject{
                 self?.modified = true
             }
             .store(in: &cancellables)
+            
     }
     
     func addAnnouncement(announcement: Announcement){

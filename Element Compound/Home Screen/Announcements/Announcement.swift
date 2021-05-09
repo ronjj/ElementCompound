@@ -33,6 +33,7 @@ struct Announcement: Identifiable, Codable{
         case message
         case sender
         case dateEvent
+      
     }
 }
 

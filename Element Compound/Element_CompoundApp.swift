@@ -30,6 +30,8 @@ struct Element_CompoundApp: App {
     //@UIApplicationMain
     class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate{
         @AppStorage ("log_Status") var status = false
+        @ObservedObject private var viewModel = AnnouncementsViewModel()
+       
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.
@@ -76,6 +78,10 @@ struct Element_CompoundApp: App {
             // Perform any operations when the user disconnects from app here.
             // ...
         }
+        
+        
+
+        
         
         // MARK: UISceneSession Lifecycle
         

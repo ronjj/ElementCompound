@@ -8,6 +8,9 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import Firebase
+import GoogleSignIn
+
 
 class AnnouncementsViewModel:ObservableObject {
     @Published var announcements = [Announcement]()
@@ -15,7 +18,8 @@ class AnnouncementsViewModel:ObservableObject {
     private var db = Firestore.firestore()
     
     func fetchData() {
-        db.collection("announcements").addSnapshotListener { (querySnapshot, error) in
+        db.collection("announcements").order(by: "dateEvent", descending: true).addSnapshotListener { (querySnapshot, error) in
+          
             guard let documents = querySnapshot?.documents else {
                 print("No documents")
                 return
@@ -33,4 +37,5 @@ class AnnouncementsViewModel:ObservableObject {
             }
         }
     }
+
 }

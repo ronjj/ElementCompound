@@ -22,7 +22,6 @@ struct AnnouncementCardView: View {
             }
             
             HStack{
-            //  Text("Advisor")
                 Spacer()
                 Text(announcement.timeString)
             }
@@ -32,7 +31,13 @@ struct AnnouncementCardView: View {
             
         }
         .padding()
+     
+        
     }
+    
+  
 }
+
+
 
 

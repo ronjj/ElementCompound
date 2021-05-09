@@ -57,6 +57,7 @@ struct AnnouncementEditView: View {
     func dismiss() {
         presentationMode.wrappedValue.dismiss()
     }
+    
 }
 
 struct AnnouncementEditView_Previews: PreviewProvider {
