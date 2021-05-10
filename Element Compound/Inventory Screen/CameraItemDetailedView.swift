@@ -20,6 +20,11 @@ struct CameraItemDetailedView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 200)
                         .cornerRadius(8)
+            
+//                           .resizable()
+//                           .aspectRatio(contentMode: .fill)
+//                           .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//                           .edgesIgnoringSafeArea(.all)
                     
                     
                     VStack(alignment: .leading, spacing: 20) {
@@ -46,6 +51,7 @@ struct CameraItemDetailedView: View {
                     .frame(maxWidth: 600, alignment: .center)
                     .navigationBarTitle(camera.name, displayMode: .inline)
                     .navigationBarHidden(true)
+                    .edgesIgnoringSafeArea(.all)
                   
                 }
             }

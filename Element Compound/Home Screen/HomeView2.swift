@@ -26,12 +26,15 @@ struct HomeView2: View {
                         AnnouncementCardView(announcement: announcement)
                     }
                 }
-//                Section(header: Text("My Projects")) {
-//                    Can uncomment this section once I finish the projects part of the app
-//                }
+                
+                .padding(EdgeInsets(top: 22, leading: 5, bottom: 24, trailing: 5))
+
+                //                Section(header: Text("My Projects")) {
+                //                    Can uncomment this section once I finish the projects part of the app
+                //                }
                
             }
-            .navigationBarTitle("Home")
+            .navigationBarTitle("Element Compound")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -41,6 +44,7 @@ struct HomeView2: View {
                     }
                 }
             }
+           
       
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
@@ -49,10 +53,10 @@ struct HomeView2: View {
             .onAppear(){
                 self.viewModel.fetchData()
     
-                
-            }
+                }
             
         }
+        .background(Color.green)
     }
 //    mutating func getRole()  {
 //      if Auth.auth().currentUser?.email == "22420rj@chaminade-hs.org" {

@@ -14,28 +14,26 @@ struct AnnouncementCardView: View {
     var announcement: Announcement
     
     var body: some View {
-        VStack{
-            HStack{
-                Text(announcement.sender)
-                Spacer()
-                Text(announcement.dateString)
+   
+            VStack{
+                HStack{
+                    Text(announcement.sender)
+                    Spacer()
+                    Text(announcement.dateString)
+                }
+                
+                HStack{
+                    Spacer()
+                    Text(announcement.timeString)
+                }
+             
+                Text(announcement.message)
+                    .padding(.top, 10)
+                
             }
-            
-            HStack{
-                Spacer()
-                Text(announcement.timeString)
-            }
-         
-            Text(announcement.message)
-                .padding(.top, 10)
-            
-        }
-        .padding()
-     
+            .padding(10)
         
     }
-    
-  
 }
 
 

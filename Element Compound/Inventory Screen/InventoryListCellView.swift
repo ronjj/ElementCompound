@@ -26,7 +26,7 @@ struct InventoryListCellView: View {
                     .fontWeight(.medium)
                 
                 Text(description)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(Color.darkGrey)
                     .fontWeight(.semibold)
             }
             .padding(5)
