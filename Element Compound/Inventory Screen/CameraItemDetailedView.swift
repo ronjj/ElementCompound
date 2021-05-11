@@ -20,7 +20,7 @@ struct CameraItemDetailedView: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 200)
-                        .cornerRadius(8)
+                        .cornerRadius(12)
             
 //                           .resizable()
 //                           .aspectRatio(contentMode: .fill)
