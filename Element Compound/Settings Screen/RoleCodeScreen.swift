@@ -7,9 +7,9 @@
 
 import SwiftUI
 
+
+
 struct RoleCodeScreen: View {
-    
-  
     @Environment(\.presentationMode) var presentationMode
     @State var text = ""
     @AppStorage ("role_Status") var role = Bool()
@@ -57,7 +57,7 @@ struct RoleCodeScreen: View {
     }
     
     func codeCheck() {
-        if text == "password" {
+        if text == "PJA3gSJiaL6loQ9n" {
             self.role = true
         } else {
             //need to present an error saying code was wrong

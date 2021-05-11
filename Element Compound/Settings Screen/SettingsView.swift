@@ -10,16 +10,29 @@ import Firebase
 import GoogleSignIn
 import MessageUI
 
+
+
+enum Sheets: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    case info
+    case mail
+    case role
+}
+
+
 struct SettingsView: View {
     
-    @State private var presentInfoScreen = false
-    @State private var presentRoleScreen = false
-    @State var isShowingMailView = false
+//    @State private var presentInfoScreen = false
+//    @State private var presentRoleScreen = false
+//    @State var isShowingMailView = false
+    @State private var activeSheet: Sheets?
     
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var alertNoMail = false
-  
-    
+
     @AppStorage ("log_Status") var status = true
     @AppStorage ("role_Status") var role = Bool()
     
@@ -65,19 +78,34 @@ struct SettingsView: View {
                     .onTapGesture {
 //                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
                         if MFMailComposeViewController.canSendMail() {
-                            self.isShowingMailView.toggle()
+//                            self.isShowingMailView.toggle()
+                            activeSheet = .mail
                         } else if let emailUrl = SettingsView.createEmailUrl(subject: "Element Compound Bug Report / Feature Request", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.alertNoMail.toggle()
                         }
                     }
-                    .sheet(isPresented: $isShowingMailView) {
-                        MailView(result: self.$result)
+//                    .sheet(isPresented: $isShowingMailView) {
+//                        MailView(result: self.$result)
+//                    }
+//                    .sheet(isPresented: $presentRoleScreen) {
+//                        RoleCodeScreen()
+//                    }
+//                    .sheet(isPresented: $presentInfoScreen){
+//                        InfoScreen()
+//                    }
+                    .sheet(item: $activeSheet) { item in
+                        switch item {
+                        case .info:
+                            InfoScreen()
+                        case .mail:
+                            MailView(result: self.$result)
+                        case .role:
+                            RoleCodeScreen()
+                        }
                     }
-                    .sheet(isPresented: $presentRoleScreen) {
-                        RoleCodeScreen()
-                    }
+                    
                     .alert(isPresented: self.$alertNoMail) {
                         Alert(title: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"))
                     }
@@ -90,27 +118,21 @@ struct SettingsView: View {
                     }
                     
                     Button(action: {
-                        self.presentRoleScreen.toggle()
+//                        self.presentRoleScreen = true
+                        activeSheet = .role
                     }) {
                         Text("Get Role")
                     }
-                    
-                    
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            
             .navigationBarTitle("Settings")
-            
-            .sheet(isPresented: $presentInfoScreen){
-                InfoScreen()
-            }
-            
-            
+
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        presentInfoScreen = true
+//                        presentInfoScreen = true
+                        activeSheet = .info
                         
                     }) {
                         Image(systemName: "info.circle")
