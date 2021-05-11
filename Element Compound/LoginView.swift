@@ -17,8 +17,8 @@ struct LoginView: View {
     
     var body: some View {
         VStack{
-            Text("Element Compound")
-                .font(.largeTitle)
+            Text("Element Compound").font(Font.custom("Felixti.TFF", size: 33))
+              //  .font(.largeTitle)
                 .fontWeight(.bold)
                 .offset(y: 250)
             

@@ -11,7 +11,8 @@ import GoogleSignIn
 
 struct HomeView2: View {
     
-    @AppStorage ("role_Status") var role = false
+    @AppStorage ("role_Status") var role = Bool()
+    
     @ObservedObject var viewModel = AnnouncementsViewModel()
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
@@ -42,6 +43,7 @@ struct HomeView2: View {
                     }) {
                         Image(systemName: "plus")
                     }
+                    .disabled(role == false)
                 }
             }
            

@@ -11,6 +11,7 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage ("log_Status") var status = false
+  
     var body: some View {
         
         ZStack{

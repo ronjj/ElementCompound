@@ -65,7 +65,9 @@ struct InventoryListView: View {
                 .listStyle(InsetGroupedListStyle())
                 .navigationTitle("Equipment List")
             }
+            
         }
+        .background(Color.blue)
     }
 }
 

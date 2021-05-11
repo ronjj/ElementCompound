@@ -64,7 +64,7 @@ struct MockData {
 
     
     static let cameras = [
-        CameraItem(name: "Lumix GH4", shortDescription: "Basic camera for video recording.", longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.", imageURL: "gh4-s_120x90", bigImageURL: "gh4-l_350x200"),
+        CameraItem(name: "Lumix GH4", shortDescription: "Basic camera for video recording.", longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.", imageURL: "GH5S_Icon_copy_1_140x120", bigImageURL: "GH5S_BG_350x200"),
         
         CameraItem(name: "Lumix GH5", shortDescription: "4K camera for video recording.", longDescription: "The professional level GH5 from LUMIX delivers high quality 4K video with its improved design from the GH4. The mirrorless camera delivers crisp video, while in-camera stabilization provides smooth movement, and the in-camera ", imageURL: "gh5s-s_120x90", bigImageURL: "gh5s-l_350x200"),
         
