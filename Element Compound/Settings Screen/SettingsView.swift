@@ -17,9 +17,11 @@ enum Sheets: Identifiable {
     var id: Int {
         self.hashValue
     }
+    
     case info
     case mail
     case role
+    
 }
 
 
@@ -42,7 +44,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView{
             List{
-                Section(header: Text("Display Name")){
+                Section(header: Text("Display Name (Based On Google)")){
                     Text("\(Auth.auth().currentUser?.displayName ?? "Not Logged In")")
                 }
                 
@@ -80,7 +82,7 @@ struct SettingsView: View {
                         if MFMailComposeViewController.canSendMail() {
 //                            self.isShowingMailView.toggle()
                             activeSheet = .mail
-                        } else if let emailUrl = SettingsView.createEmailUrl(subject: "Element Compound Bug Report / Feature Request", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
+                        } else if let emailUrl = SettingsView.createEmailUrl(subject: "Element Compound Feedback", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.alertNoMail.toggle()

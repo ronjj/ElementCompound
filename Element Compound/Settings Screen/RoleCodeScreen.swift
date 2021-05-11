@@ -18,7 +18,7 @@ struct RoleCodeScreen: View {
         NavigationView{
             Form{
                 Section(header: Text("Enter Code For Role")) {
-                    TextEditor(text: $text)
+                    SecureField("Code", text: $text)
                         .font(.custom("SF Pro", size: 18))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
@@ -57,7 +57,7 @@ struct RoleCodeScreen: View {
     }
     
     func codeCheck() {
-        if text == "PJA3gSJiaL6loQ9n" {
+        if text == "Password" {
             self.role = true
         } else {
             //need to present an error saying code was wrong

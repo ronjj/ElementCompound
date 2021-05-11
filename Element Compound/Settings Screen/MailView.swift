@@ -65,7 +65,7 @@ struct MailView: UIViewControllerRepresentable {
         let vc = MFMailComposeViewController()
         let mailto = "ronaldjabouin2004@gmail.com"
         vc.setToRecipients([mailto])
-        vc.setSubject("Element Compound Bug Report / Feature Request")
+        vc.setSubject("Element Compound Feedback")
        // vc.setMessageBody(messageBody, isHTML: false)
        // vc.setMessageBody("\n\n\n\n\n——————————————\nDevice: \(uidevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: uidevice.version))", isHTML: false)
         vc.setMessageBody( "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))", isHTML: false)
