@@ -15,6 +15,10 @@
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
 		5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE97260FF37C00DCC5A6 /* Preview Assets.xcassets */; };
 		5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */; };
+		543B6640264ABFCF00992350 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B663F264ABFCF00992350 /* Poppins-Thin.ttf */; };
+		543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B6642264ABFF000992350 /* Poppins-Black.ttf */; };
+		543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B6645264AC04F00992350 /* Poppins-Regular.ttf */; };
+		543B664D264AC72200992350 /* Felixti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B664C264AC72200992350 /* Felixti.ttf */; };
 		543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */; };
 		543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA0262A1766004FDF51 /* CoursesView.swift */; };
 		543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA3262A1773004FDF51 /* ProjectsView.swift */; };
@@ -24,7 +28,6 @@
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		544099A22642333C007EBF4A /* RoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544099A12642333C007EBF4A /* RoleScreen.swift */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
-		548A35E62649D8FC008B9B4A /* Felixti.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 548A35E52649D8FC008B9B4A /* Felixti.TTF */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
 		54933279263C51C6001C1D24 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54933278263C51C6001C1D24 /* HomeView2.swift */; };
@@ -51,8 +54,12 @@
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
 		5439CE94260FF37C00DCC5A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5439CE97260FF37C00DCC5A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5439CE99260FF37C00DCC5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryItems.swift; sourceTree = "<group>"; };
+		543B6638264ABBF300992350 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		543B663F264ABFCF00992350 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		543B6642264ABFF000992350 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		543B6645264AC04F00992350 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		543B664C264AC72200992350 /* Felixti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felixti.ttf; sourceTree = "<group>"; };
 		543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewModel.swift; sourceTree = "<group>"; };
 		543E7BA0262A1766004FDF51 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		543E7BA3262A1773004FDF51 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
@@ -62,7 +69,6 @@
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		544099A12642333C007EBF4A /* RoleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreen.swift; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
-		548A35E52649D8FC008B9B4A /* Felixti.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felixti.TTF; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
 		548A35EC264A1307008B9B4A /* Element Compound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Element Compound.entitlements"; sourceTree = "<group>"; };
 		548C3F8C2630BED600EFD1C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +132,11 @@
 			children = (
 				548A35EC264A1307008B9B4A /* Element Compound.entitlements */,
 				5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */,
+				543B663F264ABFCF00992350 /* Poppins-Thin.ttf */,
+				543B6642264ABFF000992350 /* Poppins-Black.ttf */,
+				543B664C264AC72200992350 /* Felixti.ttf */,
+				543B6645264AC04F00992350 /* Poppins-Regular.ttf */,
+				543B6638264ABBF300992350 /* Info.plist */,
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
@@ -133,14 +144,12 @@
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
-				548A35E52649D8FC008B9B4A /* Felixti.TTF */,
 				543E7BA6262A1976004FDF51 /* TabView.swift */,
 				544099A12642333C007EBF4A /* RoleScreen.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
-				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
+				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
-				5439CE99260FF37C00DCC5A6 /* Info.plist */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
 			);
 			path = "Element Compound";
@@ -271,10 +280,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				548A35E62649D8FC008B9B4A /* Felixti.TTF in Resources */,
 				5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */,
+				543B664D264AC72200992350 /* Felixti.ttf in Resources */,
+				543B6640264ABFCF00992350 /* Poppins-Thin.ttf in Resources */,
 				5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */,
+				543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */,
 				5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */,
+				543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

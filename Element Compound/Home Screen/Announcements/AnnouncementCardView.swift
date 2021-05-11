@@ -14,7 +14,8 @@ struct AnnouncementCardView: View {
     var announcement: Announcement
     
     var body: some View {
-   
+        ZStack{
+            Color.white.edgesIgnoringSafeArea(.all)
             VStack{
                 HStack{
                     Text(announcement.sender)
@@ -28,11 +29,21 @@ struct AnnouncementCardView: View {
                 }
              
                 Text(announcement.message)
+//                    .font(Font.custom("Poppins-Thin", size: 18))
                     .padding(.top, 10)
+                   
+//                    .font(.custom("Poppins-Black", size: 22))
                 
             }
-            .padding(10)
-        
+            .font(Font.custom("Poppins-Regular", size: 18))
+            .padding(5)
+         
+            
+           
+        }
+        .cornerRadius(20)
+        .frame(width: 325, height: 150)
+        .shadow(color: .veryLightGrey, radius: 5, x: 0, y: 4)
     }
 }
 

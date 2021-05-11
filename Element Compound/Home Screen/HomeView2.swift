@@ -21,20 +21,31 @@ struct HomeView2: View {
     
     var body: some View {
         NavigationView{
-            List{
-                Section(header: Text("Announcements")){
-                    ForEach(viewModel.announcements) { announcement in
-                        AnnouncementCardView(announcement: announcement)
+//            List{
+//                Section(header: Text("Announcements")){
+//                    ForEach(viewModel.announcements) { announcement in
+//                        AnnouncementCardView(announcement: announcement)
+//                    }
+//                }
+//                .padding(EdgeInsets(top: 22, leading: 5, bottom: 24, trailing: 5))
+
+//                Section(header: Text("My Projects")) {
+//                    Can uncomment this section once I finish the projects part of the app
+//                }
+            ZStack{
+                Color.lightBlue.edgesIgnoringSafeArea(.all)
+                
+                
+                ScrollView{
+                    LazyVStack{
+                        ForEach(viewModel.announcements) { announcement in
+                            AnnouncementCardView(announcement: announcement)
+                        }
+                        .padding(10)
                     }
                 }
-                
-                .padding(EdgeInsets(top: 22, leading: 5, bottom: 24, trailing: 5))
-
-                //                Section(header: Text("My Projects")) {
-                //                    Can uncomment this section once I finish the projects part of the app
-                //                }
-               
             }
+            
             .navigationBarTitle("Element Compound")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -55,23 +66,26 @@ struct HomeView2: View {
             .onAppear(){
                 self.viewModel.fetchData()
     
-                }
-            
+            }
         }
-        .background(Color.green)
     }
-//    mutating func getRole()  {
+    
+    // need to call this function in onAppear
+    
+    //test if it actually works and the other method is not affecting this system
+//    func getRole()  {
 //      if Auth.auth().currentUser?.email == "22420rj@chaminade-hs.org" {
-//          announcement.role = "Officer"
+//          self.role = true
 //      } else if Auth.auth().currentUser?.email == "22102tb@chaminade-hs.org" {
-//          announcement.role = "Officer"
+//          self.role = true
 //      } else if Auth.auth().currentUser?.email == "sluo@chaminade-hs.org" {
-//          announcement.role = "Advisor"
+//           self.role = true
 //      } else if Auth.auth().currentUser?.email == "tterill@chaminade-hs.org" {
-//          announcement.role = "Advisor"
+//          self.role = true
 //      } else {
-//          announcement.role = "Member"
+//          self.role = true
 //      }
+    
 //  }
 }
 

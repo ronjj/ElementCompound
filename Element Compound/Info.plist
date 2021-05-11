@@ -40,7 +40,10 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Felixti.TTF</string>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-Thin.ttf</string>
+		<string>Felixti.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

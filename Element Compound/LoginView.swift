@@ -13,13 +13,13 @@ import GoogleSignIn
 
 
 struct LoginView: View {
+    //this should probably be set to :Bool()
     @AppStorage ("log_Status") var status = true
     
     var body: some View {
         VStack{
-            Text("Element Compound").font(Font.custom("Felixti.TFF", size: 33))
-              //  .font(.largeTitle)
-                .fontWeight(.bold)
+            Text("Element Compound")
+                .font(Font.custom("Poppins-Regular", size: 35))
                 .offset(y: 250)
             
             WrappedViewController()
@@ -27,8 +27,8 @@ struct LoginView: View {
             
             
             Text("*Sign In With School Account")
-                .foregroundColor(.secondary)
-                .font(.caption)
+                .font(Font.custom("Poppins-Thin", size: 15))
+                .foregroundColor(.veryLightGrey)
                 .offset( y: -300)
         }
     }
