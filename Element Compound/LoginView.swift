@@ -28,8 +28,8 @@ struct LoginView: View {
             
             Text("*Sign In With School Account")
                 .font(Font.custom("Poppins-Thin", size: 15))
-                .foregroundColor(.veryLightGrey)
-                .offset( y: -300)
+                .foregroundColor(.black)
+                .offset( y: -250)
         }
     }
 }

@@ -21,6 +21,7 @@ struct AnnouncementCardView: View {
                     Text(announcement.sender)
                     Spacer()
                     Text(announcement.dateString)
+                    
                 }
                 
                 HStack{

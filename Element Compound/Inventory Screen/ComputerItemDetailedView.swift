@@ -17,6 +17,7 @@ struct ComputerItemDetailedView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Image(computer.bigImageURL)
+                        .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 200)
                         .cornerRadius(8)

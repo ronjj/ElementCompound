@@ -26,6 +26,7 @@ struct MiscItemDetailedView: View {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Image(misc.bigImageURL)
+                        .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 200)
                         .cornerRadius(8)

@@ -26,6 +26,12 @@ struct Element_CompoundApp: App {
         }
     }
     
+//    class ViewController: UIViewController {
+//        override func viewDidLoad() {
+//            super.viewDidLoad()
+//            overrideUserInterfaceStyle = .light
+//        }
+//    }
     
     
     //@UIApplicationMain

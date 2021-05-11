@@ -16,10 +16,13 @@ struct InventoryListCellView: View {
     var body: some View {
         HStack(spacing: 15) {
             Image(image)
+                .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 120)
                 .cornerRadius(8)
-                
+            
+  
+
             VStack(alignment: .leading, spacing: 5) {
                 Text(title)
                     .font(.title2)
@@ -29,6 +32,8 @@ struct InventoryListCellView: View {
                     .foregroundColor(Color.darkGrey)
                     .fontWeight(.semibold)
             }
+            .padding(.leading)
+            
         }
     }
 }
