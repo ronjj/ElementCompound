@@ -28,6 +28,8 @@
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		544099A22642333C007EBF4A /* RoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544099A12642333C007EBF4A /* RoleScreen.swift */; };
+		5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519A264C6BE000BC2719 /* RemoteImage.swift */; };
+		5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519D264C6C0500BC2719 /* NetworkManager.swift */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
@@ -70,6 +72,8 @@
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		544099A12642333C007EBF4A /* RoleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreen.swift; sourceTree = "<group>"; };
+		5461519A264C6BE000BC2719 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		5461519D264C6C0500BC2719 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
 		548A35EC264A1307008B9B4A /* Element Compound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Element Compound.entitlements"; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
 				5493327F263C5295001C1D24 /* AnnouncementEditView.swift */,
 				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
+				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
+				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 			);
 			path = Announcements;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */,
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
 				54933280263C5295001C1D24 /* AnnouncementEditView.swift in Sources */,
+				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
@@ -376,6 +383,7 @@
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
+				5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */,
 				54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */,
 				542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */,
 				54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */,

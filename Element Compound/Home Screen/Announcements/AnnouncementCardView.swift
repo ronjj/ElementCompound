@@ -21,20 +21,25 @@ struct AnnouncementCardView: View {
                     Text(announcement.sender)
                     Spacer()
                     Text(announcement.dateString)
-                    
+
                 }
                 
                 HStack{
                     Text(announcement.title)
                     Spacer()
                     Text(announcement.timeString)
+                 
                 }
              
                 Text(announcement.message)
-//                    .font(Font.custom("Poppins-Thin", size: 18))
+                //Image("\(announcement.photoURL)")
+                ProfileRemoteImage(urlString: "\(announcement.photoURL)")
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 90)
+                    .cornerRadius(8)
+                    
                     .padding(.top, 10)
                    
-//                    .font(.custom("Poppins-Black", size: 22))
                 
             }
             .font(Font.custom("Poppins-Regular", size: 18))
