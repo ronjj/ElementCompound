@@ -16,40 +16,45 @@ struct AnnouncementCardView: View {
     var body: some View {
         ZStack{
             Color.white.edgesIgnoringSafeArea(.all)
-            VStack{
-                HStack{
-                    Text(announcement.sender)
-                    Spacer()
-                    Text(announcement.dateString)
-
-                }
-                
-                HStack{
-                    Text(announcement.title)
-                    Spacer()
-                    Text(announcement.timeString)
-                 
-                }
-             
-                Text(announcement.message)
-                //Image("\(announcement.photoURL)")
-                ProfileRemoteImage(urlString: "\(announcement.photoURL)")
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 120, height: 90)
-                    .cornerRadius(8)
-                    
-                    .padding(.top, 10)
-                   
-                
-            }
-            .font(Font.custom("Poppins-Regular", size: 18))
-            .padding(5)
-         
             
-           
+            HStack{
+                //Left side
+                VStack(alignment: .leading){
+                    Text(announcement.title)
+                        .font(Font.custom("Poppins-Black", size: 20))
+                        .padding(.bottom, 5)
+                    
+                    Text(announcement.message)
+                        .font(Font.custom("Poppins-Regular", size: 18))
+                        .padding(.bottom, 10)
+                }
+                .padding(.leading)
+                
+                Spacer()
+                
+                //Right side
+                VStack{
+                    Text(announcement.sender)
+                        .font(Font.custom("Poppins-Thin", size: 14))
+                    
+                    ProfileRemoteImage(urlString: "\(announcement.photoURL)")
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 120, height: 90)
+                        .clipShape(Circle())
+                      //  .cornerRadius(8)
+                    
+                    Text(announcement.dateString)
+                        .font(Font.custom("Poppins-Thin", size: 12))
+                    
+                    Text(announcement.timeString)
+                        .font(Font.custom("Poppins-Thin", size: 10))
+                }
+                .padding(.trailing)
+            }
+
         }
         .cornerRadius(20)
-        .frame(width: 325, height: 150)
+        .frame(width: 360, height: 200)
         .shadow(color: .veryLightGrey, radius: 5, x: 0, y: 4)
     }
 }
