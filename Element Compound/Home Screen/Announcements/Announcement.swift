@@ -14,6 +14,7 @@ import GoogleSignIn
 struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
+    var title: String
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
     var dateEvent: Date
        var dateString: String {
@@ -33,6 +34,7 @@ struct Announcement: Identifiable, Codable{
         case message
         case sender
         case dateEvent
+        case title
       
     }
 }

@@ -32,7 +32,7 @@ struct InventoryListCellView: View {
                     .foregroundColor(Color.darkGrey)
                     .fontWeight(.semibold)
             }
-            .padding(.leading)
+            //.padding(.leading)
             
         }
     }

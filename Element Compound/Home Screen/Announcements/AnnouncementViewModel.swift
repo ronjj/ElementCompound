@@ -10,14 +10,14 @@ import Firebase
 import Combine
 
 class AnnoucnementViewModel: ObservableObject{
-    @Published var announcement: Announcement = Announcement(message: "",  sender: Auth.auth().currentUser?.displayName ?? "N/A", dateEvent: Date())
+    @Published var announcement: Announcement = Announcement(message: "", title: "",  sender: Auth.auth().currentUser?.displayName ?? "N/A", dateEvent: Date())
     @Published var modified = false
     
     private var db = Firestore.firestore()
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(announcement: Announcement = Announcement(message: "", sender: Auth.auth().currentUser?.displayName ?? "N/A", dateEvent: Date()
+    init(announcement: Announcement = Announcement(message: "", title: "", sender: Auth.auth().currentUser?.displayName ?? "N/A",  dateEvent: Date()
 )) {
         self.announcement = announcement
         

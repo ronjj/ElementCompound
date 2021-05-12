@@ -25,6 +25,7 @@ struct AnnouncementCardView: View {
                 }
                 
                 HStack{
+                    Text(announcement.title)
                     Spacer()
                     Text(announcement.timeString)
                 }

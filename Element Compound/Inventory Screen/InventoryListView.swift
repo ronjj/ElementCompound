@@ -25,14 +25,24 @@ struct InventoryListView: View {
                     .padding(.bottom, 5)
                 
                 List{
-                    Section(header: Text("Cameras")){
-                        ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
-                            NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
-                                InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
-                                    .padding(7)
-                            }
-                        }
-                    }
+//                    Section(header: Text("Cameras")){
+//                        ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
+//                            NavigationLink(destination: CameraItemDetailedView(camera: camera)) {
+//                                InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
+//                                    .padding(7)
+//                            }
+//                        }
+//                    }
+                    
+                                        Section(header: Text("Cameras")){
+                                            ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
+                                                NavigationLink(destination: CameraDetailView2()) {
+                                                    InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
+                                                        .padding(7)
+                                                }
+                                            }
+                                        }
+
                     
                     Section(header: Text("Computers")){
                         ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in

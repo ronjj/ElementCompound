@@ -15,6 +15,14 @@ struct AnnouncementEditView: View {
     var body: some View {
         NavigationView{
             Form{
+                Section(header: Text("Title")) {
+                    TextEditor(text:$viewModel.announcement.title)
+                        .font(.custom("SF Pro", size: 18))
+                        .frame(height: 125, alignment: .center)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                }
+                
                 Section(header: Text("Message")) {
                     TextEditor(text:$viewModel.announcement.message)
                         .font(.custom("SF Pro", size: 18))

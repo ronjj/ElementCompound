@@ -19,6 +19,7 @@
 		543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B6642264ABFF000992350 /* Poppins-Black.ttf */; };
 		543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B6645264AC04F00992350 /* Poppins-Regular.ttf */; };
 		543B664D264AC72200992350 /* Felixti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B664C264AC72200992350 /* Felixti.ttf */; };
+		543B6650264B248500992350 /* CameraDetailView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B664F264B248500992350 /* CameraDetailView2.swift */; };
 		543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */; };
 		543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA0262A1766004FDF51 /* CoursesView.swift */; };
 		543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA3262A1773004FDF51 /* ProjectsView.swift */; };
@@ -60,6 +61,7 @@
 		543B6642264ABFF000992350 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
 		543B6645264AC04F00992350 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		543B664C264AC72200992350 /* Felixti.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felixti.ttf; sourceTree = "<group>"; };
+		543B664F264B248500992350 /* CameraDetailView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView2.swift; sourceTree = "<group>"; };
 		543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewModel.swift; sourceTree = "<group>"; };
 		543E7BA0262A1766004FDF51 /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		543E7BA3262A1773004FDF51 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
 				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
+				543B664F264B248500992350 /* CameraDetailView2.swift */,
 				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
 				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
@@ -360,6 +363,7 @@
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
 				54933280263C5295001C1D24 /* AnnouncementEditView.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
+				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
