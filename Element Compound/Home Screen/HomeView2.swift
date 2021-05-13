@@ -37,10 +37,25 @@ struct HomeView2: View {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
                 
-                
+     
                 ScrollView{
+                    HStack{
+                        Text("Announcements")
+                            .padding()
+                            .font(Font.custom("Poppins-Regular", size: 18))
+                            
+                        Spacer()
+                        Button{
+                            self.action = 1
+                        } label: {
+                            ButtonStyle(title: "View All")
+                        }
+                        .padding()
+                    }
+                    .padding(.bottom, -10)
+                    
+                    
                     LazyVStack{
- 
                         ForEach(viewModel.announcements.prefix(2)) { announcement in
                             AnnouncementCardView(announcement: announcement)
                         }
@@ -51,14 +66,6 @@ struct HomeView2: View {
                         NavigationLink(destination: AllAnouncements(), tag: 1, selection: $action) {
                                            EmptyView()
                         }
-                  
-                        Button{
-                            self.action = 1
-                        } label: {
-                            ButtonStyle(title: "View All")
-                        }
-                            .padding(.top)
-  
                     }
                     .padding(10)
                 }
@@ -75,7 +82,6 @@ struct HomeView2: View {
             }
            
             .navigationBarTitle("Element Compound")
-            
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
             }

@@ -12,10 +12,10 @@ struct ButtonStyle: View {
     let title: LocalizedStringKey
     var body: some View {
         Text(title)
-            .font(.title3)
+            .font(.caption)
             .fontWeight(.semibold)
             //.frame(width: 260, height: 50)
-            .frame(width: 140, height: 50)
+            .frame(width: 100, height: 35)
             .foregroundColor(Color.accentColor)
             .background(Color.white)
             .cornerRadius(10)

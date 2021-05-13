@@ -17,7 +17,6 @@ struct AllAnouncements: View {
   
     
     var body: some View {
-        NavigationView{
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
 
@@ -26,10 +25,8 @@ struct AllAnouncements: View {
                         ForEach(viewModel.announcements) { announcement in
                             AnnouncementCardView(announcement: announcement)
                         }
-                        .padding(7)
                     }
-                    .navigationBarTitle("All Announcements", displayMode: .inline)
-                    .navigationBarHidden(true)
+                    .navigationBarTitle("All Announcements")
                     .padding(10)
                 }
                 .edgesIgnoringSafeArea(.all)
@@ -40,7 +37,6 @@ struct AllAnouncements: View {
                 self.viewModel.fetchData()
     
             }
-        }
     }
 }
 
