@@ -6,6 +6,11 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>org.chaminade-hs.element.compound.refresh</string>
+		<string>org.chaminade-hs.element.compound.db_cleaning</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -43,7 +48,6 @@
 		<string>Poppins-Black.ttf</string>
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-Thin.ttf</string>
-		<string>Felixti.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

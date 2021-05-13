@@ -41,7 +41,6 @@ struct AnnouncementCardView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120, height: 90)
                         .clipShape(Circle())
-                      //  .cornerRadius(8)
                     
                     Text(announcement.dateString)
                         .font(Font.custom("Poppins-Thin", size: 12))

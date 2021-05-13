@@ -18,18 +18,20 @@ struct LoginView: View {
     
     var body: some View {
         VStack{
-            Text("Element Compound")
+            Text("Element")
                 .font(Font.custom("Poppins-Regular", size: 35))
                 .offset(y: 250)
+            
+            Text("Compound")
+                .font(Font.custom("Poppins-Regular", size: 25))
+                .offset(y: 270)
             
             WrappedViewController()
                 .padding(0)
             
             
-            Text("*Sign In With School Account")
-                .font(Font.custom("Poppins-Thin", size: 15))
-                .foregroundColor(.black)
-                .offset( y: -250)
+            Image("launchsmalll")
+                .offset(y: 300)
         }
     }
 }

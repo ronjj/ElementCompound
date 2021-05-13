@@ -45,8 +45,6 @@ struct HomeView2: View {
                     }
                 }
             }
-            
-            .navigationBarTitle("Element Compound")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -58,7 +56,8 @@ struct HomeView2: View {
                 }
             }
            
-      
+            .navigationBarTitle("Element Compound")
+            
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementEditView()
             }
@@ -68,6 +67,7 @@ struct HomeView2: View {
     
             }
         }
+        
     }
     
     // need to call this function in onAppear

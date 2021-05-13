@@ -5,76 +5,114 @@
 //  Created by Ronald Jabouin on 5/11/21.
 //
 
+//Deprecated
+
 import SwiftUI
 
 struct CameraDetailView2: View {
     var body: some View {
+        
+        
         ZStack{
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
-            
-            VStack{
-                ProductView()
-                Spacer()
-                CardView()
+     
+                VStack{
+                    Spacer()
+                    ProductView()
+                    Spacer()
+                    CardView()
+                
             }
         }
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
-struct CameraDetailView2_Previews: PreviewProvider {
-    static var previews: some View {
-        CameraDetailView2()
-    }
-}
 
 //Make into seperate file
 struct ProductView: View {
     var body: some View {
-        VStack{
-                Image("Mavic Mini 2")
+        TabView{
+            ForEach(0 ..< 5) {_ in
+                Image("Rode Background Final")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
+                    .aspectRatio(contentMode: .fit)
+            }
             .padding()
         }
         .frame(width: UIScreen.main.bounds.width)
-        
+        .tabViewStyle(PageTabViewStyle())
+
     }
 }
 
 struct CardView: View {
-    
+
     @State private var quantity = 1
-    
+
     var body: some View {
+        
         VStack{
-            VStack(alignment: .leading){
-                Text("Lumix GH4")
+            VStack{
+                Text("Orange")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                Text("\(quantity) each")
+                Text("\(quantity)")
                     .foregroundColor(.secondary)
-                
             }
             .padding(.top)
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity,  alignment: .leading)
             
+            HStack {
+                Stepper("\(quantity)"){
+                    quantity += 1
+                } onDecrement: {
+                    quantity -= 1
+                }
+                .frame(width:120)
+                Spacer()
+                Text("$\(quantity)")
+                    .font(.largeTitle)
+                    .bold()
+            }
+            .padding(.vertical)
             
-            Text("Product Description")
+            Text("Product Description ")
                 .font(.title)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .frame(width: .infinity, alignment: .leading)
             
-            Text("Lorem ipsum decorem")
-                .fixedSize(horizontal: false, vertical: true)
+            
+            Text("Lorem ipsum")
                 .padding(.vertical)
             
+            HStack{
+                Image(systemName: "heart")
+                    .font(.largeTitle)
+                    .foregroundColor(.orange)
+                    .padding()
+                    .padding(.trailing)
+                
+                Button{
+                    
+                } label: {
+                    Spacer()
+                    Text("add to cart")
+                        .foregroundColor(.white)
+                        .bold()
+                    Spacer()
+                }
+                .padding()
+                .background(Color(.orange))
+                .cornerRadius(30)
+            }
+            .padding(.bottom)
         }
         .padding()
         .background(Color(.systemBackground))
-        //.cornerRadius(30)
+        .cornerRadius(30)
+        
     }
-
 }
 
