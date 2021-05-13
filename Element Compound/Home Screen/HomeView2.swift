@@ -17,6 +17,8 @@ struct HomeView2: View {
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
     @State private var buttonDisabled = true
+    
+    @State private var action: Int? = 0
   
     
     var body: some View {
@@ -38,11 +40,27 @@ struct HomeView2: View {
                 
                 ScrollView{
                     LazyVStack{
-                        ForEach(viewModel.announcements) { announcement in
+ 
+                        ForEach(viewModel.announcements.prefix(2)) { announcement in
                             AnnouncementCardView(announcement: announcement)
                         }
-                        .padding(10)
+                        .padding(7)
+                        
+//                       ButtonStyle(title: "View All")
+//                        .padding(.top)
+                        NavigationLink(destination: AllAnouncements(), tag: 1, selection: $action) {
+                                           EmptyView()
+                        }
+                  
+                        Button{
+                            self.action = 1
+                        } label: {
+                            ButtonStyle(title: "View All")
+                        }
+                            .padding(.top)
+  
                     }
+                    .padding(10)
                 }
             }
             .toolbar {
