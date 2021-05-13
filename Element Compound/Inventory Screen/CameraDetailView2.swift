@@ -15,18 +15,15 @@ struct CameraDetailView2: View {
     
     var body: some View {
         NavigationView{
-        
-        ZStack{
-            Color(.black)
-                .edgesIgnoringSafeArea(.all)
-     
-                ScrollView{
-                    ProductView(camera: camera)
-                    Spacer()
-                    CardView(camera: camera)
-                        .offset(y:-15)
-                        
-            
+                ZStack{
+                    Color(.black)
+                        .edgesIgnoringSafeArea(.all)
+         
+                    ScrollView(showsIndicators: false){
+                        ProductView(camera: camera)
+                        Spacer()
+                        CardView(camera: camera)
+                            .offset(y:-30)
            }
                 .edgesIgnoringSafeArea(.all)
         }
@@ -67,60 +64,29 @@ struct CardView: View {
     var body: some View {
         
         VStack{
-            VStack{
+            VStack(alignment: .leading, spacing: 20) {
                 Text(camera.name)
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                Text("\(quantity)")
-                    .foregroundColor(.secondary)
-            }
-            
-            .frame(maxWidth: .infinity,  alignment: .leading)
-            
-            HStack {
-                Stepper("\(quantity)"){
-                    quantity += 1
-                } onDecrement: {
-                    quantity -= 1
-                }
-                .frame(width:120)
-                Spacer()
-                Text("$\(quantity)")
                     .font(.largeTitle)
-                    .bold()
-            }
-            .padding(.vertical)
-        
-            
-            HStack{
-                Image(systemName: "heart")
-                    .font(.largeTitle)
-                    .foregroundColor(.orange)
-                    .padding()
-                    .padding(.trailing)
+                    .fontWeight(.heavy)
                 
-                Button{
-                    
-                } label: {
-                    Spacer()
-                    Text("add to cart")
-                        .foregroundColor(.white)
-                        .bold()
-                    Spacer()
-                }
-                .padding()
-                .background(Color(.orange))
-                .cornerRadius(30)
-            }
-            .padding(.bottom)
-            Spacer()
+                Text(camera.longDescription)
+                    .lineLimit(nil)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .padding(.bottom, 20)
+                 
+                Text("Tutorials for \(camera.name)")
+                Rectangle()
+                Rectangle()
+            
         }
+        .frame(maxWidth: .infinity,  alignment: .leading)
         .frame(height: UIScreen.main.bounds.height)
         .padding()
         .background(Color(.systemBackground))
         .cornerRadius(30)
-        
+        }
     }
 }
 

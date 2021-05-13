@@ -40,6 +40,7 @@
 		54933280263C5295001C1D24 /* AnnouncementEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementEditView.swift */; };
 		54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyle.swift */; };
 		54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */; };
+		54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5DA264DC853003B749C /* CameraDetailView3.swift */; };
 		54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8C262BB6310040A559 /* AppDelegate.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
@@ -89,6 +90,7 @@
 		5493327F263C5295001C1D24 /* AnnouncementEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementEditView.swift; sourceTree = "<group>"; };
 		54A8B5D2264D6770003B749C /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnnouncements.swift; sourceTree = "<group>"; };
+		54A8B5DA264DC853003B749C /* CameraDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView3.swift; sourceTree = "<group>"; };
 		54AEEB8C262BB6310040A559 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
 				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
 				543B664F264B248500992350 /* CameraDetailView2.swift */,
+				54A8B5DA264DC853003B749C /* CameraDetailView3.swift */,
 				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
 				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
@@ -387,6 +390,7 @@
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
+				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
