@@ -26,13 +26,15 @@ struct AllAnouncements: View {
                             AnnouncementCardView(announcement: announcement)
                         }
                     }
-                    .navigationBarTitle("All Announcements")
+                   // .navigationBarTitle("All Announcements")
                     .padding(10)
                 }
                 .edgesIgnoringSafeArea(.all)
                 .padding()
+                //.navigationBarTitle("All Announcements")
                 
             }
+            .navigationBarTitle("All Announcements")
             .onAppear(){
                 self.viewModel.fetchData()
     

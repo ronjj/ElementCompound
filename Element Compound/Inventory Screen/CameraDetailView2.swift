@@ -10,59 +10,72 @@
 import SwiftUI
 
 struct CameraDetailView2: View {
+    
+    let camera: CameraItem
+    
     var body: some View {
-        
+        NavigationView{
         
         ZStack{
             Color(.black)
                 .edgesIgnoringSafeArea(.all)
      
-                VStack{
+                ScrollView{
+                    ProductView(camera: camera)
                     Spacer()
-                    ProductView()
-                    Spacer()
-                    CardView()
-                
-            }
+                    CardView(camera: camera)
+                        .offset(y:-15)
+                        
+            
+           }
+                .edgesIgnoringSafeArea(.all)
         }
-        .edgesIgnoringSafeArea(.bottom)
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
+        .edgesIgnoringSafeArea(.all)
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 
 //Make into seperate file
 struct ProductView: View {
+    let camera: CameraItem
     var body: some View {
-        TabView{
-            ForEach(0 ..< 5) {_ in
-                Image("Rode Background Final")
+        VStack{
+           
+            VStack(alignment: .center, spacing: 20) {
+                Image(camera.bigImageURL)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            }
-            .padding()
+                    .frame(maxWidth: .infinity)
+                    .edgesIgnoringSafeArea(.all)
+            
         }
         .frame(width: UIScreen.main.bounds.width)
-        .tabViewStyle(PageTabViewStyle())
-
+        .edgesIgnoringSafeArea(.all)
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
 struct CardView: View {
-
+    let camera: CameraItem
     @State private var quantity = 1
 
     var body: some View {
         
         VStack{
             VStack{
-                Text("Orange")
+                Text(camera.name)
                     .font(.title)
                     .fontWeight(.bold)
                 
                 Text("\(quantity)")
                     .foregroundColor(.secondary)
             }
-            .padding(.top)
+            
             .frame(maxWidth: .infinity,  alignment: .leading)
             
             HStack {
@@ -78,14 +91,7 @@ struct CardView: View {
                     .bold()
             }
             .padding(.vertical)
-            
-            Text("Product Description ")
-                .font(.title)
-                .frame(width: .infinity, alignment: .leading)
-            
-            
-            Text("Lorem ipsum")
-                .padding(.vertical)
+        
             
             HStack{
                 Image(systemName: "heart")
@@ -108,11 +114,15 @@ struct CardView: View {
                 .cornerRadius(30)
             }
             .padding(.bottom)
+            Spacer()
         }
+        .frame(height: UIScreen.main.bounds.height)
         .padding()
         .background(Color(.systemBackground))
         .cornerRadius(30)
         
     }
 }
+
+//it's probably one of the paddings. if not, need to make them overlay each other
 

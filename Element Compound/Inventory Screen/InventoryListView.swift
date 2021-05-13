@@ -36,7 +36,7 @@ struct InventoryListView: View {
                     
                                         Section(header: Text("Cameras")){
                                             ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
-                                                NavigationLink(destination: CameraItemDetailedView(camera:camera)) {
+                                                NavigationLink(destination: CameraDetailView2(camera: camera)) {
                                                     InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription)
                                                         .padding(7)
                                                 }

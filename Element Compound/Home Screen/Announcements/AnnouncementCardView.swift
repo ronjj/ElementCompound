@@ -16,6 +16,7 @@ struct AnnouncementCardView: View {
     var body: some View {
         ZStack{
             Color.white.edgesIgnoringSafeArea(.all)
+
             
             HStack{
                 //Left side
@@ -50,11 +51,11 @@ struct AnnouncementCardView: View {
                 }
                 .padding(.trailing)
             }
-
+     
         }
-        .cornerRadius(20)
         .frame(width: 360, height: 200)
-        .shadow(color: .veryLightGrey, radius: 5, x: 0, y: 4)
+        .cornerRadius(20)
+        .shadow(color: .veryLightGrey, radius: 30, x: 0, y: 15)
     }
 }
 

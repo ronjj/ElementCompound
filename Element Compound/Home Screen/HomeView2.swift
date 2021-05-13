@@ -54,10 +54,9 @@ struct HomeView2: View {
                     }
                     .padding(.bottom, -10)
                     
-                    
                     LazyVStack{
                         ForEach(viewModel.announcements.prefix(2)) { announcement in
-                            AnnouncementCardView(announcement: announcement)
+                                AnnouncementCardView(announcement: announcement)
                         }
                         .padding(7)
                         
@@ -68,6 +67,14 @@ struct HomeView2: View {
                         }
                     }
                     .padding(10)
+                    
+                    HStack{
+                        Text("My Projects")
+                            .padding()
+                            .font(Font.custom("Poppins-Regular", size: 18))
+                            
+                        Spacer()
+                    }
                 }
             }
             .toolbar {

@@ -26,7 +26,6 @@
 		543E7BA7262A1976004FDF51 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA6262A1976004FDF51 /* TabView.swift */; };
 		543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA9262A1F96004FDF51 /* SettingsView.swift */; };
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
-		543F888C264CCA16004D5550 /* CameraItemDetailedView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543F888B264CCA16004D5550 /* CameraItemDetailedView2.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		544099A22642333C007EBF4A /* RoleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544099A12642333C007EBF4A /* RoleScreen.swift */; };
 		5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519A264C6BE000BC2719 /* RemoteImage.swift */; };
@@ -75,7 +74,6 @@
 		543E7BA6262A1976004FDF51 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		543E7BA9262A1F96004FDF51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
-		543F888B264CCA16004D5550 /* CameraItemDetailedView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView2.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		544099A12642333C007EBF4A /* RoleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleScreen.swift; sourceTree = "<group>"; };
 		5461519A264C6BE000BC2719 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
 				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
-				543F888B264CCA16004D5550 /* CameraItemDetailedView2.swift */,
 				543B664F264B248500992350 /* CameraDetailView2.swift */,
 				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
@@ -409,7 +406,6 @@
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
-				543F888C264CCA16004D5550 /* CameraItemDetailedView2.swift in Sources */,
 				5440999E26422081007EBF4A /* Users.swift in Sources */,
 				544099A22642333C007EBF4A /* RoleScreen.swift in Sources */,
 				54BBA4C926320B300021536D /* SearchBar.swift in Sources */,
