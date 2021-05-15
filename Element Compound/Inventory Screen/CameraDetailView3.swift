@@ -5,7 +5,7 @@ struct CameraDetailView3: View {
     let camera: CameraItem
     
     var body: some View {
-        ScrollView {
+        ScrollView(.vertical, showsIndicators: false) {
             GeometryReader { geometry in
                 ZStack {
                     if geometry.frame(in: .global).minY <= 0 {

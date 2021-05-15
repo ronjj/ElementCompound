@@ -46,6 +46,7 @@
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
+		54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */; };
 		54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2442B263F922000D1B693 /* InfoScreen.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
@@ -96,6 +97,7 @@
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
+		54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView4.swift; sourceTree = "<group>"; };
 		54E2442B263F922000D1B693 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
 				543B664F264B248500992350 /* CameraDetailView2.swift */,
 				54A8B5DA264DC853003B749C /* CameraDetailView3.swift */,
+				54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */,
 				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
 				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
@@ -403,6 +406,7 @@
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
 				5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */,
+				54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */,
 				54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */,
 				54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */,
 				542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */,
