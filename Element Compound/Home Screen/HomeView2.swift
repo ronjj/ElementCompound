@@ -60,8 +60,6 @@ struct HomeView2: View {
                         }
                         .padding(7)
                         
-//                       ButtonStyle(title: "View All")
-//                        .padding(.top)
                         NavigationLink(destination: AllAnouncements(), tag: 1, selection: $action) {
                                            EmptyView()
                         }
@@ -98,26 +96,7 @@ struct HomeView2: View {
     
             }
         }
-        
     }
-    
-    // need to call this function in onAppear
-    
-    //test if it actually works and the other method is not affecting this system
-//    func getRole()  {
-//      if Auth.auth().currentUser?.email == "22420rj@chaminade-hs.org" {
-//          self.role = true
-//      } else if Auth.auth().currentUser?.email == "22102tb@chaminade-hs.org" {
-//          self.role = true
-//      } else if Auth.auth().currentUser?.email == "sluo@chaminade-hs.org" {
-//           self.role = true
-//      } else if Auth.auth().currentUser?.email == "tterill@chaminade-hs.org" {
-//          self.role = true
-//      } else {
-//          self.role = true
-//      }
-    
-//  }
 }
 
 

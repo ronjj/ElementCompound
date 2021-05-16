@@ -21,8 +21,8 @@ struct CameraDetailView4: View {
             
                 Image(systemName: "chevron.left")
                     .foregroundColor(Color.black)
-                    .imageScale(.large)
-                    .frame(width: 40, height: 40)
+//                    .imageScale(.large)
+//                    .frame(width: 40, height: 40)
             
             }
         .padding()
@@ -30,6 +30,9 @@ struct CameraDetailView4: View {
     }
     
     var body: some View {
+
+            btnBack
+    
         ScrollView(.vertical, showsIndicators: false, content: {
             GeometryReader{ reader in
                 
@@ -61,8 +64,32 @@ struct CameraDetailView4: View {
                     .foregroundColor(.white)
 
                 Text(camera.longDescription)
-                    .padding(.top,10)
-                    .foregroundColor(.white )
+                    .padding(.top, 10)
+                    .foregroundColor(.white)
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                
+                VStack(alignment: .leading){
+                    Text("YouTube Tutorials")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                        
+                    Rectangle()
+                        .foregroundColor(.white)
+                    Rectangle()
+                        .foregroundColor(.white)
+                }
+                
+                VStack(alignment: .leading) {
+                    Text("Courses")
+                        .foregroundColor(.white)
+                        .padding(.top, 10)
+                    Rectangle()
+                        .foregroundColor(.white)
+                    Rectangle()
+                        .foregroundColor(.white)
+                }
                 
             }
             .padding(.top,25)
@@ -73,9 +100,10 @@ struct CameraDetailView4: View {
         })
         .edgesIgnoringSafeArea(.all)
         .background(Color.black.edgesIgnoringSafeArea(.all))
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: btnBack)
+        //.navigationBarBackButtonHidden(true)
+       // .navigationBarItems(leading: btnBack)
         .navigationBarHidden(true)
+       
     }
 }
 

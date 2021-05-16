@@ -20,25 +20,22 @@ struct AllAnouncements: View {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
 
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     LazyVStack{
                         ForEach(viewModel.announcements) { announcement in
                             AnnouncementCardView(announcement: announcement)
                         }
+                        .padding(7)
                     }
-                   // .navigationBarTitle("All Announcements")
-                    .padding(10)
                 }
-                .edgesIgnoringSafeArea(.all)
-                .padding()
-                //.navigationBarTitle("All Announcements")
-                
             }
             .navigationBarTitle("All Announcements")
+           
+          
             .onAppear(){
                 self.viewModel.fetchData()
     
-            }
+        }
     }
 }
 

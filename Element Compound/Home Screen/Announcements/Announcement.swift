@@ -31,7 +31,10 @@ struct Announcement: Identifiable, Codable{
             return formatter.string(from: dateEvent)
         }
 
-
+    
+ 
+    
+    
     enum CodingKeys: String, CodingKey {
         case message
         case sender
@@ -42,7 +45,4 @@ struct Announcement: Identifiable, Codable{
     }
 }
 
-//class Announcements: ObservableObject {
-//   @Published var items = [AnnouncementItem]()
-//}
 

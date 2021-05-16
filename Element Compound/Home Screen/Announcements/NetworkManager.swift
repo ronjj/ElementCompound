@@ -15,12 +15,12 @@ final class NetworkManager {
     private let cache = NSCache<NSString, UIImage>()
     
     static let baseURL = "https://seanallen-course-backend.herokuapp.com/swiftui-fundamentals/"
-    private let appetizerURL = baseURL + "appetizers"
+    private let cameraURL = baseURL + "appetizers"
     
     private init() {}
     
-//    func getAppetizers(completed: @escaping (Result<[Appetizer], APError>) -> Void){
-//        guard let url = URL(string: appetizerURL) else {
+//    func getCameras(completed: @escaping (Result<[CameraItem], ErrorMSGs>) -> Void){
+//        guard let url = URL(string: cameraURL) else {
 //            completed(.failure(.invalidURL))
 //            return
 //        }
@@ -42,7 +42,7 @@ final class NetworkManager {
 //
 //            do{
 //                let decoder = JSONDecoder()
-//                let decodedResponse = try decoder.decode(AppetizerResponse.self, from: data)
+//                let decodedResponse = try decoder.decode(CameraResponse.self, from: data)
 //                completed(.success(decodedResponse.request))
 //            } catch{
 //                completed(.failure(.invalidData))
