@@ -10,6 +10,24 @@ import SwiftUI
 struct CameraDetailView4: View {
     
     let camera: CameraItem
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+        ZStack {
+                Circle()
+                    .foregroundColor(Color.white)
+            
+                Image(systemName: "chevron.left")
+                    .foregroundColor(Color.black)
+                    .imageScale(.large)
+                    .frame(width: 40, height: 40)
+            
+            }
+        .padding()
+        }
+    }
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
@@ -55,6 +73,9 @@ struct CameraDetailView4: View {
         })
         .edgesIgnoringSafeArea(.all)
         .background(Color.black.edgesIgnoringSafeArea(.all))
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: btnBack)
+        .navigationBarHidden(true)
     }
 }
 
