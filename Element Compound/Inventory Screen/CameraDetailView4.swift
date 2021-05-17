@@ -11,29 +11,13 @@ struct CameraDetailView4: View {
     
     let camera: CameraItem
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
-    var btnBack : some View { Button(action: {
-        self.presentationMode.wrappedValue.dismiss()
-        }) {
-        ZStack {
-                Circle()
-                    .foregroundColor(Color.white)
-            
-                Image(systemName: "chevron.left")
-                    .foregroundColor(Color.black)
-//                    .imageScale(.large)
-//                    .frame(width: 40, height: 40)
-            
-            }
-        .padding()
-        }
-    }
-    
+        
     var body: some View {
-
-            btnBack
-    
         ScrollView(.vertical, showsIndicators: false, content: {
+//            CustomNavigationBar()
+//               .padding(.horizontal)
+//               .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
+            
             GeometryReader{ reader in
                 
                 //Type 1
@@ -77,8 +61,10 @@ struct CameraDetailView4: View {
                         
                     Rectangle()
                         .foregroundColor(.white)
+                        .frame(width: 350, height: 75)
                     Rectangle()
                         .foregroundColor(.white)
+                        .frame(width: 350, height: 75)
                 }
                 
                 VStack(alignment: .leading) {
@@ -87,8 +73,10 @@ struct CameraDetailView4: View {
                         .padding(.top, 10)
                     Rectangle()
                         .foregroundColor(.white)
+                        .frame(width: 350, height: 75)
                     Rectangle()
                         .foregroundColor(.white)
+                        .frame(width: 350, height: 75)
                 }
                 
             }
@@ -100,10 +88,22 @@ struct CameraDetailView4: View {
         })
         .edgesIgnoringSafeArea(.all)
         .background(Color.black.edgesIgnoringSafeArea(.all))
-        //.navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading:
+          Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+          }) {
+            ZStack {
+                Circle()
+                    .foregroundColor(.white)
+                    .frame(width:30, height: 30)
+              Image(systemName: "arrow.left")
+                .foregroundColor(.black)
+            }
+        })
        // .navigationBarItems(leading: btnBack)
-        .navigationBarHidden(true)
-       
+        //.navigationBarHidden(true)
+    
     }
 }
 

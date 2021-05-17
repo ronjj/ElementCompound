@@ -33,6 +33,7 @@
 		546151A1264C738A00BC2719 /* Felix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A0264C738A00BC2719 /* Felix.ttf */; };
 		546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A3264C740100BC2719 /* FelixTitling.ttf */; };
 		5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462610726509ECF000E4592 /* ErrorMSGs.swift */; };
+		5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462845826514DED0081614A /* CustomNavigationBar.swift */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
@@ -84,6 +85,7 @@
 		546151A0264C738A00BC2719 /* Felix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felix.ttf; sourceTree = "<group>"; };
 		546151A3264C740100BC2719 /* FelixTitling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FelixTitling.ttf; sourceTree = "<group>"; };
 		5462610726509ECF000E4592 /* ErrorMSGs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMSGs.swift; sourceTree = "<group>"; };
+		5462845826514DED0081614A /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
 		548A35EC264A1307008B9B4A /* Element Compound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Element Compound.entitlements"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
@@ -394,6 +397,7 @@
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
+				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
