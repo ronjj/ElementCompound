@@ -15,8 +15,7 @@ struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
     var title: String
-    //find a way to not force unwrap
-    var photoURL: URL = (Auth.auth().currentUser?.photoURL)! 
+    var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
     var dateEvent: Date
        var dateString: String {
@@ -44,5 +43,6 @@ struct Announcement: Identifiable, Codable{
       
     }
 }
+
 
 
