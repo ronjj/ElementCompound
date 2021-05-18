@@ -84,8 +84,10 @@ struct CameraDetailView4: View {
             .padding(.horizontal)
             .background(Color.black)
             .cornerRadius(30)
+            .frame(maxWidth: .infinity)
             .offset(y: -30)
         })
+        .frame(maxWidth: .infinity)
         .edgesIgnoringSafeArea(.all)
         .background(Color.black.edgesIgnoringSafeArea(.all))
         .navigationBarBackButtonHidden(true)
@@ -107,3 +109,13 @@ struct CameraDetailView4: View {
     }
 }
 
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}

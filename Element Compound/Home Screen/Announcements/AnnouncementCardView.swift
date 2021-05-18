@@ -51,7 +51,6 @@ struct AnnouncementCardView: View {
                 }
                 .padding(.trailing)
             }
-     
         }
         .frame(width: 360, height: 200)
         .cornerRadius(20)
