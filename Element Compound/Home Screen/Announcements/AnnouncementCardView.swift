@@ -15,7 +15,7 @@ struct AnnouncementCardView: View {
     
     var body: some View {
         ZStack{
-            Color.white.edgesIgnoringSafeArea(.all)
+            Color.bg.edgesIgnoringSafeArea(.all)
 
             
             HStack{
@@ -54,7 +54,7 @@ struct AnnouncementCardView: View {
         }
         .frame(width: 360, height: 200)
         .cornerRadius(20)
-        .shadow(color: .veryLightGrey, radius: 30, x: 0, y: 15)
+        .shadow(color: .bg, radius: 30, x: 0, y: 15)
     }
 }
 

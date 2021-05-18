@@ -37,7 +37,7 @@ struct RoleCodeScreen: View {
                     Button(action: {
                      handleDoneTapped()
                     }) {
-                        Text("Send")
+                        Text("Enter")
                     }
                 }
                 

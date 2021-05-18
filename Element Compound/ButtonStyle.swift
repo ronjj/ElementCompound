@@ -17,7 +17,7 @@ struct ButtonStyle: View {
             //.frame(width: 260, height: 50)
             .frame(width: 100, height: 35)
             .foregroundColor(Color.accentColor)
-            .background(Color.white)
+            .background(Color.bg)
             .cornerRadius(10)
     }
 }
