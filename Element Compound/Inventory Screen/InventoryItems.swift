@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct CameraItem: Identifiable{
     let id = UUID()
@@ -14,6 +15,7 @@ struct CameraItem: Identifiable{
     let longDescription: String
     let imageURL: String
     let bigImageURL: String
+    let color = Color.red
     
     
 }

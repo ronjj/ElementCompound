@@ -12,6 +12,7 @@ struct InventoryListCellView: View {
     let image: String
     let title: String
     let description: String
+    let color: Color
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
 
     
@@ -25,7 +26,8 @@ struct InventoryListCellView: View {
             
             HStack{
                 Rectangle()
-                    .foregroundColor(colors.randomElement())
+                   // .foregroundColor(colors.randomElement())
+                    .foregroundColor(color)
                     .frame(width: 10, height: 140)
             }
             
