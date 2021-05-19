@@ -40,7 +40,6 @@ struct Announcement: Identifiable, Codable{
         case dateEvent
         case title
         case photoURL
-      
     }
 }
 

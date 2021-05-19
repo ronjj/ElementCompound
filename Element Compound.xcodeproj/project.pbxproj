@@ -49,6 +49,9 @@
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
 		54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */; };
+		54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636552654526900480CF3 /* AvenirLTStd-Book.otf */; };
+		54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */; };
+		54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636572654526900480CF3 /* AvenirLTStd-Black.otf */; };
 		54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2442B263F922000D1B693 /* InfoScreen.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
@@ -102,6 +105,9 @@
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
 		54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView4.swift; sourceTree = "<group>"; };
+		54D636552654526900480CF3 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
+		54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
+		54D636572654526900480CF3 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
 		54E2442B263F922000D1B693 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 				543B663F264ABFCF00992350 /* Poppins-Thin.ttf */,
 				546151A0264C738A00BC2719 /* Felix.ttf */,
 				546151A3264C740100BC2719 /* FelixTitling.ttf */,
+				54D636572654526900480CF3 /* AvenirLTStd-Black.otf */,
+				54D636552654526900480CF3 /* AvenirLTStd-Book.otf */,
+				54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */,
 				543B6642264ABFF000992350 /* Poppins-Black.ttf */,
 				543B664C264AC72200992350 /* Felixti.ttf */,
 				543B6645264AC04F00992350 /* Poppins-Regular.ttf */,
@@ -314,13 +323,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */,
+				54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */,
 				543B664D264AC72200992350 /* Felixti.ttf in Resources */,
+				54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */,
 				543B6640264ABFCF00992350 /* Poppins-Thin.ttf in Resources */,
 				546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */,
 				5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */,
 				543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */,
 				546151A1264C738A00BC2719 /* Felix.ttf in Resources */,
 				5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */,
+				54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */,
 				543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,7 +570,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -584,7 +596,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

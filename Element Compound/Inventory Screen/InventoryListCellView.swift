@@ -12,14 +12,31 @@ struct InventoryListCellView: View {
     let image: String
     let title: String
     let description: String
+    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+
     
     var body: some View {
+
+        ZStack{
+            Color.bg.edgesIgnoringSafeArea(.all)
+        
+        
         HStack(spacing: 15) {
-            Image(image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 150, height: 120)
-                .cornerRadius(8)
+            
+            HStack{
+                Rectangle()
+                    .foregroundColor(colors.randomElement())
+                    .frame(width: 10, height: 140)
+            }
+            
+            Spacer()
+            
+            HStack{
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 120)
+                    .cornerRadius(8)
             
   
 
@@ -27,19 +44,22 @@ struct InventoryListCellView: View {
                 Text(title)
                     .font(.title2)
                     .fontWeight(.medium)
+                    .fixedSize(horizontal: false, vertical: true)
                 
                 Text(description)
                     .foregroundColor(Color.darkGrey)
-                    .fontWeight(.semibold)
-            }
-            //.padding(.leading)
+                    .font(.footnote)
+                    .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding()
             
+                }
+            Spacer()
+            }
+        
         }
-    }
-}
-
-struct InventoryListCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        InventoryListCellView(image: MockData.sampleCamera.imageURL, title: MockData.sampleCamera.name, description: MockData.sampleCamera.shortDescription)
+        .frame(width: 360, height: 140)
+        .cornerRadius(20)
+        .shadow(color: .bg, radius: 30, x: 0, y: 15)
     }
 }

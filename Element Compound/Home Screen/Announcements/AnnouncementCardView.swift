@@ -13,6 +13,9 @@ struct AnnouncementCardView: View {
     @ObservedObject private var viewModel = AnnouncementsViewModel()
     var announcement: Announcement
     
+    
+    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+       
     var body: some View {
         ZStack{
             Color.bg.edgesIgnoringSafeArea(.all)
@@ -21,13 +24,23 @@ struct AnnouncementCardView: View {
             HStack{
                 //Left side
                 VStack(alignment: .leading){
+                    
+                    VStack(alignment: .leading){
+                        Rectangle()
+                            .cornerRadius(10)
+                            .foregroundColor(colors.randomElement())
+                            .frame(width: 10, height: 10)
+                    }
+                  
                     Text(announcement.title)
-                        .font(Font.custom("Poppins-Black", size: 20))
+                        //.font(Font.custom("Poppins-Regular", size: 18))
+                        .bold()
+                        .font(.title)
                         .padding(.bottom, 5)
                     
                     Text(announcement.message)
-                        .font(Font.custom("Poppins-Regular", size: 18))
                         .padding(.bottom, 10)
+                        .font(.body)
                 }
                 .padding(.leading)
                 
@@ -36,18 +49,19 @@ struct AnnouncementCardView: View {
                 //Right side
                 VStack{
                     Text(announcement.sender)
-                        .font(Font.custom("Poppins-Thin", size: 14))
-                    
+                        .font(.body)
+                     
                     ProfileRemoteImage(urlString: "\(announcement.photoURL)")
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120, height: 90)
                         .clipShape(Circle())
                     
                     Text(announcement.dateString)
-                        .font(Font.custom("Poppins-Thin", size: 12))
+                        .font(.body)
                     
                     Text(announcement.timeString)
-                        .font(Font.custom("Poppins-Thin", size: 10))
+                        .font(.body)
+                       
                 }
                 .padding(.trailing)
             }

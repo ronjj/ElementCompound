@@ -86,17 +86,11 @@ struct SettingsView: View {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.alertNoMail.toggle()
+                            
+
+                            
                         }
                     }
-//                    .sheet(isPresented: $isShowingMailView) {
-//                        MailView(result: self.$result)
-//                    }
-//                    .sheet(isPresented: $presentRoleScreen) {
-//                        RoleCodeScreen()
-//                    }
-//                    .sheet(isPresented: $presentInfoScreen){
-//                        InfoScreen()
-//                    }
                     .sheet(item: $activeSheet) { item in
                         switch item {
                         case .info:
@@ -107,9 +101,11 @@ struct SettingsView: View {
                             RoleCodeScreen()
                         }
                     }
-                    
+//                    .alert(item: self.$alertNoMail) {
+//                               Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
+//                           }
                     .alert(isPresented: self.$alertNoMail) {
-                        Alert(title: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"))
+                        Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
                     }
                     
                     Button(action: {
@@ -126,7 +122,9 @@ struct SettingsView: View {
                         Text("Get Role")
                     }
                 }
+                
             }
+           
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
 

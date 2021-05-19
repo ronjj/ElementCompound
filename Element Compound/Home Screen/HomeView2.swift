@@ -51,6 +51,7 @@ struct HomeView2: View {
                             ButtonStyle(title: "View All")
                         }
                         .padding()
+                        .shadow(color: .bg, radius: 15, x: 0, y: 7.5)
                         
                     }
                     .padding(.bottom, -10)
