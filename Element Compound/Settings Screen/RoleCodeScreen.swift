@@ -7,14 +7,23 @@
 
 import SwiftUI
 
+struct AlertItem: Identifiable {
+    var id = UUID()
+    var title: Text
+    var message: Text?
+    var dismissButton: Alert.Button?
+}
 
 
 struct RoleCodeScreen: View {
+    
     @Environment(\.presentationMode) var presentationMode
     @State var text = ""
     @State var correctPassword = false
     @State var incorrectPassword = false
+    @State private var alertItem: AlertItem?
     @AppStorage ("role_Status") var role = Bool()
+   
     
     var body: some View {
         NavigationView{
@@ -36,20 +45,25 @@ struct RoleCodeScreen: View {
                         Text("Cancel")
                     }
                     
+                    
                     Button(action: {
-                     handleEnterTapped()
+                        
+                        handleEnterTapped()
                     }) {
                         Text("Enter")
                     }
                 }
             }
+            .alert(item: $alertItem) { alertItem in
+                       Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+                   }
 
-            .alert(isPresented: self.$correctPassword) {
-                Alert(title: Text("Correct Password"), message: Text("You Now Have Extra Capabilities"), dismissButton: .cancel())
-            }
-            .alert(isPresented: self.$incorrectPassword) {
-                Alert(title: Text("Incorrect Password"), message: Text("Incorrect Password. Current status remains."), dismissButton: .cancel())
-            }
+//            .alert(isPresented: self.$correctPassword) {
+//                Alert(title: Text("Correct Password"), message: Text("You Now Have Extra Capabilities"), dismissButton: .cancel())
+//            }
+//            .alert(isPresented: self.$incorrectPassword) {
+//                Alert(title: Text("Incorrect Password"), message: Text("Incorrect Password. Current status remains."), dismissButton: .cancel())
+//            }
         }
     }
     
@@ -57,22 +71,20 @@ struct RoleCodeScreen: View {
         dismiss()
     }
     
-    
-   
+
     func handleEnterTapped() {
-        dismiss()
         codeCheck()
-      
+        
+       
     }
     
     func codeCheck() {
         if text == "Password" {
             self.role = true
-            self.correctPassword.toggle()
+            self.alertItem = AlertItem(title: Text("Correct Password"), message: Text("You now have special privileges"))
         } else {
             //need to present an error saying code was wrong
-            self.incorrectPassword.toggle()
-            self.role = false
+            self.alertItem = AlertItem(title: Text("Incorrect Password"), message: Text("You entered an incorrect password"))
             text = ""
             
         }

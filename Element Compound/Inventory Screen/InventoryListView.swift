@@ -34,7 +34,7 @@ struct InventoryListView: View {
 
                     HStack{
                         Text("Cameras")
-                            .foregroundColor(Color.bg)
+                            .foregroundColor(Color.bginv)
                             .fontWeight(.bold)
                             .font(.title2)
                             .padding()
@@ -45,16 +45,17 @@ struct InventoryListView: View {
                         ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
                             NavigationLink(destination: CameraDetailView4(camera: camera)) {
                                 InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
-                                    .padding(7)
+                                    
                             }
+                            .padding(5)
                         }
-                        .padding(.bottom, 20)
+                   
                     
                     
 
                     HStack{
                         Text("Computers")
-                            .foregroundColor(Color.bg)
+                            .foregroundColor(Color.bginv)
                             .fontWeight(.bold)
                             .font(.title2)
                             .padding()
@@ -65,14 +66,14 @@ struct InventoryListView: View {
                         ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in
                             NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
                                 InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription, color: Color.ruby)
-                                    .padding(5)
+                                    
                             }
                         }
                     
                     
                     HStack{
                         Text("Audio")
-                            .foregroundColor(Color.bg)
+                            .foregroundColor(Color.bginv)
                             .fontWeight(.bold)
                             .font(.title2)
                             .padding()
@@ -83,14 +84,15 @@ struct InventoryListView: View {
                         ForEach(MockData.audios.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { audio in
                             NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
                                 InventoryListCellView(image: audio.imageURL, title: audio.name, description: audio.shortDescription, color: Color.yellow2)
-                                    .padding(5)
+                                    
                             }
+                            .padding(5)
                         }
                     
                     
                         HStack{
                             Text("Computers")
-                                .foregroundColor(Color.bg)
+                                .foregroundColor(Color.bginv)
                                 .fontWeight(.bold)
                                 .font(.title2)
                                 .padding()

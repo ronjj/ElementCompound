@@ -34,6 +34,11 @@ struct HomeView2: View {
 //                Section(header: Text("My Projects")) {
 //                    Can uncomment this section once I finish the projects part of the app
 //                }
+//            CustomTabBar()
+//                .navigationTitle("")
+//                .navigationBarTitleDisplayMode(.inline)
+//                .navigationBarHidden(true)
+//            
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
                 

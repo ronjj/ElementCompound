@@ -17,6 +17,7 @@ struct Announcement: Identifiable, Codable{
     var title: String
     var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
+   // var color: Color = Color.random
     var dateEvent: Date
        var dateString: String {
            let formatter = DateFormatter()
@@ -31,7 +32,15 @@ struct Announcement: Identifiable, Codable{
         }
 
     
- 
+    init(id: UUID = UUID(), message: String, title: String, photoURL: URL, sender: String, /*color: Color,*/ dateEvent: Date) {
+       // self.id = id
+        self.message = message
+        self.title = title
+        self.photoURL = photoURL
+     //   self.color = color
+        self.sender = sender
+        self.dateEvent = dateEvent
+    }
     
     
     enum CodingKeys: String, CodingKey {
@@ -40,6 +49,7 @@ struct Announcement: Identifiable, Codable{
         case dateEvent
         case title
         case photoURL
+       // case color
     }
 }
 
