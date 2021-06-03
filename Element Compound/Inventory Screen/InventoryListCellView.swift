@@ -23,7 +23,7 @@ struct InventoryListCellView: View {
             HStack(spacing: 15) {
                 HStack{
                     Rectangle()
-                        // .foregroundColor(colors.randomElement())
+                        //.foregroundColor(colors.randomElement())
                         .foregroundColor(color)
                         .frame(width: 10, height: 140)
                 }

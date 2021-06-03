@@ -67,7 +67,6 @@ struct AnnouncementEditView: View {
     }
     
 }
-
 struct AnnouncementEditView_Previews: PreviewProvider {
     static var previews: some View {
         AnnouncementEditView()
