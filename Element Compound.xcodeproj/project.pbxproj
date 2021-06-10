@@ -178,14 +178,13 @@
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
-				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
-				54AB3B552655999C0073EB35 /* CustomTabBar.swift */,
+				54B455192672A54D00E2F62F /* Tab Bar */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
+				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
-				543E7BA6262A1976004FDF51 /* TabView.swift */,
 				544099A12642333C007EBF4A /* RoleScreen.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
@@ -231,6 +230,15 @@
 				548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */,
 			);
 			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		54B455192672A54D00E2F62F /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				543E7BA6262A1976004FDF51 /* TabView.swift */,
+				54AB3B552655999C0073EB35 /* CustomTabBar.swift */,
+			);
+			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		54BBA4CC2632168A0021536D /* Announcements */ = {
@@ -578,12 +586,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -604,12 +612,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
