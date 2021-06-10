@@ -52,7 +52,7 @@ struct AnnouncementCardView: View {
                     Text(announcement.sender)
                         .font(.body)
                      
-                    ProfileRemoteImage(urlString: "\(announcement.photoURL)")
+                    AsyncImage(url: announcement.photoURL)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120, height: 90)
                         .clipShape(Circle())
