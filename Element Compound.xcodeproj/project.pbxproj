@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
-		5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
 		5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */; };
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
@@ -34,6 +33,7 @@
 		546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A3264C740100BC2719 /* FelixTitling.ttf */; };
 		5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462610726509ECF000E4592 /* ErrorMSGs.swift */; };
 		5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462845826514DED0081614A /* CustomNavigationBar.swift */; };
+		548123A72674026D00A06200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548123A62674026D00A06200 /* SceneDelegate.swift */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
@@ -58,13 +58,13 @@
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
 		54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */; };
+		54FDFB4C2673F3A100D25361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */; };
 		DAB328010F53D22C0AF95C45 /* Pods_Element_Compound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A768F2986036DFE58B81BA /* Pods_Element_Compound.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
-		5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element_CompoundApp.swift; sourceTree = "<group>"; };
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
@@ -91,6 +91,7 @@
 		546151A3264C740100BC2719 /* FelixTitling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FelixTitling.ttf; sourceTree = "<group>"; };
 		5462610726509ECF000E4592 /* ErrorMSGs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMSGs.swift; sourceTree = "<group>"; };
 		5462845826514DED0081614A /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		548123A62674026D00A06200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
 		548A35EC264A1307008B9B4A /* Element Compound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Element Compound.entitlements"; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscItemDetailedView.swift; sourceTree = "<group>"; };
+		54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		830855C6B59589D064BAED85 /* Pods-Element Compound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.release.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.release.xcconfig"; sourceTree = "<group>"; };
 		E30D470D52F55E4131C75708 /* Pods-Element Compound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.debug.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.debug.xcconfig"; sourceTree = "<group>"; };
 		E5A768F2986036DFE58B81BA /* Pods_Element_Compound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Element_Compound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,9 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				548A35EC264A1307008B9B4A /* Element Compound.entitlements */,
-				5435EAD0262BA2C8008078F1 /* GoogleService-Info.plist */,
 				543B663F264ABFCF00992350 /* Poppins-Thin.ttf */,
 				546151A0264C738A00BC2719 /* Felix.ttf */,
+				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
 				546151A3264C740100BC2719 /* FelixTitling.ttf */,
 				54D636572654526900480CF3 /* AvenirLTStd-Black.otf */,
 				54D636552654526900480CF3 /* AvenirLTStd-Book.otf */,
@@ -186,6 +188,7 @@
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
+				548123A62674026D00A06200 /* SceneDelegate.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
 				544099A12642333C007EBF4A /* RoleScreen.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
@@ -336,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54FDFB4C2673F3A100D25361 /* GoogleService-Info.plist in Resources */,
 				5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */,
 				54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */,
 				543B664D264AC72200992350 /* Felixti.ttf in Resources */,
@@ -345,7 +349,6 @@
 				5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */,
 				543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */,
 				546151A1264C738A00BC2719 /* Felix.ttf in Resources */,
-				5435EAD1262BA2C8008078F1 /* GoogleService-Info.plist in Resources */,
 				54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */,
 				543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */,
 			);
@@ -432,6 +435,7 @@
 				54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
+				548123A72674026D00A06200 /* SceneDelegate.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
@@ -586,7 +590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -597,7 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.chaminade-hs.element.compound";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.jab.ron.Element-Compound";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,7 +616,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -623,7 +627,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.chaminade-hs.element.compound";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.jab.ron.Element-Compound";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -15,7 +15,7 @@ struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
     var title: String
-    var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
+   var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
    // var color: Color = Color.random
     var dateEvent: Date
