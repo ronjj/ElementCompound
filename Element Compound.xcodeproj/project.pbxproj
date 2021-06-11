@@ -174,13 +174,15 @@
 				543B664C264AC72200992350 /* Felixti.ttf */,
 				543B6645264AC04F00992350 /* Poppins-Regular.ttf */,
 				543B6638264ABBF300992350 /* Info.plist */,
+				54BBA4CC2632168A0021536D /* Announcements */,
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
-				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
 				54B455192672A54D00E2F62F /* Tab Bar */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
+				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
@@ -245,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				54BBA4CE263216EA0021536D /* Announcement.swift */,
-				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
 				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
 				5493327F263C5295001C1D24 /* AnnouncementEditView.swift */,
@@ -262,7 +263,6 @@
 			children = (
 				54933278263C51C6001C1D24 /* HomeView2.swift */,
 				5440999D26422081007EBF4A /* Users.swift */,
-				54BBA4CC2632168A0021536D /* Announcements */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -513,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -568,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

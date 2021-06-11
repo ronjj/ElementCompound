@@ -20,7 +20,9 @@ struct CustomTabBar: View {
             HStack{
                 
                 Button(action: {
-                    self.index = 0
+                    withAnimation(.default){
+                        self.index = 0
+                    }
                 }, label: {
                     VStack{
                         if self.index != 0{
@@ -43,7 +45,9 @@ struct CustomTabBar: View {
                 })
                 
                 Button(action: {
-                    self.index = 1
+                    withAnimation(.default){
+                        self.index = 1
+                    }
                 }, label: {
                     VStack{
                         if self.index != 1{
@@ -65,7 +69,9 @@ struct CustomTabBar: View {
                 })
                 
                 Button(action: {
-                    self.index = 2
+                    withAnimation(.default){
+                        self.index = 2
+                    }
                 }, label: {
                     VStack{
                         if self.index != 2{
@@ -87,7 +93,9 @@ struct CustomTabBar: View {
                 })
                 
                 Button(action: {
-                    self.index = 3
+                    withAnimation(.default){
+                        self.index = 3
+                    }
                 }, label: {
                     VStack{
                         if self.index != 3{
@@ -109,7 +117,9 @@ struct CustomTabBar: View {
                 })
                 
                 Button(action: {
-                    self.index = 4
+                    withAnimation(.default){
+                        self.index = 4
+                    }
                 }, label: {
                     VStack{
                         if self.index != 4{
@@ -135,7 +145,7 @@ struct CustomTabBar: View {
             .background(.regularMaterial)
             .cornerRadius(20)
             .shadow(radius: 30)
-            .animation(.default)
+            
         }
         
     }
