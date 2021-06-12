@@ -112,10 +112,7 @@ struct Element_CompoundApp: App {
         
         
         func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-         
-
-          let dataDict:[String: String] = ["token": fcmToken ?? ""]
-         
+          let dataDict:[String: String] = ["token": fcmToken ?? ""] 
             print(dataDict)
         }
         

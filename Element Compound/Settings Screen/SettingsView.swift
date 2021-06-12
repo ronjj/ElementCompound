@@ -124,8 +124,8 @@ struct SettingsView: View {
                         Text("Get Role")
                     }
                 }
-                
             }
+            
            
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
