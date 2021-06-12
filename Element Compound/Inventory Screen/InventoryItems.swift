@@ -69,13 +69,13 @@ struct MockData {
         CameraItem( name: "Lumix GH4",
                     shortDescription: "Basic camera for video recording.",
                     longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.",
-                    imageURL: "asian-flank-steak",
+                    imageURL: "black",
                     bigImageURL: "Lumix GH4 Background"),
         
         CameraItem(name: "Lumix GH5",
                    shortDescription: "4K camera for video recording.",
                    longDescription: "The professional level GH5 from LUMIX delivers high quality 4K video with its improved design from the GH4. The mirrorless camera delivers crisp video, while in-camera stabilization provides smooth movement, and the in-camera ",
-                   imageURL: "Rode (450x360) Final",
+                   imageURL: "black",
                    bigImageURL: "Rode Background Final"),
         
         CameraItem( name: "Lumix GH5s",

@@ -20,7 +20,10 @@ struct TabViewItem: View {
                     InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
                 }
                 else if self.index == 2{
-                    SettingsView()
+                    Color.red.opacity(0.5).edgesIgnoringSafeArea(.all)
+                    
+                    Text("Courses")
+                        .font(.largeTitle)
                 }
                 else if self.index == 3{
                     Color.pink.edgesIgnoringSafeArea(.all)
@@ -29,12 +32,8 @@ struct TabViewItem: View {
                         .font(.largeTitle)
                 }
                 else{
-                    Color.red.opacity(0.5).edgesIgnoringSafeArea(.all)
-                    
-                    Text("Courses")
-                        .font(.largeTitle)
+                    SettingsView()
                 }
-                
                 
                 CustomTabBar(index: $index)
             }

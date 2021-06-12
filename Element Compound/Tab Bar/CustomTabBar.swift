@@ -75,19 +75,20 @@ struct CustomTabBar: View {
                 }, label: {
                     VStack{
                         if self.index != 2{
-                            Image(systemName: "gear")
+                            Image(systemName: "folder")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
                         else{
-                            Image(systemName: "gear")
+                            Image(systemName: "folder.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
+                        
                         
                     }
                 })
@@ -123,20 +124,19 @@ struct CustomTabBar: View {
                 }, label: {
                     VStack{
                         if self.index != 4{
-                            Image(systemName: "folder")
+                            Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
                         else{
-                            Image(systemName: "folder.fill")
+                            Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
-                        
                     }
                 })
                 

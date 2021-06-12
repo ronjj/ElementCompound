@@ -47,7 +47,6 @@ struct RoleCodeScreen: View {
                     
                     
                     Button(action: {
-                        
                         handleEnterTapped()
                     }) {
                         Text("Enter")
@@ -74,8 +73,6 @@ struct RoleCodeScreen: View {
 
     func handleEnterTapped() {
         codeCheck()
-        
-       
     }
     
     func codeCheck() {
@@ -86,13 +83,11 @@ struct RoleCodeScreen: View {
             //need to present an error saying code was wrong
             self.alertItem = AlertItem(title: Text("Incorrect Password"), message: Text("You entered an incorrect password"))
             text = ""
-            
         }
     }
     
     func dismiss() {
         presentationMode.wrappedValue.dismiss()
     }
-    
 }
 
