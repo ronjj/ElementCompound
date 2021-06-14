@@ -26,10 +26,7 @@ struct TabViewItem: View {
                         .font(.largeTitle)
                 }
                 else if self.index == 3{
-                    Color.pink.edgesIgnoringSafeArea(.all)
-                    
-                    Text("Projects")
-                        .font(.largeTitle)
+                   ProjectsView()
                 }
                 else{
                     SettingsView()

@@ -8,7 +8,7 @@
 import SwiftUI
 import Firebase
 
-struct AnnouncementEditView: View {
+struct ProjectAddView: View {
     
     @StateObject var viewModel = AnnoucnementViewModel()
     @Environment(\.presentationMode) var presentationMode
@@ -71,13 +71,3 @@ struct AnnouncementEditView: View {
 
     
 }
-struct AnnouncementEditView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnnouncementEditView()
-    }
-}
-
-
-
- 
-

@@ -95,7 +95,7 @@ struct HomeView2: View {
            
             .navigationBarTitle("Element Compound")
             .sheet(isPresented: $presentAddNewAnnouncement){
-                AnnouncementEditView()
+                AnnouncementAddView()
             }
 
             .onAppear(){

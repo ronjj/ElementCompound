@@ -26,6 +26,11 @@
 		543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA9262A1F96004FDF51 /* SettingsView.swift */; };
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
+		5454C5232677EB7A00EC84DA /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5222677EB7A00EC84DA /* Project.swift */; };
+		5454C5262677EBC300EC84DA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */; };
+		5454C5282677EC0700EC84DA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5272677EC0700EC84DA /* ProjectViewModel.swift */; };
+		5454C52A2677ECB400EC84DA /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5292677ECB400EC84DA /* ProjectCardView.swift */; };
+		5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C52B2677ECE300EC84DA /* ProjectAddView.swift */; };
 		5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519A264C6BE000BC2719 /* RemoteImage.swift */; };
 		5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519D264C6C0500BC2719 /* NetworkManager.swift */; };
 		546151A1264C738A00BC2719 /* Felix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A0264C738A00BC2719 /* Felix.ttf */; };
@@ -38,7 +43,7 @@
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
 		54933279263C51C6001C1D24 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54933278263C51C6001C1D24 /* HomeView2.swift */; };
 		5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */; };
-		54933280263C5295001C1D24 /* AnnouncementEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementEditView.swift */; };
+		54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementAddView.swift */; };
 		54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyle.swift */; };
 		54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */; };
 		54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5DA264DC853003B749C /* CameraDetailView3.swift */; };
@@ -83,6 +88,11 @@
 		543E7BA9262A1F96004FDF51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		5454C5222677EB7A00EC84DA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		5454C5272677EC0700EC84DA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		5454C5292677ECB400EC84DA /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		5454C52B2677ECE300EC84DA /* ProjectAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAddView.swift; sourceTree = "<group>"; };
 		5461519A264C6BE000BC2719 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		5461519D264C6C0500BC2719 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		546151A0264C738A00BC2719 /* Felix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felix.ttf; sourceTree = "<group>"; };
@@ -96,7 +106,7 @@
 		548C3F8C2630BED600EFD1C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		54933278263C51C6001C1D24 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewModel.swift; sourceTree = "<group>"; };
-		5493327F263C5295001C1D24 /* AnnouncementEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementEditView.swift; sourceTree = "<group>"; };
+		5493327F263C5295001C1D24 /* AnnouncementAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementAddView.swift; sourceTree = "<group>"; };
 		54A8B5D2264D6770003B749C /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnnouncements.swift; sourceTree = "<group>"; };
 		54A8B5DA264DC853003B749C /* CameraDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView3.swift; sourceTree = "<group>"; };
@@ -184,13 +194,15 @@
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
+				5454C5242677EB8700EC84DA /* Projects */,
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
+				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
+				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
-				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
 			);
@@ -223,6 +235,19 @@
 			path = "Inventory Screen";
 			sourceTree = "<group>";
 		};
+		5454C5242677EB8700EC84DA /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				5454C5222677EB7A00EC84DA /* Project.swift */,
+				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
+				5454C5272677EC0700EC84DA /* ProjectViewModel.swift */,
+				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
+				5454C5292677ECB400EC84DA /* ProjectCardView.swift */,
+				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
 		548A35E82649FFA7008B9B4A /* Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,11 +274,9 @@
 				54BBA4CE263216EA0021536D /* Announcement.swift */,
 				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
 				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
-				5493327F263C5295001C1D24 /* AnnouncementEditView.swift */,
+				5493327F263C5295001C1D24 /* AnnouncementAddView.swift */,
 				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
 				54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */,
-				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
-				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 			);
 			path = Announcements;
 			sourceTree = "<group>";
@@ -418,11 +441,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5454C5282677EC0700EC84DA /* ProjectViewModel.swift in Sources */,
+				5454C5262677EBC300EC84DA /* ProjectsViewModel.swift in Sources */,
 				548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */,
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
 				54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */,
-				54933280263C5295001C1D24 /* AnnouncementEditView.swift in Sources */,
+				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
+				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
@@ -438,9 +464,11 @@
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
+				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
+				5454C52A2677ECB400EC84DA /* ProjectCardView.swift in Sources */,
 				5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */,
 				54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */,
 				54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */,

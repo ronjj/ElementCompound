@@ -113,7 +113,6 @@ struct CustomTabBar: View {
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
-                        
                     }
                 })
                 
@@ -149,7 +148,6 @@ struct CustomTabBar: View {
             .shadow(radius: 30)
             
         }
-        
     }
 }
 

@@ -54,6 +54,6 @@ struct InfoScreen: View {
 
 struct InfoScreen_Previews: PreviewProvider {
     static var previews: some View {
-        AnnouncementEditView()
+        AnnouncementAddView()
     }
 }
