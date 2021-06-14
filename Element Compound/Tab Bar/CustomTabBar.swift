@@ -142,7 +142,9 @@ struct CustomTabBar: View {
                 
             }
             .padding()
-            .background(.regularMaterial)
+            .background(Color.bg)
+            //For iOS 15 
+          //  .background(.regularMaterial)
             .cornerRadius(20)
             .shadow(radius: 30)
             

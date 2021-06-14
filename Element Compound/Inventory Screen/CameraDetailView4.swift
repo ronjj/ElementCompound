@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct CameraDetailView4: View {
     
@@ -62,9 +63,8 @@ struct CameraDetailView4: View {
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 350, height: 75)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
+                    VideoPlayer(player: AVPlayer(url:  URL(string: "https://bit.ly/swswift")!))
+                        .frame(height: 300)
                 }
                 
                 VStack(alignment: .leading) {

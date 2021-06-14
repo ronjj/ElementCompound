@@ -27,7 +27,7 @@ struct InventoryListCellView: View {
                         .foregroundColor(color)
                         .frame(width: 10, height: 140)
                 }
-
+                
                 HStack{
                     Image(image)
                         .resizable()

@@ -81,13 +81,13 @@ struct MockData {
         CameraItem( name: "Lumix GH5s",
                     shortDescription: "Optimized 4K camera for video recording.",
                     longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.",
-                    imageURL: "sony 350x200",
+                    imageURL: "black",
                     bigImageURL: "Mavic Mini 2"),
         
         CameraItem(name: "Sony A7SII",
                    shortDescription: "High end 4K video camera.",
                    longDescription: "The Sony A7SII is the elite camera of Element. With built-in stabilization technology, the A7SII delivers smooth 4K video. The camera microphone records basic audio. The ultra-sensitive filter gives the camera dynamic performance in most lighting conditions. The A7SII also records full pixel readouts, amplifying video quality for the editing room.",
-                   imageURL: "a7sii-s",
+                   imageURL: "black",
                    bigImageURL: "largeImage"),
         
         CameraItem(name: "Ricoh Theta 360",
