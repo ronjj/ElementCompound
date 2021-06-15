@@ -15,7 +15,7 @@ import SwiftUI
 
 
 class ProjectViewModel: ObservableObject{
-    @Published var project: Announcement = Announcement(message: "", title: "",  photoURL:(Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date())
+    @Published var project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea")
     @Published var modified = false
   
     let ReceiverFCMToken = "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo"
@@ -27,20 +27,19 @@ class ProjectViewModel: ObservableObject{
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(announcement: Announcement = Announcement(message: "", title: "",  photoURL: (Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date()
-)) {
-        self.announcement = announcement
-        self.$announcement
+    init(project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea")) {
+        self.project = project
+        self.$project
             .dropFirst()
-            .sink{ [weak self] announcement in
+            .sink{ [weak self] project in
                 self?.modified = true
             }
             .store(in: &cancellables)
     }
     
-    func addAnnouncement(announcement: Announcement){
+    func addProject(project: Project){
         do {
-          let _ =  try db.collection("announcements").addDocument(from: announcement)
+          let _ =  try db.collection("projects").addDocument(from: project)
         }
         catch{
             print(error)
@@ -48,7 +47,7 @@ class ProjectViewModel: ObservableObject{
     }
     
     func save() {
-        addAnnouncement(announcement: announcement)
+        addProject(project: project)
     }
 
     func sendMessageTouser(to token: String, title: String, body: String) {

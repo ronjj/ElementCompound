@@ -12,8 +12,8 @@ import GoogleSignIn
 
 //need to change announcement stuff 
 struct ProjectCardView: View {
-    @ObservedObject private var viewModel = AnnouncementsViewModel()
-    var announcement: Announcement
+    @ObservedObject private var viewModel = ProjectsViewModel()
+    var project: Project
     
     
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
@@ -35,15 +35,21 @@ struct ProjectCardView: View {
                             .frame(width: 10, height: 10)
                     }
                   
-                    Text(announcement.title)
+                    Text(project.title)
                         //.font(Font.custom("Poppins-Regular", size: 18))
                         .bold()
                         .font(.title)
                         .padding(.bottom, 5)
                     
-                    Text(announcement.message)
-                        .padding(.bottom, 10)
-                        .font(.body)
+                    Text("\(project.pickedDateString)")
+                        .font(.title3)
+                        .padding(.bottom, 5)
+                    
+                    Text("\(project.pickedTimeString)")
+                        .font(.title3)
+                        .padding(.bottom, 5)
+                    
+                    
                 }
                 .padding(.leading)
                 
@@ -51,20 +57,20 @@ struct ProjectCardView: View {
                 
                 //Right side
                 VStack{
-                    Text(announcement.sender)
-                        .font(.body)
-                     
-                    AsyncImage(url: announcement.photoURL)
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 120, height: 90)
-                        .clipShape(Circle())
+//                    Text(project.creator)
+//                        .font(.body)
                     
-                    Text(announcement.dateString)
-                        .font(.body)
+//                    Text(project.extraInfo)
+//                        .font(.body)
+
+//                    Text(project.dateString)
+//                        .font(.body)
+//
+//                    Text(project.timeString)
+//                        .font(.body)
                     
-                    Text(announcement.timeString)
+                    Text(project.completionLevel)
                         .font(.body)
-                       
                 }
                 .padding(.trailing)
             }

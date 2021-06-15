@@ -88,8 +88,6 @@ struct CustomTabBar: View {
                                 .foregroundColor(.bginv)
                                 .padding()
                         }
-                        
-                        
                     }
                 })
                 

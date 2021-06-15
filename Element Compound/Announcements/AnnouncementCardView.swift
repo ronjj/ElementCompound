@@ -15,11 +15,11 @@ struct AnnouncementCardView: View {
     
     
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
-       
+    
     var body: some View {
         ZStack{
             Color.bg.edgesIgnoringSafeArea(.all)
-
+            
             
             HStack{
                 //Left side
@@ -29,12 +29,12 @@ struct AnnouncementCardView: View {
                         Rectangle()
                             .cornerRadius(10)
                             .foregroundColor(colors.randomElement())
-                           // .foregroundColor(announcement.color)
+                        // .foregroundColor(announcement.color)
                             .frame(width: 10, height: 10)
                     }
-                  
+                    
                     Text(announcement.title)
-                        //.font(Font.custom("Poppins-Regular", size: 18))
+                    //.font(Font.custom("Poppins-Regular", size: 18))
                         .bold()
                         .font(.title)
                         .padding(.bottom, 5)
@@ -51,18 +51,22 @@ struct AnnouncementCardView: View {
                 VStack{
                     Text(announcement.sender)
                         .font(.body)
-                     
-                    AsyncImage(url: announcement.photoURL)
+                    
+                    ProfileRemoteImage(urlString: "\(announcement.photoURL)")
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 120, height: 90)
                         .clipShape(Circle())
+                    //                    AsyncImage(url: announcement.photoURL)
+                    //                        .aspectRatio(contentMode: .fit)
+                    //                        .frame(width: 120, height: 90)
+                    //                        .clipShape(Circle())
                     
                     Text(announcement.dateString)
                         .font(.body)
                     
                     Text(announcement.timeString)
                         .font(.body)
-                       
+                    
                 }
                 .padding(.trailing)
             }

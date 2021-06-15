@@ -10,30 +10,44 @@ import Firebase
 
 struct ProjectAddView: View {
     
-    @StateObject var viewModel = AnnoucnementViewModel()
+    @StateObject var viewModel = ProjectViewModel()
     @Environment(\.presentationMode) var presentationMode
-
+    static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
     
     var body: some View {
         NavigationView{
             Form{
                 Section(header: Text("Title")) {
-                    TextEditor(text:$viewModel.announcement.title)
+                    TextEditor(text:$viewModel.project.title)
                         .font(.custom("SF Pro", size: 18))
                         .frame(height: 125, alignment: .center)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
                 }
                 
-                Section(header: Text("Message")) {
-                    TextEditor(text:$viewModel.announcement.message)
-                        .font(.custom("SF Pro", size: 18))
-                        .frame(height: 125, alignment: .center)
-                        .foregroundColor(.gray)
-                        .multilineTextAlignment(.leading)
+                Section(header: Text("Due Date")) {
+                    DatePicker("Choose Date", selection: $viewModel.project.dueDate)
                 }
+                
+                Section(header: Text("Stage")) {
+                    Picker("Completion Level", selection: $viewModel.project.completionLevel) {
+                        ForEach(Self.completionLevels, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                }
+                                    
+//                Section(header: Text("Project Notes")){
+//                    TextField("text", text: $viewModel.project.extraInfo)
+//                        .frame(height: 125, alignment: .center)
+//                        .foregroundColor(.gray)
+//                        .multilineTextAlignment(.leading)
+//                }
+             
+                
             }
-            .navigationTitle("New Announcement")
+            .navigationTitle("New Project")
+            
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     
@@ -45,13 +59,12 @@ struct ProjectAddView: View {
                     
                     Button(action: {
                         handleDoneTapped()
-                        self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.announcement.title, body: self.viewModel.announcement.message)
+                        self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.project.title, body: self.viewModel.project.creator)
                     }) {
-                        Text("Send")
+                        Text("Create")
                     }
                     .disabled(!viewModel.modified)
                 }
-                
             }
         }
     }
@@ -68,6 +81,4 @@ struct ProjectAddView: View {
         viewModel.save()
         dismiss()
     }
-
-    
 }
