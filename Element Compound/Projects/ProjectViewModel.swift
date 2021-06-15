@@ -17,9 +17,10 @@ import SwiftUI
 class ProjectViewModel: ObservableObject{
     @Published var project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea")
     @Published var modified = false
-  
+    
     let ReceiverFCMToken = "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo"
     let legacyServerKey = "AAAAnjP38Rg:APA91bH6k0y3FhWBKdRImuwXyt_jgm5u-0HedjcfX30j_P6RJ5Pdc_-cGEZA_jjXUeXcLy39YO4MnIB4nWqFy9FGlrxUhdz5kVLhwdKWYMF7rtkjccrjPE_A2tXAV_9F0RK6SVUyAPmc"
+  
     @State private var fcmTokenMessage = "fcmTokenMessage"
     @State private var instanceIDTokenMessage = "instanceIDTokenMessage"
     

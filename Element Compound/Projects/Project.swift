@@ -38,7 +38,7 @@ struct Project: Identifiable, Codable{
             let formatter = DateFormatter()
             formatter.dateFormat = "h:mm a"
             formatter.timeZone = NSTimeZone(name: "EDT") as TimeZone?
-            return formatter.string(from: dateEvent)
+            return formatter.string(from: dueDate)
         }
     var completionLevel: String
  

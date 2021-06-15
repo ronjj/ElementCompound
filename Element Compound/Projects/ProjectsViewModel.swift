@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Firebase
@@ -14,6 +15,7 @@ import GoogleSignIn
 
 class ProjectsViewModel:ObservableObject {
     @Published var projects = [Project]()
+    
     
     private var db = Firestore.firestore()
     

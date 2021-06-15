@@ -71,8 +71,17 @@ struct ProjectCardView: View {
                     
                     Text(project.completionLevel)
                         .font(.body)
+                    
+                   
                 }
                 .padding(.trailing)
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .foregroundColor(Color.bginv)
+                    .font(.caption)
+                    .padding(.horizontal, 8)
             }
         }
         .frame(width: 360, height: 200)
