@@ -111,7 +111,7 @@ struct Element_CompoundApp: App {
         }
         
         
-        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
           let dataDict:[String: String] = ["token": fcmToken ?? ""] 
             print(dataDict)
         }

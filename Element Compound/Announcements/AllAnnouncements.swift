@@ -40,11 +40,11 @@ struct AllAnouncements: View {
 }
 
 
-struct AllAnouncements_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView2()
-    }
-}
+//struct AllAnouncements_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView2()
+//    }
+//}
 
 
 

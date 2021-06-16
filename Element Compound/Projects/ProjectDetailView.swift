@@ -16,30 +16,42 @@ struct ProjectDetailView: View {
     var body: some View {
         ZStack{
             Color.lightBlue.edgesIgnoringSafeArea(.all)
-
-
+            
+            
             List{
-                Section{
+                Section(header: Text("Creation Information")){
                     Text("Created by: \(project.creator)")
                         .font(.body)
                     
                     Text("Created on: \(project.dateString) at \(project.timeString)")
                         .font(.body)
+                    
+
                 }
                 
-                Section{
+                Section(header: Text("Project Details")){
                     Text("Due: \(project.pickedDateString) at \(project.pickedTimeString)")
-                        .font(.title3)
-                        .padding(.bottom, 5)
+                        .font(.body)
                     
                     Text("Progress: \(project.completionLevel)")
-                        .font(.title3)
-                        .padding(.bottom, 5)
+                        .font(.body)
                 }
+                
+                Section(header: Text("Assigned To")){
+                    ForEach(project.assignedStudents, id: \.self) { assignedStudent in
+                        Label(assignedStudent, systemImage: "person")
+                            .accessibilityLabel(Text("Person"))
+                            .accessibilityValue(Text(assignedStudent))
+                            .font(.body)
+                    }
+                }
+                
+                
             }
-            .padding(.top, 5)
         }
+        .padding(.top, 5)
         .navigationBarTitle("\(project.title)")
     }
 }
+
 

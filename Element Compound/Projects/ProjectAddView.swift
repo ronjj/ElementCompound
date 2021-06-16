@@ -11,12 +11,13 @@ import Firebase
 struct ProjectAddView: View {
     
     @StateObject var viewModel = ProjectViewModel()
+    @State private var newAssigned = ""
     @Environment(\.presentationMode) var presentationMode
     static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
     
     var body: some View {
         NavigationView{
-            Form{
+            List{
                 Section(header: Text("Title")) {
                     TextEditor(text:$viewModel.project.title)
                         .font(.custom("SF Pro", size: 18))
@@ -34,6 +35,28 @@ struct ProjectAddView: View {
                         ForEach(Self.completionLevels, id: \.self) {
                             Text($0)
                         }
+                    }
+                }
+                
+                Section(header: Text("Assigned")) {
+                    ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
+                        Text(assignedStudent)
+                    }
+                    .onDelete { indices in
+                        viewModel.project.assignedStudents.remove(atOffsets: indices)
+                    }
+                    HStack {
+                        TextField("New Person", text: $newAssigned)
+                        Button(action: {
+                            withAnimation {
+                                viewModel.project.assignedStudents.append(newAssigned)
+                                newAssigned = ""
+                            }
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .accessibilityLabel(Text("Add new person"))
+                        }
+                        .disabled(newAssigned.isEmpty)
                     }
                 }
                                     
