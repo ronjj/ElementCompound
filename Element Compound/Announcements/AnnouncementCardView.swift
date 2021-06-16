@@ -29,7 +29,7 @@ struct AnnouncementCardView: View {
                         Rectangle()
                             .cornerRadius(10)
                             .foregroundColor(colors.randomElement())
-                        // .foregroundColor(announcement.color)
+                           // .foregroundColor(announcement.color)
                             .frame(width: 10, height: 10)
                     }
                     

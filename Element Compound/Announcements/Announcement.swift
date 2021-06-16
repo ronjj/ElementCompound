@@ -15,9 +15,9 @@ struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
     var title: String
-   var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
+    var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
-   // var color: Color = Color.random
+   // var color: Color
     var dateEvent: Date
        var dateString: String {
            let formatter = DateFormatter()
@@ -37,7 +37,7 @@ struct Announcement: Identifiable, Codable{
         self.message = message
         self.title = title
         self.photoURL = photoURL
-     //   self.color = color
+      //  self.color = color
         self.sender = sender
         self.dateEvent = dateEvent
     }
@@ -49,7 +49,7 @@ struct Announcement: Identifiable, Codable{
         case dateEvent
         case title
         case photoURL
-       // case color
+      //  case color
     }
 }
 

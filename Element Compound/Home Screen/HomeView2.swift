@@ -90,7 +90,6 @@ struct HomeView2: View {
                         
                     }
                 }
-            }
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -106,10 +105,10 @@ struct HomeView2: View {
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementAddView()
             }
-            
             .onAppear(){
                 self.viewModel.fetchData()
                 
+                }
             }
         }
     }

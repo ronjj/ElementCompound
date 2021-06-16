@@ -23,7 +23,7 @@ class AnnoucnementViewModel: ObservableObject{
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(announcement: Announcement = Announcement(message: "", title: "",  photoURL: (Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date()
+    init(announcement: Announcement = Announcement(message: "", title: "",  photoURL: (Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue, */dateEvent: Date()
 )) {
         self.announcement = announcement
         self.$announcement

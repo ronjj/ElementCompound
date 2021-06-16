@@ -33,6 +33,9 @@ struct ProjectDetailView: View {
                     Text("Due: \(project.pickedDateString) at \(project.pickedTimeString)")
                         .font(.body)
                     
+                    Text("Priority: \(project.priority)")
+                        .font(.body)
+                    
                     Text("Progress: \(project.completionLevel)")
                         .font(.body)
                 }

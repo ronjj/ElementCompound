@@ -14,6 +14,7 @@ struct ProjectAddView: View {
     @State private var newAssigned = ""
     @Environment(\.presentationMode) var presentationMode
     static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
+    static let priorityLevels = ["Low", "Medium", "High"]
     
     var body: some View {
         NavigationView{
@@ -30,7 +31,16 @@ struct ProjectAddView: View {
                     DatePicker("Choose Date", selection: $viewModel.project.dueDate)
                 }
                 
+                Section(header: Text("Priority")) {
+                    Picker("Priority Level", selection: $viewModel.project.priority) {
+                        ForEach(Self.priorityLevels, id: \.self) {
+                            Text($0)
+                        }
+                    }.pickerStyle(SegmentedPickerStyle())
+                }
+                
                 Section(header: Text("Stage")) {
+              
                     Picker("Completion Level", selection: $viewModel.project.completionLevel) {
                         ForEach(Self.completionLevels, id: \.self) {
                             Text($0)

@@ -15,7 +15,7 @@ import SwiftUI
 
 
 class ProjectViewModel: ObservableObject{
-    @Published var project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea", assignedStudents: [] )
+    @Published var project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea", assignedStudents: [], priority: "Low" )
     @Published var modified = false
     
     let ReceiverFCMToken = "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo"
@@ -28,7 +28,7 @@ class ProjectViewModel: ObservableObject{
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea",  assignedStudents: [])) {
+    init(project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea",  assignedStudents: [], priority: "Low")) {
         self.project = project
         self.$project
             .dropFirst()
