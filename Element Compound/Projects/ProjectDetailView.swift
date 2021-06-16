@@ -25,8 +25,6 @@ struct ProjectDetailView: View {
                     
                     Text("Created on: \(project.dateString) at \(project.timeString)")
                         .font(.body)
-                    
-
                 }
                 
                 Section(header: Text("Project Details")){
@@ -40,6 +38,11 @@ struct ProjectDetailView: View {
                         .font(.body)
                 }
                 
+                Section(header: Text("Notes")){
+                    Text("Notes: \(project.notes)")
+                        .font(.body)
+                }
+                
                 Section(header: Text("Assigned To")){
                     ForEach(project.assignedStudents, id: \.self) { assignedStudent in
                         Label(assignedStudent, systemImage: "person")
@@ -48,8 +51,6 @@ struct ProjectDetailView: View {
                             .font(.body)
                     }
                 }
-                
-                
             }
         }
         .padding(.top, 5)

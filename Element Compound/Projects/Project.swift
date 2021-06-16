@@ -43,12 +43,13 @@ struct Project: Identifiable, Codable{
     var completionLevel: String
     var assignedStudents: [String]
     var priority: String
+    var notes: String
     
     
  
 
     
-    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ dateEvent: Date, dueDate: Date, completionLevel: String, assignedStudents: [String], priority: String) {
+    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ dateEvent: Date, dueDate: Date, completionLevel: String, assignedStudents: [String], priority: String, notes: String) {
        // self.id = id
         self.title = title
      //   self.color = color
@@ -58,6 +59,7 @@ struct Project: Identifiable, Codable{
         self.completionLevel = completionLevel
         self.assignedStudents = assignedStudents
         self.priority = priority
+        self.notes = notes
       
    
     }
@@ -71,6 +73,7 @@ struct Project: Identifiable, Codable{
         case completionLevel
         case assignedStudents
         case priority
+        case notes
       
        
        // case color

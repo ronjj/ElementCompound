@@ -70,12 +70,12 @@ struct ProjectAddView: View {
                     }
                 }
                                     
-//                Section(header: Text("Project Notes")){
-//                    TextField("text", text: $viewModel.project.extraInfo)
-//                        .frame(height: 125, alignment: .center)
-//                        .foregroundColor(.gray)
-//                        .multilineTextAlignment(.leading)
-//                }
+                Section(header: Text("Project Notes")){
+                    TextEditor(text: $viewModel.project.notes)
+                        .frame(height: 125, alignment: .center)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                }
              
                 
             }
