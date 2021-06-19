@@ -40,7 +40,9 @@ struct ProjectDetailView: View {
                
                 
                 Section(header: Text("Notes")){
-                    Text("Notes: \(project.notes)")
+                    
+                    LinkedText("\(project.notes)")
+//                    Text("Notes: \(project.notes)")
                         .font(.body)
                 }
                 
