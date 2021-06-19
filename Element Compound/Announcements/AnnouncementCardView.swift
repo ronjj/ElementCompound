@@ -39,7 +39,8 @@ struct AnnouncementCardView: View {
                         .font(.title)
                         .padding(.bottom, 5)
                     
-                    Text(announcement.message)
+                    LinkedText(announcement.message)
+                    //Text(announcement.message)
                         .padding(.bottom, 10)
                         .font(.body)
                 }

@@ -80,13 +80,10 @@ struct ProjectDetailView: View {
         
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button(action: {
-                    presentEditProject.toggle()
-                }) {
-                   editButton{
-                       self.presentEditProject.toggle()
-                     }
-                }
+               
+                    editButton{
+                        self.presentEditProject.toggle()
+                      }
                 .disabled(role == false)
             }
         }
