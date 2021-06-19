@@ -14,7 +14,7 @@ struct HomeView2: View {
     @AppStorage ("role_Status") var role = Bool()
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
-    @ObservedObject var viewModel2 = ProjectsViewModel()
+    @ObservedObject var viewModel2 = ProjectsViewModel2()
    
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false

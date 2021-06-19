@@ -45,6 +45,8 @@ struct InventoryListView: View {
                         ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
                             NavigationLink(destination: CameraDetailView4(camera: camera)) {
                                 InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
+ 
+                                
                                     
                             }
                             .padding(5)
@@ -66,6 +68,7 @@ struct InventoryListView: View {
                         ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in
                             NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
                                 InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription, color: Color.ruby)
+
                                     
                             }
                         }
@@ -111,11 +114,14 @@ struct InventoryListView: View {
                     
                 }
                 .navigationTitle("Equipment List")
+
             }
                 .background(Color.lightBlue)
             }
             
         }
+       
+
     }
 }
 

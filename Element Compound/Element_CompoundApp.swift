@@ -17,7 +17,7 @@ struct Element_CompoundApp: App {
         delegate
     
     init() {
-        FirebaseApp.configure() 
+        FirebaseApp.configure()
     }
     
     var body: some Scene {

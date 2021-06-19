@@ -10,7 +10,7 @@ import SwiftUI
 import Firebase
 
 struct ProjectsView: View {
-    @ObservedObject var viewModel = ProjectsViewModel()
+    @ObservedObject var viewModel = ProjectsViewModel2()
     
     @AppStorage ("role_Status") var role = Bool()
     
@@ -36,6 +36,7 @@ struct ProjectsView: View {
                     }
                 }
             }
+            .navigationBarTitle("Projects")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -47,14 +48,15 @@ struct ProjectsView: View {
                 }
             }
            
-            .navigationBarTitle("Projects")
+           
             
             .sheet(isPresented: $presentAddNewProject){
-               ProjectAddView()
+               ProjectEditView()
             }
 
             .onAppear(){
-                self.viewModel.fetchData()
+              //  self.viewModel.fetchData()
+                self.viewModel.subscribe()
     
             }
         }

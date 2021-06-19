@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5423FEE1267E10700015ACC8 /* Publisher+Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */; };
+		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
+		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
@@ -32,6 +35,9 @@
 		5454C5282677EC0700EC84DA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5272677EC0700EC84DA /* ProjectViewModel.swift */; };
 		5454C52A2677ECB400EC84DA /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5292677ECB400EC84DA /* ProjectCardView.swift */; };
 		5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C52B2677ECE300EC84DA /* ProjectAddView.swift */; };
+		5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */; };
+		5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5457018E267CF6B700D93F68 /* ProgressBar.swift */; };
+		54570191267D58EF00D93F68 /* ProjectEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54570190267D58EF00D93F68 /* ProjectEditView.swift */; };
 		5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519A264C6BE000BC2719 /* RemoteImage.swift */; };
 		5461519E264C6C0500BC2719 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5461519D264C6C0500BC2719 /* NetworkManager.swift */; };
 		546151A1264C738A00BC2719 /* Felix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A0264C738A00BC2719 /* Felix.ttf */; };
@@ -68,6 +74,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Assign.swift"; sourceTree = "<group>"; };
+		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
+		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +104,9 @@
 		5454C5272677EC0700EC84DA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		5454C5292677ECB400EC84DA /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		5454C52B2677ECE300EC84DA /* ProjectAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectAddView.swift; sourceTree = "<group>"; };
+		5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavAppearanceModifier.swift; sourceTree = "<group>"; };
+		5457018E267CF6B700D93F68 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		54570190267D58EF00D93F68 /* ProjectEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditView.swift; sourceTree = "<group>"; };
 		5461519A264C6BE000BC2719 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		5461519D264C6C0500BC2719 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		546151A0264C738A00BC2719 /* Felix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felix.ttf; sourceTree = "<group>"; };
@@ -197,6 +209,8 @@
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
+				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
+				5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
@@ -242,11 +256,15 @@
 			children = (
 				5454C5222677EB7A00EC84DA /* Project.swift */,
 				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
+				5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */,
 				5454C5272677EC0700EC84DA /* ProjectViewModel.swift */,
+				5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */,
 				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
+				54570190267D58EF00D93F68 /* ProjectEditView.swift */,
 				5454C5292677ECB400EC84DA /* ProjectCardView.swift */,
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
+				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -452,15 +470,19 @@
 				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
+				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
+				54570191267D58EF00D93F68 /* ProjectEditView.swift in Sources */,
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
+				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
+				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
@@ -469,6 +491,7 @@
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
+				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
 				54437C722679133C0057763F /* ProjectDetailView.swift in Sources */,
@@ -488,6 +511,7 @@
 				543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */,
 				54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */,
 				548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */,
+				5423FEE1267E10700015ACC8 /* Publisher+Assign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ import GoogleSignIn
 
 //need to change announcement stuff 
 struct ProjectCardView: View {
-    @ObservedObject private var viewModel = ProjectsViewModel()
+    @ObservedObject private var viewModel = ProjectsViewModel2()
     var project: Project
     
     
