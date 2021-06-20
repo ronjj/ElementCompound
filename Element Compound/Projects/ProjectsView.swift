@@ -23,7 +23,9 @@ struct ProjectsView: View {
         NavigationView{
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
-
+                
+                
+                
                 ScrollView(showsIndicators: false){
                     LazyVStack{
                         ForEach(viewModel.projects) { project in
@@ -51,7 +53,7 @@ struct ProjectsView: View {
            
             
             .sheet(isPresented: $presentAddNewProject){
-               ProjectEditView()
+               ProjectEditView2()
             }
 
             .onAppear(){

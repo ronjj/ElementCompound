@@ -11,6 +11,7 @@
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
+		5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */; };
 		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
@@ -79,6 +80,7 @@
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
+		5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditView2.swift; sourceTree = "<group>"; };
 		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5425C8B7268001A000465EAE /* Projects Files To Delete */ = {
+			isa = PBXGroup;
+			children = (
+				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
+				54570190267D58EF00D93F68 /* ProjectEditView.swift */,
+				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
+				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
+				5454C5272677EC0700EC84DA /* ProjectViewModel.swift */,
+			);
+			path = "Projects Files To Delete";
+			sourceTree = "<group>";
+		};
 		5439CE84260FF37A00DCC5A6 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +223,7 @@
 				5454C5242677EB8700EC84DA /* Projects */,
 				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				5425C8B7268001A000465EAE /* Projects Files To Delete */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
@@ -258,16 +273,12 @@
 			isa = PBXGroup;
 			children = (
 				5454C5222677EB7A00EC84DA /* Project.swift */,
-				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
 				5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */,
-				5454C5272677EC0700EC84DA /* ProjectViewModel.swift */,
 				5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */,
-				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
-				54570190267D58EF00D93F68 /* ProjectEditView.swift */,
+				5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */,
 				5454C5292677ECB400EC84DA /* ProjectCardView.swift */,
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
-				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -476,6 +487,7 @@
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
+				5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */,
 				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,

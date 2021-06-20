@@ -66,14 +66,13 @@ struct ProjectDetailView: View {
                     
                     }
                 }
-                // ProgressBar(width: 200, height: 40, percent: 60, color1: Color.red, color2: Color.blue)
             }
         }
 //        .sheet(isPresented: $presentEditProject) {
 //            ProjectEditView(project: project)
 //                }
         .sheet(isPresented: self.$presentEditProject) {
-          ProjectEditView(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
+          ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
             if case .success(let action) = result, action == .delete {
               self.presentationMode.wrappedValue.dismiss()
             }

@@ -63,6 +63,8 @@ class ProjectViewModel2: ObservableObject {
       }
     }
   }
+    
+    
   
   private func updateOrAddProject() {
     if let _ = project.id {
