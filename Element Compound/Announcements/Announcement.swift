@@ -11,6 +11,7 @@ import Firebase
 import GoogleSignIn
 
 
+
 struct Announcement: Identifiable, Codable{
     @DocumentID var id: String? = UUID().uuidString
     var message: String
@@ -37,7 +38,7 @@ struct Announcement: Identifiable, Codable{
         self.message = message
         self.title = title
         self.photoURL = photoURL
-      //  self.color = color
+       // self.color = color
         self.sender = sender
         self.dateEvent = dateEvent
     }
@@ -49,9 +50,10 @@ struct Announcement: Identifiable, Codable{
         case dateEvent
         case title
         case photoURL
-      //  case color
+       // case color
     }
 }
+
 
 
 

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5423FEE1267E10700015ACC8 /* Publisher+Assign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */; };
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
@@ -30,6 +29,7 @@
 		543E7BA7262A1976004FDF51 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA6262A1976004FDF51 /* TabView.swift */; };
 		543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA9262A1F96004FDF51 /* SettingsView.swift */; };
 		543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */; };
+		543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FED54268611360057D3B9 /* ProjectsView2.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		54437C722679133C0057763F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54437C712679133C0057763F /* ProjectDetailView.swift */; };
 		5454C5232677EB7A00EC84DA /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5222677EB7A00EC84DA /* Project.swift */; };
@@ -76,7 +76,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Assign.swift"; sourceTree = "<group>"; };
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		543E7BA6262A1976004FDF51 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		543E7BA9262A1F96004FDF51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListCellView.swift; sourceTree = "<group>"; };
+		543FED54268611360057D3B9 /* ProjectsView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView2.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		54437C712679133C0057763F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
 		5454C5222677EB7A00EC84DA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
@@ -220,15 +220,13 @@
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
 				54B455192672A54D00E2F62F /* Tab Bar */,
-				5454C5242677EB8700EC84DA /* Projects */,
-				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
-				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				5425C8B7268001A000465EAE /* Projects Files To Delete */,
+				5454C5242677EB8700EC84DA /* Projects */,
+				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
-				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
 				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
-				5423FEE0267E10700015ACC8 /* Publisher+Assign.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
@@ -275,10 +273,11 @@
 				5454C5222677EB7A00EC84DA /* Project.swift */,
 				5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */,
 				5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */,
-				5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */,
 				5454C5292677ECB400EC84DA /* ProjectCardView.swift */,
+				5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */,
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
+				543FED54268611360057D3B9 /* ProjectsView2.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -312,6 +311,7 @@
 				5493327F263C5295001C1D24 /* AnnouncementAddView.swift */,
 				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
 				54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */,
+				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
 			);
 			path = Announcements;
 			sourceTree = "<group>";
@@ -505,6 +505,7 @@
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
+				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
@@ -527,7 +528,6 @@
 				54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */,
 				5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */,
 				548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */,
-				5423FEE1267E10700015ACC8 /* Publisher+Assign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,8 +5,6 @@
 //  Created by Ronald Jabouin on 6/19/21.
 //
 
-
-
 import SwiftUI
 
 enum Mode {
@@ -45,14 +43,16 @@ struct ProjectEditView2: View {
       Text(mode == .new ? "Done" : "Save")
     }
     .disabled(!viewModel.modified)
+
   }
-  
+
     @State private var newAssigned = ""
        static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
-       static let priorityLevels = ["Low", "Medium", "High"]
+       static let priorityLevels = ["A", "B", "C"]
+    
   var body: some View {
     NavigationView {
-        List{
+        Form{
             Section(header: Text("Title")) {
                 TextEditor(text:$viewModel.project.title)
                     .font(.custom("SF Pro", size: 18))
@@ -65,12 +65,15 @@ struct ProjectEditView2: View {
                 DatePicker("Choose Date", selection: $viewModel.project.dueDate)
             }
 
+
             Section(header: Text("Priority")) {
                 Picker("Priority Level", selection: $viewModel.project.priority) {
                     ForEach(Self.priorityLevels, id: \.self) {
                         Text($0)
                     }
-                }.pickerStyle(SegmentedPickerStyle())
+                }
+                .pickerStyle(SegmentedPickerStyle())
+
             }
 
             Section(header: Text("Stage")) {
@@ -118,49 +121,50 @@ struct ProjectEditView2: View {
               }
             }
         }
-      .navigationTitle(mode == .new ? "New Project" : viewModel.project.title)
-      .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
-      .navigationBarItems(
-        leading: cancelButton,
-        trailing: saveButton
-      )
-      .actionSheet(isPresented: $presentActionSheet) {
-        ActionSheet(title: Text("Are you sure?"),
-                    buttons: [
-                      .destructive(Text("Delete Project"),
-                                   action: { self.handleDeleteTapped() }),
-                      .cancel()
-                    ])
-      }
+        .navigationTitle(mode == .new ? "New Project" : viewModel.project.title)
+        .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
+        .navigationBarItems(
+          leading: cancelButton,
+          trailing: saveButton
+        )
+        .actionSheet(isPresented: $presentActionSheet) {
+          ActionSheet(title: Text("Are you sure?"),
+                      buttons: [
+                        .destructive(Text("Delete Project"),
+                                     action: { self.handleDeleteTapped() }),
+                        .cancel()
+                      ])
+        }
     }
   }
-  
+
   // MARK: - Action Handlers
-  
-  func handleCancelTapped() {
-    self.dismiss()
+
+    func handleCancelTapped() {
+      self.dismiss()
+    }
+    
+    func handleDoneTapped() {
+      self.viewModel.handleDoneTapped()
+      self.dismiss()
+    }
+    
+    func handleDeleteTapped() {
+      viewModel.handleDeleteTapped()
+      self.dismiss()
+      self.completionHandler?(.success(.delete))
+    }
+    
+    func dismiss() {
+      self.presentationMode.wrappedValue.dismiss()
+    }
   }
-  
-  func handleDoneTapped() {
-    self.viewModel.handleDoneTapped()
-    self.dismiss()
-  }
-  
-  func handleDeleteTapped() {
-    viewModel.handleDeleteTapped()
-    self.dismiss()
-    self.completionHandler?(.success(.delete))
-  }
-  
-  func dismiss() {
-    self.presentationMode.wrappedValue.dismiss()
-  }
-}
+
 
 //struct BookEditView_Previews: PreviewProvider {
 //  static var previews: some View {
-//    let book = Book(title: "Changer", author: "Matt Gemmell", numberOfPages: 474)
-//    let bookViewModel = BookViewModel(book: book)
-//    return BookEditView(viewModel: bookViewModel, mode: .edit)
+//    let project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/ dateEvent: Date(), dueDate: Date(), completionLevel: "Idea",  assignedStudents: [], priority: "Low", notes: "...")
+//    let projectViewModel = ProjectViewModel2(project: project)
+//    return ProjectEditView2(viewModel:projectViewModel, mode: .edit)
 //  }
 //}

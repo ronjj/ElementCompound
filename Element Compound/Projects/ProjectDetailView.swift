@@ -9,43 +9,49 @@ import SwiftUI
 
 struct ProjectDetailView: View {
     
-    let project: Project
-    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
-    @ObservedObject private var viewModel = ProjectsViewModel2()
-    @AppStorage ("role_Status") var role = Bool()
+    
+    // MARK: - State
     
     @Environment(\.presentationMode) var presentationMode
-    @State private var presentEditProject = false
+    @State var presentEditProjectSheet = false
+    
+    // MARK: - State (Initialiser-modifiable)
+    
+    var project: Project
+    
+    // MARK: - UI Components
     
     private func editButton(action: @escaping () -> Void) -> some View {
       Button(action: { action() }) {
         Text("Edit")
       }
+      //.disabled(role == false)
+      .disabled(true)
     }
     
+    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+    @AppStorage ("role_Status") var role = Bool()
+
+
     var body: some View {
-        ZStack{
-            Color.lightBlue.edgesIgnoringSafeArea(.all)
-            
-            
-            List{
+            Form{
                 Section(header: Text("Creation Information")){
                     Text("Created by: \(project.creator)")
                         .font(.body)
-                    
+
                     Text("Created on: \(project.dateString) at \(project.timeString)")
                         .font(.body)
                 }
-                
-               
-                
+
+
+
                 Section(header: Text("Notes")){
-                    
+
                     LinkedText("\(project.notes)")
 //                    Text("Notes: \(project.notes)")
                         .font(.body)
                 }
-                
+
                 Section(header: Text("Assigned To")){
                     ForEach(project.assignedStudents, id: \.self) { assignedStudent in
                         Label(assignedStudent, systemImage: "person")
@@ -53,43 +59,38 @@ struct ProjectDetailView: View {
                             .accessibilityValue(Text(assignedStudent))
                             .font(.body)
                     }
-                    
+                }
+
                 Section(header: Text("Project Details")){
                     Text("Due: \(project.pickedDateString) at \(project.pickedTimeString)")
                         .font(.body)
-                    
+
                     Text("Priority: \(project.priority)")
                         .font(.body)
-                    
+
                     Text("Progress: \(project.completionLevel)")
                         .font(.body)
-                    
-                    }
+
+
                 }
             }
-        }
-//        .sheet(isPresented: $presentEditProject) {
-//            ProjectEditView(project: project)
-//                }
-        .sheet(isPresented: self.$presentEditProject) {
-          ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
-            if case .success(let action) = result, action == .delete {
-              self.presentationMode.wrappedValue.dismiss()
+            .navigationBarTitle(project.title)
+            .navigationBarItems(trailing: editButton {
+              self.presentEditProjectSheet.toggle()
+            })
+            .onAppear() {
+              print("BookDetailsView.onAppear() for \(self.project.title)")
             }
-          }
-        }
-        
-        .toolbar {
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
-               
-                    editButton{
-                        self.presentEditProject.toggle()
-                      }
-                .disabled(role == false)
+//            .onDisappear() {
+//              print("BookDetailsView.onDisappear()")
+//            }
+            .sheet(isPresented: self.$presentEditProjectSheet) {
+              ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
+                if case .success(let action) = result, action == .delete {
+                  self.presentationMode.wrappedValue.dismiss()
+                }
+              }
             }
-        }
-        .padding(.top, 5)
-        .navigationBarTitle("\(project.title)")
     }
 }
 

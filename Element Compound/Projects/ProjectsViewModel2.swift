@@ -26,34 +26,83 @@ class ProjectsViewModel2: ObservableObject {
     }
   }
   
-  func subscribe() {
-    if listenerRegistration == nil {
-      listenerRegistration = db.collection("projects").addSnapshotListener { (querySnapshot, error) in
-        guard let documents = querySnapshot?.documents else {
-          print("No documents")
-          return
-        }
-        
-        self.projects = documents.compactMap { queryDocumentSnapshot in
-          try? queryDocumentSnapshot.data(as: Project.self)
+    func subscribe() {
+      if listenerRegistration == nil {
+        listenerRegistration = db.collection("projects").addSnapshotListener { (querySnapshot, error) in
+          guard let documents = querySnapshot?.documents else {
+            print("No documents")
+            return
+          }
+          
+          self.projects = documents.compactMap { queryDocumentSnapshot in
+            try? queryDocumentSnapshot.data(as: Project.self)
+          }
         }
       }
     }
-  }
-  
-  func removeProject(atOffsets indexSet: IndexSet) {
-    let projects = indexSet.lazy.map { self.projects[$0] }
-    projects.forEach { project in
-      if let documentId = project.id {
-        db.collection("projects").document(documentId).delete { error in
-          if let error = error {
-            print("Unable to remove document: \(error.localizedDescription)")
+    
+    
+    
+    func removeProject(atOffsets indexSet: IndexSet) {
+      let projects = indexSet.lazy.map { self.projects[$0] }
+      projects.forEach { project in
+        if let documentId = project.id {
+          db.collection("projects").document(documentId).delete { error in
+            if let error = error {
+              print("Unable to remove document: \(error.localizedDescription)")
+            }
           }
         }
       }
     }
   }
 
-  
-}
 
+
+//
+//  func subscribeNewest() {
+//    if listenerRegistration == nil {
+//      listenerRegistration = db.collection("books2").order(by: "dateEvent", descending: true).addSnapshotListener { (querySnapshot, error) in
+//        guard let documents = querySnapshot?.documents else {
+//          print("No documents")
+//          return
+//        }
+//
+//        self.projects = documents.compactMap { queryDocumentSnapshot in
+//          try? queryDocumentSnapshot.data(as: Project.self)
+//        }
+//      }
+//    }
+//  }
+//
+//    func subscribeClosest() {
+//      if listenerRegistration == nil {
+//        listenerRegistration = db.collection("books2").order(by: "dueDate", descending: true).addSnapshotListener { (querySnapshot, error) in
+//          guard let documents = querySnapshot?.documents else {
+//            print("No documents")
+//            return
+//          }
+//
+//          self.projects = documents.compactMap { queryDocumentSnapshot in
+//            try? queryDocumentSnapshot.data(as: Project.self)
+//          }
+//        }
+//      }
+//    }
+//
+//    func subscribePriority() {
+//      if listenerRegistration == nil {
+//        listenerRegistration = db.collection("books2").order(by: "priority", descending: false).addSnapshotListener { (querySnapshot, error) in
+//          guard let documents = querySnapshot?.documents else {
+//            print("No documents")
+//            return
+//          }
+//
+//          self.projects = documents.compactMap { queryDocumentSnapshot in
+//            try? queryDocumentSnapshot.data(as: Project.self)
+//          }
+//        }
+//      }
+//    }
+    
+ 

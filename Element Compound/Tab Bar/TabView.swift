@@ -26,7 +26,7 @@ struct TabViewItem: View {
                         .font(.largeTitle)
                 }
                 else if self.index == 3{
-                   ProjectsView()
+                    ProjectsView()
                 }
                 else{
                     SettingsView()

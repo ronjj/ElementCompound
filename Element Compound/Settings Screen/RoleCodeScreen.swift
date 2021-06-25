@@ -42,7 +42,8 @@ struct RoleCodeScreen: View {
                     Button(action: {
                         handleCancelTapped()
                     }) {
-                        Text("Cancel")
+                      //  Text("Cancel")
+                        Text(role == true ? "Exit" : "Cancel")
                     }
                     
                     

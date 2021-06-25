@@ -7,7 +7,9 @@
 
 
 import SwiftUI
+import Combine
 
+//MARK: Apple Version (Scrumdinger)
 extension Color: Codable {
     private struct Components {
         let red: Double
@@ -84,3 +86,27 @@ extension Color: Codable {
         return lightness >= 2
     }
 }
+
+//MARK: Firebase Version
+//extension Color: Codable {
+//  init(hex: String) {
+//    let rgba = hex.toRGBA()
+//    self.init(.sRGB,
+//              red: Double(rgba.r),
+//              green: Double(rgba.g),
+//              blue: Double(rgba.b),
+//              opacity: Double(rgba.alpha))
+//    }
+//
+//  public init(from decoder: Decoder) throws {
+//    let container = try decoder.singleValueContainer()
+//    let hex = try container.decode(String.self)
+//    self.init(hex: hex)
+//  }
+//
+//  public func encode(to encoder: Encoder) throws {
+//    var container = encoder.singleValueContainer()
+//    try container.encode(toHex)
+//  }
+//  //... (code for translating between hex and RGBA ommitted for brevity)
+//}

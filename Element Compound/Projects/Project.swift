@@ -5,14 +5,14 @@
 //  Created by Ronald Jabouin on 4/22/21.
 //
 
-import SwiftUI
+import Foundation
 import FirebaseFirestoreSwift
 import Firebase
 
 
 
 struct Project: Identifiable, Codable{
-    @DocumentID var id: String? = UUID().uuidString
+    @DocumentID var id: String? = UUID().uuidString 
     var title: String
     var creator: String = Auth.auth().currentUser?.displayName ?? "N/A"
    // var color: Color = Color.random
@@ -48,9 +48,9 @@ struct Project: Identifiable, Codable{
     
  
 
-    
-    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ dateEvent: Date, dueDate: Date, completionLevel: String, assignedStudents: [String], priority: String, notes: String) {
-       // self.id = id
+    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ dateEvent: Date, dueDate: Date, completionLevel: String, assignedStudents: [String], priority: String, notes: String)
+    {
+     // self.id = id
         self.title = title
      //   self.color = color
         self.creator = creator
@@ -60,10 +60,8 @@ struct Project: Identifiable, Codable{
         self.assignedStudents = assignedStudents
         self.priority = priority
         self.notes = notes
-      
-   
     }
-    
+
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -74,8 +72,6 @@ struct Project: Identifiable, Codable{
         case assignedStudents
         case priority
         case notes
-      
-       
        // case color
     }
 }
