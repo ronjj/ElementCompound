@@ -13,7 +13,7 @@ struct InventoryListCellView: View {
     let title: String
     let description: String
     let color: Color
-    let colors = [Color.yellow2,Color.ruby, Color.nyanza]
+    let colors = [Color.yellow2,Color.ruby, Color.nyanza, Color.independence]
     
     
     var body: some View {
