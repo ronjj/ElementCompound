@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoScreen: View {
     
-    @StateObject var viewModel = AnnoucnementViewModel()
+    @ObservedObject var viewModel = AnnoucnementViewModel()
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -48,7 +48,7 @@ struct InfoScreen: View {
     }
     
     func dismiss() {
-        presentationMode.wrappedValue.dismiss()
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

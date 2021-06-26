@@ -23,6 +23,7 @@ struct RoleCodeScreen: View {
     @State var incorrectPassword = false
     @State private var alertItem: AlertItem?
     @AppStorage ("role_Status") var role = Bool()
+
    
     
     var body: some View {
@@ -35,6 +36,11 @@ struct RoleCodeScreen: View {
                         .multilineTextAlignment(.leading)
                 }
             }
+            .alert(item: $alertItem) { alertItem in
+                       Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
+                   }
+
+
             .navigationTitle("Code For Role")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -54,10 +60,7 @@ struct RoleCodeScreen: View {
                     }
                 }
             }
-            .alert(item: $alertItem) { alertItem in
-                       Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
-                   }
-
+            
 //            .alert(isPresented: self.$correctPassword) {
 //                Alert(title: Text("Correct Password"), message: Text("You Now Have Extra Capabilities"), dismissButton: .cancel())
 //            }
@@ -73,22 +76,26 @@ struct RoleCodeScreen: View {
     
 
     func handleEnterTapped() {
+        
         codeCheck()
+    
     }
     
     func codeCheck() {
         if text == "Password" {
+            self.dismiss()
             self.role = true
             self.alertItem = AlertItem(title: Text("Correct Password"), message: Text("You now have special privileges"))
+         
         } else {
-            //need to present an error saying code was wrong
+            self.dismiss()
             self.alertItem = AlertItem(title: Text("Incorrect Password"), message: Text("You entered an incorrect password"))
             text = ""
         }
     }
     
     func dismiss() {
-        presentationMode.wrappedValue.dismiss()
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 

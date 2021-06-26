@@ -19,33 +19,54 @@ struct CameraDetailView4: View {
     var body: some View {
         
             ScrollView(.vertical, showsIndicators: false, content: {
-    //            CustomNavigationBar()
-    //               .padding(.horizontal)
-    //               .padding(.top,UIApplication.shared.windows.first?.safeAreaInsets.top)
-                
-                GeometryReader{ reader in
-                    
-                    //Type 1
-    //                Image(camera.bigImageURL)
-    //                    .resizable()
-    //                    .aspectRatio(contentMode: .fill)
-    //                    .offset(y: -reader.frame(in: .global).minY)
-    //                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
-                    
-                    
-    //                Type 2
-                    if  reader.frame(in: .global).minY > -480 {
-                    Image(camera.bigImageURL)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .offset(y: -reader.frame(in: .global).minY)
-                        .frame(width: UIScreen.main.bounds.width, height:
-                                reader.frame(in: .global).minY > 0 ?
-                                reader.frame(in: .global).minY + 480 : 480)
-     
+                ZStack{
+                    GeometryReader{ reader in
+                        
+                        //Type 1
+        //                Image(camera.bigImageURL)
+        //                    .resizable()
+        //                    .aspectRatio(contentMode: .fill)
+        //                    .offset(y: -reader.frame(in: .global).minY)
+        //                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
+                        
+                        
+        //                Type 2
+                        if  reader.frame(in: .global).minY > -480 {
+                        Image(camera.bigImageURL)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .offset(y: -reader.frame(in: .global).minY)
+                            .frame(width: UIScreen.main.bounds.width, height:
+                                    reader.frame(in: .global).minY > 0 ?
+                                    reader.frame(in: .global).minY + 480 : 480)
+         
+                        }
+                        HStack {
+                            Button(action: { self.presentationMode.wrappedValue.dismiss() },
+                                   label: {
+                                ZStack {
+                                    Circle()
+                                        .foregroundColor(.white)
+                                        .frame(width:30, height: 30)
+                                  Image(systemName: "arrow.left")
+                                    .foregroundColor(.black)
+                                }
+                            })
+//                            Spacer()
+//                            Button(action: { viewModel.favouriteMethod() },
+//                                   label: {
+//                                Image(IMAGE_FAV_ICON)
+//                                .resizable()
+//                                .frame(width: 26, height: 26)
+//
+//                                }
+//                            )
+                        }
+                        .padding(.horizontal, 24).padding(.top, 46)
                     }
+                    .frame(height:480)
                 }
-                .frame(height:480)
+               
                 
                 VStack(alignment: .leading, spacing: 15) {
                     Text(camera.name)
@@ -90,28 +111,15 @@ struct CameraDetailView4: View {
                 .cornerRadius(30)
                 .frame(maxWidth: .infinity)
                 .offset(y: -30)
-                
-                
-               // .navigationAppearance(backgroundColor: .clear, foregroundColor: .clear, tintColor: .clear, hideSeparator: true)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
-                //.navigationTitle("")
+           
             })
             .frame(maxWidth: .infinity)
             .edgesIgnoringSafeArea(.all)
             .background(Color.black.edgesIgnoringSafeArea(.all))
            
-            .navigationBarItems(leading:
-              Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-              }) {
-                ZStack {
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width:30, height: 30)
-                  Image(systemName: "arrow.left")
-                    .foregroundColor(.black)
-                }
-            })
     }
 }
 

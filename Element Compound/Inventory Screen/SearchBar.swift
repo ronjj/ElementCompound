@@ -11,6 +11,8 @@ struct SearchBar: View {
     @Binding var text: String
     @State private var isEditing = false
  
+    
+    //will be removed by .searchable once iOS 15 is available to the public
     var body: some View {
         HStack {
             TextField("Search ...", text: $text)
