@@ -31,8 +31,8 @@ struct ProjectsView: View {
             .font(.headline)
           Text(project.creator)
             .font(.subheadline)
-            Text(project.completionLevel)
-            .font(.subheadline)
+//            Text(project.completionLevel)
+//            .font(.subheadline)
         }
       }
     }
@@ -43,8 +43,8 @@ struct ProjectsView: View {
             projectRowView(project: project)
           }
           .onDelete() { indexSet in
-            viewModel.removeProject(atOffsets: indexSet)
-        
+              viewModel.removeProjects(atOffsets: indexSet)
+
           }
         }
         .navigationBarTitle("Projects")

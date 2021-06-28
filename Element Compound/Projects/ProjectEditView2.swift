@@ -47,8 +47,8 @@ struct ProjectEditView2: View {
   }
 
     @State private var newAssigned = ""
-       static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
-       static let priorityLevels = ["A", "B", "C"]
+//       static let completionLevels = ["Idea", "Filming", "Processing", "Rough Cut", "Final Cut", "Complete", "Posted"]
+//       static let priorityLevels = ["A", "B", "C"]
     
   var body: some View {
     NavigationView {
@@ -66,24 +66,24 @@ struct ProjectEditView2: View {
             }
 
 
-            Section(header: Text("Priority")) {
-                Picker("Priority Level", selection: $viewModel.project.priority) {
-                    ForEach(Self.priorityLevels, id: \.self) {
-                        Text($0)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
+//            Section(header: Text("Priority")) {
+//                Picker("Priority Level", selection: $viewModel.project.priority) {
+//                    ForEach(Self.priorityLevels, id: \.self) {
+//                        Text($0)
+//                    }
+//                }
+//                .pickerStyle(SegmentedPickerStyle())
+//
+//            }
 
-            }
-
-            Section(header: Text("Stage")) {
-
-                Picker("Completion Level", selection: $viewModel.project.completionLevel) {
-                    ForEach(Self.completionLevels, id: \.self) {
-                        Text($0)
-                    }
-                }
-            }
+//            Section(header: Text("Stage")) {
+//
+//                Picker("Completion Level", selection: $viewModel.project.completionLevel) {
+//                    ForEach(Self.completionLevels, id: \.self) {
+//                        Text($0)
+//                    }
+//                }
+//            }
 
             Section(header: Text("Assigned")) {
                 ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in

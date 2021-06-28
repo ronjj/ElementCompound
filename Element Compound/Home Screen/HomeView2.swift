@@ -14,13 +14,15 @@ struct HomeView2: View {
     @AppStorage ("role_Status") var role = Bool()
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
-   // @ObservedObject var viewModel2 = ProjectsViewModel2()
+    @ObservedObject var projectViewModel = ProjectViewModel2()
+   // @ObservedObject var favorites = Favorites()
    
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
     @State private var buttonDisabled = true
     
     @State private var action: Int? = 0
+    
     
     
     var body: some View {
@@ -75,19 +77,24 @@ struct HomeView2: View {
                     }
                     .padding(10)
                     
-//                    HStack{
-//                        Text("My Projects")
-//                            .padding()
-//                            .font(Font.custom("Poppins-Regular", size: 18))
+                    HStack{
+                        Text("My Projects")
+                            .padding()
+                            .font(Font.custom("Poppins-Regular", size: 18))
+
+                        Spacer()
+                    }
+                    .padding(.bottom, -10)
+//                    
+//                                        LazyVStack{
+//                                                    ForEach(favorites, id: \.self) { project in
+//                                                            NavigationLink(destination: ProjectDetailView(project: project)) {
+//                                                                ProjectCardView(project: project)
+//                                                            }
+//                                                        }
+//                                                    .padding(7)
 //
-//                        Spacer()
-//                    }
-//                    .padding(.bottom, -10)
-//
-//                    LazyVStack{
-//                        }
-//                        .padding(7)
-                        
+//                                            }
                     }
                 }
             .toolbar {

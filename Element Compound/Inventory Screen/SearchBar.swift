@@ -31,6 +31,7 @@ struct SearchBar: View {
                             Button(action: {
                                 self.text = ""
                                 
+                                
                             }) {
                                 Image(systemName: "multiply.circle.fill")
                                     .foregroundColor(.gray)
@@ -50,6 +51,7 @@ struct SearchBar: View {
                     self.isEditing = false
                     self.text = ""
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    
  
                 }) {
                     Text("Cancel")

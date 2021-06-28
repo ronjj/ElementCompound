@@ -18,6 +18,8 @@ struct ProjectDetailView: View {
     // MARK: - State (Initialiser-modifiable)
     
     var project: Project
+    @ObservedObject var viewModel = ProjectViewModel2()
+  //  @ObservedObject var favorites = Favorites()
     
     // MARK: - UI Components
     
@@ -38,9 +40,9 @@ struct ProjectDetailView: View {
                 Section(header: Text("Creation Information")){
                     Text("Created by: \(project.creator)")
                         .font(.body)
-
-                    Text("Created on: \(project.dateString) at \(project.timeString)")
-                        .font(.body)
+//
+//                    Text("Created on: \(project.dateString) at \(project.timeString)")
+//                        .font(.body)
                 }
 
 
@@ -65,19 +67,39 @@ struct ProjectDetailView: View {
                     Text("Due: \(project.pickedDateString) at \(project.pickedTimeString)")
                         .font(.body)
 
-                    Text("Priority: \(project.priority)")
-                        .font(.body)
-
-                    Text("Progress: \(project.completionLevel)")
-                        .font(.body)
+//                    Text("Priority: \(project.priority)")
+//                        .font(.body)
+//
+//                    Text("Progress: \(project.completionLevel)")
+//                        .font(.body)
 
 
                 }
             }
             .navigationBarTitle(project.title)
-            .navigationBarItems(trailing: editButton {
-              self.presentEditProjectSheet.toggle()
-            })
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button{
+                        self.presentEditProjectSheet.toggle()
+                    } label: {
+                        Text("Edit")
+                    }
+                    .disabled(true)
+                    
+//                    Button{
+//                        if self.favorites.contains(self.project) {
+//                            self.favorites.remove(self.project)
+//                        } else{
+//                            self.favorites.add(self.project)
+//                        }
+//                    } label: {
+//                        Image(systemName: self.favorites.contains(project) ? "heart.fill" : "heart")
+//                            .foregroundColor(.red)
+//                    }
+                    
+                   
+                }
+            }
             .onAppear() {
               print("BookDetailsView.onAppear() for \(self.project.title)")
             }
