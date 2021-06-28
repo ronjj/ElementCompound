@@ -5,12 +5,16 @@
 //  Created by Ronald Jabouin on 5/4/21.
 //
 
-import Foundation
+import SwiftUI
 import Firebase
 import GoogleSignIn
 
 
 struct Users{
+    // @AppStorage ("role_Status") var role = Bool()
+    //
+    
+    
     let officers = ["Ronald Jabouin", "Thomas Breslin"]
     let advisors = ["Mr. Shuchao Luo", "Bro. Thomas Terrill, S.M"]
 }
@@ -18,7 +22,10 @@ struct Users{
 func UserInfo() {
     let user = Auth.auth().currentUser
     if user?.uid == "FQfZNTWXb2SEfHDuFJwm9iU7LdI2" {
-        return
+        //role == true
+        //else {
+        // role == false
+        //}
     }
 //    if let user = user {
 //      // The user's ID, unique to the Firebase project.

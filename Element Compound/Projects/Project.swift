@@ -12,8 +12,8 @@ import Firebase
 
 
 struct Project: Identifiable, Codable{
-    //@DocumentID var id: String? = UUID().uuidString
-    @DocumentID var id: String?
+    @DocumentID var id: String? = UUID().uuidString
+    //@DocumentID var id: String?
     var title: String
     var creator: String = Auth.auth().currentUser?.displayName ?? "N/A"
    // var color: Color = Color.random

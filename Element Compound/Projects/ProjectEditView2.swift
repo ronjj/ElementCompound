@@ -107,7 +107,7 @@ struct ProjectEditView2: View {
                 }
             }
 
-            Section(header: Text("Project Notes")){
+            Section(header: Text("Project Notes and Description")){
                 TextEditor(text: $viewModel.project.notes)
                     .frame(height: 125, alignment: .center)
                     .foregroundColor(.gray)

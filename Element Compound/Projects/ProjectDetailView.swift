@@ -36,46 +36,59 @@ struct ProjectDetailView: View {
 
 
     var body: some View {
-            Form{
-                Section(header: Text("Creation Information")){
-                    Text("Created by: \(project.creator)")
-                        .font(.body)
-//
-//                    Text("Created on: \(project.dateString) at \(project.timeString)")
-//                        .font(.body)
-                }
-
-
-
-                Section(header: Text("Notes")){
-
-                    LinkedText("\(project.notes)")
+        
+        VStack{
+            
+            Text("Created by: \(project.creator). Due: \(project.pickedDateString) at \(project.pickedTimeString). ")
+                .font(.body)
+                .foregroundColor(Color.gray)
+            
+            Spacer()
+            
+            HStack{
+                Circle()
+                    .frame(width: 40, height: 40)
+                    .foregroundColor(Color.red)
+                Text("Help Needed")
+                    .font(.body)
+            }
+            
+            Spacer()
+            
+            HStack{
+                Image(systemName: "info.circle.fill")
+                    .font(.title)
+                LinkedText("\(project.notes)")
 //                    Text("Notes: \(project.notes)")
+                    .font(.body)
+            }
+            
+            Spacer()
+            
+            HStack{
+                Image(systemName: "person.3.fill")
+                    .font(.title)
+                ForEach(project.assignedStudents, id: \.self) { assignedStudent in
+                    Label(assignedStudent, systemImage: "person")
+                        .accessibilityLabel(Text("Person"))
+                        .accessibilityValue(Text(assignedStudent))
                         .font(.body)
-                }
-
-                Section(header: Text("Assigned To")){
-                    ForEach(project.assignedStudents, id: \.self) { assignedStudent in
-                        Label(assignedStudent, systemImage: "person")
-                            .accessibilityLabel(Text("Person"))
-                            .accessibilityValue(Text(assignedStudent))
-                            .font(.body)
-                    }
-                }
-
-                Section(header: Text("Project Details")){
-                    Text("Due: \(project.pickedDateString) at \(project.pickedTimeString)")
-                        .font(.body)
-
-//                    Text("Priority: \(project.priority)")
-//                        .font(.body)
-//
-//                    Text("Progress: \(project.completionLevel)")
-//                        .font(.body)
-
-
                 }
             }
+            
+            Spacer()
+            
+            Button{
+       
+            } label: {
+                ButtonStyle(title: "Contact Moderator")
+            }
+        }
+
+            
+        
+        
+        
             .navigationBarTitle(project.title)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
