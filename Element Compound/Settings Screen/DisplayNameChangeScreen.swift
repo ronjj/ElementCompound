@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import Combine
 
 
 struct DisplayNameChangeScreen: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
+//    @ObservedObject var textBindingManager = TextBindingManager(limit: 15)
+    @ObservedObject var textBindingManager = TextBindingManager()
     @Environment(\.presentationMode) var presentationMode
+    let textLimit = 15
 
     
         
@@ -18,10 +22,12 @@ struct DisplayNameChangeScreen: View {
             NavigationView{
                 Form{
                     Section(header: Text("Enter New Display Name")) {
+                       // TextField("Eneter New Display name", text: $textBindingManager.text)
                         TextEditor(text:$settingsViewModel.newDisplayName)
                             .font(.custom("SF Pro", size: 18))
                             .frame(height: 50, alignment: .center)
                             .multilineTextAlignment(.leading)
+                            .onReceive(Just(settingsViewModel.newDisplayName)) { _ in limitText(textLimit) }
                     }
                     
                 }
@@ -59,5 +65,11 @@ struct DisplayNameChangeScreen: View {
         settingsViewModel.updateDisplayName()
         dismiss()
     }
+    
+    func limitText(_ upper: Int) {
+            if settingsViewModel.newDisplayName.count > upper {
+                settingsViewModel.newDisplayName = String(settingsViewModel.newDisplayName.prefix(upper))
+            }
+        }
         
     }
