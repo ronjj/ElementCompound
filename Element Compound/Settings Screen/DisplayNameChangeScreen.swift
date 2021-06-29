@@ -22,14 +22,15 @@ struct DisplayNameChangeScreen: View {
             NavigationView{
                 Form{
                     Section(header: Text("Enter New Display Name")) {
-                       // TextField("Eneter New Display name", text: $textBindingManager.text)
-                        TextEditor(text:$settingsViewModel.newDisplayName)
+                        TextField("Enter Display Name Here", text:$settingsViewModel.newDisplayName)
                             .font(.custom("SF Pro", size: 18))
-                            .frame(height: 50, alignment: .center)
-                            .multilineTextAlignment(.leading)
                             .onReceive(Just(settingsViewModel.newDisplayName)) { _ in limitText(textLimit) }
                     }
                     
+                    Section(header: Text("Disclaimer")) {
+                        Text("Change will take place in the settings once you quit and reopen the app")
+                          
+                    }
                 }
                 .navigationTitle("New Display Name")
                 .toolbar {

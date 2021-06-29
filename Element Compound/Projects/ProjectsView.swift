@@ -26,14 +26,22 @@ struct ProjectsView: View {
     
     private func projectRowView(project: Project) -> some View {
       NavigationLink(destination: ProjectDetailView(project: project)) {
-        VStack(alignment: .leading) {
-          Text(project.title)
-            .font(.headline)
-          Text(project.creator)
-            .font(.subheadline)
-//            Text(project.completionLevel)
-//            .font(.subheadline)
-        }
+          HStack{
+              VStack(alignment: .leading) {
+                  Text(project.title)
+                    .font(.headline)
+                  Text(project.creator)
+                    .font(.subheadline)
+        //            Text(project.completionLevel)
+        //            .font(.subheadline)
+            }
+              Spacer()
+              
+              Circle()
+                  .frame(width: 15, height: 15)
+              //this color needs to become dynamic
+                  .foregroundColor(Color.red)
+          }
       }
     }
     var body: some View {

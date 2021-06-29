@@ -26,7 +26,6 @@ struct ProjectCardView: View {
             HStack{
                 //Left side
                 VStack(alignment: .leading){
-                    
                     VStack(alignment: .leading){
                         Rectangle()
                             .cornerRadius(10)

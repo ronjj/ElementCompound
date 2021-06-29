@@ -43,8 +43,9 @@ struct Project: Identifiable, Codable{
         }
   //  var completionLevel: String
     var assignedStudents: [String]
-   // var priority: String
+   //var priority: String
     var notes: String
+    
     
     
  

@@ -50,6 +50,7 @@
 		54707100268AA5060057FA28 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547070FF268AA5060057FA28 /* SettingsViewModel.swift */; };
 		54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */; };
 		54707105268AABA50057FA28 /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707104268AABA50057FA28 /* TextBindingManager.swift */; };
+		54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707106268B9DF10057FA28 /* Color+Hexcode.swift */; };
 		5483871C26754C9F00B40A78 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5483871B26754C9F00B40A78 /* Launch Screen.storyboard */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
@@ -57,7 +58,7 @@
 		54933279263C51C6001C1D24 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54933278263C51C6001C1D24 /* HomeView2.swift */; };
 		5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */; };
 		54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementAddView.swift */; };
-		54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyle.swift */; };
+		54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyles.swift */; };
 		54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */; };
 		54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5DA264DC853003B749C /* CameraDetailView3.swift */; };
 		54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B552655999C0073EB35 /* CustomTabBar.swift */; };
@@ -125,6 +126,7 @@
 		547070FF268AA5060057FA28 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameChangeScreen.swift; sourceTree = "<group>"; };
 		54707104268AABA50057FA28 /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
+		54707106268B9DF10057FA28 /* Color+Hexcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hexcode.swift"; sourceTree = "<group>"; };
 		5483871B26754C9F00B40A78 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 		54933278263C51C6001C1D24 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewModel.swift; sourceTree = "<group>"; };
 		5493327F263C5295001C1D24 /* AnnouncementAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementAddView.swift; sourceTree = "<group>"; };
-		54A8B5D2264D6770003B749C /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		54A8B5D2264D6770003B749C /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnnouncements.swift; sourceTree = "<group>"; };
 		54A8B5DA264DC853003B749C /* CameraDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView3.swift; sourceTree = "<group>"; };
 		54AB3B552655999C0073EB35 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -232,7 +234,6 @@
 				5454C5242677EB8700EC84DA /* Projects */,
 				54707103268AAB740057FA28 /* Utilities */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
-				54A8B5D2264D6770003B749C /* ButtonStyle.swift */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
@@ -292,11 +293,13 @@
 		54707103268AAB740057FA28 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
 				54BBA4C826320B300021536D /* SearchBar.swift */,
 				54707104268AABA50057FA28 /* TextBindingManager.swift */,
 				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
+				54707106268B9DF10057FA28 /* Color+Hexcode.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -516,7 +519,7 @@
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
 				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
-				54A8B5D3264D6770003B749C /* ButtonStyle.swift in Sources */,
+				54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
 				54707105268AABA50057FA28 /* TextBindingManager.swift in Sources */,
 				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
@@ -526,6 +529,7 @@
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
+				54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */,
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
@@ -682,7 +686,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -708,7 +712,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

@@ -8,7 +8,7 @@
 import SwiftUI
 
 class TextBindingManager: ObservableObject {
-    @Published var text = "" {
+    
         
         //Version 1
 //        didSet {
@@ -24,10 +24,14 @@ class TextBindingManager: ObservableObject {
 //    }
         
         //Version 2
-        didSet {
-            if text.count > 15 && oldValue.count <= 15 {
-                text = oldValue
-            }
+//        didSet {
+//            if text.count > 15 && oldValue.count <= 15 {
+//                text = oldValue
+//            }
         }
-    }
-}
+        
+        
+        
+        
+        //MARK: Using The Text Limiter
+        // https://stackoverflow.com/questions/56476007/swiftui-textfield-max-length

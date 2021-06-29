@@ -36,58 +36,73 @@ struct ProjectDetailView: View {
 
 
     var body: some View {
-        
-        VStack{
-            
-            Text("Created by: \(project.creator). Due: \(project.pickedDateString) at \(project.pickedTimeString). ")
-                .font(.body)
-                .foregroundColor(Color.gray)
-            
-            Spacer()
-            
-            HStack{
-                Circle()
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color.red)
-                Text("Help Needed")
-                    .font(.body)
-            }
-            
-            Spacer()
-            
-            HStack{
-                Image(systemName: "info.circle.fill")
-                    .font(.title)
-                LinkedText("\(project.notes)")
-//                    Text("Notes: \(project.notes)")
-                    .font(.body)
-            }
-            
-            Spacer()
-            
-            HStack{
-                Image(systemName: "person.3.fill")
-                    .font(.title)
-                ForEach(project.assignedStudents, id: \.self) { assignedStudent in
-                    Label(assignedStudent, systemImage: "person")
-                        .accessibilityLabel(Text("Person"))
-                        .accessibilityValue(Text(assignedStudent))
-                        .font(.body)
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                VStack(alignment: .center, spacing: 50){
+                    Text("Created by: \(project.creator). Due: \(project.pickedDateString) at \(project.pickedTimeString). ")
+                        .font(.caption)
+                        .foregroundColor(Color.gray)
+                        .frame(width: 280)
+                        .fixedSize()
+                        .padding(.bottom, 50)
+                    
+                    Group{
+                        HStack{
+                    
+                            Circle()
+                                .frame(width: 35, height: 35)
+                                .foregroundColor(Color.red)
+                            Spacer()
+                            Text("Help Needed")
+                                .font(.body)
+                            Spacer()
+                        }
+                        
+                        
+                        
+                        HStack{
+                            
+                            Image(systemName: "info.circle.fill")
+                                .font(.title)
+                            Spacer()
+                            LinkedText("\(project.notes)")
+            //                    Text("Notes: \(project.notes)")
+                                .font(.body)
+                            Spacer()
+                               
+                        }
+                        
+                        
+                        HStack{
+                            
+                            Image(systemName: "person.3.fill")
+                                .font(.title)
+                            Spacer()
+                            ForEach(project.assignedStudents, id: \.self) { assignedStudent in
+                                Label(assignedStudent, systemImage: "person")
+                                    .accessibilityLabel(Text("Person"))
+                                    .accessibilityValue(Text(assignedStudent))
+                                    .font(.body)
+                            }
+                            Spacer()
+                        }
+                        .padding(.bottom, 25)
+                    }
+                    
+                    
+                    Button{
+               
+                    } label: {
+                        largeButtonStyle(title: "Contact Moderator")
+                    }
+                    
+                    Spacer()
                 }
-            }
-            
-            Spacer()
-            
-            Button{
-       
-            } label: {
-                ButtonStyle(title: "Contact Moderator")
+                .padding()
+                .frame(width: geometry.size.width)
+                .frame(minHeight: geometry.size.height)
             }
         }
-
-            
-        
-        
         
             .navigationBarTitle(project.title)
             .toolbar {

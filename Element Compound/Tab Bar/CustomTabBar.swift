@@ -29,14 +29,14 @@ struct CustomTabBar: View {
                             Image(systemName: "house")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
                             Image(systemName: "house.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         
@@ -54,14 +54,14 @@ struct CustomTabBar: View {
                             Image(systemName: "list.bullet")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
                             Image(systemName: "list.bullet")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         
@@ -78,14 +78,14 @@ struct CustomTabBar: View {
                             Image(systemName: "folder")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
                             Image(systemName: "folder.fill")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                     }
@@ -101,14 +101,14 @@ struct CustomTabBar: View {
                             Image(systemName: "note.text")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
                             Image(systemName: "note.text")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                     }
@@ -124,14 +124,14 @@ struct CustomTabBar: View {
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bginv)
+                                .foregroundColor(.bg)
                                 .padding()
                         }
                     }
@@ -139,7 +139,7 @@ struct CustomTabBar: View {
                 
             }
             .padding()
-            .background(Color.bg)
+            .background(Color.bginv)
             //For iOS 15 
           //  .background(.regularMaterial)
             .cornerRadius(20)
