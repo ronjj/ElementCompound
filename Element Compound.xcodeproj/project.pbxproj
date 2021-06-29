@@ -47,6 +47,8 @@
 		546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A3264C740100BC2719 /* FelixTitling.ttf */; };
 		5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462610726509ECF000E4592 /* ErrorMSGs.swift */; };
 		5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462845826514DED0081614A /* CustomNavigationBar.swift */; };
+		54707100268AA5060057FA28 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547070FF268AA5060057FA28 /* SettingsViewModel.swift */; };
+		54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */; };
 		5483871C26754C9F00B40A78 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5483871B26754C9F00B40A78 /* Launch Screen.storyboard */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
@@ -119,6 +121,8 @@
 		546151A3264C740100BC2719 /* FelixTitling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FelixTitling.ttf; sourceTree = "<group>"; };
 		5462610726509ECF000E4592 /* ErrorMSGs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMSGs.swift; sourceTree = "<group>"; };
 		5462845826514DED0081614A /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		547070FF268AA5060057FA28 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameChangeScreen.swift; sourceTree = "<group>"; };
 		5483871B26754C9F00B40A78 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
@@ -291,6 +295,8 @@
 				5429AF84264628EF00422295 /* MailView.swift */,
 				54E2442B263F922000D1B693 /* InfoScreen.swift */,
 				543E7BA9262A1F96004FDF51 /* SettingsView.swift */,
+				54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */,
+				547070FF268AA5060057FA28 /* SettingsViewModel.swift */,
 				548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */,
 			);
 			path = "Settings Screen";
@@ -509,6 +515,7 @@
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
+				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
@@ -532,6 +539,7 @@
 				54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */,
 				5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */,
 				548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */,
+				54707100268AA5060057FA28 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

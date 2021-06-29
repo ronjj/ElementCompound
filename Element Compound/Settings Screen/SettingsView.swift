@@ -21,6 +21,7 @@ enum Sheets: Identifiable {
     case info
     case mail
     case role
+    case displayNameChange
     
 }
 
@@ -32,11 +33,14 @@ struct SettingsView: View {
 //    @State private var presentInfoScreen = false
 //    @State private var presentRoleScreen = false
 //    @State var isShowingMailView = false
-    @State private var activeSheet: Sheets?
     
+    @ObservedObject var settingsViewModel = SettingsViewModel()
+    
+    @State private var activeSheet: Sheets?
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var alertNoMail = false
 
+    
     @AppStorage ("log_Status") var status = true
     @AppStorage ("role_Status") var role = Bool()
     
@@ -101,6 +105,8 @@ struct SettingsView: View {
                             MailView(result: self.$result)
                         case .role:
                             RoleCodeScreen()
+                        case .displayNameChange:
+                            DisplayNameChangeScreen()
                         }
                     }
 //                    .alert(item: self.$alertNoMail) {
@@ -116,13 +122,19 @@ struct SettingsView: View {
                     }) {
                         Text("Sign Out")
                     }
-                    
                     Button(action: {
-//                        self.presentRoleScreen = true
-                        activeSheet = .role
+                        activeSheet = .displayNameChange
                     }) {
-                        Text("Get Role")
+                        Text("Update Display Name")
                     }
+                    .disabled(role == false)
+                    
+//                    Button(action: {
+////                        self.presentRoleScreen = true
+//                        activeSheet = .role
+//                    }) {
+//                        Text("Get Role")
+//                    }
                 }
             }
             
