@@ -15,6 +15,7 @@ struct HomeView2: View {
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
     @ObservedObject var projectViewModel = ProjectViewModel2()
+    @ObservedObject var userAuth = Users()
    // @ObservedObject var favorites = Favorites()
    
     @State private var presentAddNewAnnouncement = false
@@ -114,6 +115,7 @@ struct HomeView2: View {
             }
             .onAppear(){
                 self.viewModel.fetchData()
+                self.userAuth.checkUserAuth()
                 
                 }
             }
