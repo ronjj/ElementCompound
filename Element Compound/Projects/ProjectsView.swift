@@ -40,7 +40,7 @@ struct ProjectsView: View {
               Circle()
                   .frame(width: 15, height: 15)
               //this color needs to become dynamic
-                  .foregroundColor(Color.red)
+                  .foregroundColor(project.color)
           }
       }
     }

@@ -29,8 +29,8 @@ struct ProjectCardView: View {
                     VStack(alignment: .leading){
                         Rectangle()
                             .cornerRadius(10)
-                            .foregroundColor(colors.randomElement())
-                           // .foregroundColor(announcement.color)
+                            //.foregroundColor(colors.randomElement())
+                            .foregroundColor(project.color)
                             .frame(width: 10, height: 10)
                     }
                   

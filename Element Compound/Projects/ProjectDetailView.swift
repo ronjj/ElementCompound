@@ -52,7 +52,7 @@ struct ProjectDetailView: View {
                     
                             Circle()
                                 .frame(width: 35, height: 35)
-                                .foregroundColor(Color.red)
+                                .foregroundColor(project.color)
                             Spacer()
                             Text("Help Needed")
                                 .font(.body)
@@ -94,7 +94,7 @@ struct ProjectDetailView: View {
                     Button{
                
                     } label: {
-                        largeButtonStyle(title: "Contact Moderator")
+                        largeButtonStyle(title: "Contact Officer")
                     }
                     
                     Spacer()

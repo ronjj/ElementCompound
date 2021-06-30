@@ -65,9 +65,9 @@ struct ProjectEditView2: View {
                 DatePicker("Choose Date", selection: $viewModel.project.dueDate)
             }
             
-//            Section(header: Text("Select Color")) {
-//                ColorPicker("Choose Color", selection: $viewModel.project.color)
-//            }
+            Section(header: Text("Select Color")) {
+                ColorPicker("Choose Color", selection: $viewModel.project.color)
+            }
 
 
 //            Section(header: Text("Priority")) {

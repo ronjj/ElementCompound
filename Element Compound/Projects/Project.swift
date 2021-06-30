@@ -18,7 +18,7 @@ struct Project: Identifiable, Codable{
     //@DocumentID var id: String?
     var title: String
     var creator: String = Auth.auth().currentUser?.displayName ?? "N/A"
-   // var color: Color = Color.random
+    var color: Color
 //    var dateEvent: Date
 //       var dateString: String {
 //           let formatter = DateFormatter()
@@ -51,11 +51,11 @@ struct Project: Identifiable, Codable{
 
     
  
-    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ /*dateEvent: Date,*/ dueDate: Date, /*completionLevel: String,*/ assignedStudents: [String], /*priority: String,*/ notes: String)
+    init(id: UUID = UUID(), title: String, creator: String, color: Color, /*dateEvent: Date,*/ dueDate: Date, /*completionLevel: String,*/ assignedStudents: [String], /*priority: String,*/ notes: String)
     {
      // self.id = id
         self.title = title
-        
+        self.color = color
         self.creator = creator
       //  self.dateEvent = dateEvent
         self.dueDate = dueDate
@@ -76,8 +76,7 @@ struct Project: Identifiable, Codable{
         case assignedStudents
      //   case priority
         case notes
-     
-       // case color
+        case color
         
     }
 }
