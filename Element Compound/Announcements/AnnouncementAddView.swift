@@ -33,9 +33,9 @@ struct AnnouncementAddView: View {
                         .multilineTextAlignment(.leading)
                 }
                 
-//                Section(header: Text("Color")) {
-//                    ColorPicker("Color", selection: $viewModel.announcement.color)
-//                }
+                Section(header: Text("Color")) {
+                    ColorPicker("Color", selection: $viewModel.announcement.color)
+                }
             }
             .navigationTitle("New Announcement")
             .toolbar {

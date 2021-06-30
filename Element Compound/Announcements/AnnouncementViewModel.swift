@@ -11,7 +11,7 @@ import Combine
 import SwiftUI
 
 class AnnoucnementViewModel: ObservableObject{
-    @Published var announcement: Announcement = Announcement(message: "", title: "",  photoURL:(Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue,*/  dateEvent: Date())
+    @Published var announcement: Announcement = Announcement(message: "", title: "",  photoURL:(Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  color: Color.blue,  dateEvent: Date())
     @Published var modified = false
   
     let ReceiverFCMToken = "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo"
@@ -23,7 +23,7 @@ class AnnoucnementViewModel: ObservableObject{
     
     private var cancellables = Set<AnyCancellable>()
     
-    init(announcement: Announcement = Announcement(message: "", title: "",  photoURL: (Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  /*color: Color.blue, */ dateEvent: Date()
+    init(announcement: Announcement = Announcement(message: "", title: "",  photoURL: (Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  color: Color.blue,  dateEvent: Date()
 )) {
         self.announcement = announcement
         self.$announcement

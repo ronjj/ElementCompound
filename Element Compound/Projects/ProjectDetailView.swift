@@ -19,6 +19,7 @@ struct ProjectDetailView: View {
     
     var project: Project
     @ObservedObject var viewModel = ProjectViewModel2()
+    @ObservedObject var viewModels = ProjectViewModel2()
   //  @ObservedObject var favorites = Favorites()
     
     // MARK: - UI Components
@@ -130,6 +131,7 @@ struct ProjectDetailView: View {
             }
             .onAppear() {
               print("BookDetailsView.onAppear() for \(self.project.title)")
+                
             }
 //            .onDisappear() {
 //              print("BookDetailsView.onDisappear()")
@@ -143,5 +145,4 @@ struct ProjectDetailView: View {
             }
     }
 }
-
 

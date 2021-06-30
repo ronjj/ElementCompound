@@ -5,6 +5,8 @@
 //  Created by Ronald Jabouin on 4/22/21.
 //
 
+import SwiftUI
+import UIKit
 import Foundation
 import FirebaseFirestoreSwift
 import Firebase
@@ -43,27 +45,26 @@ struct Project: Identifiable, Codable{
         }
   //  var completionLevel: String
     var assignedStudents: [String]
-   //var priority: String
+   // var priority: String
     var notes: String
-    
-    
+  
+
     
  
-
-//    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ dateEvent: Date, dueDate: Date, completionLevel: String, assignedStudents: [String], priority: String, notes: String)
-//    {
-//     // self.id = id
-//        self.title = title
-//     //   self.color = color
-//        self.creator = creator
-//        self.dateEvent = dateEvent
-//        self.dueDate = dueDate
-//        self.completionLevel = completionLevel
-//        self.assignedStudents = assignedStudents
-//        self.priority = priority
-//        self.notes = notes
-//      
-//    }
+    init(id: UUID = UUID(), title: String, creator: String, /*color: Color,*/ /*dateEvent: Date,*/ dueDate: Date, /*completionLevel: String,*/ assignedStudents: [String], /*priority: String,*/ notes: String)
+    {
+     // self.id = id
+        self.title = title
+        
+        self.creator = creator
+      //  self.dateEvent = dateEvent
+        self.dueDate = dueDate
+     //   self.completionLevel = completionLevel
+        self.assignedStudents = assignedStudents
+      //  self.priority = priority
+        self.notes = notes
+      
+    }
 
     
     enum CodingKeys: String, CodingKey {
@@ -75,6 +76,7 @@ struct Project: Identifiable, Codable{
         case assignedStudents
      //   case priority
         case notes
+     
        // case color
         
     }

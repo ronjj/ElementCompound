@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import FirebaseFirestoreSwift
 import Firebase
 import GoogleSignIn
@@ -18,7 +19,7 @@ struct Announcement: Identifiable, Codable{
     var title: String
     var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
-   // var color: Color
+    var color: Color
     var dateEvent: Date
        var dateString: String {
            let formatter = DateFormatter()
@@ -33,12 +34,12 @@ struct Announcement: Identifiable, Codable{
         }
 
     
-    init(id: UUID = UUID(), message: String, title: String, photoURL: URL, sender: String, /*color: Color,*/ dateEvent: Date) {
+    init(id: UUID = UUID(), message: String, title: String, photoURL: URL, sender: String, color: Color, dateEvent: Date) {
        // self.id = id
         self.message = message
         self.title = title
         self.photoURL = photoURL
-       // self.color = color
+        self.color = color
         self.sender = sender
         self.dateEvent = dateEvent
     }
@@ -50,10 +51,32 @@ struct Announcement: Identifiable, Codable{
         case dateEvent
         case title
         case photoURL
-       // case color
+        case color
     }
 }
 
 
 
-
+//extension Color: Codable {
+//  init(hex: String) {
+//    let rgba = hex.toRGBA()
+//    self.init(.sRGB,
+//              red: Double(rgba.r),
+//              green: Double(rgba.g),
+//              blue: Double(rgba.b),
+//              opacity: Double(rgba.alpha))
+//    }
+//
+//  public init(from decoder: Decoder) throws {
+//    let container = try decoder.singleValueContainer()
+//    let hex = try container.decode(String.self)
+//    self.init(hex: hex)
+//  }
+//
+//  public func encode(to encoder: Encoder) throws {
+//    var container = encoder.singleValueContainer()
+//    try container.encode(toHex)
+//  }
+//  //... (code for translating between hex and RGBA ommitted for brevity)
+//}
+//
