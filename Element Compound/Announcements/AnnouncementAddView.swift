@@ -33,9 +33,9 @@ struct AnnouncementAddView: View {
                         .multilineTextAlignment(.leading)
                 }
                 
-                Section(header: Text("Color")) {
-                    ColorPicker("Color", selection: $viewModel.announcement.color)
-                }
+//                Section(header: Text("Color")) {
+//                    ColorPicker("Color", selection: $viewModel.announcement.color)
+//                }
             }
             .navigationTitle("New Announcement")
             .toolbar {
@@ -49,7 +49,7 @@ struct AnnouncementAddView: View {
                     
                     Button(action: {
                         handleDoneTapped()
-                        self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.announcement.title, body: self.viewModel.announcement.message)
+                       // self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.announcement.title, body: self.viewModel.announcement.message)
                     }) {
                         Text("Send")
                     }
@@ -69,7 +69,7 @@ struct AnnouncementAddView: View {
     }
     
     func handleDoneTapped() {
-        viewModel.save()
+        viewModel.handleDoneTapped()
         dismiss()
     }
 

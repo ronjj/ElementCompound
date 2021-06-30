@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 import GoogleSignIn
+import UserNotifications
 
 
 @main

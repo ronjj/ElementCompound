@@ -33,7 +33,7 @@ struct AllAnouncements: View {
            
           
             .onAppear(){
-                self.viewModel.fetchData()
+                self.viewModel.subscribe()
     
         }
     }

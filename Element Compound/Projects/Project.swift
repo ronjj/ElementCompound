@@ -13,7 +13,7 @@ import Firebase
 
 
 
-struct Project: Identifiable, Codable{
+struct Project: Identifiable, Codable, Equatable{
     @DocumentID var id: String? = UUID().uuidString
     //@DocumentID var id: String?
     var title: String
@@ -37,12 +37,18 @@ struct Project: Identifiable, Codable{
             formatter.dateFormat = "MM/dd/YYYY"
             return formatter.string(from: dueDate)
         }
+        var pickedDateString2: String {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM-dd-YYYY"
+            return formatter.string(from: dueDate)
+        }
         var pickedTimeString: String {
             let formatter = DateFormatter()
             formatter.dateFormat = "h:mm a"
             formatter.timeZone = NSTimeZone(name: "EDT") as TimeZone?
             return formatter.string(from: dueDate)
         }
+    
   //  var completionLevel: String
     var assignedStudents: [String]
    // var priority: String

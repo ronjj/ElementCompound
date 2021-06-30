@@ -43,7 +43,7 @@ struct InfoScreen: View {
     }
     
     func handleDoneTapped() {
-        viewModel.save()
+        viewModel.handleDoneTapped()
         dismiss()
     }
     

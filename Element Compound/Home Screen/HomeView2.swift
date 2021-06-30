@@ -21,6 +21,7 @@ struct HomeView2: View {
     @State private var presentAddNewAnnouncement = false
     @State private var presentInfoScreen = false
     @State private var buttonDisabled = true
+   // let projects = self.projects
     
     @State private var action: Int? = 0
     
@@ -86,7 +87,7 @@ struct HomeView2: View {
                         Spacer()
                     }
                     .padding(.bottom, -10)
-//                    
+
 //                                        LazyVStack{
 //                                                    ForEach(favorites, id: \.self) { project in
 //                                                            NavigationLink(destination: ProjectDetailView(project: project)) {
@@ -114,17 +115,11 @@ struct HomeView2: View {
                 AnnouncementAddView()
             }
             .onAppear(){
-                self.viewModel.fetchData()
+                self.viewModel.subscribe()
                 self.userAuth.checkUserAuth()
                 
                 }
             }
         }
     }
-
-
-
-
-
-
 

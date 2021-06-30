@@ -32,7 +32,7 @@
 		543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FED54268611360057D3B9 /* ProjectsView2.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		54437C722679133C0057763F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54437C712679133C0057763F /* ProjectDetailView.swift */; };
-		54548438268955DF00392461 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54548437268955DF00392461 /* Favorites.swift */; };
+		54548438268955DF00392461 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54548437268955DF00392461 /* Bookmark.swift */; };
 		5454C5232677EB7A00EC84DA /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5222677EB7A00EC84DA /* Project.swift */; };
 		5454C5262677EBC300EC84DA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */; };
 		5454C5282677EC0700EC84DA /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5272677EC0700EC84DA /* ProjectViewModel.swift */; };
@@ -76,6 +76,7 @@
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
 		54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */; };
+		54FD8360268C02D100AB530C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD835F268C02D100AB530C /* DataStore.swift */; };
 		54FDFB4C2673F3A100D25361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */; };
 		DAB328010F53D22C0AF95C45 /* Pods_Element_Compound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A768F2986036DFE58B81BA /* Pods_Element_Compound.framework */; };
 /* End PBXBuildFile section */
@@ -108,7 +109,7 @@
 		543FED54268611360057D3B9 /* ProjectsView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView2.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		54437C712679133C0057763F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
-		54548437268955DF00392461 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		54548437268955DF00392461 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		5454C5222677EB7A00EC84DA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
 		5454C5272677EC0700EC84DA /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscItemDetailedView.swift; sourceTree = "<group>"; };
+		54FD835F268C02D100AB530C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		830855C6B59589D064BAED85 /* Pods-Element Compound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.release.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.release.xcconfig"; sourceTree = "<group>"; };
 		E30D470D52F55E4131C75708 /* Pods-Element Compound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.debug.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,7 +287,7 @@
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
 				543FED54268611360057D3B9 /* ProjectsView2.swift */,
-				54548437268955DF00392461 /* Favorites.swift */,
+				54548437268955DF00392461 /* Bookmark.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
+				54FD835F268C02D100AB530C /* DataStore.swift */,
 				54BBA4C826320B300021536D /* SearchBar.swift */,
 				54707104268AABA50057FA28 /* TextBindingManager.swift */,
 				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
@@ -505,7 +508,7 @@
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
 				54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */,
 				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
-				54548438268955DF00392461 /* Favorites.swift in Sources */,
+				54548438268955DF00392461 /* Bookmark.swift in Sources */,
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
@@ -534,6 +537,7 @@
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
+				54FD8360268C02D100AB530C /* DataStore.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
@@ -613,7 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -668,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

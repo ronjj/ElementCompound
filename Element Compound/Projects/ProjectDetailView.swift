@@ -40,7 +40,7 @@ struct ProjectDetailView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack(alignment: .center, spacing: 50){
-                    Text("Created by: \(project.creator). Due: \(project.pickedDateString) at \(project.pickedTimeString). ")
+                    Text(" \(project.creator).  \(project.pickedDateString2)")
                         .font(.caption)
                         .foregroundColor(Color.gray)
                         .frame(width: 280)
@@ -49,7 +49,6 @@ struct ProjectDetailView: View {
                     
                     Group{
                         HStack{
-                    
                             Circle()
                                 .frame(width: 35, height: 35)
                                 .foregroundColor(project.color)
@@ -114,6 +113,13 @@ struct ProjectDetailView: View {
                         Text("Edit")
                     }
                     .disabled(true)
+                    
+//                    Button {
+//                       toggleBookmark(for: project)
+//                   } label: {
+//                       Image(systemName: projectBookmarkVM.isBookmarked(for: project) ? "bookmark.fill" : "bookmark")
+//                   }
+                  // ios 15 styling .buttonStyle(.bordered)
                     
 //                    Button{
 //                        if self.favorites.contains(self.project) {
