@@ -79,14 +79,14 @@ struct HomeView2: View {
                     }
                     .padding(10)
                     
-                    HStack{
-                        Text("My Projects")
-                            .padding()
-                            .font(Font.custom("Poppins-Regular", size: 18))
-
-                        Spacer()
-                    }
-                    .padding(.bottom, -10)
+//                    HStack{
+//                        Text("My Projects")
+//                            .padding()
+//                            .font(Font.custom("Poppins-Regular", size: 18))
+//
+//                        Spacer()
+//                    }
+//                    .padding(.bottom, -10)
 
 //                                        LazyVStack{
 //                                                    ForEach(favorites, id: \.self) { project in

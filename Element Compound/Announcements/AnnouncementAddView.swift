@@ -7,11 +7,15 @@
 
 import SwiftUI
 import Firebase
+import Combine
 
 struct AnnouncementAddView: View {
     
     @StateObject var viewModel = AnnoucnementViewModel()
     @Environment(\.presentationMode) var presentationMode
+    
+    let textLimit = 21
+    let textLimit2 = 90
 
     
     var body: some View {
@@ -23,6 +27,8 @@ struct AnnouncementAddView: View {
                         .frame(height: 125, alignment: .center)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
+                        .onReceive(Just(viewModel.announcement.title)) { _ in limitText(textLimit) }
+                   
                 }
                 
                 Section(header: Text("Message")) {
@@ -31,6 +37,7 @@ struct AnnouncementAddView: View {
                         .frame(height: 125, alignment: .center)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
+                        .onReceive(Just(viewModel.announcement.message)) { _ in limitText2(textLimit2) }
                 }
                 
 //                Section(header: Text("Color")) {
@@ -73,7 +80,17 @@ struct AnnouncementAddView: View {
         dismiss()
     }
 
+    func limitText(_ upper: Int) {
+            if viewModel.announcement.title.count > upper {
+                viewModel.announcement.title = String(viewModel.announcement.title.prefix(upper))
+            }
+        }
     
+    func limitText2(_ upper: Int) {
+            if viewModel.announcement.message.count > upper {
+                viewModel.announcement.message = String(viewModel.announcement.message.prefix(upper))
+            }
+        }
 }
 struct AnnouncementEditView_Previews: PreviewProvider {
     static var previews: some View {

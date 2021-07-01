@@ -53,8 +53,6 @@ class ProjectsViewModel2: ObservableObject {
       }
     }
   }
-
-  
 }
 
 

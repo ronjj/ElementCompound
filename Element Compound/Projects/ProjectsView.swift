@@ -15,6 +15,7 @@ struct ProjectsView: View {
     @StateObject var viewModel = ProjectsViewModel2()
     @State var presentAddProjectSheet = false
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+   
     
     
     // MARK: - UI Components
@@ -67,13 +68,15 @@ struct ProjectsView: View {
 
           }
         }
+       
         .navigationBarTitle("Projects")
         .navigationBarItems(trailing: addButton)
         .listStyle(PlainListStyle())
         .onAppear() {
           print("BooksListView appears. Subscribing to data updates.")
           self.viewModel.subscribe()
-        }
+        
+      }
 //        .onDisappear() {
 //          // By unsubscribing from the view model, we prevent updates coming in from
 //          // Firestore to be reflected in the UI. Since we do want to receive updates
@@ -85,7 +88,9 @@ struct ProjectsView: View {
         .sheet(isPresented: self.$presentAddProjectSheet) {
             ProjectEditView2()
         }
+        
       }
+      
     }
   }
 

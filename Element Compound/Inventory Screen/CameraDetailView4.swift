@@ -103,6 +103,9 @@ struct CameraDetailView4: View {
                             .foregroundColor(.white)
                             .frame(width: 350, height: 75)
                     }
+                    .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarTitle("")
                     
                 }
                 .padding(.top,25)
@@ -114,11 +117,15 @@ struct CameraDetailView4: View {
                 .navigationViewStyle(StackNavigationViewStyle())
                 .navigationBarHidden(true)
                 .navigationBarBackButtonHidden(true)
+                .navigationBarTitle("")
            
             })
             .frame(maxWidth: .infinity)
             .edgesIgnoringSafeArea(.all)
             .background(Color.black.edgesIgnoringSafeArea(.all))
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarTitle("")
            
     }
 }

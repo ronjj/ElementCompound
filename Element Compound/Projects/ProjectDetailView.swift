@@ -29,7 +29,7 @@ struct ProjectDetailView: View {
         Text("Edit")
       }
       //.disabled(role == false)
-      .disabled(true)
+      //.disabled(true)
     }
     
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
@@ -40,12 +40,15 @@ struct ProjectDetailView: View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
                 VStack(alignment: .center, spacing: 50){
-                    Text(" \(project.creator).  \(project.pickedDateString2)")
-                        .font(.caption)
-                        .foregroundColor(Color.gray)
-                        .frame(width: 280)
-                        .fixedSize()
-                        .padding(.bottom, 50)
+                    
+                    VStack(alignment: .leading){
+                        Text(" \(project.creator).  \(project.pickedDateString2)")
+                            .font(.caption)
+                            .foregroundColor(Color.gray)
+                            .frame(width: 280)
+                            .fixedSize()
+                            .padding(.bottom, 50)
+                    }
                     
                     Group{
                         HStack{
@@ -58,8 +61,6 @@ struct ProjectDetailView: View {
                             Spacer()
                         }
                         
-                        
-                        
                         HStack{
                             
                             Image(systemName: "info.circle.fill")
@@ -71,7 +72,6 @@ struct ProjectDetailView: View {
                             Spacer()
                                
                         }
-                        
                         
                         HStack{
                             
@@ -112,7 +112,7 @@ struct ProjectDetailView: View {
                     } label: {
                         Text("Edit")
                     }
-                    .disabled(true)
+                    //.disabled(true)
                     
 //                    Button {
 //                       toggleBookmark(for: project)
@@ -143,7 +143,7 @@ struct ProjectDetailView: View {
 //              print("BookDetailsView.onDisappear()")
 //            }
             .sheet(isPresented: self.$presentEditProjectSheet) {
-              ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
+                ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
                 if case .success(let action) = result, action == .delete {
                   self.presentationMode.wrappedValue.dismiss()
                 }

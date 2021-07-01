@@ -24,6 +24,7 @@ struct ProjectEditView2: View {
   @Environment(\.presentationMode) private var presentationMode
   @State var presentActionSheet = false
 
+
   // MARK: - State (Initialiser-modifiable)
   
   @ObservedObject var viewModel = ProjectViewModel2()
@@ -39,10 +40,10 @@ struct ProjectEditView2: View {
   }
   
   var saveButton: some View {
-    Button(action: { self.handleDoneTapped() }) {
+    Button(action: { self.viewModel.handleDoneTapped() }) {
       Text(mode == .new ? "Done" : "Save")    
     }
-    .disabled(!viewModel.modified)
+    .disabled(!viewModel.modified)   
 
   }
 

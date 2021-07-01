@@ -38,11 +38,13 @@ struct AnnouncementCardView: View {
                         .bold()
                         .font(.title)
                         .padding(.bottom, 5)
+                        .minimumScaleFactor(0.4)
                     
                     LinkedText(announcement.message)
                     //Text(announcement.message)
                         .padding(.bottom, 10)
                         .font(.body)
+                        .minimumScaleFactor(0.4)
                 }
                 .padding(.leading)
                 

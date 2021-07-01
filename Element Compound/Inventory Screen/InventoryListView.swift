@@ -113,6 +113,7 @@ struct InventoryListView: View {
                         ForEach(MockData.miscs.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { misc in
                             NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
                                 InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription, color: Color.independence)
+                                
                                  
                                 
                             }

@@ -58,7 +58,7 @@ class ProjectViewModel2: ObservableObject {
       }
     }
     
-    private func updateProject(_ project: Project) {
+     func updateProject(_ project: Project) {
       if let documentId = project.id {
         do {
           try db.collection("projects").document(documentId).setData(from: project)
