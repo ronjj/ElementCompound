@@ -17,7 +17,6 @@ struct AnnouncementAddView: View {
     let textLimit = 21
     let textLimit2 = 90
 
-    
     var body: some View {
         NavigationView{
             Form{
