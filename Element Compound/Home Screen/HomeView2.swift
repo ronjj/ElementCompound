@@ -117,18 +117,18 @@ struct HomeView2: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        presentAddNewAnnouncement.toggle()
+                        presentInfoScreen.toggle()
                     }) {
-                        Image(systemName: "plus")
+                        Image(systemName: "info.circle")
                     }
-                    .disabled(role == false)
+                    
                 }
             }
             
            // .navigationBarTitle("Element Compound")
             .navigationBarTitle("")
-            .sheet(isPresented: $presentAddNewAnnouncement){
-                AnnouncementAddView()
+            .sheet(isPresented: $presentInfoScreen){
+                InfoScreen()
             }
             .onAppear(){
                 self.viewModel.subscribe()
