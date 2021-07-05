@@ -9,6 +9,18 @@ import SwiftUI
 import Firebase
 import GoogleSignIn
 
+
+enum Sheets2: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    case info
+    case addAnnoun
+}
+
+
+
 struct HomeView2: View {
     
     @AppStorage ("role_Status") var role = Bool()
@@ -16,6 +28,7 @@ struct HomeView2: View {
     @ObservedObject var viewModel = AnnouncementsViewModel()
     @ObservedObject var projectViewModel = ProjectViewModel2()
     @ObservedObject var userAuth = Users()
+    @State private var activeSheet: Sheets2?
    // @ObservedObject var favorites = Favorites()
    
     @State private var presentAddNewAnnouncement = false
@@ -57,7 +70,7 @@ struct HomeView2: View {
                             .padding()
                             .font(Font.custom("Poppins-Regular", size: 18))
 
-                        Button(action: { presentAddNewAnnouncement.toggle() },
+                        Button(action: { activeSheet = .addAnnoun },
                                label: {
                             ZStack {
                                 Circle()
@@ -117,7 +130,7 @@ struct HomeView2: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-                        presentInfoScreen.toggle()
+                        activeSheet = .info
                     }) {
                         Image(systemName: "info.circle")
                     }
@@ -125,10 +138,17 @@ struct HomeView2: View {
                 }
             }
             
-           // .navigationBarTitle("Element Compound")
-            .navigationBarTitle("")
-            .sheet(isPresented: $presentInfoScreen){
-                InfoScreen()
+            .navigationBarTitle("Element Compound")
+//            .sheet(isPresented: $presentInfoScreen){
+//                InfoScreen()
+//            }
+            .sheet(item: $activeSheet) { item in
+                switch item {
+                case .info:
+                    InfoScreen()
+                case .addAnnoun:
+                    AnnouncementAddView()
+                }
             }
             .onAppear(){
                 self.viewModel.subscribe()
