@@ -23,6 +23,8 @@ struct ProjectEditView2: View {
   
   @Environment(\.presentationMode) private var presentationMode
   @State var presentActionSheet = false
+    var colors = [Color.red, Color.blue]
+    @State private var selectedColor = Color.blue
 
 
   // MARK: - State (Initialiser-modifiable)
@@ -67,10 +69,54 @@ struct ProjectEditView2: View {
             }
             
             Section(header: Text("Select Color")) {
-                ColorPicker("Choose Color", selection: $viewModel.project.color)
+                
+                //V1
+                //ColorPicker("Choose Color", selection: $viewModel.project.color)
+                
+                //V2
+                Picker("Please choose a color", selection: $selectedColor) {
+                              ForEach(colors, id: \.self) { color in
+                                Circle()
+                                      .frame(width: 30, height: 30)
+                                      .foregroundColor(color)
+                              }
+                             
+                          }
+               
+              
+                //V3
+//                HStack{
+//                    VStack{
+//                        Button{
+//                            self.viewModel.project.color = Color.red
+//                        }label: {
+//                            Circle()
+//                                .frame(width: 30, height: 30)
+//                                .foregroundColor(Color.red)
+//                        }
+//
+//                        Text("Red Button")
+//                    }
+//
+//                    Spacer()
+//
+//                    VStack{
+//                        Button{
+//                            self.viewModel.project.color = Color.blue
+//                        }label: {
+//                            Circle()
+//                                .frame(width: 30, height: 30)
+//                                .foregroundColor(Color.blue)
+//                        }
+//
+//                        Text("Blue Button")
+//                    }
+//
+//                }
+//                .padding(20)
             }
 
-
+//              Priority Level
 //            Section(header: Text("Priority")) {
 //                Picker("Priority Level", selection: $viewModel.project.priority) {
 //                    ForEach(Self.priorityLevels, id: \.self) {
@@ -81,6 +127,7 @@ struct ProjectEditView2: View {
 //
 //            }
 
+            //Completion Level
 //            Section(header: Text("Stage")) {
 //
 //                Picker("Completion Level", selection: $viewModel.project.completionLevel) {
