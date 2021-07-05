@@ -10,8 +10,8 @@ import Firebase
 import GoogleSignIn
 
 struct ContentView: View {
-    @AppStorage ("log_Status") var status = false
-   
+    @AppStorage ("log_Status") var status = Bool()
+    
   
     var body: some View {
         
@@ -21,6 +21,7 @@ struct ContentView: View {
             }
             else{
                 LoginView()
+                //RejectedScreen()
             }
 //            if Auth.auth().currentUser?.uid != nil {
 //

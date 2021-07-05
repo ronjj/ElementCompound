@@ -13,8 +13,8 @@ import GoogleSignIn
 
 
 struct LoginView: View {
-    //this should probably be set to :Bool()
-    @AppStorage ("log_Status") var status = true
+    
+    @AppStorage ("log_Status") var status = Bool()
     
     var body: some View {
         VStack{

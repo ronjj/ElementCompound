@@ -12,42 +12,56 @@ import GoogleSignIn
 
 class Users: ObservableObject{
      @AppStorage ("role_Status") var role = Bool()
+     @AppStorage ("login_Status") var loginStatus = Bool()
+    @AppStorage ("log_Status") var status = Bool()
     
+    
+    //MARK: Roles
     func checkUserAuth() {
         let user = Auth.auth().currentUser
-        //sluo@chaminade-hs.org
-        if user?.uid == "FQfZNTWXb2SEfHDuFJwm9iU7LdI2" {
+        
+        //Chao S. Luo
+        if user?.email == "sluo@chaminade-hs.org"{
+            loginStatus = true
+            role = true
+        }
+
+        //Ronald Jabouin - Personal Account
+        else if user?.email == "ronaldjabouin2004@gmail.com" {
+            loginStatus = true
+            role = true
+        }
+
+        //Ronald Jabouin - School Account
+        else if user?.email == "22420rj@chaminade-hs.org" {
+            loginStatus = true
             role = true
         }
         
-        //ronaldjabouin2004@gmail.com
-        else if user?.uid == "PhDjOmlUUQgdmxwXvfepOn4JLUx2" {
+        //Brother Thomas Terrill
+        else if user?.email == "tterrill@chaminade-hs.org" {
+            loginStatus = true
              role = true
         }
         
-        //22420rj@chaminade-hs.org
-        else if user?.uid == "wiK3A60HKmbdK9Lw8DHMiW2Qk9t1" {
+        //Thomas Breslin
+        else if user?.email == "22102tb@chaminade-hs.org" {
+            loginStatus = true
              role = true
         }
         
-        //tterrill@chaminade-hs.org
-        else if user?.uid == "JbEGdMXQjihko4H3XOK7yBVxzjm2" {
-             role = true
-        }
-        
-        //22102tb@chaminade-hs.org
-        else if user?.uid == "r5p3zBbSOPPEC50Od0En707SPBf2" {
-             role = true
-        }
-        
-        //24129ad@chaminade-hs.org
-        else if user?.uid == "8BIdVf0AbsbFkt6JTTWObkCawD72" {
+        //Alexander Dircks
+        else if user?.email == "24129ad@chaminade-hs.org" {
+            loginStatus = true
              role = true
         }
         
         // Other Members
         else {
+            status = false
             role = false
         }
     }
 }
+
+

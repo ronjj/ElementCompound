@@ -40,6 +40,7 @@ struct Element_CompoundApp: App {
         @AppStorage ("log_Status") var status = false
         @ObservedObject private var viewModel = AnnouncementsViewModel()
         let gcmMessageIDKey = "gcm.message_id"
+        let user = Auth.auth().currentUser
       
        
         
@@ -101,6 +102,8 @@ struct Element_CompoundApp: App {
                     print("user=" + (res?.user.email)!)
                     withAnimation(.easeInOut) {
                     self.status = true
+                    
+                        //put logic here for if else
                     }
                 }
             }

@@ -27,6 +27,7 @@ struct TabViewItem: View {
                 }
                 else if self.index == 3{
                     ProjectsView()
+                    //TaskListView()
                 }
                 else{
                     SettingsView()

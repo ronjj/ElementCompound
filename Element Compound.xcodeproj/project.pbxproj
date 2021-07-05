@@ -65,10 +65,16 @@
 		54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B592655AF1D0073EB35 /* Color+Codable.swift */; };
 		54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8C262BB6310040A559 /* AppDelegate.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
+		54B7D51F268FAC960067AA12 /* RejectedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7D51E268FAC960067AA12 /* RejectedScreen.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
 		54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */; };
+		54D319CD26927143007A0948 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D319CC26927143007A0948 /* Task.swift */; };
+		54D319CF26927168007A0948 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D319CE26927168007A0948 /* TaskRepository.swift */; };
+		54D319D126927190007A0948 /* TaskCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D319D026927190007A0948 /* TaskCellViewModel.swift */; };
+		54D319D3269271AC007A0948 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D319D2269271AB007A0948 /* TaskListViewModel.swift */; };
+		54D319D5269271C4007A0948 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D319D4269271C4007A0948 /* TaskListView.swift */; };
 		54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636552654526900480CF3 /* AvenirLTStd-Book.otf */; };
 		54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */; };
 		54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636572654526900480CF3 /* AvenirLTStd-Black.otf */; };
@@ -143,10 +149,16 @@
 		54AB3B592655AF1D0073EB35 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		54AEEB8C262BB6310040A559 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		54B7D51E268FAC960067AA12 /* RejectedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectedScreen.swift; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
 		54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView4.swift; sourceTree = "<group>"; };
+		54D319CC26927143007A0948 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		54D319CE26927168007A0948 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		54D319D026927190007A0948 /* TaskCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellViewModel.swift; sourceTree = "<group>"; };
+		54D319D2269271AB007A0948 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		54D319D4269271C4007A0948 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		54D636552654526900480CF3 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
 		54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
 		54D636572654526900480CF3 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
@@ -184,6 +196,8 @@
 		5425C8B7268001A000465EAE /* Projects Files To Delete */ = {
 			isa = PBXGroup;
 			children = (
+				54548437268955DF00392461 /* Bookmark.swift */,
+				543FED54268611360057D3B9 /* ProjectsView2.swift */,
 				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
 				54570190267D58EF00D93F68 /* ProjectEditView.swift */,
 				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
@@ -235,10 +249,12 @@
 				5425C8B7268001A000465EAE /* Projects Files To Delete */,
 				5454C5242677EB8700EC84DA /* Projects */,
 				54707103268AAB740057FA28 /* Utilities */,
-				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5462845826514DED0081614A /* CustomNavigationBar.swift */,
 				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
+				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				54B7D51E268FAC960067AA12 /* RejectedScreen.swift */,
+				54D319CB26927136007A0948 /* ToDo Test */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
@@ -286,8 +302,6 @@
 				5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */,
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
-				543FED54268611360057D3B9 /* ProjectsView2.swift */,
-				54548437268955DF00392461 /* Bookmark.swift */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -349,6 +363,18 @@
 				5440999D26422081007EBF4A /* Users.swift */,
 			);
 			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		54D319CB26927136007A0948 /* ToDo Test */ = {
+			isa = PBXGroup;
+			children = (
+				54D319CC26927143007A0948 /* Task.swift */,
+				54D319CE26927168007A0948 /* TaskRepository.swift */,
+				54D319D026927190007A0948 /* TaskCellViewModel.swift */,
+				54D319D2269271AB007A0948 /* TaskListViewModel.swift */,
+				54D319D4269271C4007A0948 /* TaskListView.swift */,
+			);
+			path = "ToDo Test";
 			sourceTree = "<group>";
 		};
 		E6978BBADDF56ED28FC85115 /* Pods */ = {
@@ -505,6 +531,7 @@
 				5454C5282677EC0700EC84DA /* ProjectViewModel.swift in Sources */,
 				5454C5262677EBC300EC84DA /* ProjectsViewModel.swift in Sources */,
 				548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */,
+				54D319D126927190007A0948 /* TaskCellViewModel.swift in Sources */,
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
 				54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */,
 				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
@@ -515,6 +542,7 @@
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */,
+				54D319D3269271AC007A0948 /* TaskListViewModel.swift in Sources */,
 				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
@@ -523,6 +551,7 @@
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
 				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */,
+				54D319CF26927168007A0948 /* TaskRepository.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
 				54707105268AABA50057FA28 /* TextBindingManager.swift in Sources */,
 				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
@@ -551,8 +580,11 @@
 				54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */,
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
+				54B7D51F268FAC960067AA12 /* RejectedScreen.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
 				5440999E26422081007EBF4A /* Users.swift in Sources */,
+				54D319D5269271C4007A0948 /* TaskListView.swift in Sources */,
+				54D319CD26927143007A0948 /* Task.swift in Sources */,
 				54BBA4C926320B300021536D /* SearchBar.swift in Sources */,
 				54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */,
 				543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */,

@@ -101,39 +101,4 @@ struct ProjectsView: View {
 //  }
 
     
-//    var body: some View {
-//        NavigationView{
-//                ScrollView(showsIndicators: false){
-//                    LazyVStack{
-//                        ForEach(viewModel.projects) { project in
-//                                NavigationLink(destination: ProjectDetailView(project: project)) {
-//                                    ProjectCardView(project: project)
-//                                }
-//                            }
-//                        .padding(7)
-//                    }
-//                }
-//
-//            .navigationBarTitle("Projects")
-//
-//            .toolbar {
-//                ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                    Button(action: {
-//                        presentAddNewProject.toggle()
-//                    }) {
-//                        Image(systemName: "plus")
-//                    }
-//                    .disabled(role == false)
-//                }
-//            }
-//
-//            .sheet(isPresented: $presentAddNewProject){
-//               ProjectEditView2()
-//            }
-//
-//            .onAppear{
-//                self.viewModel.subscribeNewest()
-//            }
-//        }
-//    }
-//}
+

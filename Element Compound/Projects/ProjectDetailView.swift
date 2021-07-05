@@ -112,7 +112,7 @@ struct ProjectDetailView: View {
                     } label: {
                         Text("Edit")
                     }
-                    //.disabled(true)
+                   
                     
 //                    Button {
 //                       toggleBookmark(for: project)

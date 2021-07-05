@@ -48,12 +48,27 @@ struct HomeView2: View {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
                 
+                Image("elementicontrans2")
+                    .font(.title)
                 
                 ScrollView{
                     HStack{
                         Text("Announcements")
                             .padding()
                             .font(Font.custom("Poppins-Regular", size: 18))
+
+                        Button(action: { presentAddNewAnnouncement.toggle() },
+                               label: {
+                            ZStack {
+                                Circle()
+                                    .foregroundColor(.white)
+                                    .frame(width: 25, height: 25)
+                              Image(systemName: "plus")
+                                    .foregroundColor(.accentColor)
+                            }
+                        })
+                            .disabled(role == false)
+                            .padding(.leading, -15)
                         
                         Spacer()
                         Button{
@@ -110,7 +125,8 @@ struct HomeView2: View {
                 }
             }
             
-            .navigationBarTitle("Element Compound")
+           // .navigationBarTitle("Element Compound")
+            .navigationBarTitle("")
             .sheet(isPresented: $presentAddNewAnnouncement){
                 AnnouncementAddView()
             }

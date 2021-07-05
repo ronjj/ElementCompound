@@ -42,11 +42,13 @@ struct InventoryListCellView: View {
                             .font(.title2)
                             .fontWeight(.medium)
                             .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
                         
                         Text(description)
                             .foregroundColor(Color.darkGrey)
                             .font(.footnote)
                             .fixedSize(horizontal: false, vertical: true)
+                            .multilineTextAlignment(.leading)
                     }
                     
                     Spacer()
