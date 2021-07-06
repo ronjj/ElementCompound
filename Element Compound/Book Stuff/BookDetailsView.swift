@@ -1,69 +1,69 @@
+////
+////  BookDetailsView.swift
+////  BookSpine
+////
+////  Created by Peter Friese on 15/09/2020.
+////  Copyright © 2020 Google LLC. All rights reserved.
+////
 //
-//  BookDetailsView.swift
-//  BookSpine
+//import SwiftUI
 //
-//  Created by Peter Friese on 15/09/2020.
-//  Copyright © 2020 Google LLC. All rights reserved.
+//struct BookDetailsView: View {
+//  // MARK: - State
+//  
+//  @Environment(\.presentationMode) var presentationMode
+//  @State var presentEditBookSheet = false
+//  
+//  // MARK: - State (Initialiser-modifiable)
+//  
+//  var book: Book
+//  
+//  // MARK: - UI Components
+//  
+//  private func editButton(action: @escaping () -> Void) -> some View {
+//    Button(action: { action() }) {
+//      Text("Edit")
+//    }
+//  }
+//  
+//  var body: some View {
+//    Form {
+//      Section(header: Text("Book")) {
+//        Text(book.title)
+//        Text("\(book.numberOfPages) pages")
+//      }
+//      
+//      Section(header: Text("Author")) {
+//        Text(book.author)
+//      }
+//    }
+//    .navigationBarTitle(book.title)
+//    .navigationBarItems(trailing: editButton {
+//      self.presentEditBookSheet.toggle()
+//    })
+//    .onAppear() {
+//      print("BookDetailsView.onAppear() for \(self.book.title)")
+//    }
+//    .onDisappear() {
+//      print("BookDetailsView.onDisappear()")
+//    }
+//    .sheet(isPresented: self.$presentEditBookSheet) {
+//      BookEditView(viewModel: BookViewModel(book: book), mode: .edit) { result in
+//        if case .success(let action) = result, action == .delete {
+//          self.presentationMode.wrappedValue.dismiss()
+//        }
+//      }
+//    }
+//  }
+//  
+//}
 //
-
-import SwiftUI
-
-struct BookDetailsView: View {
-  // MARK: - State
-  
-  @Environment(\.presentationMode) var presentationMode
-  @State var presentEditBookSheet = false
-  
-  // MARK: - State (Initialiser-modifiable)
-  
-  var book: Book
-  
-  // MARK: - UI Components
-  
-  private func editButton(action: @escaping () -> Void) -> some View {
-    Button(action: { action() }) {
-      Text("Edit")
-    }
-  }
-  
-  var body: some View {
-    Form {
-      Section(header: Text("Book")) {
-        Text(book.title)
-        Text("\(book.numberOfPages) pages")
-      }
-      
-      Section(header: Text("Author")) {
-        Text(book.author)
-      }
-    }
-    .navigationBarTitle(book.title)
-    .navigationBarItems(trailing: editButton {
-      self.presentEditBookSheet.toggle()
-    })
-    .onAppear() {
-      print("BookDetailsView.onAppear() for \(self.book.title)")
-    }
-    .onDisappear() {
-      print("BookDetailsView.onDisappear()")
-    }
-    .sheet(isPresented: self.$presentEditBookSheet) {
-      BookEditView(viewModel: BookViewModel(book: book), mode: .edit) { result in
-        if case .success(let action) = result, action == .delete {
-          self.presentationMode.wrappedValue.dismiss()
-        }
-      }
-    }
-  }
-  
-}
-
-struct BookDetailsView_Previews: PreviewProvider {
-  static var previews: some View {
-    let book = Book(title: "Changer", author: "Matt Gemmell", numberOfPages: 474)
-    return
-      NavigationView {
-        BookDetailsView(book: book)
-      }
-  }
-}
+//struct BookDetailsView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    let book = Book(title: "Changer", author: "Matt Gemmell", numberOfPages: 474)
+//    return
+//      NavigationView {
+//        BookDetailsView(book: book)
+//      }
+//  }
+//}

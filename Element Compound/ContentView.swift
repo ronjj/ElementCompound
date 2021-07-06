@@ -12,6 +12,7 @@ import GoogleSignIn
 struct ContentView: View {
     @AppStorage ("log_Status") var status = Bool()
     
+    
   
     var body: some View {
         
@@ -19,10 +20,11 @@ struct ContentView: View {
             if status {
                 TabViewItem()
             }
-            else{
+            else {
                 LoginView()
                 //RejectedScreen()
             }
+            
 //            if Auth.auth().currentUser?.uid != nil {
 //
 //                TabViewItem()
@@ -31,10 +33,12 @@ struct ContentView: View {
 //                    LoginView()
 //                }
         }
+        
+        }
        
 
     }
-}
+
 
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {

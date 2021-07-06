@@ -35,6 +35,13 @@ struct InventoryListCellView: View {
                         .frame(width: 120, height: 90)
                         .cornerRadius(8)
                         .padding(.trailing, 5)
+                    
+//                    InventoryRemoteImage(urlString: image)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 120, height: 90)
+//                        .cornerRadius(8)
+//                        .padding(.trailing, 5)
                           
                     VStack(alignment: .leading, spacing: 5) {
                         Text(title)

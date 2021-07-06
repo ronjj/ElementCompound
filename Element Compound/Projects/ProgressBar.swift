@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProgressBar: View {
+    
+    
     var width: CGFloat = 200
     var height: CGFloat = 20
     var percent: CGFloat = 70

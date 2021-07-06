@@ -41,3 +41,14 @@ struct ProfileRemoteImage: View{
             .onAppear{imageLoader.load(fromURLString: urlString)}
     }
 }
+
+struct InventoryRemoteImage: View{
+    
+    @ObservedObject var imageLoader = ImageLoader()
+    let urlString: String
+    
+    var body: some View{
+        RemoteImage(image: imageLoader.image)
+            .onAppear{imageLoader.load(fromURLString: urlString)}
+    }
+}

@@ -26,8 +26,8 @@ struct TabViewItem: View {
                         .font(.largeTitle)
                 }
                 else if self.index == 3{
-                    BooksListView()
-                    //ProjectsView()
+                    //BooksListView()
+                    ProjectsListView()
                     //TaskListView()
                 }
                 else{

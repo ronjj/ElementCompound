@@ -215,7 +215,6 @@
 				5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */,
 				54570190267D58EF00D93F68 /* ProjectEditView.swift */,
 				5454C52B2677ECE300EC84DA /* ProjectAddView.swift */,
-				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
 				5454C5272677EC0700EC84DA /* ProjectViewModel.swift */,
 			);
 			path = "Projects Files To Delete";
@@ -310,6 +309,7 @@
 		5454C5242677EB8700EC84DA /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
 				5454C5222677EB7A00EC84DA /* Project.swift */,
 				5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */,
 				5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */,
