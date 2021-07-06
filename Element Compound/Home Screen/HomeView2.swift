@@ -26,7 +26,7 @@ struct HomeView2: View {
     @AppStorage ("role_Status") var role = Bool()
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
-    @ObservedObject var projectViewModel = ProjectViewModel2()
+    //@ObservedObject var projectViewModel = ProjectViewModel2()
     @ObservedObject var userAuth = Users()
     @State private var activeSheet: Sheets2?
    // @ObservedObject var favorites = Favorites()
