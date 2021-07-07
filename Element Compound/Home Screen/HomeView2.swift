@@ -26,13 +26,13 @@ struct HomeView2: View {
     @AppStorage ("role_Status") var role = Bool()
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
-@ObservedObject var projectViewModel = ProjectViewModel2()
+    @ObservedObject var projectViewModel = ProjectViewModel2()
     @ObservedObject var userAuth = Users()
     @State private var activeSheet: Sheets2?
    // @ObservedObject var favorites = Favorites()
    
-    @State private var presentAddNewAnnouncement = false
-    @State private var presentInfoScreen = false
+//    @State private var presentAddNewAnnouncement = false
+//    @State private var presentInfoScreen = false
     @State private var buttonDisabled = true
    // let projects = self.projects
     
@@ -65,6 +65,27 @@ struct HomeView2: View {
                     .font(.title)
                 
                 ScrollView{
+                    HStack {
+                        Text("Equipment List")
+                            .font(.largeTitle)
+                            .foregroundColor(.bginv)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            activeSheet = .info
+                        }) {
+                            Image(systemName: "info.circle")
+                                .font(.title2)
+                        }
+                        
+                        .padding(.trailing, 20)
+                    }
+                    .padding(.top, 30)
+                    .padding(.bottom, 20)
+                    .padding(.leading, 20)
+                    
                     HStack{
                         Text("Announcements")
                             .padding()
@@ -127,18 +148,19 @@ struct HomeView2: View {
 //                                            }
                     }
                 }
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        activeSheet = .info
-                    }) {
-                        Image(systemName: "info.circle")
-                    }
-                    
-                }
-            }
+//            .toolbar {
+//                ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                    Button(action: {
+//                        activeSheet = .info
+//                    }) {
+//                        Image(systemName: "info.circle")
+//                    }
+//
+//                }
+//            }
             
-            .navigationBarTitle("Element Compound")
+            .navigationBarHidden(true)
+            
 //            .sheet(isPresented: $presentInfoScreen){
 //                InfoScreen()
 //            }
