@@ -42,18 +42,21 @@ struct ProjectDetailsView: View {
   var body: some View {
       GeometryReader { geometry in
           ScrollView(.vertical) {
-              VStack(alignment: .center, spacing: 50){
-                  
-                  VStack(alignment: .leading){
-                      Text(" \(project.creator).  \(project.pickedDateString2)")
-                          .font(.caption)
-                          .foregroundColor(Color.gray)
-                          .frame(width: 280)
-                          .fixedSize()
-                          .padding(.bottom, 50)
-                  }
-                  
-                  Group{
+            
+            HStack{
+                Text(" \(project.creator), \(project.pickedDateString2)")
+                    .font(.caption)
+                    .foregroundColor(Color.gray)
+                    .frame(width: 280)
+                    //.fixedSize()
+                    .padding(.bottom, 50)
+                    .padding(.leading, -65)
+                
+                Spacer()
+            }
+            
+              VStack(spacing: 50){
+               Group{
                       HStack{
                           Circle()
                               .frame(width: 35, height: 35)
@@ -95,13 +98,11 @@ struct ProjectDetailsView: View {
                       .padding(.bottom, 25)
                   }
                   
-                  
                   Button{
              
                   } label: {
-                      largeButtonStyle(title: "Contact Officer")
+                      mediumButtonStyle(title: "Contact Officer")
                   }
-                 
                   
                   Spacer()
               }
@@ -130,7 +131,5 @@ struct ProjectDetailsView: View {
       }
     }
   }
-  
-
 }
 

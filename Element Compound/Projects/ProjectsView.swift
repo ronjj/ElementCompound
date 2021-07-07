@@ -7,6 +7,7 @@ struct ProjectsListView: View {
   // MARK: - State
     @AppStorage ("role_Status") var role = Bool()
     @StateObject var viewModel = ProjectsViewModel2()
+    @ObservedObject var viewModel2 = ProjectViewModel2()
     @State var presentAddProjectSheet = false
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
 
@@ -45,8 +46,6 @@ struct ProjectsListView: View {
         //            Text(project.completionLevel)
         //            .font(.subheadline)
                 }
-                  
-          
             }
               Spacer()
 

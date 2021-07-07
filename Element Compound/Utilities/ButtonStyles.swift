@@ -23,6 +23,21 @@ struct ButtonStyle: View {
 }
 
 
+struct mediumButtonStyle: View {
+    let title: LocalizedStringKey
+    var body: some View {
+        Text(title)
+            .font(.title3)
+            .fontWeight(.semibold)
+            .frame(width: 200, height: 50)
+            .foregroundColor(.bg)
+            .background(Color.bginv)
+            .cornerRadius(20)
+    }
+}
+
+
+
 struct largeButtonStyle: View {
     let title: LocalizedStringKey
     var body: some View {

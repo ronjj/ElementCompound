@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ProgressBar: View {
     
+    @ObservedObject var viewModel = ProjectViewModel2()
     
     var width: CGFloat = 200
     var height: CGFloat = 20
+   
     var percent: CGFloat = 70
     var color1 = Color.red
     var color2 = Color.blue
@@ -30,7 +32,7 @@ struct ProgressBar: View {
                 .foregroundColor(Color.black.opacity(0.1))
             
             RoundedRectangle(cornerRadius: height, style: .continuous)
-                .frame(width: percent * multiplier, height: height)
+                .frame(width: CGFloat(viewModel.project.percentComplete) * multiplier, height: height)
                 .background(LinearGradient(gradient: Gradient(colors:[color1, color2]), startPoint: .leading,endPoint: .trailing)
                                 .clipShape(RoundedRectangle(cornerRadius: height, style: .continuous))
                 )

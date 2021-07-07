@@ -82,8 +82,7 @@ struct ProjectEditView2: View {
                       Button{
                           self.viewModel.project.color = Color.red
                           self.helpText = "Help Needed"
-                          viewModel.project.helpNeeded = true
-                          print(viewModel.project.helpNeeded)
+                         
                       }label: {
                           Circle()
                               .frame(width: 30, height: 30)
@@ -100,8 +99,7 @@ struct ProjectEditView2: View {
                       Button{
                           self.viewModel.project.color = Color.blue
                           self.helpText = "No Help Needed"
-                          viewModel.project.helpNeeded = false
-                          print(viewModel.project.helpNeeded)
+                         
                       }label: {
                           Circle()
                               .frame(width: 30, height: 30)
@@ -141,6 +139,18 @@ struct ProjectEditView2: View {
               }
           }
 
+        
+        Section(header: Text("Project Percentage")){
+            HStack{
+                Slider(value: $viewModel.project.percentComplete, in: 0...100)
+                    .padding()
+                
+                Text("\(viewModel.project.percentComplete, specifier: "%.0f")%")
+            }
+           
+        }
+        
+        
           Section(header: Text("Project Notes and Description")){
               TextEditor(text: $viewModel.project.notes)
                   .frame(height: 125, alignment: .center)
