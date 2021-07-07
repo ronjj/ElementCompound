@@ -33,7 +33,7 @@ class ProjectViewModel2: ObservableObject {
         
   // MARK: - Constructors
   
-    init(project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  color: Color.blue, /*dateEvent: Date(),*/ dueDate: Date(), /*completionLevel: "Idea", */ assignedStudents: [], /*priority: "Low",*/ notes: "...")) {
+    init(project: Project = Project(title: "",creator: Auth.auth().currentUser?.displayName ?? "N/A",  color: Color.blue, /*dateEvent: Date(),*/ dueDate: Date(), /*completionLevel: "Idea", */ assignedStudents: [], /*priority: "Low",*/ notes: "...", helpNeeded: false )) {
     self.project = project
     
     self.$project

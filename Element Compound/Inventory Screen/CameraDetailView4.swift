@@ -103,9 +103,7 @@ struct CameraDetailView4: View {
                             .foregroundColor(.white)
                             .frame(width: 350, height: 75)
                     }
-                    .navigationBarHidden(true)
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarTitle("")
+                   
                     
                 }
                 .padding(.top,25)
@@ -115,9 +113,7 @@ struct CameraDetailView4: View {
                 .frame(maxWidth: .infinity)
                 .offset(y: -30)
                 .navigationViewStyle(StackNavigationViewStyle())
-                .navigationBarHidden(true)
-                .navigationBarBackButtonHidden(true)
-                .navigationBarTitle("")
+                
            
             })
             .frame(maxWidth: .infinity)
@@ -130,13 +126,4 @@ struct CameraDetailView4: View {
     }
 }
 
-extension UINavigationController: UIGestureRecognizerDelegate {
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-        interactivePopGestureRecognizer?.delegate = self
-    }
 
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return viewControllers.count > 1
-    }
-}

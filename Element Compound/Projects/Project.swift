@@ -51,6 +51,7 @@ struct Project: Identifiable, Codable, Equatable{
     var assignedStudents: [String]
    // var priority: String
     var notes: String
+    var helpNeeded: Bool
 
   
 
@@ -82,6 +83,7 @@ struct Project: Identifiable, Codable, Equatable{
      //   case priority
         case notes
         case color
+        case helpNeeded
    
         
     }

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CameraItem: Identifiable{
+struct CameraItem: Decodable, Identifiable{
     let id = UUID()
     let name: String
     let shortDescription: String
@@ -21,7 +21,7 @@ struct CameraItem: Identifiable{
 }
 
 
-struct ComputerItem: Identifiable{
+struct ComputerItem:  Decodable, Identifiable{
     let id = UUID()
     let name: String
     let shortDescription: String
@@ -32,7 +32,7 @@ struct ComputerItem: Identifiable{
 }
 
 
-struct AudioItem: Identifiable{
+struct AudioItem:  Decodable, Identifiable{
     let id = UUID()
     let name: String
     let shortDescription: String
@@ -43,7 +43,7 @@ struct AudioItem: Identifiable{
 }
 
 
-struct MiscItem: Identifiable{
+struct MiscItem:  Decodable, Identifiable{
     let id = UUID()
     let name: String
     let shortDescription: String
@@ -53,7 +53,21 @@ struct MiscItem: Identifiable{
     
 }
 
+struct CameraResponse: Decodable {
+    let request: [CameraItem]
+}
 
+struct ComputerResponse: Decodable {
+    let request: [ComputerItem]
+}
+
+struct AudioResponse: Decodable {
+    let request: [AudioItem]
+}
+
+struct MiscResponse: Decodable {
+    let request: [MiscItem]
+}
 // add actual images as a test
 // remember to delete these images from xcassets
 

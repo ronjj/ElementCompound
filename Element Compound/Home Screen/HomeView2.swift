@@ -74,10 +74,10 @@ struct HomeView2: View {
                                label: {
                             ZStack {
                                 Circle()
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.bg)
                                     .frame(width: 25, height: 25)
                               Image(systemName: "plus")
-                                    .foregroundColor(.accentColor)
+                                    .foregroundColor(.bginv)
                             }
                         })
                             .disabled(role == false)

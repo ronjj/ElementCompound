@@ -23,12 +23,21 @@ struct InventoryListView: View {
         NavigationView {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
-                
-                Text("Equipment List")
-                    .font(.title)
-                
-                
                 ScrollView{
+                    HStack {
+                        Text("Equipment List")
+                            .font(.largeTitle)
+                            .foregroundColor(.bginv)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                    }
+                    
+                    .padding(.top, 30)
+                    .padding(.bottom, 20)
+                    .padding(.leading, 20)
+                    
+                    
                     SearchBar(text: $searchText)
                         .padding(.top, 15)
                         .padding(.bottom, 5)
@@ -46,19 +55,13 @@ struct InventoryListView: View {
                         }
                         
                         ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
-                            NavigationLink(destination: CameraDetailView4(camera: camera)) {
+                            NavigationLink(destination: CameraItemDetailedView5(camera: camera)) {
                                 InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
-                                   
-                                
-                                
-                                
+ 
                             }
                             .padding(5)
                         }
-                        
-                        
-                        
-                        
+    
                         HStack{
                             Text("Computers")
                                 .foregroundColor(Color.bginv)
@@ -72,9 +75,6 @@ struct InventoryListView: View {
                         ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in
                             NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
                                 InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription, color: Color.ruby)
-                                  
-                                
-                                
                             }
                         }
                         
@@ -113,19 +113,20 @@ struct InventoryListView: View {
                         ForEach(MockData.miscs.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { misc in
                             NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
                                 InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription, color: Color.independence)
-                                
-                                 
-                                
+    
                             }
                             .padding(5)
                         }
                         
                     }
                     .navigationTitle("Equipment List")
+                    .navigationBarHidden(true)
                     
                 }
                 .background(Color.lightBlue)
+                .navigationBarHidden(true)
             }
+            .navigationBarHidden(true)
         }
     }
 }

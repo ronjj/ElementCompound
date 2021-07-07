@@ -60,8 +60,9 @@ struct ProjectDetailsView: View {
                               .foregroundColor(project.color)
                           Spacer()
                           Text("Help Needed")
+                         // Text(viewModel.project.helpNeeded ? "No Help Needed" : "Help Needed")
                          
-                              .font(.body)
+                              //.font(.body)
                           Spacer()
                          
                       }
