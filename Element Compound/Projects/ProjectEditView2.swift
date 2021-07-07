@@ -82,6 +82,7 @@ struct ProjectEditView2: View {
                       Button{
                           self.viewModel.project.color = Color.red
                           self.helpText = "Help Needed"
+                        viewModel.project.helpToggle = true
                          
                       }label: {
                           Circle()
@@ -99,6 +100,7 @@ struct ProjectEditView2: View {
                       Button{
                           self.viewModel.project.color = Color.blue
                           self.helpText = "No Help Needed"
+                        viewModel.project.helpToggle = false
                          
                       }label: {
                           Circle()

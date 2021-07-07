@@ -20,6 +20,7 @@ struct ProjectDetailsView: View {
   @State var presentEditBookSheet = false
     @ObservedObject var viewModel = ProjectViewModel2()
     @ObservedObject var viewModels = ProjectViewModel2()
+    @State var helpNeededText = "Help Needed"
     
 
     
@@ -62,8 +63,9 @@ struct ProjectDetailsView: View {
                               .frame(width: 35, height: 35)
                               .foregroundColor(project.color)
                           Spacer()
-                          Text("Help Needed")
-                         // Text(viewModel.project.helpNeeded ? "No Help Needed" : "Help Needed")
+                        Text(project.helpToggle ? "Help Needed" : "No Help Needed")
+                          //Text("Help Needed")
+                         
                          
                               //.font(.body)
                           Spacer()
