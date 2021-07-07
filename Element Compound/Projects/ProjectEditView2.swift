@@ -80,14 +80,14 @@ struct ProjectEditView2: View {
               HStack{
                   VStack{
                       Button{
-                          self.viewModel.project.color = Color.red
+                          self.viewModel.project.color = Color.redButton
                           self.helpText = "Help Needed"
                         viewModel.project.helpToggle = true
                          
                       }label: {
                           Circle()
                               .frame(width: 30, height: 30)
-                              .foregroundColor(Color.red)
+                            .foregroundColor(Color.redButton)
                       }
                       .buttonStyle(BorderlessButtonStyle())
                       
@@ -98,14 +98,14 @@ struct ProjectEditView2: View {
 
                   VStack{
                       Button{
-                          self.viewModel.project.color = Color.blue
+                          self.viewModel.project.color = Color.blueButton
                           self.helpText = "No Help Needed"
                         viewModel.project.helpToggle = false
                          
                       }label: {
                           Circle()
                               .frame(width: 30, height: 30)
-                              .foregroundColor(Color.blue)
+                              .foregroundColor(Color.blueButton)
                       }
                       .buttonStyle(BorderlessButtonStyle())
 

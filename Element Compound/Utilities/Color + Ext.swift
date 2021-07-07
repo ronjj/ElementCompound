@@ -17,6 +17,8 @@ extension Color {
     static let ruby = Color("ruby")
     static let yellow2 = Color("yellow2")
     static let independence = Color("independence")
+    static let redButton = Color("redButton")
+    static let blueButton = Color("blueButton")
 }
 
 extension UIColor {
@@ -29,6 +31,8 @@ extension UIColor {
     static let ruby = UIColor(named: "ruby")
     static let yellow2 = UIColor(named: "yellow2")
     static let independence = UIColor(named: "independence")
+    static let redButton = UIColor(named: "redButton")
+    static let blueButton = UIColor(named: "blueButton")
 }
 
 

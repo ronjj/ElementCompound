@@ -51,7 +51,6 @@ struct ProjectsListView: View {
 
               Circle()
                   .frame(width: 15, height: 15)
-              
                   .foregroundColor(project.color)
           }
           .padding(20)
