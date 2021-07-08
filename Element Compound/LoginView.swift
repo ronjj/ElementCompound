@@ -13,7 +13,7 @@ import GoogleSignIn
 
 
 struct LoginView: View {
-    
+    @AppStorage ("login_Status") var loginStatus = Bool()
     @AppStorage ("log_Status") var status = Bool()
     
     var body: some View {
@@ -26,12 +26,27 @@ struct LoginView: View {
                 .font(Font.custom("Poppins-Regular", size: 25))
                 .offset(y: 270)
             
+            VStack{
+               
+                Text(loginStatus == false ? "Please login with an email associated with an element member. Non members are not allowed in the app." : "")
+                    .bold()
+                    .padding()
+                    .background(Color.red)
+                    .cornerRadius(10)
+                    .padding(10)
+                    .offset(y: 290)
+                    .multilineTextAlignment(.center)
+            }
+           
+               
+                
+            
             WrappedViewController()
                 .padding(0)
             
             
-            Image("launchsmalll")
-                .offset(y: 300)
+//            Image("launchsmalll")
+//                .offset(y: 300)
         }
     }
 }

@@ -56,10 +56,10 @@ struct ProjectEditView2: View {
           }
 
           Section(header: Text("Due Date")) {
-              DatePicker("Choose Date", selection: $viewModel.project.dueDate, displayedComponents: .date)
+              DatePicker("Choose Due Date", selection: $viewModel.project.dueDate, displayedComponents: .date)
           }
           
-          Section(header: Text("Select Color")) {
+          Section(header: Text("Select Status")) {
               
               //V1
              // ColorPicker("Choose Color", selection: $viewModel.project.color, supportsOpacity: false)
@@ -91,7 +91,7 @@ struct ProjectEditView2: View {
                       }
                       .buttonStyle(BorderlessButtonStyle())
                       
-                      Text("Red Button")
+                      Text("Help Needed")
                   }
 
                   Spacer()
@@ -109,7 +109,7 @@ struct ProjectEditView2: View {
                       }
                       .buttonStyle(BorderlessButtonStyle())
 
-                      Text("Blue Button")
+                      Text("No Help Needed")
                   }
 
               }
@@ -119,7 +119,7 @@ struct ProjectEditView2: View {
 
        
 
-          Section(header: Text("Assigned")) {
+          Section(header: Text("Assign Members")) {
               ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
                   Text(assignedStudent)
               }
@@ -142,7 +142,7 @@ struct ProjectEditView2: View {
           }
 
         
-        Section(header: Text("Project Percentage")){
+        Section(header: Text("Percentage Complete")){
             HStack{
                 Slider(value: $viewModel.project.percentComplete, in: 0...100)
                     .padding()

@@ -66,7 +66,7 @@ struct HomeView2: View {
                 
                 ScrollView{
                     HStack {
-                        Text("Equipment List")
+                        Text("Element Compound")
                             .font(.largeTitle)
                             .foregroundColor(.bginv)
                             .fontWeight(.bold)

@@ -60,6 +60,7 @@ struct SettingsView: View {
                 
                 Section(header: Text("Version")){
                     Text("0.1.0")
+                    //Text("\(String(describing: UIDevice.version)")
                 }
                 
                 

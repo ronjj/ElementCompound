@@ -44,6 +44,12 @@ class Users: ObservableObject{
              role = true
         }
         
+        //Jack Muscatello
+        else if user?.email == "drummerjackmusk@gmail.com" {
+            loginStatus = true
+             role = true
+        }
+        
         //Thomas Breslin
         else if user?.email == "22102tb@chaminade-hs.org" {
             loginStatus = true
@@ -60,6 +66,7 @@ class Users: ObservableObject{
         else {
             status = false
             role = false
+            loginStatus = false
         }
     }
 }

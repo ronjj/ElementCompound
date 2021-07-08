@@ -346,8 +346,8 @@
 				5429AF84264628EF00422295 /* MailView.swift */,
 				54E2442B263F922000D1B693 /* InfoScreen.swift */,
 				543E7BA9262A1F96004FDF51 /* SettingsView.swift */,
-				54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */,
 				547070FF268AA5060057FA28 /* SettingsViewModel.swift */,
+				54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */,
 				548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */,
 			);
 			path = "Settings Screen";
@@ -762,7 +762,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -788,7 +788,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

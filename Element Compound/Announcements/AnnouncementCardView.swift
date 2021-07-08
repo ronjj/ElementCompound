@@ -36,7 +36,7 @@ struct AnnouncementCardView: View {
                     Text(announcement.title)
                     //.font(Font.custom("Poppins-Regular", size: 18))
                         .bold()
-                        .font(.title)
+                        .font(.title2)
                         .padding(.bottom, 5)
                         .minimumScaleFactor(0.4)
                     
@@ -71,7 +71,7 @@ struct AnnouncementCardView: View {
                         .font(.body)
                     
                 }
-                .padding(.trailing)
+                .padding(.trailing, 4)
             }
         }
         .frame(width: 360, height: 200)

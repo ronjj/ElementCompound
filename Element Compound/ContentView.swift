@@ -11,6 +11,7 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage ("log_Status") var status = Bool()
+  
     
     
   
@@ -25,6 +26,7 @@ struct ContentView: View {
                 //RejectedScreen()
             }
             
+           
 //            if Auth.auth().currentUser?.uid != nil {
 //
 //                TabViewItem()
