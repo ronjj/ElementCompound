@@ -53,6 +53,7 @@ struct Project: Identifiable, Codable, Equatable{
     var notes: String
     var percentComplete: Double
     var helpToggle: Bool
+    var officerEmail: String
    
 
   
@@ -87,6 +88,7 @@ struct Project: Identifiable, Codable, Equatable{
         case color
         case percentComplete
         case helpToggle
+        case officerEmail
       
    
         

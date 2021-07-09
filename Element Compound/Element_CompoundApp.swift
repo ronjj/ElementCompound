@@ -14,6 +14,8 @@ import UserNotifications
 @main
 struct Element_CompoundApp: App {
     
+  
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var
         delegate
     
@@ -50,26 +52,11 @@ struct Element_CompoundApp: App {
             GIDSignIn.sharedInstance().delegate = self
             
             
-            Messaging.messaging().delegate = self
+                let pushManager = PushNotificationManager(userID: Auth.auth().currentUser?.uid ?? "N/A")
+                pushManager.registerForPushNotifications()
+                let sender = PushNotificationSender()
+                sender.sendPushNotification(to: "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo", title: "Notification title", body: "Notification body")
             
-            
-            if #available(iOS 10.0, *) {
-              // For iOS 10 display notification (sent via APNS)
-              UNUserNotificationCenter.current().delegate = self
-
-              let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-              UNUserNotificationCenter.current().requestAuthorization(
-                options: authOptions,
-                completionHandler: {_, _ in })
-            } else {
-              let settings: UIUserNotificationSettings =
-              UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-              application.registerUserNotificationSettings(settings)
-            }
-
-            application.registerForRemoteNotifications()
-
-
             
             return true
         }
@@ -113,44 +100,6 @@ struct Element_CompoundApp: App {
             // Perform any operations when the user disconnects from app here.
             // ...
         }
-        
-        
-        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-          let dataDict:[String: String] = ["token": fcmToken ?? ""] 
-            print(dataDict)
-        }
-        
-        
-        func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                    willPresent notification: UNNotification,
-          withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-          let userInfo = notification.request.content.userInfo
-
-          Messaging.messaging().appDidReceiveMessage(userInfo)
-
-          // Change this to your preferred presentation option
-            completionHandler([[.banner,.badge, .sound]])
-        }
-
-        func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                    didReceive response: UNNotificationResponse,
-                                    withCompletionHandler completionHandler: @escaping () -> Void) {
-          let userInfo = response.notification.request.content.userInfo
-
-          Messaging.messaging().appDidReceiveMessage(userInfo)
-
-          completionHandler()
-        }
-        
-        func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-            
-        }
-        
-        func application(_ application: UIApplication,
-        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-          Messaging.messaging().apnsToken = deviceToken;
-        }
-
 
 //        func application(_ application: UIApplication,
 //        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
@@ -160,20 +109,7 @@ struct Element_CompoundApp: App {
 //        }
 
 
-        
-        func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-                         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-
-          if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-          }
-
-          // Print full message.
-          print(userInfo)
-
-          completionHandler(UIBackgroundFetchResult.newData)
-        }
-        
+    
         
         // MARK: UISceneSession Lifecycle
         

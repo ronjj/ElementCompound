@@ -8,12 +8,14 @@
 import SwiftUI
 import Firebase
 import Combine
+import FirebaseMessaging
+import UserNotifications
 
 struct AnnouncementAddView: View {
     
     @StateObject var viewModel = AnnoucnementViewModel()
     @Environment(\.presentationMode) var presentationMode
-    
+    let sender = PushNotificationSender()
     let textLimit = 21
     let textLimit2 = 90
 
@@ -56,6 +58,7 @@ struct AnnouncementAddView: View {
                     Button(action: {
                         handleDoneTapped()
                        // self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.announcement.title, body: self.viewModel.announcement.message)
+                        
                     }) {
                         Text("Send")
                     }

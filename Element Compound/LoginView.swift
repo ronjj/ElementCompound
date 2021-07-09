@@ -27,8 +27,7 @@ struct LoginView: View {
                 .offset(y: 270)
             
             VStack{
-               
-                Text(loginStatus == false ? "Please login with an email associated with an element member. Non members are not allowed in the app." : "")
+                Text(loginStatus == false ? "Please login with an email associated with an element member. Non members are not allowed in the app." :   "Log in with school email")
                     .bold()
                     .padding()
                     .background(Color.red)
@@ -37,21 +36,12 @@ struct LoginView: View {
                     .offset(y: 290)
                     .multilineTextAlignment(.center)
             }
-           
-               
-                
-            
+
             WrappedViewController()
                 .padding(0)
-            
-            
-//            Image("launchsmalll")
-//                .offset(y: 300)
         }
     }
 }
-
-
 
 
 struct WrappedViewController: UIViewControllerRepresentable {

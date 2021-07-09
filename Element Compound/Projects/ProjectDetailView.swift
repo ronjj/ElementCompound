@@ -9,8 +9,21 @@
 ////
 //
 import SwiftUI
+import UIKit
+import MessageUI
 
 
+enum Sheets4: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    
+    case edit
+    case mail
+
+    
+}
 
 
 struct ProjectDetailsView: View {
@@ -20,16 +33,16 @@ struct ProjectDetailsView: View {
   @State var presentEditBookSheet = false
     @ObservedObject var viewModel = ProjectViewModel2()
     @ObservedObject var viewModels = ProjectViewModel2()
-    @State var helpNeededText = "Help Needed"
-    
-
-    
+    let uidevice = UIDevice()
 
   // MARK: - State (Initialiser-modifiable)
 
   var project: Project
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
     @AppStorage ("role_Status") var role = Bool()
+    @State private var activeSheet: Sheets4?
+    @State var result: Result<MFMailComposeResult, Error>? = nil
+    @State var alertNoMail = false
 
 
   // MARK: - UI Components
@@ -51,7 +64,7 @@ struct ProjectDetailsView: View {
                     .frame(width: 280)
                     //.fixedSize()
                     .padding(.bottom, 50)
-                    .padding(.leading, -65)
+                    .padding(.leading, -40)
                 
                 Spacer()
             }
@@ -64,12 +77,9 @@ struct ProjectDetailsView: View {
                               .foregroundColor(project.color)
                           Spacer()
                         Text(project.helpToggle ? "Help Needed" : "No Help Needed")
-                          //Text("Help Needed")
-                         
-                         
-                              //.font(.body)
+                              .font(.body)
+                          
                           Spacer()
-                         
                       }
                       
                       HStack{
@@ -80,20 +90,25 @@ struct ProjectDetailsView: View {
                           LinkedText("\(project.notes)")
           //                    Text("Notes: \(project.notes)")
                               .font(.body)
+                              .padding(15)
                           Spacer()
                              
                       }
                       
                       HStack{
-                          
                           Image(systemName: "person.3.fill")
                               .font(.title)
+                          
                           Spacer()
-                          ForEach(project.assignedStudents, id: \.self) { assignedStudent in
-                              Label(assignedStudent, systemImage: "person")
-                                  .accessibilityLabel(Text("Person"))
-                                  .accessibilityValue(Text(assignedStudent))
-                                  .font(.body)
+                          
+                          VStack(alignment: .leading, spacing: 10){
+                              ForEach(project.assignedStudents, id: \.self) { assignedStudent in
+                                      Label(assignedStudent, systemImage: "person")
+                                          .accessibilityLabel(Text("Person"))
+                                          .accessibilityValue(Text(assignedStudent))
+                                          .font(.body)
+                                  
+                              }
                           }
                           Spacer()
                       }
@@ -101,10 +116,25 @@ struct ProjectDetailsView: View {
                   }
                   
                   Button{
-             
+                    if MFMailComposeViewController.canSendMail() {
+//                            self.isShowingMailView.toggle()
+                        activeSheet = .mail
+                    } else if let emailUrl = ProjectDetailsView.createEmailUrl(to: "\(project.officerEmail)"  ,subject: "Officer Message", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
+                        UIApplication.shared.open(emailUrl)
+                    } else {
+                        self.alertNoMail.toggle()
+                        
+
+                        
+                    }
                   } label: {
                       mediumButtonStyle(title: "Contact Officer")
                   }
+
+                  .alert(isPresented: self.$alertNoMail) {
+                      Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
+                  }
+                 
                   
                   Spacer()
               }
@@ -118,6 +148,7 @@ struct ProjectDetailsView: View {
     .navigationBarTitle(project.title)
     .navigationBarItems(trailing: editButton {
       self.presentEditBookSheet.toggle()
+        activeSheet = .edit
     })
     .onAppear() {
       print("BookDetailsView.onAppear() for \(self.project.title)")
@@ -125,13 +156,55 @@ struct ProjectDetailsView: View {
     .onDisappear() {
       print("BookDetailsView.onDisappear()")
     }
-    .sheet(isPresented: self.$presentEditBookSheet) {
-     ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
-        if case .success(let action) = result, action == .delete {
-          self.presentationMode.wrappedValue.dismiss()
-        }
+     
+    
+//    .sheet(isPresented: self.$presentEditBookSheet) {
+//     ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
+//        if case .success(let action) = result, action == .delete {
+//          self.presentationMode.wrappedValue.dismiss()
+//        }
+//      }
+//    }
+    
+      .sheet(item: $activeSheet) { item in
+          switch item {
+          case .mail:
+              MailView2(result: self.$result)
+          case .edit:
+            ProjectEditView2(viewModel: ProjectViewModel2(project: project), mode: .edit) { result in
+               if case .success(let action) = result, action == .delete {
+                 self.presentationMode.wrappedValue.dismiss()
+               }
+             }
+
+          }
       }
-    }
+    
+    
   }
+    static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
+           // let to = "22420rj@chaminade-hs.org"
+        // let to = ("\project.officerEmail)")
+            let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+            let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+
+            let gmailUrl = URL(string: "googlegmail://co?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+            let outlookUrl = URL(string: "ms-outlook://compose?to=\(to)&subject=\(subjectEncoded)")
+            let yahooMail = URL(string: "ymail://mail/compose?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+            let sparkUrl = URL(string: "readdle-spark://compose?recipient=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+            let defaultUrl = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
+
+            if let gmailUrl = gmailUrl, UIApplication.shared.canOpenURL(gmailUrl) {
+                return gmailUrl
+            } else if let outlookUrl = outlookUrl, UIApplication.shared.canOpenURL(outlookUrl) {
+                return outlookUrl
+            } else if let yahooMail = yahooMail, UIApplication.shared.canOpenURL(yahooMail) {
+                return yahooMail
+            } else if let sparkUrl = sparkUrl, UIApplication.shared.canOpenURL(sparkUrl) {
+                return sparkUrl
+            }
+
+            return defaultUrl
+        }
 }
 

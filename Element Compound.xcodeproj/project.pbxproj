@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5403E8ED2697760F008C7CEB /* Firebase Notifications Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */; };
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
@@ -96,6 +97,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase Notifications Helper.swift"; sourceTree = "<group>"; };
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 				54FD835F268C02D100AB530C /* DataStore.swift */,
 				54BBA4C826320B300021536D /* SearchBar.swift */,
 				54707104268AABA50057FA28 /* TextBindingManager.swift */,
+				5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */,
 				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
@@ -602,6 +605,7 @@
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
+				5403E8ED2697760F008C7CEB /* Firebase Notifications Helper.swift in Sources */,
 				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				549259EE26937EBF0071A45C /* Publisher+Assign.swift in Sources */,
 				54FD8360268C02D100AB530C /* DataStore.swift in Sources */,

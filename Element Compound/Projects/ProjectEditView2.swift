@@ -160,6 +160,10 @@ struct ProjectEditView2: View {
                   .multilineTextAlignment(.leading)
           }
           
+          Section(header: Text("Officer Email")){
+              TextField("Enter Officer Email", text: $viewModel.project.officerEmail)
+          }
+          
           //              Priority Level
           //            Section(header: Text("Priority")) {
           //                Picker("Priority Level", selection: $viewModel.project.priority) {
