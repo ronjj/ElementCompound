@@ -1,6 +1,3 @@
-
-
-
 import SwiftUI
 
 struct ProjectsListView: View {
@@ -12,20 +9,13 @@ struct ProjectsListView: View {
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
 
 
-
-
-
   // MARK: - UI Components
-
- 
     private var addButton: some View {
       Button(action: { self.presentAddProjectSheet.toggle() }) {
         Image(systemName: "plus")
       }
       .disabled(role == false)
     }
-    
-    
 
     private func projectRowView(project: Project) -> some View {
         NavigationLink(destination: ProjectDetailsView(project: project )) {
@@ -33,7 +23,6 @@ struct ProjectsListView: View {
               VStack(alignment: .leading) {
                   Text(project.title)
                     .font(.headline)
-
                 HStack{
                   Text(project.creator)
                     .font(.subheadline)
@@ -49,7 +38,7 @@ struct ProjectsListView: View {
                   ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                   // viewModel2.project.percentComplete,
             }
-             
+
               Spacer()
 
               Circle()

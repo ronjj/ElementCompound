@@ -14,11 +14,8 @@ struct CustomTabBar: View {
     var body: some View{
         
         VStack{
-            
             Spacer()
-            
             HStack{
-                
                 Button(action: {
                     withAnimation(.default){
                         self.index = 0

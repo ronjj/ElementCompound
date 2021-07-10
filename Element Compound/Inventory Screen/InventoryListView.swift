@@ -32,7 +32,6 @@ struct InventoryListView: View {
                         
                         Spacer()
                     }
-                    
                     .padding(.top, 30)
                     .padding(.bottom, 20)
                     .padding(.leading, 20)
@@ -116,14 +115,18 @@ struct InventoryListView: View {
                                 InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription, color: Color.independence)
     
                             }
+                            
                             .padding(5)
                         }
+                       
                         
                     }
+                    
                     .navigationTitle("Equipment List")
                     .navigationBarHidden(true)
                     
                 }
+                
                 .background(Color.lightBlue)
                 .navigationBarHidden(true)
             }

@@ -12,8 +12,8 @@ import Firebase
 
 
 struct Project: Identifiable, Codable, Equatable{
-    @DocumentID var id: String? = UUID().uuidString
-    //@DocumentID var id: String?
+    //@DocumentID var id: String? = UUID().uuidString
+    @DocumentID var id: String?
     var title: String
     var creator: String = Auth.auth().currentUser?.displayName ?? "N/A"
     var color: Color
@@ -77,6 +77,7 @@ struct Project: Identifiable, Codable, Equatable{
 
     
     enum CodingKeys: String, CodingKey {
+        case id
         case title
         case creator
       //  case dateEvent
