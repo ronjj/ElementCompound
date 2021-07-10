@@ -45,7 +45,8 @@ struct InventoryListView: View {
                     LazyVStack{
                         
                         HStack{
-                            Text("Cameras")
+                            
+                            Text("Cameras 📸")
                                 .foregroundColor(Color.bginv)
                                 .fontWeight(.bold)
                                 .font(.title2)
@@ -63,7 +64,7 @@ struct InventoryListView: View {
                         }
     
                         HStack{
-                            Text("Computers")
+                            Text("Computers 🖥")
                                 .foregroundColor(Color.bginv)
                                 .fontWeight(.bold)
                                 .font(.title2)
@@ -80,7 +81,7 @@ struct InventoryListView: View {
                         
                         
                         HStack{
-                            Text("Audio")
+                            Text("Audio 🎤")
                                 .foregroundColor(Color.bginv)
                                 .fontWeight(.bold)
                                 .font(.title2)
@@ -100,7 +101,7 @@ struct InventoryListView: View {
                         
                         
                         HStack{
-                            Text("Misc")
+                            Text("Misc 💼")
                                 .foregroundColor(Color.bginv)
                                 .fontWeight(.bold)
                                 .font(.title2)

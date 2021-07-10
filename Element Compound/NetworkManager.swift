@@ -3,10 +3,6 @@
 //  Element Compound
 //
 //  Created by Ronald Jabouin on 5/12/21.
-//
-
-
-
 import UIKit
 
 final class NetworkManager {

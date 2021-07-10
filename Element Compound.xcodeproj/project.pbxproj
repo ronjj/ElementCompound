@@ -47,7 +47,6 @@
 		546151A1264C738A00BC2719 /* Felix.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A0264C738A00BC2719 /* Felix.ttf */; };
 		546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 546151A3264C740100BC2719 /* FelixTitling.ttf */; };
 		5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462610726509ECF000E4592 /* ErrorMSGs.swift */; };
-		5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5462845826514DED0081614A /* CustomNavigationBar.swift */; };
 		54707100268AA5060057FA28 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547070FF268AA5060057FA28 /* SettingsViewModel.swift */; };
 		54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */; };
 		54707105268AABA50057FA28 /* TextBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707104268AABA50057FA28 /* TextBindingManager.swift */; };
@@ -72,9 +71,7 @@
 		54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5DA264DC853003B749C /* CameraDetailView3.swift */; };
 		54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B552655999C0073EB35 /* CustomTabBar.swift */; };
 		54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B592655AF1D0073EB35 /* Color+Codable.swift */; };
-		54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8C262BB6310040A559 /* AppDelegate.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
-		54B7D51F268FAC960067AA12 /* RejectedScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B7D51E268FAC960067AA12 /* RejectedScreen.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
@@ -139,7 +136,6 @@
 		546151A0264C738A00BC2719 /* Felix.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Felix.ttf; sourceTree = "<group>"; };
 		546151A3264C740100BC2719 /* FelixTitling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FelixTitling.ttf; sourceTree = "<group>"; };
 		5462610726509ECF000E4592 /* ErrorMSGs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMSGs.swift; sourceTree = "<group>"; };
-		5462845826514DED0081614A /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		547070FF268AA5060057FA28 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		54707101268AA70C0057FA28 /* DisplayNameChangeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayNameChangeScreen.swift; sourceTree = "<group>"; };
 		54707104268AABA50057FA28 /* TextBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBindingManager.swift; sourceTree = "<group>"; };
@@ -165,9 +161,7 @@
 		54A8B5DA264DC853003B749C /* CameraDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView3.swift; sourceTree = "<group>"; };
 		54AB3B552655999C0073EB35 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		54AB3B592655AF1D0073EB35 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
-		54AEEB8C262BB6310040A559 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		54B7D51E268FAC960067AA12 /* RejectedScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectedScreen.swift; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
@@ -246,18 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				548A35EC264A1307008B9B4A /* Element Compound.entitlements */,
-				543B663F264ABFCF00992350 /* Poppins-Thin.ttf */,
-				546151A0264C738A00BC2719 /* Felix.ttf */,
-				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
-				546151A3264C740100BC2719 /* FelixTitling.ttf */,
-				54D636572654526900480CF3 /* AvenirLTStd-Black.otf */,
-				54D636552654526900480CF3 /* AvenirLTStd-Book.otf */,
-				54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */,
-				543B6642264ABFF000992350 /* Poppins-Black.ttf */,
-				543B664C264AC72200992350 /* Felixti.ttf */,
-				543B6645264AC04F00992350 /* Poppins-Regular.ttf */,
-				543B6638264ABBF300992350 /* Info.plist */,
-				5483871B26754C9F00B40A78 /* Launch Screen.storyboard */,
+				54CE4C7126988F5B00D398DC /* Fonts */,
 				54BBA4CC2632168A0021536D /* Announcements */,
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
@@ -267,15 +250,14 @@
 				5454C5242677EB8700EC84DA /* Projects */,
 				54D319CB26927136007A0948 /* ToDo Test */,
 				54707103268AAB740057FA28 /* Utilities */,
-				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
-				5462845826514DED0081614A /* CustomNavigationBar.swift */,
-				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
 				549259F126937EE90071A45C /* Book Stuff */,
+				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
+				543B6638264ABBF300992350 /* Info.plist */,
+				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
+				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
-				54B7D51E268FAC960067AA12 /* RejectedScreen.swift */,
 				54AEEB8F262BB9930040A559 /* LoginView.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
-				54AEEB8C262BB6310040A559 /* AppDelegate.swift */,
 				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
@@ -359,6 +341,7 @@
 		549259F126937EE90071A45C /* Book Stuff */ = {
 			isa = PBXGroup;
 			children = (
+				5483871B26754C9F00B40A78 /* Launch Screen.storyboard */,
 				549259EF26937EDC0071A45C /* Book.swift */,
 				549259F226937F060071A45C /* BooksViewModel.swift */,
 				549259F626937F2B0071A45C /* BooksListView.swift */,
@@ -398,6 +381,22 @@
 				5440999D26422081007EBF4A /* Users.swift */,
 			);
 			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		54CE4C7126988F5B00D398DC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				543B663F264ABFCF00992350 /* Poppins-Thin.ttf */,
+				546151A0264C738A00BC2719 /* Felix.ttf */,
+				546151A3264C740100BC2719 /* FelixTitling.ttf */,
+				54D636572654526900480CF3 /* AvenirLTStd-Black.otf */,
+				54D636552654526900480CF3 /* AvenirLTStd-Book.otf */,
+				54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */,
+				543B6642264ABFF000992350 /* Poppins-Black.ttf */,
+				543B664C264AC72200992350 /* Felixti.ttf */,
+				543B6645264AC04F00992350 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		54D319CB26927136007A0948 /* ToDo Test */ = {
@@ -580,7 +579,6 @@
 				5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */,
 				549259F026937EDC0071A45C /* Book.swift in Sources */,
 				54D319D3269271AC007A0948 /* TaskListViewModel.swift in Sources */,
-				5462845926514DED0081614A /* CustomNavigationBar.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				54570191267D58EF00D93F68 /* ProjectEditView.swift in Sources */,
@@ -606,7 +604,6 @@
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
 				5403E8ED2697760F008C7CEB /* Firebase Notifications Helper.swift in Sources */,
-				54AEEB8D262BB6310040A559 /* AppDelegate.swift in Sources */,
 				549259EE26937EBF0071A45C /* Publisher+Assign.swift in Sources */,
 				54FD8360268C02D100AB530C /* DataStore.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
@@ -623,7 +620,6 @@
 				549259F326937F060071A45C /* BooksViewModel.swift in Sources */,
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
-				54B7D51F268FAC960067AA12 /* RejectedScreen.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
 				5440999E26422081007EBF4A /* Users.swift in Sources */,
 				54D319D5269271C4007A0948 /* TaskListView.swift in Sources */,
@@ -766,7 +762,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -792,7 +788,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

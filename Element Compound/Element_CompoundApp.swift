@@ -13,9 +13,6 @@ import UserNotifications
 
 @main
 struct Element_CompoundApp: App {
-    
-  
-    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var
         delegate
     
@@ -108,9 +105,6 @@ struct Element_CompoundApp: App {
 //          completionHandler(.noData)
 //        }
 
-
-    
-        
         // MARK: UISceneSession Lifecycle
         
         func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -134,8 +128,6 @@ struct Element_CompoundApp: App {
             }
         }
     }
-    
-
 }
 
 

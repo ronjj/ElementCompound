@@ -11,12 +11,8 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage ("log_Status") var status = Bool()
-  
-    
-    
-  
+
     var body: some View {
-        
         ZStack{
             if status {
                 TabViewItem()
@@ -34,13 +30,9 @@ struct ContentView: View {
 //                }else {
 //                    LoginView()
 //                }
+            }
         }
-        
-        }
-       
-
     }
-
 
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {

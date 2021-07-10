@@ -46,7 +46,7 @@ struct ProjectsListView: View {
         //            Text(project.completionLevel)
         //            .font(.subheadline)
                 }
-                  ProgressBar(width: 200, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                  ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                   // viewModel2.project.percentComplete,
             }
              

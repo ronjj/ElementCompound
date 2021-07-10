@@ -1,9 +1,7 @@
-//
 //  NavAppearanceModifier.swift
 //  Element Compound
 //
 //  Created by Ronald Jabouin on 6/18/21.
-//
 
 import SwiftUI
 
@@ -38,8 +36,7 @@ extension View {
 }
 
 
-/* 
-
+/*
 - try in different spots on the page
 - change modifiers within */
 //    .navigationBarTitle("",displayMode: .inline)

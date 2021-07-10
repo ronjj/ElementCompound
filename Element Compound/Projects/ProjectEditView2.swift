@@ -160,7 +160,7 @@ struct ProjectEditView2: View {
                   .multilineTextAlignment(.leading)
           }
           
-          Section(header: Text("Officer Email")){
+          Section(header: Text("Email of Officer Leading Project")){
               TextField("Enter Officer Email", text: $viewModel.project.officerEmail)
           }
           

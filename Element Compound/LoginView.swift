@@ -1,12 +1,7 @@
-//
 //  LoginView.swift
 //  Element Compound
 //
 //  Created by Ronald Jabouin on 4/17/21.
-//
-
-
-
 import SwiftUI
 import Firebase
 import GoogleSignIn

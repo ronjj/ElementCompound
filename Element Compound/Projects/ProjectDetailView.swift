@@ -113,6 +113,9 @@ struct ProjectDetailsView: View {
                           Spacer()
                       }
                       .padding(.bottom, 25)
+                   
+                        ProgressBar(width: 300, height: 30, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                     
                   }
                   
                   Button{
@@ -132,7 +135,7 @@ struct ProjectDetailsView: View {
                   }
 
                   .alert(isPresented: self.$alertNoMail) {
-                      Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
+                      Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Officers's email is \n \(project.officerEmail)"), dismissButton: .cancel())
                   }
                  
                   
