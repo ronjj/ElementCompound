@@ -58,7 +58,10 @@ struct ProjectsListView: View {
         .onDelete() { indexSet in
           viewModel.removeProjects(atOffsets: indexSet)
         }
+        //Disbales swipe to delete if user does not have role
+        .deleteDisabled(role ? false : true)
       }
+      
       .navigationBarTitle("Projects")
       .navigationBarItems(trailing: addButton)
       .onAppear() {
@@ -69,13 +72,20 @@ struct ProjectsListView: View {
         // By unsubscribing from the view model, we prevent updates coming in from
         // Firestore to be reflected in the UI. Since we do want to receive updates
         // when the user is on any of the child screens, we keep the subscription active!
-        //
-        // print("BooksListView disappears. Unsubscribing from data updates.")
-        // self.viewModel.unsubscribe()
+        
+         print("ProjectsView disappears. Unsubscribing from data updates.")
+         self.viewModel.unsubscribe()
       }
       .sheet(isPresented: self.$presentAddProjectSheet) {
       ProjectEditView2()
       }
     }
   }
+    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell.EditingStyle {
+        if role == true{
+            return UITableViewCell.EditingStyle.delete
+        }
+        return UITableViewCell.EditingStyle.none
+    }
 }
