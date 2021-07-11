@@ -37,7 +37,7 @@ struct Project: Identifiable, Codable, Equatable{
         }
         var pickedDateString2: String {
             let formatter = DateFormatter()
-            formatter.dateFormat = "MM-dd-YYYY"
+            formatter.dateFormat = "MM-dd-YY"
             return formatter.string(from: dueDate)
         }
         var pickedTimeString: String {

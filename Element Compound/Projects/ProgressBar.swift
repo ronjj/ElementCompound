@@ -22,7 +22,7 @@ struct ProgressBar: View {
         ZStack(alignment: .leading){
             RoundedRectangle(cornerRadius: height, style: .continuous)
                 .frame(width: width, height: height)
-                .foregroundColor(Color.black.opacity(0.1))
+                .foregroundColor(Color.gray.opacity(0.5))
             
             RoundedRectangle(cornerRadius: height, style: .continuous)
                 .frame(width: CGFloat(percent) * multiplier, height: height)

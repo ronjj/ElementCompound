@@ -26,11 +26,12 @@ struct AnnouncementCardView: View {
                 VStack(alignment: .leading){
                     
                     VStack(alignment: .leading){
-                        Rectangle()
-                            .cornerRadius(10)
-                            .foregroundColor(colors.randomElement())
-                            //.foregroundColor(announcement.color)
+                        Circle()
                             .frame(width: 10, height: 10)
+                            //.foregroundColor(announcement.color)
+                            .foregroundColor(colors.randomElement())
+                        
+                       
                     }
                     
                     Text(announcement.title)

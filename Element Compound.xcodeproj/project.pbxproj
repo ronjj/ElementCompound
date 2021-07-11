@@ -33,6 +33,7 @@
 		543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543FED54268611360057D3B9 /* ProjectsView2.swift */; };
 		5440999E26422081007EBF4A /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5440999D26422081007EBF4A /* Users.swift */; };
 		54437C722679133C0057763F /* ProjectDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54437C712679133C0057763F /* ProjectDetailView.swift */; };
+		5452049F269B1B1B007444F0 /* AnnouncementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5452049E269B1B1B007444F0 /* AnnouncementDetailView.swift */; };
 		54548438268955DF00392461 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54548437268955DF00392461 /* Bookmark.swift */; };
 		5454C5232677EB7A00EC84DA /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5222677EB7A00EC84DA /* Project.swift */; };
 		5454C5262677EBC300EC84DA /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */; };
@@ -122,6 +123,7 @@
 		543FED54268611360057D3B9 /* ProjectsView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView2.swift; sourceTree = "<group>"; };
 		5440999D26422081007EBF4A /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		54437C712679133C0057763F /* ProjectDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailView.swift; sourceTree = "<group>"; };
+		5452049E269B1B1B007444F0 /* AnnouncementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailView.swift; sourceTree = "<group>"; };
 		54548437268955DF00392461 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		5454C5222677EB7A00EC84DA /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		5454C5252677EBC300EC84DA /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
 				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
 				5493327F263C5295001C1D24 /* AnnouncementAddView.swift */,
+				5452049E269B1B1B007444F0 /* AnnouncementDetailView.swift */,
 				54BBA4D1263217C90021536D /* AnnouncementCardView.swift */,
 				54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */,
 			);
@@ -575,6 +578,7 @@
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
+				5452049F269B1B1B007444F0 /* AnnouncementDetailView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */,
 				549259F026937EDC0071A45C /* Book.swift in Sources */,
@@ -762,7 +766,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -788,7 +792,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

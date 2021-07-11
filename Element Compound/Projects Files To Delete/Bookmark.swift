@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-//class Favorites: ObservableObject{
-//    @Published var favoritesList: [Project] = []
-//}
+class Favorites: ObservableObject{
+    @Published var isFavorite = false
+    @Published var favoritesList: [Project] = []
+}
 
 //class Favorites: ObservableObject {
 //    private var projects: Set<String>

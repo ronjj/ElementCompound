@@ -66,7 +66,7 @@ import Firebase
       
       // MARK: - Constructors
       
-        init(announcement: Announcement = Announcement(message: "", title: "", /*color: Color.blue,*/ photoURL:(Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  dateEvent: Date())) {
+        init(announcement: Announcement = Announcement(message: "", title: "", /*color: Color.blue,*/  photoURL:(Auth.auth().currentUser?.photoURL!)!,  sender: Auth.auth().currentUser?.displayName ?? "N/A",  dateEvent: Date())) {
                 self.announcement = announcement
     //
                 self.$announcement

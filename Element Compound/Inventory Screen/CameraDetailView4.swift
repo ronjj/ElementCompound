@@ -21,26 +21,6 @@ struct CameraDetailView4: View {
             ScrollView(.vertical, showsIndicators: false, content: {
                 ZStack{
                     GeometryReader{ reader in
-                        
-                        //Type 1
-        //                Image(camera.bigImageURL)
-        //                    .resizable()
-        //                    .aspectRatio(contentMode: .fill)
-        //                    .offset(y: -reader.frame(in: .global).minY)
-        //                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
-                        
-                        
-        //                Type 2
-                        if  reader.frame(in: .global).minY > -480 {
-                        Image(camera.bigImageURL)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .offset(y: -reader.frame(in: .global).minY)
-                            .frame(width: UIScreen.main.bounds.width, height:
-                                    reader.frame(in: .global).minY > 0 ?
-                                    reader.frame(in: .global).minY + 480 : 480)
-         
-                        }
                         HStack {
                             Button(action: { self.presentationMode.wrappedValue.dismiss() },
                                    label: {
@@ -63,6 +43,28 @@ struct CameraDetailView4: View {
 //                            )
                         }
                         .padding(.horizontal, 24).padding(.top, 46)
+                        
+                        //Type 1
+        //                Image(camera.bigImageURL)
+        //                    .resizable()
+        //                    .aspectRatio(contentMode: .fill)
+        //                    .offset(y: -reader.frame(in: .global).minY)
+        //                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
+                        
+                        
+        //                Type 2
+                        if  reader.frame(in: .global).minY > -480 {
+                        Image(camera.bigImageURL)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .offset(y: -reader.frame(in: .global).minY)
+                            .frame(width: UIScreen.main.bounds.width, height:
+                                    reader.frame(in: .global).minY > 0 ?
+                                    reader.frame(in: .global).minY + 480 : 480)
+         
+                        }
+                      
+                        
                     }
                     .frame(height:480)
                 }

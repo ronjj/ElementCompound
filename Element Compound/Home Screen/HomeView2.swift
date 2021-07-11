@@ -53,11 +53,6 @@ struct HomeView2: View {
             //                Section(header: Text("My Projects")) {
             //                    Can uncomment this section once I finish the projects part of the app
             //                }
-            //            CustomTabBar()
-            //                .navigationTitle("")
-            //                .navigationBarTitleDisplayMode(.inline)
-            //                .navigationBarHidden(true)
-            //
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
                 
@@ -102,6 +97,7 @@ struct HomeView2: View {
                             }
                         })
                             .disabled(role == false)
+                            .opacity(role ? 1.0 : 0.0)
                             .padding(.leading, -15)
                         
                         Spacer()
@@ -118,7 +114,9 @@ struct HomeView2: View {
                     
                     LazyVStack{
                         ForEach(viewModel.announcements.prefix(2)) { announcement in
-                            AnnouncementCardView(announcement: announcement)
+                            NavigationLink(destination: AnnouncementDetailView( announcement: announcement)) {
+                                AnnouncementCardView(announcement: announcement)
+                            }
                         }
                         .padding(7)
                         
@@ -160,10 +158,6 @@ struct HomeView2: View {
 //            }
             
             .navigationBarHidden(true)
-            
-//            .sheet(isPresented: $presentInfoScreen){
-//                InfoScreen()
-//            }
             .sheet(item: $activeSheet) { item in
                 switch item {
                 case .info:

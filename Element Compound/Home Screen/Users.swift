@@ -26,13 +26,13 @@ class Users: ObservableObject{
             role = true
         }
 
-        //Ronald Jabouin - Personal Account
+        //Ronald Jabouin - Personal Account - No Role
         else if user?.email == "ronaldjabouin2004@gmail.com" {
             loginStatus = true
-            role = true
+           
         }
 
-        //Ronald Jabouin - School Account
+        //Ronald Jabouin - School Account - Role
         else if user?.email == "22420rj@chaminade-hs.org" {
             loginStatus = true
             role = true

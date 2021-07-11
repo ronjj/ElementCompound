@@ -64,7 +64,9 @@ struct AllAnouncements: View {
                     
                     LazyVStack{
                         ForEach(viewModel.announcements) { announcement in
-                            AnnouncementCardView(announcement: announcement)
+                            NavigationLink(destination: AnnouncementDetailView( announcement: announcement)) {
+                                AnnouncementCardView(announcement: announcement)
+                            }
                         }
                         .padding(7)
                     }

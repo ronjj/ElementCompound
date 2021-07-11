@@ -49,10 +49,7 @@ struct Element_CompoundApp: App {
             GIDSignIn.sharedInstance().delegate = self
             
             
-                let pushManager = PushNotificationManager(userID: Auth.auth().currentUser?.uid ?? "N/A")
-                pushManager.registerForPushNotifications()
-                let sender = PushNotificationSender()
-                sender.sendPushNotification(to: "fWM1lZGSxEvZtPtfkf-sZF:APA91bFsRypqHw9QLFIy6hFoe-h4QPvo7yh7NWULa8QbYm3H_eG8kKd0KL6vA9A71HjCIFjd2YYuzkbUWSQh2CAMkYuLGnpzTKDdG8Jz7PAoN0TYsMP_Ti4IAHe1aVY7C-ghf0QRiSMo", title: "Notification title", body: "Notification body")
+    
             
             
             return true

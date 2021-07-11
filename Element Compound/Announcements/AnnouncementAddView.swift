@@ -11,13 +11,45 @@ import Combine
 import FirebaseMessaging
 import UserNotifications
 
+enum Mode2 {
+    case new
+    case edit
+}
+
+enum Action2 {
+    case delete
+    case done
+    case cancel
+}
+
+
 struct AnnouncementAddView: View {
     
     @StateObject var viewModel = AnnoucnementViewModel()
     @Environment(\.presentationMode) var presentationMode
-    let sender = PushNotificationSender()
+    //let sender = PushNotificationSender()
     let textLimit = 21
     let textLimit2 = 90
+    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+    
+    
+    @State var presentActionSheet = false
+    var mode: Mode2 = .new
+    var completionHandler: ((Result<Action, Error>) -> Void)?
+    
+    
+    var cancelButton: some View {
+        Button(action: { self.handleCancelTapped() }) {
+            Text("Cancel")
+        }
+    }
+    
+    var saveButton: some View {
+        Button(action: { self.handleDoneTapped() }) {
+            Text(mode == .new ? "Done" : "Save")
+        }
+        .disabled(!viewModel.modified)
+    }
 
     var body: some View {
         NavigationView{
@@ -40,47 +72,51 @@ struct AnnouncementAddView: View {
                         .multilineTextAlignment(.leading)
                         .onReceive(Just(viewModel.announcement.message)) { _ in limitText2(textLimit2) }
                 }
-                
-//                Section(header: Text("Color")) {
-//                    ColorPicker("Color", selection: $viewModel.announcement.color)
-//                }
-            }
-            .navigationTitle("New Announcement")
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    
-                    Button(action: {
-                        handleCancelTapped()
-                    }) {
-                        Text("Cancel")
+                if mode == .edit {
+                    Section {
+                        Button("Delete Announcement") { self.presentActionSheet.toggle() }
+                            .foregroundColor(.red)
                     }
-                    
-                    Button(action: {
-                        handleDoneTapped()
-                       // self.viewModel.sendMessageTouser(to: viewModel.ReceiverFCMToken, title: self.viewModel.announcement.title, body: self.viewModel.announcement.message)
-                        
-                    }) {
-                        Text("Send")
-                    }
-                    .disabled(!viewModel.modified)
                 }
                 
+          
+            }
+            .navigationTitle(mode == .new ? "New Announcement" : viewModel.announcement.title)
+            .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
+            .navigationBarItems(
+                leading: cancelButton,
+                trailing: saveButton
+            )
+            .actionSheet(isPresented: $presentActionSheet) {
+                ActionSheet(title: Text("Are you sure?"),
+                            buttons: [
+                                .destructive(Text("Delete Announcement"),
+                                             action: { self.handleDeleteTapped() }),
+                                .cancel()
+                            ])
             }
         }
     }
     
-    func dismiss() {
-        presentationMode.wrappedValue.dismiss()
-    }
-    
     func handleCancelTapped() {
-        dismiss()
+        self.dismiss()
     }
     
     func handleDoneTapped() {
-        viewModel.handleDoneTapped()
-        dismiss()
+        self.viewModel.handleDoneTapped()
+        self.dismiss()
     }
+    
+    func handleDeleteTapped() {
+        viewModel.handleDeleteTapped()
+        self.dismiss()
+        self.completionHandler?(.success(.delete))
+    }
+    
+    func dismiss() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
+
 
     func limitText(_ upper: Int) {
             if viewModel.announcement.title.count > upper {
@@ -94,12 +130,6 @@ struct AnnouncementAddView: View {
             }
         }
 }
-struct AnnouncementEditView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnnouncementAddView()
-    }
-}
-
 
 
  

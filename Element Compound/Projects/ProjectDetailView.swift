@@ -51,12 +51,12 @@ struct ProjectDetailsView: View {
     Button(action: { action() }) {
       Text("Edit")
     }
+    .disabled(role == false)
   }
 
   var body: some View {
       GeometryReader { geometry in
           ScrollView(.vertical) {
-            
             HStack{
                 Text(" \(project.creator), \(project.pickedDateString2)")
                     .font(.caption)
