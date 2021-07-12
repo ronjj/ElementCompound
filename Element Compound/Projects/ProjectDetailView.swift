@@ -109,6 +109,7 @@ struct ProjectDetailsView: View {
                                           .font(.body)
                                   
                               }
+                            
                           }
                           Spacer()
                       }
@@ -188,6 +189,8 @@ struct ProjectDetailsView: View {
     
     
   }
+    
+    
     static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
            // let to = "22420rj@chaminade-hs.org"
         // let to = ("\project.officerEmail)")

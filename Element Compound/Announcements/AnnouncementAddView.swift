@@ -53,7 +53,8 @@ struct AnnouncementAddView: View {
         }) {
             Text(mode == .new ? "Done" : "Save")
         }
-        .disabled(!viewModel.modified)
+       // .disabled(!viewModel.modified)
+        .disabled(viewModel.announcement.title.isEmpty || viewModel.announcement.message.isEmpty)
     }
 
     var body: some View {

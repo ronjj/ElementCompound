@@ -24,6 +24,7 @@ struct ProjectEditView2: View {
     // MARK: - State (Initialiser-modifiable)
     
     @ObservedObject var viewModel = ProjectViewModel2()
+    @ObservedObject var usersVM = UsersViewModel()
     var mode: Mode = .new
     var completionHandler: ((Result<Action, Error>) -> Void)?
     @State private var newAssigned = ""
@@ -44,6 +45,7 @@ struct ProjectEditView2: View {
         .disabled(!viewModel.modified)
     }
     
+ 
     var body: some View {
         NavigationView {
             Form {
@@ -126,19 +128,23 @@ struct ProjectEditView2: View {
                     .onDelete { indices in
                         viewModel.project.assignedStudents.remove(atOffsets: indices)
                     }
-                    HStack {
-                        TextField("New Person", text: $newAssigned)
-                        Button(action: {
-                            withAnimation {
-                                viewModel.project.assignedStudents.append(newAssigned)
-                                newAssigned = ""
+                        HStack {
+                            TextField("New Person", text: $newAssigned)
+                            Button(action: {
+                                withAnimation {
+                                    viewModel.project.assignedStudents.append(newAssigned)
+                                    newAssigned = ""
+                                }
+                               
+                            }) {
+                                Image(systemName: "plus.circle.fill")
+                                    .accessibilityLabel(Text("Add new person"))
                             }
-                        }) {
-                            Image(systemName: "plus.circle.fill")
-                                .accessibilityLabel(Text("Add new person"))
+                            .disabled(newAssigned.isEmpty)
+                           
                         }
-                        .disabled(newAssigned.isEmpty)
-                    }
+                        
+                    
                 }
                 
                 
@@ -189,6 +195,8 @@ struct ProjectEditView2: View {
                             .foregroundColor(.red)
                     }
                 }
+                
+               
             }
             .navigationTitle(mode == .new ? "New Project" : viewModel.project.title)
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
@@ -217,7 +225,7 @@ struct ProjectEditView2: View {
         self.viewModel.handleDoneTapped()
         self.dismiss()
     }
-    
+
     func handleDeleteTapped() {
         viewModel.handleDeleteTapped()
         self.dismiss()

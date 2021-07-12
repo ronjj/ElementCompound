@@ -27,7 +27,7 @@ struct HomeView2: View {
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
     //@ObservedObject var projectViewModel = ProjectViewModel2()
-    @ObservedObject var userAuth = Users()
+    @ObservedObject var userAuth = UsersViewModel()
     @State private var activeSheet: Sheets2?
    // @ObservedObject var favorites = Favorites()
    

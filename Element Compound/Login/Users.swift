@@ -10,11 +10,13 @@ import Firebase
 import GoogleSignIn
 
 
-class Users: ObservableObject{
+class UsersViewModel: ObservableObject{
      @AppStorage ("role_Status") var role = Bool()
      @AppStorage ("login_Status") var loginStatus = Bool()
     @AppStorage ("log_Status") var status = Bool()
-    
+    @Published var members: [String: String  ] = ["Ronald Jabouin" : "22420rj@chaminade-hs.org" ,
+                                                  "Mr.Luo" : "sluo@chaminade-hs.org"
+    ]
     
     //MARK: Roles
     func checkUserAuth() {
