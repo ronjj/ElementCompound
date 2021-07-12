@@ -13,6 +13,7 @@ import UserNotifications
 
 @main
 struct Element_CompoundApp: App {
+    @AppStorage ("log_Status") var status = false
     @UIApplicationDelegateAdaptor(AppDelegate.self) var
         delegate
     
@@ -24,24 +25,28 @@ struct Element_CompoundApp: App {
         WindowGroup {
             ContentView()
         }
+      
     }
     
-//    class ViewController: UIViewController {
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            overrideUserInterfaceStyle = .light
-//        }
-//    }
+    //    class ViewController: UIViewController {
+    //        override func viewDidLoad() {
+    //            super.viewDidLoad()
+    //            overrideUserInterfaceStyle = .light
+    //        }
+    //    }
     
     
     //@UIApplicationMain
     class AppDelegate: UIResponder, UIApplicationDelegate,GIDSignInDelegate, MessagingDelegate, UNUserNotificationCenterDelegate{
+
+        
+        
         @AppStorage ("log_Status") var status = false
         @ObservedObject private var viewModel = AnnouncementsViewModel()
         let gcmMessageIDKey = "gcm.message_id"
         let user = Auth.auth().currentUser
-      
-       
+        
+        
         
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.
@@ -49,17 +54,49 @@ struct Element_CompoundApp: App {
             GIDSignIn.sharedInstance().delegate = self
             
             
-    
+            //MARK: Start of Notifs
+            
+            Messaging.messaging().delegate = self
+            
+            if #available(iOS 10.0, *) {
+                // For iOS 10 display notification (sent via APNS)
+                UNUserNotificationCenter.current().delegate = self
+                
+                let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+                UNUserNotificationCenter.current().requestAuthorization(
+                    options: authOptions,
+                    completionHandler: { _, _ in }
+                )
+            } else {
+                let settings: UIUserNotificationSettings =
+                    UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+                application.registerUserNotificationSettings(settings)
+            }
+            
+            application.registerForRemoteNotifications()
+            
             
             
             return true
         }
         
-        
+        func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+            if  let messageID = userInfo[gcmMessageIDKey] {
+                print ("message id: \(messageID)")
+            }
+            print(userInfo)
+            
+            completionHandler(UIBackgroundFetchResult.newData)
+        }
         func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
             return GIDSignIn.sharedInstance().handle(url)
             //
             
+        }
+        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+            let deviceToken: [String: String] = ["token": fcmToken ]
+            
+            print("Device token" , deviceToken)
         }
         
         func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
@@ -82,8 +119,8 @@ struct Element_CompoundApp: App {
                 } else {
                     print("user=" + (res?.user.email)!)
                     withAnimation(.easeInOut) {
-                    self.status = true
-                    
+                        self.status = true
+                        
                         //put logic here for if else
                     }
                 }
@@ -94,14 +131,8 @@ struct Element_CompoundApp: App {
             // Perform any operations when the user disconnects from app here.
             // ...
         }
-
-//        func application(_ application: UIApplication,
-//        didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-//           fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-//          Messaging.messaging().appDidReceiveMessage(userInfo)
-//          completionHandler(.noData)
-//        }
-
+        
+        
         // MARK: UISceneSession Lifecycle
         
         func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -132,6 +163,6 @@ struct Element_CompoundApp: App {
 
 
 
-    
+
 
 

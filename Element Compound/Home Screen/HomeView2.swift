@@ -158,6 +158,7 @@ struct HomeView2: View {
 //            }
             
             .navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
             .sheet(item: $activeSheet) { item in
                 switch item {
                 case .info:
@@ -180,6 +181,8 @@ struct HomeView2: View {
                self.viewModel.unsubscribe()
             }
             }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
         }
     }
 

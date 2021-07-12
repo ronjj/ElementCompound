@@ -38,6 +38,7 @@ struct ProjectsListView: View {
                   ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                   // viewModel2.project.percentComplete,
             }
+              .lineLimit(nil)
 
               Spacer()
 
@@ -61,7 +62,7 @@ struct ProjectsListView: View {
         //Disbales swipe to delete if user does not have role
         .deleteDisabled(role ? false : true)
       }
-      
+      .navigationViewStyle(StackNavigationViewStyle())
       .navigationBarTitle("Projects")
       .navigationBarItems(trailing: addButton)
       .onAppear() {
@@ -80,6 +81,7 @@ struct ProjectsListView: View {
       ProjectEditView2()
       }
     }
+    .navigationViewStyle(StackNavigationViewStyle())
   }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell.EditingStyle {

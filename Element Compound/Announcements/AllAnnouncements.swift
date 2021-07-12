@@ -72,6 +72,7 @@ struct AllAnouncements: View {
                     }
                 }
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
             .navigationBarTitle("")

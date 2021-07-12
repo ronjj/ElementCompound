@@ -81,7 +81,7 @@ struct AnnouncementAddView: View {
                 
           
             }
-            .navigationTitle(mode == .new ? "New Announcement" : viewModel.announcement.title)
+            .navigationTitle(mode == .new ? "New Announcement" : "Edit Announcement")
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
             .navigationBarItems(
                 leading: cancelButton,

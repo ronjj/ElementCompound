@@ -11,7 +11,7 @@ import GoogleSignIn
 
 struct ContentView: View {
     @AppStorage ("log_Status") var status = Bool()
-
+    
     var body: some View {
         ZStack{
             if status {
@@ -19,23 +19,9 @@ struct ContentView: View {
             }
             else {
                 LoginView()
-                //RejectedScreen()
-            }
-            
-           
-//            if Auth.auth().currentUser?.uid != nil {
-//
-//                TabViewItem()
-//
-//                }else {
-//                    LoginView()
-//                }
+                
             }
         }
     }
+}
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}

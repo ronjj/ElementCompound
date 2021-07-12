@@ -149,6 +149,7 @@ struct ProjectDetailsView: View {
    
 
     .navigationBarTitle(project.title)
+    .navigationViewStyle(StackNavigationViewStyle())
     .navigationBarItems(trailing: editButton {
       self.presentEditBookSheet.toggle()
         activeSheet = .edit

@@ -142,7 +142,7 @@ struct SettingsView: View {
            
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
-
+          
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -155,6 +155,7 @@ struct SettingsView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         
         
     }
