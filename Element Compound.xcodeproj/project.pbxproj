@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5403E8ED2697760F008C7CEB /* Firebase Notifications Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */; };
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
@@ -54,6 +53,9 @@
 		54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54707106268B9DF10057FA28 /* Color+Hexcode.swift */; };
 		5483871C26754C9F00B40A78 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5483871B26754C9F00B40A78 /* Launch Screen.storyboard */; };
 		54859AE52695DE200025ECA6 /* CameraDetail5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54859AE42695DE200025ECA6 /* CameraDetail5.swift */; };
+		5487EDFA269C77AD009C7E0E /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487EDF9269C77AD009C7E0E /* NotificationViewModel.swift */; };
+		5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487EDFB269C8A11009C7E0E /* PushNotificationManager.swift */; };
+		5487EDFE269C8A11009C7E0E /* PushNotificationSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487EDFC269C8A11009C7E0E /* PushNotificationSender.swift */; };
 		548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E12649D6A9008B9B4A /* Color + Ext.swift */; };
 		548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */; };
 		548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C3F8C2630BED600EFD1C0 /* ContentView.swift */; };
@@ -95,7 +97,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase Notifications Helper.swift"; sourceTree = "<group>"; };
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
@@ -144,6 +145,9 @@
 		54707106268B9DF10057FA28 /* Color+Hexcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hexcode.swift"; sourceTree = "<group>"; };
 		5483871B26754C9F00B40A78 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		54859AE42695DE200025ECA6 /* CameraDetail5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetail5.swift; sourceTree = "<group>"; };
+		5487EDF9269C77AD009C7E0E /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
+		5487EDFB269C8A11009C7E0E /* PushNotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationManager.swift; sourceTree = "<group>"; };
+		5487EDFC269C8A11009C7E0E /* PushNotificationSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotificationSender.swift; sourceTree = "<group>"; };
 		548A35E12649D6A9008B9B4A /* Color + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Ext.swift"; sourceTree = "<group>"; };
 		548A35E92649FFC9008B9B4A /* RoleCodeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleCodeScreen.swift; sourceTree = "<group>"; };
 		548A35EC264A1307008B9B4A /* Element Compound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Element Compound.entitlements"; sourceTree = "<group>"; };
@@ -242,27 +246,21 @@
 			isa = PBXGroup;
 			children = (
 				548A35EC264A1307008B9B4A /* Element Compound.entitlements */,
-				54CE4C7126988F5B00D398DC /* Fonts */,
-				54BBA4CC2632168A0021536D /* Announcements */,
+				5487EDF7269C711B009C7E0E /* Login */,
 				54BBA4CD263216AF0021536D /* Home Screen */,
+				54BBA4CC2632168A0021536D /* Announcements */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
+				5454C5242677EB8700EC84DA /* Projects */,
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
 				54B455192672A54D00E2F62F /* Tab Bar */,
 				5425C8B7268001A000465EAE /* Projects Files To Delete */,
-				5454C5242677EB8700EC84DA /* Projects */,
 				54D319CB26927136007A0948 /* ToDo Test */,
 				54707103268AAB740057FA28 /* Utilities */,
 				549259F126937EE90071A45C /* Book Stuff */,
-				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
+				54CE4C7126988F5B00D398DC /* Fonts */,
+				5487EDF8269C7167009C7E0E /* Courses */,
 				543B6638264ABBF300992350 /* Info.plist */,
-				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
-				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
-				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
-				54AEEB8F262BB9930040A559 /* LoginView.swift */,
-				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
-				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
-				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
-				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
+				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
 			);
@@ -313,18 +311,44 @@
 		54707103268AAB740057FA28 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
 				549259ED26937EBF0071A45C /* Publisher+Assign.swift */,
 				54FD835F268C02D100AB530C /* DataStore.swift */,
+				5487EDFB269C8A11009C7E0E /* PushNotificationManager.swift */,
+				5487EDFC269C8A11009C7E0E /* PushNotificationSender.swift */,
 				54BBA4C826320B300021536D /* SearchBar.swift */,
 				54707104268AABA50057FA28 /* TextBindingManager.swift */,
-				5403E8EC2697760F008C7CEB /* Firebase Notifications Helper.swift */,
+				5487EDF9269C77AD009C7E0E /* NotificationViewModel.swift */,
 				5423FEE6267E22380015ACC8 /* LinkedText.swift */,
 				548A35E12649D6A9008B9B4A /* Color + Ext.swift */,
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				54707106268B9DF10057FA28 /* Color+Hexcode.swift */,
+				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
+				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
+				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5487EDF7269C711B009C7E0E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5483871B26754C9F00B40A78 /* Launch Screen.storyboard */,
+				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
+				5440999D26422081007EBF4A /* Users.swift */,
+				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
+				54AEEB8F262BB9930040A559 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5487EDF8269C7167009C7E0E /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
+			);
+			path = Courses;
 			sourceTree = "<group>";
 		};
 		548A35E82649FFA7008B9B4A /* Settings Screen */ = {
@@ -343,7 +367,6 @@
 		549259F126937EE90071A45C /* Book Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				5483871B26754C9F00B40A78 /* Launch Screen.storyboard */,
 				549259EF26937EDC0071A45C /* Book.swift */,
 				549259F226937F060071A45C /* BooksViewModel.swift */,
 				549259F626937F2B0071A45C /* BooksListView.swift */,
@@ -381,7 +404,6 @@
 			isa = PBXGroup;
 			children = (
 				54933278263C51C6001C1D24 /* HomeView2.swift */,
-				5440999D26422081007EBF4A /* Users.swift */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -601,13 +623,14 @@
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				549259F726937F2B0071A45C /* BooksListView.swift in Sources */,
+				5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */,
 				5454C52C2677ECE300EC84DA /* ProjectAddView.swift in Sources */,
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
+				5487EDFA269C77AD009C7E0E /* NotificationViewModel.swift in Sources */,
 				543FED55268611360057D3B9 /* ProjectsView2.swift in Sources */,
-				5403E8ED2697760F008C7CEB /* Firebase Notifications Helper.swift in Sources */,
 				549259EE26937EBF0071A45C /* Publisher+Assign.swift in Sources */,
 				54FD8360268C02D100AB530C /* DataStore.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
@@ -622,6 +645,7 @@
 				542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */,
 				54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */,
 				549259F326937F060071A45C /* BooksViewModel.swift in Sources */,
+				5487EDFE269C8A11009C7E0E /* PushNotificationSender.swift in Sources */,
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,

@@ -50,7 +50,7 @@ struct AllAnouncements: View {
                     .padding(.top, 20)
                     
                     HStack {
-                        Text("Equipment List")
+                        Text("All Annoucements")
                             .font(.largeTitle)
                             .foregroundColor(.bginv)
                             .fontWeight(.bold)

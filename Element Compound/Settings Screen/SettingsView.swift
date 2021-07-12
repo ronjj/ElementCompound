@@ -30,16 +30,17 @@ enum Sheets: Identifiable {
 
 struct SettingsView: View {
     
-//    @State private var presentInfoScreen = false
-//    @State private var presentRoleScreen = false
-//    @State var isShowingMailView = false
+    //    @State private var presentInfoScreen = false
+    //    @State private var presentRoleScreen = false
+    //    @State var isShowingMailView = false
     
     @ObservedObject var settingsViewModel = SettingsViewModel()
+    @StateObject var notificationVM = NotificationViewModel()
     
     @State private var activeSheet: Sheets?
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var alertNoMail = false
-
+    
     
     @AppStorage ("log_Status") var status = true
     @AppStorage ("role_Status") var role = Bool()
@@ -49,6 +50,10 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView{
+            
+           
+                
+            
             List{
                 Section(header: Text("Display Name (Based On Google)")){
                     Text("\(Auth.auth().currentUser?.displayName ?? "Not Logged In")")
@@ -62,6 +67,8 @@ struct SettingsView: View {
                     Text("0.1.0")
                     //Text("\(String(describing: UIDevice.version)")
                 }
+                
+               
                 
                 
                 //Buttons
@@ -80,21 +87,21 @@ struct SettingsView: View {
                         Image(systemName: "envelope.circle").imageScale(.large)
                         Text("Contact Developer")
                         
-                    
+                        
                         
                     }
                     .frame(height: 50)
                     .onTapGesture {
-//                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
+                        //                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
                         if MFMailComposeViewController.canSendMail() {
-//                            self.isShowingMailView.toggle()
+                            //                            self.isShowingMailView.toggle()
                             activeSheet = .mail
                         } else if let emailUrl = SettingsView.createEmailUrl(subject: "Element Compound Feedback", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.alertNoMail.toggle()
                             
-
+                            
                             
                         }
                     }
@@ -110,9 +117,9 @@ struct SettingsView: View {
                             DisplayNameChangeScreen()
                         }
                     }
-//                    .alert(item: self.$alertNoMail) {
-//                               Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
-//                           }
+                    //                    .alert(item: self.$alertNoMail) {
+                    //                               Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
+                    //                           }
                     .alert(isPresented: self.$alertNoMail) {
                         Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Developer's email is \n ronaldjabouin2004@gmail.com"), dismissButton: .cancel())
                     }
@@ -130,23 +137,23 @@ struct SettingsView: View {
                     }
                     .disabled(role == false)
                     
-//                    Button(action: {
-////                        self.presentRoleScreen = true
-//                        activeSheet = .role
-//                    }) {
-//                        Text("Get Role")
-//                    }
+                    //                    Button(action: {
+                    ////                        self.presentRoleScreen = true
+                    //                        activeSheet = .role
+                    //                    }) {
+                    //                        Text("Get Role")
+                    //                    }
                 }
             }
             
-           
+            
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
-          
+            
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     Button(action: {
-//                        presentInfoScreen = true
+                        //                        presentInfoScreen = true
                         activeSheet = .info
                         
                     }) {
@@ -160,29 +167,29 @@ struct SettingsView: View {
         
     }
     static func createEmailUrl(subject: String, body: String) -> URL? {
-            let to = "ronaldjabouin2004@gmail.com"
-            let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-            let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-
-            let gmailUrl = URL(string: "googlegmail://co?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-            let outlookUrl = URL(string: "ms-outlook://compose?to=\(to)&subject=\(subjectEncoded)")
-            let yahooMail = URL(string: "ymail://mail/compose?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-            let sparkUrl = URL(string: "readdle-spark://compose?recipient=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
-            let defaultUrl = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
-
-            if let gmailUrl = gmailUrl, UIApplication.shared.canOpenURL(gmailUrl) {
-                return gmailUrl
-            } else if let outlookUrl = outlookUrl, UIApplication.shared.canOpenURL(outlookUrl) {
-                return outlookUrl
-            } else if let yahooMail = yahooMail, UIApplication.shared.canOpenURL(yahooMail) {
-                return yahooMail
-            } else if let sparkUrl = sparkUrl, UIApplication.shared.canOpenURL(sparkUrl) {
-                return sparkUrl
-            }
-
-            return defaultUrl
+        let to = "ronaldjabouin2004@gmail.com"
+        let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        
+        let gmailUrl = URL(string: "googlegmail://co?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        let outlookUrl = URL(string: "ms-outlook://compose?to=\(to)&subject=\(subjectEncoded)")
+        let yahooMail = URL(string: "ymail://mail/compose?to=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        let sparkUrl = URL(string: "readdle-spark://compose?recipient=\(to)&subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        let defaultUrl = URL(string: "mailto:\(to)?subject=\(subjectEncoded)&body=\(bodyEncoded)")
+        
+        if let gmailUrl = gmailUrl, UIApplication.shared.canOpenURL(gmailUrl) {
+            return gmailUrl
+        } else if let outlookUrl = outlookUrl, UIApplication.shared.canOpenURL(outlookUrl) {
+            return outlookUrl
+        } else if let yahooMail = yahooMail, UIApplication.shared.canOpenURL(yahooMail) {
+            return yahooMail
+        } else if let sparkUrl = sparkUrl, UIApplication.shared.canOpenURL(sparkUrl) {
+            return sparkUrl
         }
-
+        
+        return defaultUrl
+    }
+    
 }
 
 
@@ -254,7 +261,7 @@ extension UIDevice {
             case"iPhone13,2":                                   return "iPhone 12"
             case"iPhone13,3":                                   return "iPhone 12 Pro"
             case"iPhone13,4":                                   return "iPhone 12 Pro Max"
-                    
+                
             case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":    return "iPad 2"
             case "iPad3,1", "iPad3,2", "iPad3,3":               return "iPad 3"
             case "iPad3,4", "iPad3,5", "iPad3,6":               return "iPad 4"
@@ -272,38 +279,38 @@ extension UIDevice {
             case "iPad7,1", "iPad7,2":                          return "iPad Pro 12.9 Inch 2. Generation"
             case "iPad7,3", "iPad7,4":                          return "iPad Pro 10.5 Inch"
             case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":    return "iPad Pro 11 inch 3rd Gen"
-     
-  
                 
-              
-
+                
+                
+                
+                
+                
+            //                iPad8,5 : iPad Pro 12.9 inch 3rd Gen (WiFi)
+            //                iPad8,6 : iPad Pro 12.9 inch 3rd Gen (1TB, WiFi)
+            //                iPad8,7 : iPad Pro 12.9 inch 3rd Gen (WiFi+Cellular)
+            //                iPad8,8 : iPad Pro 12.9 inch 3rd Gen (1TB, WiFi+Cellular)
+            //                iPad8,9 : iPad Pro 11 inch 4th Gen (WiFi)
+            //                iPad8,10 : iPad Pro 11 inch 4th Gen (WiFi+Cellular)
+            //                iPad8,11 : iPad Pro 12.9 inch 4th Gen (WiFi)
+            //                iPad8,12 : iPad Pro 12.9 inch 4th Gen (WiFi+Cellular)
+            //                iPad11,1 : iPad mini 5th Gen (WiFi)
+            //                iPad11,2 : iPad mini 5th Gen
+            //                iPad11,3 : iPad Air 3rd Gen (WiFi)
+            //                iPad11,4 : iPad Air 3rd Gen
+            //                iPad11,6 : iPad 8th Gen (WiFi)
+            //                iPad11,7 : iPad 8th Gen (WiFi+Cellular)
+            //                iPad13,1 : iPad air 4th Gen (WiFi)
+            //                iPad13,2 : iPad air 4th Gen (WiFi+Cellular)
+            //                iPad13,4 : iPad Pro 11 inch 3rd Gen
+            //                iPad13,5 : iPad Pro 11 inch 3rd Gen
+            //                iPad13,6 : iPad Pro 11 inch 3rd Gen
+            //                iPad13,7 : iPad Pro 11 inch 3rd Gen
+            //                iPad13,8 : iPad Pro 12.9 inch 5th Gen
+            //                iPad13,9 : iPad Pro 12.9 inch 5th Gen
+            //                iPad13,10 : iPad Pro 12.9 inch 5th Gen
+            //                iPad13,11 : iPad Pro 12.9 inch 5th Gen
             
-//                iPad8,5 : iPad Pro 12.9 inch 3rd Gen (WiFi)
-//                iPad8,6 : iPad Pro 12.9 inch 3rd Gen (1TB, WiFi)
-//                iPad8,7 : iPad Pro 12.9 inch 3rd Gen (WiFi+Cellular)
-//                iPad8,8 : iPad Pro 12.9 inch 3rd Gen (1TB, WiFi+Cellular)
-//                iPad8,9 : iPad Pro 11 inch 4th Gen (WiFi)
-//                iPad8,10 : iPad Pro 11 inch 4th Gen (WiFi+Cellular)
-//                iPad8,11 : iPad Pro 12.9 inch 4th Gen (WiFi)
-//                iPad8,12 : iPad Pro 12.9 inch 4th Gen (WiFi+Cellular)
-//                iPad11,1 : iPad mini 5th Gen (WiFi)
-//                iPad11,2 : iPad mini 5th Gen
-//                iPad11,3 : iPad Air 3rd Gen (WiFi)
-//                iPad11,4 : iPad Air 3rd Gen
-//                iPad11,6 : iPad 8th Gen (WiFi)
-//                iPad11,7 : iPad 8th Gen (WiFi+Cellular)
-//                iPad13,1 : iPad air 4th Gen (WiFi)
-//                iPad13,2 : iPad air 4th Gen (WiFi+Cellular)
-//                iPad13,4 : iPad Pro 11 inch 3rd Gen
-//                iPad13,5 : iPad Pro 11 inch 3rd Gen
-//                iPad13,6 : iPad Pro 11 inch 3rd Gen
-//                iPad13,7 : iPad Pro 11 inch 3rd Gen
-//                iPad13,8 : iPad Pro 12.9 inch 5th Gen
-//                iPad13,9 : iPad Pro 12.9 inch 5th Gen
-//                iPad13,10 : iPad Pro 12.9 inch 5th Gen
-//                iPad13,11 : iPad Pro 12.9 inch 5th Gen
-                
-                
+            
             case "AppleTV5,3":                              return "Apple TV"
             case "AppleTV6,2":                              return "Apple TV 4K"
             case "AudioAccessory1,1":                       return "HomePod"

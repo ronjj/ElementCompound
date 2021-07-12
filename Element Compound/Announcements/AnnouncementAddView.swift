@@ -33,6 +33,7 @@ struct AnnouncementAddView: View {
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
     
     
+    
     @State var presentActionSheet = false
     var mode: Mode2 = .new
     var completionHandler: ((Result<Action, Error>) -> Void)?
@@ -45,7 +46,11 @@ struct AnnouncementAddView: View {
     }
     
     var saveButton: some View {
-        Button(action: { self.handleDoneTapped() }) {
+        Button(action: {
+            self.handleDoneTapped()
+          
+            
+        }) {
             Text(mode == .new ? "Done" : "Save")
         }
         .disabled(!viewModel.modified)
@@ -54,6 +59,7 @@ struct AnnouncementAddView: View {
     var body: some View {
         NavigationView{
             Form{
+                    
                 Section(header: Text("Title")) {
                     TextEditor(text:$viewModel.announcement.title)
                         .font(.custom("SF Pro", size: 18))
@@ -97,6 +103,7 @@ struct AnnouncementAddView: View {
             }
         }
     }
+
     
     func handleCancelTapped() {
         self.dismiss()

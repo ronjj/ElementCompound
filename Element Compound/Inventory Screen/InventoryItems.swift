@@ -107,7 +107,7 @@ struct MockData {
         CameraItem(name: "Ricoh Theta 360",
                    shortDescription: "360° video camera.",
                    longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos as seen in the Chaminade Virtual tour.",
-                   imageURL: "black",
+                   imageURL: "sony 85 - blue hand",
                    bigImageURL: "black"),
         
         CameraItem(name: "Osmo Pocket",

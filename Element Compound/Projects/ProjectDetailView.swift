@@ -131,8 +131,10 @@ struct ProjectDetailsView: View {
                         
                     }
                   } label: {
-                      mediumButtonStyle(title: "Contact Officer")
+                    mediumButtonStyle(title: project.officerEmail.isEmpty ? "No Officer Listed" : "Contact Officer")
                   }
+                  .disabled(project.officerEmail.isEmpty)
+                  .opacity(project.officerEmail.isEmpty ? 0.5 : 1.0)
 
                   .alert(isPresented: self.$alertNoMail) {
                       Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Officers's email is \n \(project.officerEmail)"), dismissButton: .cancel())
