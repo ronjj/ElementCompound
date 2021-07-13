@@ -26,20 +26,20 @@ struct ProjectsListView: View {
                 HStack{
                   Text(project.creator)
                     .font(.subheadline)
+                    
                   Image(systemName: "calendar.badge.clock")
                     .font(.body)
                     .foregroundColor(Color.ruby)
-                    Text("\(project.pickedDateString2)")
-                        .font(.subheadline)
-
-        //            Text(project.completionLevel)
-        //            .font(.subheadline)
+                    
+                  Text("\(project.pickedDateString2)")
+                    .font(.subheadline)
+                    
                 }
                   ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                   // viewModel2.project.percentComplete,
             }
               .lineLimit(nil)
-
+             
               Spacer()
 
               Circle()
@@ -52,34 +52,40 @@ struct ProjectsListView: View {
 
   var body: some View {
     NavigationView {
-      List {
-        ForEach (viewModel.projects) { project in
-         projectRowView(project: project)
+        ZStack{
+            List {
+                ForEach (viewModel.projects) { project in
+                    projectRowView(project: project)
+                }
+                .onDelete() { indexSet in
+                    viewModel.removeProjects(atOffsets: indexSet)
+                }
+                //Disbales swipe to delete if user does not have role
+                .deleteDisabled(role ? false : true)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle("Projects")
+            .navigationBarItems(trailing: addButton)
+            .onAppear() {
+                print("BooksListView appears. Subscribing to data updates.")
+                self.viewModel.subscribe()
+            }
+            .onDisappear() {
+                // By unsubscribing from the view model, we prevent updates coming in from
+                // Firestore to be reflected in the UI. Since we do want to receive updates
+                // when the user is on any of the child screens, we keep the subscription active!
+                
+                print("ProjectsView disappears. Unsubscribing from data updates.")
+                self.viewModel.unsubscribe()
+            }
+            .sheet(isPresented: self.$presentAddProjectSheet) {
+                ProjectEditView2()
+            }
+            
+            if viewModel.projects.isEmpty{
+                EmptyState(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+            }
         }
-        .onDelete() { indexSet in
-          viewModel.removeProjects(atOffsets: indexSet)
-        }
-        //Disbales swipe to delete if user does not have role
-        .deleteDisabled(role ? false : true)
-      }
-      .navigationViewStyle(StackNavigationViewStyle())
-      .navigationBarTitle("Projects")
-      .navigationBarItems(trailing: addButton)
-      .onAppear() {
-        print("BooksListView appears. Subscribing to data updates.")
-        self.viewModel.subscribe()
-      }
-      .onDisappear() {
-        // By unsubscribing from the view model, we prevent updates coming in from
-        // Firestore to be reflected in the UI. Since we do want to receive updates
-        // when the user is on any of the child screens, we keep the subscription active!
-        
-         print("ProjectsView disappears. Unsubscribing from data updates.")
-         self.viewModel.unsubscribe()
-      }
-      .sheet(isPresented: self.$presentAddProjectSheet) {
-      ProjectEditView2()
-      }
     }
     .navigationViewStyle(StackNavigationViewStyle())
   }

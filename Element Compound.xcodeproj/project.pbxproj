@@ -14,6 +14,8 @@
 		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
 		54388242269DCCD3008529A4 /* LenseItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */; };
+		54388244269DD03B008529A4 /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54388243269DD03B008529A4 /* EmptyState.swift */; };
+		54388246269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 54388245269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
 		5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */; };
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
@@ -105,6 +107,8 @@
 		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
 		54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenseItemDetailedView.swift; sourceTree = "<group>"; };
+		54388243269DD03B008529A4 /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		54388245269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png"; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element_CompoundApp.swift; sourceTree = "<group>"; };
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 				543B6638264ABBF300992350 /* Info.plist */,
 				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
+				54388245269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
 			);
 			path = "Element Compound";
@@ -315,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
+				54388243269DD03B008529A4 /* EmptyState.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
 				549259ED26937EBF0071A45C /* Publisher+Assign.swift */,
 				54FD835F268C02D100AB530C /* DataStore.swift */,
@@ -513,6 +519,7 @@
 				54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */,
 				543B664D264AC72200992350 /* Felixti.ttf in Resources */,
 				5483871C26754C9F00B40A78 /* Launch Screen.storyboard in Resources */,
+				54388246269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png in Resources */,
 				54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */,
 				543B6640264ABFCF00992350 /* Poppins-Thin.ttf in Resources */,
 				546151A4264C740100BC2719 /* FelixTitling.ttf in Resources */,
@@ -662,6 +669,7 @@
 				543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */,
 				54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */,
 				5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */,
+				54388244269DD03B008529A4 /* EmptyState.swift in Sources */,
 				548A35E22649D6A9008B9B4A /* Color + Ext.swift in Sources */,
 				54707100268AA5060057FA28 /* SettingsViewModel.swift in Sources */,
 			);

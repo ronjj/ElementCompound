@@ -43,11 +43,7 @@ struct ProjectCardView: View {
                     Text("\(project.pickedDateString)")
                         .font(.title3)
                         .padding(.bottom, 5)
-                    
-                    Text("\(project.pickedTimeString)")
-                        .font(.title3)
-                        .padding(.bottom, 5)
-                    
+                        .minimumScaleFactor(1.0)
                     
                 }
                 .padding(.leading)

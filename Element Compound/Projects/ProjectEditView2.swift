@@ -20,6 +20,7 @@ struct ProjectEditView2: View {
     @Environment(\.presentationMode) private var presentationMode
     @State var presentActionSheet = false
     @State var helpText = ""
+    @State private var isEmailValid : Bool   = true
     
     // MARK: - State (Initialiser-modifiable)
     
@@ -42,14 +43,15 @@ struct ProjectEditView2: View {
         Button(action: { self.handleDoneTapped() }) {
             Text(mode == .new ? "Done" : "Save")
         }
-        .disabled(!viewModel.modified)
+       // .disabled(!viewModel.modified)
+        .disabled(viewModel.project.title.isEmpty)
     }
     
- 
+    
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Title")) {
+                Section(header: Text("Title *")) {
                     TextEditor(text:$viewModel.project.title)
                         .font(.custom("SF Pro", size: 18))
                         .frame(height: 125, alignment: .center)
@@ -75,7 +77,7 @@ struct ProjectEditView2: View {
                     //                              }
                     //
                     //                          }
-
+                    
                     //V3
                     HStack{
                         VStack{
@@ -118,7 +120,23 @@ struct ProjectEditView2: View {
                 }
                 
                 Section(header: Text("Email of Officer Leading Project")){
-                    TextField("Enter Officer Email", text: $viewModel.project.officerEmail)
+                    TextField("Enter Officer Email", text: $viewModel.project.officerEmail, onEditingChanged: { (isChanged) in
+                        if !isChanged {
+                            if self.textFieldValidatorEmail(self.viewModel.project.officerEmail) {
+                                self.isEmailValid = true
+                            } else {
+                                self.isEmailValid = false
+                                self.viewModel.project.officerEmail = ""
+                            }
+                        }
+                    })
+                    .autocapitalization(.none)
+                    
+                    if !self.isEmailValid {
+                        Text("Email is Not Valid")
+                            .font(.callout)
+                            .foregroundColor(Color.red)
+                    }
                 }
                 
                 Section(header: Text("Assign Members")) {
@@ -128,22 +146,22 @@ struct ProjectEditView2: View {
                     .onDelete { indices in
                         viewModel.project.assignedStudents.remove(atOffsets: indices)
                     }
-                        HStack {
-                            TextField("New Person", text: $newAssigned)
-                            Button(action: {
-                                withAnimation {
-                                    viewModel.project.assignedStudents.append(newAssigned)
-                                    newAssigned = ""
-                                }
-                               
-                            }) {
-                                Image(systemName: "plus.circle.fill")
-                                    .accessibilityLabel(Text("Add new person"))
+                    HStack {
+                        TextField("New Person", text: $newAssigned)
+                        Button(action: {
+                            withAnimation {
+                                viewModel.project.assignedStudents.append(newAssigned)
+                                newAssigned = ""
                             }
-                            .disabled(newAssigned.isEmpty)
-                           
+                            
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .accessibilityLabel(Text("Add new person"))
                         }
+                        .disabled(newAssigned.isEmpty)
                         
+                    }
+                    
                     
                 }
                 
@@ -196,7 +214,7 @@ struct ProjectEditView2: View {
                     }
                 }
                 
-               
+                
             }
             .navigationTitle(mode == .new ? "New Project" : viewModel.project.title)
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
@@ -217,6 +235,17 @@ struct ProjectEditView2: View {
     
     // MARK: - Action Handlers
     
+    
+    func textFieldValidatorEmail(_ string: String) -> Bool {
+        if string.count > 100 {
+            return false
+        }
+        let emailFormat = "(?:[\\p{L}0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[\\p{L}0-9!#$%\\&'*+/=?\\^_`{|}" + "~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\" + "x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[\\p{L}0-9](?:[a-" + "z0-9-]*[\\p{L}0-9])?\\.)+[\\p{L}0-9](?:[\\p{L}0-9-]*[\\p{L}0-9])?|\\[(?:(?:25[0-5" + "]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-" + "9][0-9]?|[\\p{L}0-9-]*[\\p{L}0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21" + "-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+        //let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: string)
+    }
+    
     func handleCancelTapped() {
         self.dismiss()
     }
@@ -225,7 +254,7 @@ struct ProjectEditView2: View {
         self.viewModel.handleDoneTapped()
         self.dismiss()
     }
-
+    
     func handleDeleteTapped() {
         viewModel.handleDeleteTapped()
         self.dismiss()
@@ -235,6 +264,8 @@ struct ProjectEditView2: View {
     func dismiss() {
         self.presentationMode.wrappedValue.dismiss()
     }
+    
+    
 }
 
 //struct BookEditView_Previews: PreviewProvider {
