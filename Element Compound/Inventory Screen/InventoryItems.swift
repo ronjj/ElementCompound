@@ -31,6 +31,15 @@ struct ComputerItem:  Decodable, Identifiable{
     
 }
 
+struct LenseItem:  Decodable, Identifiable{
+    let id = UUID()
+    let name: String
+    let shortDescription: String
+    let longDescription: String
+    let imageURL: String
+    let bigImageURL: String
+    
+}
 
 struct AudioItem:  Decodable, Identifiable{
     let id = UUID()
@@ -77,48 +86,49 @@ struct MockData {
     static let sampleComputer = ComputerItem(name: "iMac Pro", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleAudio = AudioItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleMisc = MiscItem(name: "Camera Tripod", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
+    static let sampleLense = LenseItem(name: "Sony Lens", shortDescription: "Lens for our sony cameras", longDescription: "Very good lense that gives a crsip image", imageURL: "black", bigImageURL: "black")
 
     
     static let cameras = [
         CameraItem( name: "Lumix GH4",
-                    shortDescription: "Basic camera for video recording.",
-                    longDescription: "The go-to Element camera, the GH4 is a reliable camera that delivers professional-quality videos. The GH4 is equipped with 4K and HD capabilities and offers basic audio recording.",
+                    shortDescription: " Entry-Level Camera for New Student Members.",
+                    longDescription: "The go-to camera for new student members, the GH4 is a reliable and durable camera that captures professional-quality video. The GH4 is equipped with 4K and HD capability for video, basic audio recording, and can be used with a variety of entry-level lenses available in our studio.",
                     imageURL: "sony 350x200",
                     bigImageURL: "Lumix GH4 Background"),
         
         CameraItem(name: "Lumix GH5",
-                   shortDescription: "4K camera for video recording.",
-                   longDescription: "The professional level GH5 from LUMIX delivers high quality 4K video with its improved design from the GH4. The mirrorless camera delivers crisp video, while in-camera stabilization provides smooth movement, and the in-camera ",
+                   shortDescription: "4K Camera for Mid-Level Projects.",
+                   longDescription: "The professional standard DSLR from Lumix, the GH5 captures high quality 4K video with improved settings and features over the GH4. With stronger built in stabilization, and compatibility with our professional suite of lenses, the GH5 is prime for more experienced student members working on Mid-Level Projects. ",
                    imageURL: "Rode (450x360) Final",
                    bigImageURL: "Rode Background Final"),
         
         CameraItem( name: "Lumix GH5s",
-                    shortDescription: "Optimized 4K camera for video recording.",
+                    shortDescription: "Optimized 4K Camera for High-Level Projects.",
                     longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.",
                     imageURL: "Mavic Mini 2 (450x360)",
                     bigImageURL: "Mavic Mini 2"),
         
         CameraItem(name: "Sony A7SII",
-                   shortDescription: "High end 4K video camera.",
-                   longDescription: "The Sony A7SII is the elite camera of Element. With built-in stabilization technology, the A7SII delivers smooth 4K video. The camera microphone records basic audio. The ultra-sensitive filter gives the camera dynamic performance in most lighting conditions. The A7SII also records full pixel readouts, amplifying video quality for the editing room.",
+                   shortDescription: "High-End 4K Camera for Experienced Students.",
+                   longDescription: "As the most elite camera of Element, the Sony A7s Mark II is extremely versatile, and reserved for senior student members working on high-level projects. With its sensitive filter, the A7s II delivers smooth 4K video and dynamic, crisp performance in most lighting conditions. The A7s II shoots in full pixel readouts (RAW), allowing for complete quality control during editing.",
                    imageURL: "Mavic Pro 2 (450x360)",
                    bigImageURL: "Mavic Pro 2"),
         
         CameraItem(name: "Ricoh Theta 360",
-                   shortDescription: "360° video camera.",
-                   longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos as seen in the Chaminade Virtual tour.",
+                   shortDescription: "360° Camera for Immersive Photos.",
+                   longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos, as seen throughout the Chaminade Virtual Tour. ",
                    imageURL: "sony 85 - blue hand",
                    bigImageURL: "black"),
         
         CameraItem(name: "Osmo Pocket",
-                   shortDescription: "Compact action camera",
-                   longDescription: "The Osmo Pocket provides 1080p video in a super-compact camera, mounted on a three-axis gimbal. The Osmo Pocket is a useful tool for mobile shots, time-lapses, and panoramas. Its simplistic design allows users to store the Osmo easily and record video seamlessly",
+                   shortDescription: "Compact Action Camera for Simple Shoots.",
+                   longDescription: "The Osmo Pocket provides 1080p video in a super-compact form factor, mounted on a three-axis gimbal. The Osmo Pocket is prime for mobile shots, time-lapses, and panoramas. Its simplistic design allows users to store the Osmo easily and record video seamlessly.",
                    imageURL: "black",
                    bigImageURL: "black"),
         
         CameraItem(name: "Osmo Pocket Gen 2",
-                   shortDescription: "Versatile action camera",
-                   longDescription: "Osmo pocket 2 keeps the same compact design while adding new features and accessories to the older design. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
+                   shortDescription: "Versatile Action Camera for Simple Shots.",
+                   longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
                    imageURL: "black",
                    bigImageURL: "black"),
         
@@ -127,6 +137,40 @@ struct MockData {
                    longDescription: "Element has a wide range of lenses, from standard video lenses, to fish eye lenses. With a wide range of focal lengths, our inventory has the right accessory for most video projects.",
                    imageURL: "black",
                    bigImageURL: "black")
+        
+    ]
+    
+    
+    static let lenses = [
+        LenseItem( name: "Sony E-Mount 24mm",
+                    shortDescription: "Medium Focal Length Lens for Sony A7s II.",
+                    longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
+                    imageURL: "black",
+                    bigImageURL: "black"),
+        
+        LenseItem( name: "Sony E-Mount 85mm",
+                    shortDescription: "High Focal Length Lens for Sony A7s II.",
+                    longDescription: "Full Name: Sony E-Mount 85mm FE 1.4 Full Frame Lens. The E-Mount 85mm Lens is one of two “G” brand lenses in our Sony lineup. The 85mm Lens features the highest focal length of any lens in our lineup and is great for handheld shots and formal interview setups that require a tight “zoomed in” field of view. With the same high-quality focus ring and low aperture capability as the E-Mount 24mm Lens, the 85mm Lens captures fantastic images and videos.",
+                    imageURL: "black",
+                    bigImageURL: "black"),
+        
+        LenseItem( name: "Voigtlander Nokton 17.5mm",
+                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
+                    longDescription: "Full Name: Voigtlander Nokton Aspherical 17.5mm F/ 0.95 LensThe Aspherical 17.5mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in a medium field of view. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 17.5mm is great for use on our Ronin gimbal and even for handheld shots.",
+                    imageURL: "black",
+                    bigImageURL: "black"),
+        
+        LenseItem( name: "Voigtlander Nokton 25mm",
+                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
+                    longDescription: "Full Name: Voigtlander Nokton Aspherical 25mm F/0.95 Lens. The Aspherical 25mm Lens is one of a collection of Voigtlander Lenses in our lineup and offers crisp quality in a medium field of view, but slightly tighter than the 17.5mm. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 25mm is great for use on our Ronin gimbal and even for handheld shots.",
+                    imageURL: "black",
+                    bigImageURL: "black"),
+        
+        LenseItem( name: "Voigtlander Nokton 10mm",
+                    shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
+                    longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
+                    imageURL: "black",
+                    bigImageURL: "black")
         
     ]
     

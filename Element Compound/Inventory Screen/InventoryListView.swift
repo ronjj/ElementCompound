@@ -15,6 +15,7 @@ struct InventoryListView: View {
     let computer: ComputerItem
     let audio: AudioItem
     let misc: MiscItem
+    let lense : LenseItem
     
     
     
@@ -57,6 +58,25 @@ struct InventoryListView: View {
                         ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
                             NavigationLink(destination: CameraItemDetailedView5(camera: camera)) {
                                 InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
+ 
+                            }
+                            .padding(5)
+                        }
+                        
+                        HStack{
+                            
+                            Text("Lenses 📷")
+                                .foregroundColor(Color.bginv)
+                                .fontWeight(.bold)
+                                .font(.title2)
+                                .padding()
+                            
+                            Spacer()
+                        }
+                        
+                        ForEach(MockData.lenses.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { lense in
+                            NavigationLink(destination: LenseItemDetailedView(lense: lense)) {
+                                InventoryListCellView(image: lense.imageURL, title: lense.name, description: lense.shortDescription, color: Color.nyanza)
  
                             }
                             .padding(5)

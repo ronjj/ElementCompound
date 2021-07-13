@@ -47,6 +47,7 @@ struct DisplayNameChangeScreen: View {
                         }) {
                             Text("Confirm")
                         }
+                        .disabled(settingsViewModel.newDisplayName.isEmpty)
                         
                     }
                     

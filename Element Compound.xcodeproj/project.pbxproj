@@ -13,6 +13,7 @@
 		5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */; };
 		5429AF85264628EF00422295 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5429AF84264628EF00422295 /* MailView.swift */; };
 		542EAB57261281EB008645CB /* CameraItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542EAB56261281EB008645CB /* CameraItemDetailedView.swift */; };
+		54388242269DCCD3008529A4 /* LenseItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */; };
 		5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */; };
 		5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */; };
 		5439CE95260FF37C00DCC5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5439CE94260FF37C00DCC5A6 /* Assets.xcassets */; };
@@ -103,6 +104,7 @@
 		5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEditView2.swift; sourceTree = "<group>"; };
 		5429AF84264628EF00422295 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		542EAB56261281EB008645CB /* CameraItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraItemDetailedView.swift; sourceTree = "<group>"; };
+		54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LenseItemDetailedView.swift; sourceTree = "<group>"; };
 		5439CE8D260FF37B00DCC5A6 /* Element Compound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Element Compound.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element_CompoundApp.swift; sourceTree = "<group>"; };
 		5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryListView.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
 				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
 				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
+				54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */,
 			);
 			path = "Inventory Screen";
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				5487EDFE269C8A11009C7E0E /* PushNotificationSender.swift in Sources */,
 				54BBA4CF263216EA0021536D /* Announcement.swift in Sources */,
 				543E7BAA262A1F96004FDF51 /* SettingsView.swift in Sources */,
+				54388242269DCCD3008529A4 /* LenseItemDetailedView.swift in Sources */,
 				5439CE91260FF37B00DCC5A6 /* Element_CompoundApp.swift in Sources */,
 				5440999E26422081007EBF4A /* Users.swift in Sources */,
 				54D319D5269271C4007A0948 /* TaskListView.swift in Sources */,

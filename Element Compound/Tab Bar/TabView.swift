@@ -17,7 +17,7 @@ struct TabViewItem: View {
                     HomeView2()
                 }
                 else if self.index == 1{
-                    InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc)
+                    InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc, lense: MockData.sampleLense)
                 }
                 else if self.index == 2{
                     Color.red.opacity(0.5).edgesIgnoringSafeArea(.all)

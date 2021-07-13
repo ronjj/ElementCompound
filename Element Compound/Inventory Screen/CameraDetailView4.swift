@@ -27,20 +27,13 @@ struct CameraDetailView4: View {
                                 ZStack {
                                     Circle()
                                         .foregroundColor(.white)
+                                        //in ios 15 makes the foreground a .material
                                         .frame(width:30, height: 30)
                                   Image(systemName: "arrow.left")
                                     .foregroundColor(.black)
                                 }
                             })
-//                            Spacer()
-//                            Button(action: { viewModel.favouriteMethod() },
-//                                   label: {
-//                                Image(IMAGE_FAV_ICON)
-//                                .resizable()
-//                                .frame(width: 26, height: 26)
 //
-//                                }
-//                            )
                         }
                         .padding(.horizontal, 24).padding(.top, 46)
                         
@@ -56,7 +49,7 @@ struct CameraDetailView4: View {
                         if  reader.frame(in: .global).minY > -480 {
                         Image(camera.bigImageURL)
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .aspectRatio(contentMode: .fit)
                             .offset(y: -reader.frame(in: .global).minY)
                             .frame(width: UIScreen.main.bounds.width, height:
                                     reader.frame(in: .global).minY > 0 ?
