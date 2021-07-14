@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54001D52269F3B5E00249C4E /* CustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54001D51269F3B5E00249C4E /* CustomPlayer.swift */; };
+		54001D56269F4DE100249C4E /* IngredientsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54001D55269F4DE100249C4E /* IngredientsPicker.swift */; };
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
@@ -85,6 +86,7 @@
 
 /* Begin PBXFileReference section */
 		54001D51269F3B5E00249C4E /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
+		54001D55269F4DE100249C4E /* IngredientsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsPicker.swift; sourceTree = "<group>"; };
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 		54707103268AAB740057FA28 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				54001D55269F4DE100249C4E /* IngredientsPicker.swift */,
 				54001D51269F3B5E00249C4E /* CustomPlayer.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				54388243269DD03B008529A4 /* EmptyState.swift */,
@@ -533,6 +536,7 @@
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
+				54001D56269F4DE100249C4E /* IngredientsPicker.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				5452049F269B1B1B007444F0 /* AnnouncementDetailView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,

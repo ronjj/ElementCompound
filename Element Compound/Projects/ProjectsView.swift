@@ -15,6 +15,7 @@ struct ProjectsListView: View {
         Image(systemName: "plus")
       }
       .disabled(role == false)
+      .opacity(role == false ? 0.0 : 1.0)
     }
 
     private func projectRowView(project: Project) -> some View {

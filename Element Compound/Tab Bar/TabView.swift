@@ -1,16 +1,10 @@
-////
-////  TabView.swift
-////  Element Compound
-////
-////  Created by Ronald Jabouin on 4/16/21.
-////
-//
+
 import SwiftUI
 
 struct TabViewItem: View {
     @State var index = 0
+    
     var body: some View {
-        
         VStack{
             ZStack{
                 if self.index == 0{
@@ -21,7 +15,7 @@ struct TabViewItem: View {
                 }
                 else if self.index == 2{
                     Color.red.opacity(0.5).edgesIgnoringSafeArea(.all)
-                    
+
                     Text("Courses")
                         .font(.largeTitle)
                 }
@@ -33,7 +27,6 @@ struct TabViewItem: View {
                 else{
                     SettingsView()
                 }
-                
                 CustomTabBar(index: $index)
             }
            // .animation(.easeOut(duration: 0.5))

@@ -22,7 +22,7 @@ struct LoginView: View {
                 .offset(y: 270)
             
             VStack{
-                Text(loginStatus == false ? "Please login with an email associated with an element member. Non members are not allowed in the app." :   "Log in with school email")
+                Text(loginStatus == false ? "Please login with a Chaminade High School. Non Chaminade High School studetns and faculty are not allowed in the application." :   "Log in with school email")
                     .bold()
                     .padding()
                     .background(Color.red)

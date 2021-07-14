@@ -161,31 +161,35 @@ struct ProjectEditView2: View {
                     }
                 }
                 
-                Section(header: Text("Assign Members")) {
-                    ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
-                        Text(assignedStudent)
-                    }
-                    .onDelete { indices in
-                        viewModel.project.assignedStudents.remove(atOffsets: indices)
-                    }
-                    
-                    HStack {
-                        TextField("Enter Name Here", text: $newAssigned)
-                        Button(action: {
-                            withAnimation {
-                                viewModel.project.assignedStudents.append(newAssigned)
-                                newAssigned = ""
-                                self.isEditing = true
-                            }
-                            
-                        }) {
-                            Image(systemName: "plus.circle.fill")
-                                .accessibilityLabel(Text("Add new person"))
-                        }
-                        .opacity(newAssigned.isEmpty ? 0.1 : 1.0)
-                        
-                    }
-                }
+//                Section(header: Text("Assign Members")) {
+//                    ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
+//                        Text(assignedStudent)
+//                    }
+//                    .onDelete { indices in
+//                        viewModel.project.assignedStudents.remove(atOffsets: indices)
+//                    }
+//
+//                    HStack {
+//                        TextField("Enter Name Here", text: $newAssigned)
+//                        Button(action: {
+//                            withAnimation {
+//                                viewModel.project.assignedStudents.append(newAssigned)
+//                                newAssigned = ""
+//                                self.isEditing = true
+//                            }
+//
+//                        }) {
+//                            Image(systemName: "plus.circle.fill")
+//                                .accessibilityLabel(Text("Add new person"))
+//                        }
+//                        .opacity(newAssigned.isEmpty ? 0.1 : 1.0)
+//
+//                    }
+//                }
+                
+               
+                
+                
                 
                 
                 Section(header: Text("Percentage Complete")){

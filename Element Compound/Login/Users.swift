@@ -9,7 +9,6 @@ import SwiftUI
 import Firebase
 import GoogleSignIn
 
-
 class UsersViewModel: ObservableObject{
      @AppStorage ("role_Status") var role = Bool()
      @AppStorage ("login_Status") var loginStatus = Bool()
@@ -17,6 +16,9 @@ class UsersViewModel: ObservableObject{
      @Published var members: [String: String  ] = ["Ronald Jabouin" : "22420rj@chaminade-hs.org" ,
                                                   "Mr.Luo" : "sluo@chaminade-hs.org"
     ]
+    
+    let customDomain = "chaminade-hs.org"
+    let test = "22420rj@chaminade-hs.org"
     
     //MARK: Roles
     func checkUserAuth() {
@@ -31,7 +33,7 @@ class UsersViewModel: ObservableObject{
         //Ronald Jabouin - Personal Account - No Role
         else if user?.email == "ronaldjabouin2004@gmail.com" {
             loginStatus = true
-           
+
         }
 
         //Ronald Jabouin - School Account - Role
@@ -64,7 +66,19 @@ class UsersViewModel: ObservableObject{
              role = true
         }
         
-        // Other Members
+//        //Element Account
+//        else if user?.email == "element@chaminade-hs.org" {
+//            loginStatus = true
+//             role = true
+//        }
+        
+        else if ((user?.email?.hasSuffix("@chaminade-hs.org")) != false) {
+            loginStatus = true
+             role = false
+        }
+        
+
+        //Non Officers
         else {
             status = false
             role = false
