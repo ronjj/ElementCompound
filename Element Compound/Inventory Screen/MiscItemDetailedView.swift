@@ -1,24 +1,6 @@
-//
-//  MiscItemDetailedView.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 4/15/21.
-//
-
-//
-//  InventoryItemDetailedView.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 3/29/21.
-//
-//
-//  CameraDetailView4.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 5/15/21.
-//
 
 import SwiftUI
+import AVKit
 
 struct MiscItemDetailedView: View {
     
@@ -60,15 +42,6 @@ struct MiscItemDetailedView: View {
                                 .foregroundColor(.black)
                             }
                         })
-//                            Spacer()
-//                            Button(action: { viewModel.favouriteMethod() },
-//                                   label: {
-//                                Image(IMAGE_FAV_ICON)
-//                                .resizable()
-//                                .frame(width: 26, height: 26)
-//
-//                                }
-//                            )
                     }
                     .padding(.horizontal, 24).padding(.top, 46)
                 }
@@ -78,10 +51,12 @@ struct MiscItemDetailedView: View {
             VStack(alignment: .leading, spacing: 15) {
                 Text(misc.name)
                     .font(.system(size: 35, weight: .bold))
+                    .padding(10)
                     .foregroundColor(.white)
 
                 Text(misc.longDescription)
                     .padding(.top, 10)
+                    .padding(.horizontal, 10)
                     .foregroundColor(.white)
                     .font(.body)
                     .multilineTextAlignment(.leading)
@@ -91,19 +66,21 @@ struct MiscItemDetailedView: View {
                     Text("YouTube Tutorials")
                         .foregroundColor(.white)
                         .padding(.top, 10)
+                        .padding(.horizontal, 10)
                         
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 350, height: 75)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
+                    
+                    CustomPlayer(src: "https://bit.ly/swswift")
+                        .frame(width: UIScreen.main.bounds.width, height: 150)
                 }
                 
                 VStack(alignment: .leading) {
                     Text("Courses")
                         .foregroundColor(.white)
                         .padding(.top, 10)
+                        .padding(.horizontal, 10)
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 350, height: 75)

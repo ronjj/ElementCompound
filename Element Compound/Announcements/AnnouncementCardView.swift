@@ -72,6 +72,12 @@ struct AnnouncementCardView: View {
                         .font(.body)
                     
                 }
+                
+                Image(systemName: "chevron.right")
+                    .foregroundColor(Color.bginv)
+                    .font(.caption)
+                    .padding(.horizontal, 4)
+                    
                 .padding(.trailing, 4)
             }
         }

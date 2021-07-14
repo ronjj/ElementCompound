@@ -1,24 +1,6 @@
-//
-//  MiscItemDetailedView.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 4/15/21.
-//
-
-//
-//  InventoryItemDetailedView.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 3/29/21.
-//
-//
-//  CameraDetailView4.swift
-//  Element Compound
-//
-//  Created by Ronald Jabouin on 5/15/21.
-//
 
 import SwiftUI
+import AVKit
 
 struct LenseItemDetailedView: View {
     
@@ -69,10 +51,12 @@ struct LenseItemDetailedView: View {
             VStack(alignment: .leading, spacing: 15) {
                 Text(lense.name)
                     .font(.system(size: 35, weight: .bold))
+                    .padding(10)
                     .foregroundColor(.white)
 
                 Text(lense.longDescription)
                     .padding(.top, 10)
+                    .padding(.horizontal, 10)
                     .foregroundColor(.white)
                     .font(.body)
                     .multilineTextAlignment(.leading)
@@ -82,19 +66,21 @@ struct LenseItemDetailedView: View {
                     Text("YouTube Tutorials")
                         .foregroundColor(.white)
                         .padding(.top, 10)
+                        .padding(.horizontal, 10)
                         
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 350, height: 75)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
+                    
+                    CustomPlayer(src: "https://bit.ly/swswift")
+                        .frame(width: UIScreen.main.bounds.width, height: 150)
                 }
                 
                 VStack(alignment: .leading) {
                     Text("Courses")
                         .foregroundColor(.white)
                         .padding(.top, 10)
+                        .padding(.horizontal, 10)
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(width: 350, height: 75)

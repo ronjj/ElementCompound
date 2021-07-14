@@ -51,6 +51,22 @@ struct largeButtonStyle: View {
     }
 }
 
+struct customBgStyle : View {
+    let title: LocalizedStringKey
+    let textColor: Color
+    let bgColor: Color
+    
+    var body: some View {
+        Text(title)
+            .font(.body)
+            .fontWeight(.semibold)
+            .frame(width: 120, height: 120)
+            .foregroundColor(textColor)
+            .background(bgColor)
+            .cornerRadius(10)
+    }
+}
+
 
 struct ButtonStyle_Previews: PreviewProvider {
     static var previews: some View {

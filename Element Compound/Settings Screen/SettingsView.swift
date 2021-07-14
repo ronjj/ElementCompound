@@ -217,6 +217,7 @@ func signOut(){
     
 }
 
+
 extension UIDevice {
     
     static let modelName: String = {

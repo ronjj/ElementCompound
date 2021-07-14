@@ -21,6 +21,7 @@ struct ProjectEditView2: View {
     @State var presentActionSheet = false
     @State var helpText = ""
     @State private var isEmailValid : Bool   = true
+    @State private var isSelected : Bool   = false
     
     // MARK: - State (Initialiser-modifiable)
     
@@ -29,6 +30,7 @@ struct ProjectEditView2: View {
     var mode: Mode = .new
     var completionHandler: ((Result<Action, Error>) -> Void)?
     @State private var newAssigned = ""
+    @State private var isEditing = false
     
     
     // MARK: - UI Components
@@ -63,7 +65,7 @@ struct ProjectEditView2: View {
                     DatePicker("Choose Due Date", selection: $viewModel.project.dueDate, displayedComponents: .date)
                 }
                 
-                Section(header: Text("Select Status")) {
+               Section(header: Text("Select Status")) {
                     
                     //V1
                     // ColorPicker("Choose Color", selection: $viewModel.project.color, supportsOpacity: false)
@@ -84,40 +86,60 @@ struct ProjectEditView2: View {
                             Button{
                                 self.viewModel.project.color = Color.redButton
                                 self.helpText = "Help Needed"
+                                print(viewModel.project.color)
+                               
                                 viewModel.project.helpToggle = true
                                 
                             }label: {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(Color.redButton)
+//                                VStack{
+//                                    Circle()
+//                                        .frame(width: 30, height: 30)
+//                                        .foregroundColor(Color.redButton)
+//
+//                                    Text("Help Needed")
+//                                }
+//                                .padding(20)
+//                                .padding(.horizontal, 30)
+//                                .background(Color.accentColor)
+//                                .cornerRadius(10)
+                                customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: Color.redButton)
+                                    .multilineTextAlignment(.center)
                             }
                             .buttonStyle(BorderlessButtonStyle())
-                            
-                            Text("Help Needed")
+    
                         }
+                      
+                        .padding(.horizontal, 10)
                         
-                        Spacer()
                         
                         VStack{
                             Button{
                                 self.viewModel.project.color = Color.blueButton
                                 self.helpText = "No Help Needed"
+                                print(viewModel.project.color)
+                                
                                 viewModel.project.helpToggle = false
                                 
                             }label: {
-                                Circle()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(Color.blueButton)
+//                                VStack{
+//                                    Circle()
+//                                        .frame(width: 30, height: 30)
+//                                        .foregroundColor(Color.blueButton)
+//                                    Text("No Help Needed")
+//                                }
+//                                .padding(20)
+//                                .padding(.horizontal, 30)
+//                                .background(Color.accentColor)
+//                                .cornerRadius(10)
+                                customBgStyle(title: "No Help Needed", textColor: Color.bg, bgColor: Color.blueButton)
                             }
                             .buttonStyle(BorderlessButtonStyle())
-                            
-                            Text("No Help Needed")
                         }
-                        
                     }
-                    
                     .padding(20)
                 }
+                
+               
                 
                 Section(header: Text("Email of Officer Leading Project")){
                     TextField("Enter Officer Email", text: $viewModel.project.officerEmail, onEditingChanged: { (isChanged) in
@@ -146,23 +168,23 @@ struct ProjectEditView2: View {
                     .onDelete { indices in
                         viewModel.project.assignedStudents.remove(atOffsets: indices)
                     }
+                    
                     HStack {
-                        TextField("New Person", text: $newAssigned)
+                        TextField("Enter Name Here", text: $newAssigned)
                         Button(action: {
                             withAnimation {
                                 viewModel.project.assignedStudents.append(newAssigned)
                                 newAssigned = ""
+                                self.isEditing = true
                             }
                             
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .accessibilityLabel(Text("Add new person"))
                         }
-                        .disabled(newAssigned.isEmpty)
+                        .opacity(newAssigned.isEmpty ? 0.1 : 1.0)
                         
                     }
-                    
-                    
                 }
                 
                 
@@ -267,6 +289,8 @@ struct ProjectEditView2: View {
     
     
 }
+
+
 
 //struct BookEditView_Previews: PreviewProvider {
 //  static var previews: some View {

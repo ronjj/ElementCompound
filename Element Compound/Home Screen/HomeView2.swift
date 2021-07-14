@@ -172,14 +172,15 @@ struct HomeView2: View {
                 self.userAuth.checkUserAuth()
                 
                 }
-            .onDisappear() {
-              // By unsubscribing from the view model, we prevent updates coming in from
-              // Firestore to be reflected in the UI. Since we do want to receive updates
-              // when the user is on any of the child screens, we keep the subscription active!
-              
-               print("HomeView disappears. Unsubscribing from data updates.")
-               self.viewModel.unsubscribe()
-            }
+            //Causes the screen to shift down then up when reappearing in ios 14. Can add back in ios 15
+//            .onDisappear() {
+//              // By unsubscribing from the view model, we prevent updates coming in from
+//              // Firestore to be reflected in the UI. Since we do want to receive updates
+//              // when the user is on any of the child screens, we keep the subscription active!
+//
+//               print("HomeView disappears. Unsubscribing from data updates.")
+//               self.viewModel.unsubscribe()
+//            }
             }
         .navigationViewStyle(StackNavigationViewStyle())
         

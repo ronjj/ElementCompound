@@ -53,6 +53,7 @@ struct ProjectsListView: View {
   var body: some View {
     NavigationView {
         ZStack{
+            Color.lightBlue.edgesIgnoringSafeArea(.all)
             List {
                 ForEach (viewModel.projects) { project in
                     projectRowView(project: project)
@@ -63,6 +64,7 @@ struct ProjectsListView: View {
                 //Disbales swipe to delete if user does not have role
                 .deleteDisabled(role ? false : true)
             }
+            .background(Color.lightBlue.edgesIgnoringSafeArea(.all))
             .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarTitle("Projects")
             .navigationBarItems(trailing: addButton)
@@ -83,7 +85,9 @@ struct ProjectsListView: View {
             }
             
             if viewModel.projects.isEmpty{
-                EmptyState(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+                withAnimation(.default) {
+                    EmptyState(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+                }
             }
         }
     }
