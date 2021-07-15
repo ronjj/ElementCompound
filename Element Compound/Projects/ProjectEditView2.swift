@@ -31,6 +31,8 @@ struct ProjectEditView2: View {
     var completionHandler: ((Result<Action, Error>) -> Void)?
     @State private var newAssigned = ""
     @State private var isEditing = false
+    @State var redSelected = true
+    @State var blueSelected = false
     
     
     // MARK: - UI Components
@@ -87,6 +89,9 @@ struct ProjectEditView2: View {
                                 self.viewModel.project.color = Color.redButton
                                 self.helpText = "Help Needed"
                                 print(viewModel.project.color)
+                                self.redSelected = true
+                                self.blueSelected = false
+                                
                                
                                 viewModel.project.helpToggle = true
                                 
@@ -102,8 +107,9 @@ struct ProjectEditView2: View {
 //                                .padding(.horizontal, 30)
 //                                .background(Color.accentColor)
 //                                .cornerRadius(10)
-                                customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: Color.redButton)
+                                customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: redSelected ? Color.redButton : Color.redButton.opacity(0.3))
                                     .multilineTextAlignment(.center)
+                                    
                             }
                             .buttonStyle(BorderlessButtonStyle())
     
@@ -117,6 +123,8 @@ struct ProjectEditView2: View {
                                 self.viewModel.project.color = Color.blueButton
                                 self.helpText = "No Help Needed"
                                 print(viewModel.project.color)
+                                self.redSelected = false
+                                self.blueSelected = true
                                 
                                 viewModel.project.helpToggle = false
                                 
@@ -131,8 +139,8 @@ struct ProjectEditView2: View {
 //                                .padding(.horizontal, 30)
 //                                .background(Color.accentColor)
 //                                .cornerRadius(10)
-                                customBgStyle(title: "No Help Needed", textColor: Color.bg, bgColor: Color.blueButton)
-                            }
+                                customBgStyle(title: "No Help Needed", textColor: Color.bg , bgColor: blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
+                                                                }
                             .buttonStyle(BorderlessButtonStyle())
                         }
                     }

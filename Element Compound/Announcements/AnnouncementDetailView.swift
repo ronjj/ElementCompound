@@ -24,11 +24,41 @@ struct AnnouncementDetailView: View {
             Text("Edit")
         }
         .disabled(role == false)
+        .opacity(role ? 1.0 : 0.0)
     }
     
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
     
     var body: some View {
+       
+        
+        HStack {
+            Button(action: { self.presentationMode.wrappedValue.dismiss() },
+                   label: {
+                ZStack {
+                    Circle()
+                        .foregroundColor(.bginv)
+                        .frame(width:30, height: 30)
+                  Image(systemName: "arrow.left")
+                    .foregroundColor(.bg)
+                }
+            })
+            
+            Text(announcement.title)
+                .font(.largeTitle)
+                .foregroundColor(.bginv)
+                .fontWeight(.bold)
+            
+            Spacer()
+            
+            Button{
+                self.presentEditAnnouncementSheet.toggle()
+            } label: {
+                Text("Edit")
+            }
+        }
+        .padding()
+            
         VStack(alignment: .leading){
             
             LinkedText(announcement.message)
@@ -49,17 +79,17 @@ struct AnnouncementDetailView: View {
         .padding()
         Spacer()
         
-        
-        .navigationBarTitle(announcement.title)
-        .navigationBarItems(trailing: editButton {
-            self.presentEditAnnouncementSheet.toggle()
-        })
+            .navigationBarHidden(true)
+      //  .navigationBarTitle(announcement.title)
+//        .navigationBarItems(trailing: editButton {
+//            self.presentEditAnnouncementSheet.toggle()
+//        })
         .onAppear() {
             print("BookDetailsView.onAppear() for \(self.announcement.title)")
         }
-        .onDisappear() {
-            print("BookDetailsView.onDisappear()")
-        }
+//        .onDisappear() {
+//            print("BookDetailsView.onDisappear()")
+//        }
         
         .sheet(isPresented: self.$presentEditAnnouncementSheet) {
             AnnouncementAddView(viewModel: AnnoucnementViewModel(announcement: announcement), mode: .edit) { result in

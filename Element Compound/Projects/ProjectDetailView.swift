@@ -29,8 +29,8 @@ enum Sheets4: Identifiable {
 struct ProjectDetailsView: View {
   // MARK: - State
 
-  @Environment(\.presentationMode) var presentationMode
-  @State var presentEditBookSheet = false
+    @Environment(\.presentationMode) var presentationMode
+    @State var presentEditProjectSheet = false
     @ObservedObject var viewModel = ProjectViewModel2()
     @ObservedObject var viewModels = ProjectViewModel2()
     let uidevice = UIDevice()
@@ -43,6 +43,7 @@ struct ProjectDetailsView: View {
     @State private var activeSheet: Sheets4?
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var alertNoMail = false
+   
 
 
   // MARK: - UI Components
@@ -52,22 +53,54 @@ struct ProjectDetailsView: View {
       Text("Edit")
     }
     .disabled(role == false)
+    .opacity(role ? 1.0 : 0.0)
   }
 
   var body: some View {
       GeometryReader { geometry in
           ScrollView(.vertical) {
+            HStack {
+                Button(action: { self.presentationMode.wrappedValue.dismiss() },
+                       label: {
+                    ZStack {
+                        Circle()
+                            .foregroundColor(.bginv)
+                            .frame(width:30, height: 30)
+                      Image(systemName: "arrow.left")
+                        .foregroundColor(.bg)
+                    }
+                })
+                .padding(.horizontal, 5)
+                
+                Text(project.title)
+                    .font(.largeTitle)
+                    .foregroundColor(.bginv)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Button{
+                    self.presentEditProjectSheet.toggle()
+                    activeSheet = .edit
+                } label: {
+                    Text("Edit")
+                }
+                .disabled(role == false)
+                .opacity(role ? 1.0 : 0.0)
+            }
+            .padding()
+           
             HStack{
                 Text(" \(project.creator), \(project.pickedDateString2)")
                     .font(.caption)
                     .foregroundColor(Color.gray)
-                    .frame(width: 280)
-                    //.fixedSize()
                     .padding(.bottom, 50)
-                    .padding(.leading, -40)
+                    .padding(.leading, 50)
+                    
                 
                 Spacer()
             }
+        
             
               VStack(spacing: 50){
                Group{
@@ -102,15 +135,15 @@ struct ProjectDetailsView: View {
                           Spacer()
                           
                           VStack(alignment: .leading, spacing: 10){
-                              ForEach(project.assignedStudents, id: \.self) { assignedStudent in
+                            ForEach(project.assignedStudents, id: \.self) { assignedStudent in
                                       Label(assignedStudent, systemImage: "person")
                                           .accessibilityLabel(Text("Person"))
                                           .accessibilityValue(Text(assignedStudent))
                                           .font(.body)
-                                  
                               }
                             
                           }
+                       
                           Spacer()
                       }
                       .padding(.bottom, 25)
@@ -141,7 +174,6 @@ struct ProjectDetailsView: View {
                       Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Officers's email is \n \(project.officerEmail)"), dismissButton: .cancel())
                   }
                  
-                  
                   Spacer()
               }
               .padding()
@@ -149,14 +181,12 @@ struct ProjectDetailsView: View {
               .frame(minHeight: geometry.size.height)
           }
       }
-   
-
-    .navigationBarTitle(project.title)
-    .navigationViewStyle(StackNavigationViewStyle())
-    .navigationBarItems(trailing: editButton {
-      self.presentEditBookSheet.toggle()
-        activeSheet = .edit
-    })
+      .navigationBarHidden(true)
+      .navigationViewStyle(StackNavigationViewStyle())
+//    .navigationBarItems(trailing: editButton {
+//      self.presentEditProjectSheet.toggle()
+//        activeSheet = .edit
+//    })
     .onAppear() {
       print("BookDetailsView.onAppear() for \(self.project.title)")
     }
