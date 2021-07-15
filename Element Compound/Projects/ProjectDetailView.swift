@@ -95,7 +95,7 @@ struct ProjectDetailsView: View {
                     .font(.caption)
                     .foregroundColor(Color.gray)
                     .padding(.bottom, 50)
-                    .padding(.leading, 50)
+                    .padding(.leading, 65)
                     
                 
                 Spacer()

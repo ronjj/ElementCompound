@@ -90,17 +90,14 @@ struct ProjectEditView2: View {
                             Button{
                                 self.viewModel.project.color = Color.redButton
                                 self.helpText = "Help Needed"
-                                print(viewModel.project.color)
                                 self.redSelected = true
                                 self.blueSelected = false
-                                
-                               
                                 viewModel.project.helpToggle = true
                                 
                             }label: {
                               VStack{
                                 Circle()
-                                    .frame(width: 50, height: 50)
+                                    .frame(width: 25, height: 25)
                                     .foregroundColor(redSelected ? Color.redButton : Color.redButton.opacity(0.3))
                                 Text("Help \nNeeded")
                                     .foregroundColor(redSelected ? Color.accentColor : Color.accentColor.opacity(0.3))
@@ -109,8 +106,6 @@ struct ProjectEditView2: View {
                             }
                             
                             .cornerRadius(10)
-                                //customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: redSelected ? Color.redButton : Color.redButton.opacity(0.3))
-                                    //.multilineTextAlignment(.center)
                                     
                             }
                             .buttonStyle(BorderlessButtonStyle())
@@ -123,7 +118,6 @@ struct ProjectEditView2: View {
                             Button{
                                 self.viewModel.project.color = Color.blueButton
                                 self.helpText = "No Help Needed"
-                                print(viewModel.project.color)
                                 self.redSelected = false
                                 self.blueSelected = true
                                 viewModel.project.helpToggle = false
@@ -131,7 +125,7 @@ struct ProjectEditView2: View {
                             }label: {
                                 VStack{
                                     Circle()
-                                        .frame(width: 50, height: 50)
+                                        .frame(width: 25, height: 25)
                                         .foregroundColor(blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
                                     Text("No Help \nNeeded")
                                         .foregroundColor(blueSelected ? Color.accentColor : Color.accentColor.opacity(0.3))
@@ -139,7 +133,7 @@ struct ProjectEditView2: View {
                                         .multilineTextAlignment(.center)
                                 }
                                 .cornerRadius(10)
-                                //customBgStyle(title: "No Help Needed", textColor: Color.bg , bgColor: blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
+                                
                                                                 }
                             .buttonStyle(BorderlessButtonStyle())
                         }
@@ -170,31 +164,33 @@ struct ProjectEditView2: View {
                     }
                 }
                 
-//                Section(header: Text("Assign Members")) {
-//                    ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
-//                        Text(assignedStudent)
-//                    }
-//                    .onDelete { indices in
-//                        viewModel.project.assignedStudents.remove(atOffsets: indices)
-//                    }
-//
-//                    HStack {
-//                        TextField("Enter Name Here", text: $newAssigned)
-//                        Button(action: {
-//                            withAnimation {
-//                                viewModel.project.assignedStudents.append(newAssigned)
-//                                newAssigned = ""
-//                                self.isEditing = true
-//                            }
-//
-//                        }) {
-//                            Image(systemName: "plus.circle.fill")
-//                                .accessibilityLabel(Text("Add new person"))
-//                        }
-//                        .opacity(newAssigned.isEmpty ? 0.1 : 1.0)
-//
-//                    }
-//                }
+                Section(header: Text("Assign Members")) {
+                    ForEach(viewModel.project.assignedStudents, id: \.self) { assignedStudent in
+                        Text(assignedStudent)
+                    }
+                    .onDelete { indices in
+                        viewModel.project.assignedStudents.remove(atOffsets: indices)
+                    }
+
+                    HStack {
+                        TextField("Enter Name Here", text: $newAssigned)
+                        Button(action: {
+                            withAnimation {
+                                viewModel.project.assignedStudents.append(newAssigned)
+                                newAssigned = ""
+                                self.isEditing = true
+                            }
+
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .accessibilityLabel(Text("Add new person"))
+                        }
+                        .disabled(newAssigned.isEmpty ? true : false)
+                        .opacity(newAssigned.isEmpty ? 0.1 : 1.0)
+                        
+
+                    }
+                }
                 
                
                 
