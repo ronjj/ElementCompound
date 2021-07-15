@@ -84,6 +84,8 @@ struct ProjectEditView2: View {
                     
                     //V3
                     HStack{
+                        Spacer()
+                        
                         VStack{
                             Button{
                                 self.viewModel.project.color = Color.redButton
@@ -96,27 +98,26 @@ struct ProjectEditView2: View {
                                 viewModel.project.helpToggle = true
                                 
                             }label: {
-//                                VStack{
-//                                    Circle()
-//                                        .frame(width: 30, height: 30)
-//                                        .foregroundColor(Color.redButton)
-//
-//                                    Text("Help Needed")
-//                                }
-//                                .padding(20)
-//                                .padding(.horizontal, 30)
-//                                .background(Color.accentColor)
-//                                .cornerRadius(10)
-                                customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: redSelected ? Color.redButton : Color.redButton.opacity(0.3))
+                              VStack{
+                                Circle()
+                                    .frame(width: 50, height: 50)
+                                    .foregroundColor(redSelected ? Color.redButton : Color.redButton.opacity(0.3))
+                                Text("Help \nNeeded")
+                                    .foregroundColor(redSelected ? Color.accentColor : Color.accentColor.opacity(0.3))
+                                    .font(.body)
                                     .multilineTextAlignment(.center)
+                            }
+                            
+                            .cornerRadius(10)
+                                //customBgStyle(title: "Help \nNeeded", textColor: Color.bg, bgColor: redSelected ? Color.redButton : Color.redButton.opacity(0.3))
+                                    //.multilineTextAlignment(.center)
                                     
                             }
                             .buttonStyle(BorderlessButtonStyle())
     
                         }
-                      
-                        .padding(.horizontal, 10)
                         
+                        Spacer()
                         
                         VStack{
                             Button{
@@ -125,26 +126,26 @@ struct ProjectEditView2: View {
                                 print(viewModel.project.color)
                                 self.redSelected = false
                                 self.blueSelected = true
-                                
                                 viewModel.project.helpToggle = false
                                 
                             }label: {
-//                                VStack{
-//                                    Circle()
-//                                        .frame(width: 30, height: 30)
-//                                        .foregroundColor(Color.blueButton)
-//                                    Text("No Help Needed")
-//                                }
-//                                .padding(20)
-//                                .padding(.horizontal, 30)
-//                                .background(Color.accentColor)
-//                                .cornerRadius(10)
-                                customBgStyle(title: "No Help Needed", textColor: Color.bg , bgColor: blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
+                                VStack{
+                                    Circle()
+                                        .frame(width: 50, height: 50)
+                                        .foregroundColor(blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
+                                    Text("No Help \nNeeded")
+                                        .foregroundColor(blueSelected ? Color.accentColor : Color.accentColor.opacity(0.3))
+                                        .font(.body)
+                                        .multilineTextAlignment(.center)
+                                }
+                                .cornerRadius(10)
+                                //customBgStyle(title: "No Help Needed", textColor: Color.bg , bgColor: blueSelected ? Color.blueButton : Color.blueButton.opacity(0.3))
                                                                 }
                             .buttonStyle(BorderlessButtonStyle())
                         }
+                        Spacer()
                     }
-                    .padding(20)
+                    .padding()
                 }
                 
                

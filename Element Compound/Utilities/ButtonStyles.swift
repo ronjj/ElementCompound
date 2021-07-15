@@ -57,13 +57,17 @@ struct customBgStyle : View {
     let bgColor: Color
     
     var body: some View {
-        Text(title)
-            .font(.body)
-            .fontWeight(.semibold)
-            .frame(width: 120, height: 120)
-            .foregroundColor(textColor)
-            .background(bgColor)
-            .cornerRadius(10)
+        ZStack{
+           Circle()
+                .frame(width: 80, height: 80)
+                .background(bgColor)
+                
+            Text(title)
+                .font(.caption)
+                .fontWeight(.regular)
+                .padding()
+                .foregroundColor(textColor)
+        }
     }
 }
 
