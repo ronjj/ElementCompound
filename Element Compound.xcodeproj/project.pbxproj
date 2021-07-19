@@ -62,6 +62,7 @@
 		54933279263C51C6001C1D24 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54933278263C51C6001C1D24 /* HomeView2.swift */; };
 		5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */; };
 		54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementAddView.swift */; };
+		549D223126A5DDAD00DBED7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 549D223026A5DDAD00DBED7B /* GoogleService-Info.plist */; };
 		54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyles.swift */; };
 		54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */; };
 		54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5DA264DC853003B749C /* CameraDetailView3.swift */; };
@@ -71,7 +72,6 @@
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
-		54BBB66426A5C98C006C50E1 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */; };
 		54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */; };
 		54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636552654526900480CF3 /* AvenirLTStd-Book.otf */; };
 		54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */; };
@@ -143,6 +143,7 @@
 		54933278263C51C6001C1D24 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewModel.swift; sourceTree = "<group>"; };
 		5493327F263C5295001C1D24 /* AnnouncementAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementAddView.swift; sourceTree = "<group>"; };
+		549D223026A5DDAD00DBED7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54A8B5D2264D6770003B749C /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnnouncements.swift; sourceTree = "<group>"; };
 		54A8B5DA264DC853003B749C /* CameraDetailView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView3.swift; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
-		54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView4.swift; sourceTree = "<group>"; };
 		54D636552654526900480CF3 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
 		54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
@@ -220,7 +220,6 @@
 				54707103268AAB740057FA28 /* Utilities */,
 				54CE4C7126988F5B00D398DC /* Fonts */,
 				543B6638264ABBF300992350 /* Info.plist */,
-				54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				54388245269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
@@ -300,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				5483871B26754C9F00B40A78 /* Launch Screen.storyboard */,
+				549D223026A5DDAD00DBED7B /* GoogleService-Info.plist */,
 				5439CE90260FF37B00DCC5A6 /* Element_CompoundApp.swift */,
 				5440999D26422081007EBF4A /* Users.swift */,
 				548C3F8C2630BED600EFD1C0 /* ContentView.swift */,
@@ -457,8 +457,8 @@
 				543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */,
 				546151A1264C738A00BC2719 /* Felix.ttf in Resources */,
 				54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */,
-				54BBB66426A5C98C006C50E1 /* GoogleService-Info .plist in Resources */,
 				543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */,
+				549D223126A5DDAD00DBED7B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
