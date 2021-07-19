@@ -6,6 +6,7 @@ target 'Element Compound' do
   use_frameworks!
 
 pod 'Firebase/Auth'
+pod 'Firebase/Functions'
 pod 'Firebase/Firestore'
 pod 'Firebase/Analytics'
 pod 'FirebaseMessaging'

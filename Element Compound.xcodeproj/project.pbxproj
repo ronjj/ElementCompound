@@ -71,6 +71,7 @@
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
+		54BBB66426A5C98C006C50E1 /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = 54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */; };
 		54C1BBBD265022CE00C8FF22 /* CameraDetailView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */; };
 		54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636552654526900480CF3 /* AvenirLTStd-Book.otf */; };
 		54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */; };
@@ -80,7 +81,6 @@
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
 		54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */; };
 		54FD8360268C02D100AB530C /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FD835F268C02D100AB530C /* DataStore.swift */; };
-		54FDFB4C2673F3A100D25361 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */; };
 		DAB328010F53D22C0AF95C45 /* Pods_Element_Compound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A768F2986036DFE58B81BA /* Pods_Element_Compound.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +152,7 @@
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
+		54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
 		54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraDetailView4.swift; sourceTree = "<group>"; };
 		54D636552654526900480CF3 /* AvenirLTStd-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Book.otf"; sourceTree = "<group>"; };
 		54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
@@ -161,7 +162,6 @@
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscItemDetailedView.swift; sourceTree = "<group>"; };
 		54FD835F268C02D100AB530C /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		830855C6B59589D064BAED85 /* Pods-Element Compound.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.release.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.release.xcconfig"; sourceTree = "<group>"; };
 		E30D470D52F55E4131C75708 /* Pods-Element Compound.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Element Compound.debug.xcconfig"; path = "Target Support Files/Pods-Element Compound/Pods-Element Compound.debug.xcconfig"; sourceTree = "<group>"; };
 		E5A768F2986036DFE58B81BA /* Pods_Element_Compound.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Element_Compound.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,7 +220,7 @@
 				54707103268AAB740057FA28 /* Utilities */,
 				54CE4C7126988F5B00D398DC /* Fonts */,
 				543B6638264ABBF300992350 /* Info.plist */,
-				54FDFB4B2673F3A100D25361 /* GoogleService-Info.plist */,
+				54BBB66326A5C98C006C50E1 /* GoogleService-Info .plist */,
 				5439CE94260FF37C00DCC5A6 /* Assets.xcassets */,
 				54388245269DD129008529A4 /* png-transparent-black-and-yellow-exclamation-point-danger-signage-icon-danger-tape-s-angle-triangle-warning-sign.png */,
 				5439CE96260FF37C00DCC5A6 /* Preview Content */,
@@ -445,7 +445,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54FDFB4C2673F3A100D25361 /* GoogleService-Info.plist in Resources */,
 				5439CE98260FF37C00DCC5A6 /* Preview Assets.xcassets in Resources */,
 				54D636582654526900480CF3 /* AvenirLTStd-Book.otf in Resources */,
 				543B664D264AC72200992350 /* Felixti.ttf in Resources */,
@@ -458,6 +457,7 @@
 				543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */,
 				546151A1264C738A00BC2719 /* Felix.ttf in Resources */,
 				54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */,
+				54BBB66426A5C98C006C50E1 /* GoogleService-Info .plist in Resources */,
 				543B6643264ABFF100992350 /* Poppins-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

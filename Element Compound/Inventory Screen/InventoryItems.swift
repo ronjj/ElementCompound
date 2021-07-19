@@ -75,17 +75,16 @@ struct AudioResponse: Decodable {
 struct MiscResponse: Decodable {
     let request: [MiscItem]
 }
-// add actual images as a test
-// remember to delete these images from xcassets
+
 
 struct MockData {
-
+    
     static let sampleCamera = CameraItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleComputer = ComputerItem(name: "iMac Pro", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleAudio = AudioItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleMisc = MiscItem(name: "Camera Tripod", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleLense = LenseItem(name: "Sony Lens", shortDescription: "Lens for our sony cameras", longDescription: "Very good lense that gives a crsip image", imageURL: "black", bigImageURL: "black")
-
+    
     
     static let cameras = [
         CameraItem( name: "Lumix GH4",
@@ -129,41 +128,41 @@ struct MockData {
                    longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
                    imageURL: "black",
                    bigImageURL: "black"),
- 
+        
         
     ]
     
     
     static let lenses = [
         LenseItem( name: "Sony E-Mount 24mm",
-                    shortDescription: "Medium Focal Length Lens for Sony A7s II.",
-                    longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
-                    imageURL: "black",
-                    bigImageURL: "rodeBgNew"),
+                   shortDescription: "Medium Focal Length Lens for Sony A7s II.",
+                   longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
+                   imageURL: "black",
+                   bigImageURL: "rodeBgNew"),
         
         LenseItem( name: "Sony E-Mount 85mm",
-                    shortDescription: "High Focal Length Lens for Sony A7s II.",
-                    longDescription: "Full Name: Sony E-Mount 85mm FE 1.4 Full Frame Lens. The E-Mount 85mm Lens is one of two “G” brand lenses in our Sony lineup. The 85mm Lens features the highest focal length of any lens in our lineup and is great for handheld shots and formal interview setups that require a tight “zoomed in” field of view. With the same high-quality focus ring and low aperture capability as the E-Mount 24mm Lens, the 85mm Lens captures fantastic images and videos.",
-                    imageURL: "black",
-                    bigImageURL: "rodeBgNew"),
+                   shortDescription: "High Focal Length Lens for Sony A7s II.",
+                   longDescription: "Full Name: Sony E-Mount 85mm FE 1.4 Full Frame Lens. The E-Mount 85mm Lens is one of two “G” brand lenses in our Sony lineup. The 85mm Lens features the highest focal length of any lens in our lineup and is great for handheld shots and formal interview setups that require a tight “zoomed in” field of view. With the same high-quality focus ring and low aperture capability as the E-Mount 24mm Lens, the 85mm Lens captures fantastic images and videos.",
+                   imageURL: "black",
+                   bigImageURL: "rodeBgNew"),
         
         LenseItem( name: "Voigtlander Nokton 17.5mm",
-                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
-                    longDescription: "Full Name: Voigtlander Nokton Aspherical 17.5mm F/ 0.95 LensThe Aspherical 17.5mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in a medium field of view. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 17.5mm is great for use on our Ronin gimbal and even for handheld shots.",
-                    imageURL: "black",
-                    bigImageURL: "rodeBgNew"),
+                   shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
+                   longDescription: "Full Name: Voigtlander Nokton Aspherical 17.5mm F/ 0.95 LensThe Aspherical 17.5mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in a medium field of view. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 17.5mm is great for use on our Ronin gimbal and even for handheld shots.",
+                   imageURL: "black",
+                   bigImageURL: "rodeBgNew"),
         
         LenseItem( name: "Voigtlander Nokton 25mm",
-                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
-                    longDescription: "Full Name: Voigtlander Nokton Aspherical 25mm F/0.95 Lens. The Aspherical 25mm Lens is one of a collection of Voigtlander Lenses in our lineup and offers crisp quality in a medium field of view, but slightly tighter than the 17.5mm. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 25mm is great for use on our Ronin gimbal and even for handheld shots.",
-                    imageURL: "black",
-                    bigImageURL: "black"),
+                   shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
+                   longDescription: "Full Name: Voigtlander Nokton Aspherical 25mm F/0.95 Lens. The Aspherical 25mm Lens is one of a collection of Voigtlander Lenses in our lineup and offers crisp quality in a medium field of view, but slightly tighter than the 17.5mm. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 25mm is great for use on our Ronin gimbal and even for handheld shots.",
+                   imageURL: "black",
+                   bigImageURL: "black"),
         
         LenseItem( name: "Voigtlander Nokton 10mm",
-                    shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
-                    longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
-                    imageURL: "black",
-                    bigImageURL: "rodeBgNew")
+                   shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
+                   longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
+                   imageURL: "black",
+                   bigImageURL: "rodeBgNew")
         
     ]
     
@@ -311,6 +310,6 @@ struct MockData {
                  longDescription: "Used for recording and filming. Two 50 foot cables.",
                  imageURL: "black",
                  bigImageURL: "black")
-      
+        
     ]
 }

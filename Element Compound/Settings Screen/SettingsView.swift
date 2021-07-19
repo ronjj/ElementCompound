@@ -86,11 +86,8 @@ struct SettingsView: View {
                     HStack {
                         Image(systemName: "envelope.circle").imageScale(.large)
                         Text("Contact Developer")
-                        
-                        
-                        
                     }
-                    .frame(height: 50)
+                   
                     .onTapGesture {
                         //                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
                         if MFMailComposeViewController.canSendMail() {
@@ -100,9 +97,6 @@ struct SettingsView: View {
                             UIApplication.shared.open(emailUrl)
                         } else {
                             self.alertNoMail.toggle()
-                            
-                            
-                            
                         }
                     }
                     .sheet(item: $activeSheet) { item in
@@ -125,17 +119,18 @@ struct SettingsView: View {
                     }
                     
                     Button(action: {
-                        signOut()
-                        self.status = false
-                    }) {
-                        Text("Sign Out")
-                    }
-                    Button(action: {
                         activeSheet = .displayNameChange
                     }) {
                         Text("Update Display Name")
                     }
                     .disabled(role == false)
+                    
+                    Button(action: {
+                        signOut()
+                        self.status = false
+                    }) {
+                        Text("Sign Out")
+                    }
                     
                     //                    Button(action: {
                     ////                        self.presentRoleScreen = true

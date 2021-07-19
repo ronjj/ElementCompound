@@ -236,6 +236,9 @@ PODS:
   - Firebase/Firestore (6.34.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.19.0)
+  - Firebase/Functions (6.34.0):
+    - Firebase/CoreOnly
+    - FirebaseFunctions (~> 2.9.0)
   - FirebaseAnalytics (6.9.0):
     - FirebaseCore (~> 6.10)
     - FirebaseInstallations (~> 1.7)
@@ -273,6 +276,9 @@ PODS:
     - nanopb (~> 1.30906.0)
   - FirebaseFirestoreSwift (0.4.0):
     - FirebaseFirestore (>= 1.6.1, ~> 1.6)
+  - FirebaseFunctions (2.9.0):
+    - FirebaseCore (~> 6.10)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseInstallations (1.7.0):
     - FirebaseCore (~> 6.10)
     - GoogleUtilities/Environment (~> 6.7)
@@ -363,6 +369,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
+  - Firebase/Functions
   - FirebaseFirestoreSwift
   - FirebaseMessaging
   - GoogleSignIn
@@ -379,6 +386,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
     - FirebaseFirestoreSwift
+    - FirebaseFunctions
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
@@ -406,6 +414,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: 770ac5958e1372ce67959ae4b4f31d8e127c3ac1
   FirebaseFirestore: 9b2f1b9b9a6f2f0b6fb7484b9e32ab7e39243554
   FirebaseFirestoreSwift: 2c46dbc1156db97dc4f6dd798d4f5b57b9c7fab6
+  FirebaseFunctions: 27518fdd14d8b3a849e2443f921cd1b471ab7acd
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   FirebaseInstanceID: bd3ffc24367f901a43c063b36c640b345a4a5dd1
   FirebaseMessaging: 5eca4ef173de76253352511aafef774caa1cba2a
@@ -422,6 +431,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 8e78b4aabb47d17f379fb10b0d22ed5439e69b95
 
-PODFILE CHECKSUM: 17e6d3542c64a91c3520354025cecd0fabd71c3e
+PODFILE CHECKSUM: b6cb88e093c03964425b43ac6dc24ed177ff0550
 
 COCOAPODS: 1.10.1
