@@ -94,31 +94,7 @@ struct AnnouncementAddView: View {
                 }
                 
                 Section{
-                    Section{
-                        Text(fcmTokenMessage).padding(20)
-                        Text(instanceIDTokenMessage).padding(20)
-                    }
-                
-                    Section{
-                                  Button(action: {self.handleLogTokenTouch()}) {
-                                      Text("Get user FCM Token String").font(.title)
-                                  }.padding(20)
-                    }
-                    
-                    Section{
-                                  TextField("Add Notification Title", text: $notificationTitle).textFieldStyle(RoundedBorderTextFieldStyle()).padding(20)
-                                  TextField("Add Notification Content", text: $notificationContent).textFieldStyle(RoundedBorderTextFieldStyle()).padding(20)
-                    }
-                    
-                    Section{
-                                  Button(action: {self.sendMessageTouser(to: ReceiverFCMToken, title: self.notificationTitle, body: self.notificationContent)
-                                      self.notificationTitle = ""
-                                      self.notificationContent = ""
-                                  }) {
-                                      Text("Send message to User").font(.title)
-                                  }
-                                  
-                }
+                  
                 if mode == .edit {
                     Section {
                         Button("Delete Announcement") { self.presentActionSheet.toggle() }

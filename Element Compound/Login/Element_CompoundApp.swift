@@ -47,17 +47,20 @@ struct Element_CompoundApp: App {
             GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
             GIDSignIn.sharedInstance().delegate = self
             
-            Messaging.messaging().subscribe(toTopic: "announcements") { error in
-              print("Subscribed to announcements topic")
-            }
-          
             
+          
+           
             return true
         }
         
      
         
-
+        func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+          Messaging.messaging().subscribe(toTopic: "announcements"){ error in
+            print("Subscribed to announcements topic")
+          }
+        }
+        
       
         
         func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {

@@ -23,8 +23,7 @@ struct AnnouncementDetailView: View {
         Button(action: { action() }) {
             Text("Edit")
         }
-        .disabled(role == false)
-        .opacity(role ? 1.0 : 0.0)
+      
     }
     
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
@@ -48,6 +47,7 @@ struct AnnouncementDetailView: View {
                 .font(.largeTitle)
                 .foregroundColor(.bginv)
                 .fontWeight(.bold)
+                .padding(.leading, 5)
             
             Spacer()
             
@@ -56,6 +56,8 @@ struct AnnouncementDetailView: View {
             } label: {
                 Text("Edit")
             }
+            .disabled(role == false)
+            .opacity(role ? 1.0 : 0.0)
         }
         .padding()
             
@@ -66,6 +68,7 @@ struct AnnouncementDetailView: View {
                 .padding(.bottom, 10)
                 .font(.body)
                 .minimumScaleFactor(0.4)
+            
             
             Text(announcement.sender)
                 .font(.body)

@@ -120,14 +120,14 @@ struct MockData {
         CameraItem(name: "Osmo Pocket",
                    shortDescription: "Compact Action Camera for Simple Shoots.",
                    longDescription: "The Osmo Pocket provides 1080p video in a super-compact form factor, mounted on a three-axis gimbal. The Osmo Pocket is prime for mobile shots, time-lapses, and panoramas. Its simplistic design allows users to store the Osmo easily and record video seamlessly.",
-                   imageURL: "black",
-                   bigImageURL: "black"),
+                   imageURL: "GH5s I",
+                   bigImageURL: "GH5s I"),
         
         CameraItem(name: "Osmo Pocket Gen 2",
                    shortDescription: "Versatile Action Camera for Simple Shots.",
                    longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
-                   imageURL: "black",
-                   bigImageURL: "black"),
+                   imageURL: "GH5 I",
+                   bigImageURL: "GH5 B"),
         
         
     ]
@@ -138,7 +138,7 @@ struct MockData {
                    shortDescription: "Medium Focal Length Lens for Sony A7s II.",
                    longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
                    imageURL: "black",
-                   bigImageURL: "rodeBgNew"),
+                   bigImageURL: "LensBaby 56mm B 2"),
         
         LenseItem( name: "Sony E-Mount 85mm",
                    shortDescription: "High Focal Length Lens for Sony A7s II.",
