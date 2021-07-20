@@ -30,15 +30,20 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                            Image(systemName: "house.fill")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
-                                .padding()
+                            ZStack{
+                                Rectangle()
+                                    .cornerRadius(4.0)
+                                    .foregroundColor(Color.lightBlue)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image(systemName: "house")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.bg)
+                                    .padding()
+                            }
                         }
-                        
                     }
-                    
                 })
                 
                 Button(action: {
@@ -55,11 +60,18 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                            Image(systemName: "list.bullet")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
-                                .padding()
+                            ZStack{
+                                Rectangle()
+                                    .cornerRadius(4.0)
+                                    .foregroundColor(Color.lightBlue)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image(systemName: "list.bullet")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.bg)
+                                    .padding()
+                            }
                         }
                         
                     }
@@ -79,11 +91,18 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                            Image(systemName: "folder.fill")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
-                                .padding()
+                            ZStack{
+                                Rectangle()
+                                    .cornerRadius(4.0)
+                                    .foregroundColor(Color.lightBlue)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image(systemName: "folder")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.bg)
+                                    .padding()
+                            }
                         }
                     }
                 })
@@ -102,11 +121,18 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                            Image(systemName: "note.text")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
-                                .padding()
+                            ZStack{
+                                Rectangle()
+                                    .cornerRadius(4.0)
+                                    .foregroundColor(Color.lightBlue)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image(systemName: "note.text")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.bg)
+                                    .padding()
+                            }
                         }
                     }
                 })
@@ -125,12 +151,18 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                            Image(systemName: "gear")
-                                .resizable()
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
-                                .padding()
-                        }
+                            ZStack{
+                                Rectangle()
+                                    .cornerRadius(4.0)
+                                    .foregroundColor(Color.lightBlue)
+                                    .frame(width: 30, height: 30)
+                                
+                                Image(systemName: "gear")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.bg)
+                                    .padding()
+                            }                        }
                     }
                 })
                 
