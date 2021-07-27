@@ -15,10 +15,7 @@ struct CoursesView: View {
         
         GeometryReader { g in
             HStack(spacing: 0) {
-                Rectangle()
-                    .fill(Color.green)
-                    .frame(width: g.size.width, height: g.size.height)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                CameraCourseView()
                 
                 Rectangle()
                     .fill(Color.red)
@@ -37,13 +34,13 @@ struct CoursesView: View {
             ZStack{
                 Rectangle()
                     .fill(Color.white.opacity(3.0))
-                    .frame(width: 150, height: 100)
+                    .frame(width: 85, height: 25)
                     .cornerRadius(10)
                 
                 HStack{
                     Circle()
                         .fill(Color.green)
-                        .frame(width: self.backgroundOffset == 0 ? 40 : 20, height: self.backgroundOffset == 0 ? 40 : 20)
+                        .frame(width: self.backgroundOffset == 0 ? 30 : 20, height: self.backgroundOffset == 0 ? 30 : 20)
                         .overlay(
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
@@ -51,16 +48,15 @@ struct CoursesView: View {
                     
                     Circle()
                         .fill(Color.red)
-                        .frame(width: self.backgroundOffset == 1 ? 40 : 20, height: self.backgroundOffset == 1 ? 40 : 20)
+                        .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
                         .overlay(
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
                         )
                     
-                    
                     Circle()
                         .fill(Color.blue )
-                        .frame(width: self.backgroundOffset == 2 ? 40 : 20, height: self.backgroundOffset == 2 ? 40 : 20)
+                        .frame(width: self.backgroundOffset == 2 ? 30 : 20, height: self.backgroundOffset == 2 ? 30 : 20)
                         .overlay(
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
@@ -68,7 +64,7 @@ struct CoursesView: View {
                 }
                 .animation(.default)
             }
-            .position(x:g.size.width/2, y:g.size.height/2)
+           .position(x:g.size.width/2, y:g.size.height/9)
         }
         .edgesIgnoringSafeArea(.all)
 

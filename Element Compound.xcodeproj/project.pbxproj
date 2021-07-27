@@ -74,6 +74,8 @@
 		54B00A6B26B08353009092CD /* CameraCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6A26B08353009092CD /* CameraCoursesView.swift */; };
 		54B00A6D26B08BAE009092CD /* CourseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */; };
 		54B00A6F26B08E28009092CD /* CourseSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */; };
+		54B00A7126B09BF4009092CD /* CameraCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A7026B09BF4009092CD /* CameraCourseView.swift */; };
+		54B00A7326B09C55009092CD /* UIScreen Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A7226B09C55009092CD /* UIScreen Extension.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
@@ -158,6 +160,8 @@
 		54B00A6A26B08353009092CD /* CameraCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoursesView.swift; sourceTree = "<group>"; };
 		54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionModel.swift; sourceTree = "<group>"; };
 		54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionCardView.swift; sourceTree = "<group>"; };
+		54B00A7026B09BF4009092CD /* CameraCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCourseView.swift; sourceTree = "<group>"; };
+		54B00A7226B09C55009092CD /* UIScreen Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen Extension.swift"; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				54388243269DD03B008529A4 /* EmptyState.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
+				54B00A7226B09C55009092CD /* UIScreen Extension.swift */,
 				549259ED26937EBF0071A45C /* Publisher+Assign.swift */,
 				54FD835F268C02D100AB530C /* DataStore.swift */,
 				5487EDFB269C8A11009C7E0E /* PushNotificationManager.swift */,
@@ -324,6 +329,7 @@
 				54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */,
 				54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
+				54B00A7026B09BF4009092CD /* CameraCourseView.swift */,
 				54B00A6A26B08353009092CD /* CameraCoursesView.swift */,
 			);
 			path = Courses;
@@ -554,6 +560,7 @@
 				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
 				54859AE52695DE200025ECA6 /* CameraDetail5.swift in Sources */,
 				5461519B264C6BE000BC2719 /* RemoteImage.swift in Sources */,
+				54B00A7126B09BF4009092CD /* CameraCourseView.swift in Sources */,
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
 				54001D56269F4DE100249C4E /* IngredientsPicker.swift in Sources */,
@@ -582,6 +589,7 @@
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */,
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
+				54B00A7326B09C55009092CD /* UIScreen Extension.swift in Sources */,
 				54001D52269F3B5E00249C4E /* CustomPlayer.swift in Sources */,
 				5487EDFA269C77AD009C7E0E /* NotificationViewModel.swift in Sources */,
 				549259EE26937EBF0071A45C /* Publisher+Assign.swift in Sources */,
