@@ -14,10 +14,7 @@ struct TabViewItem: View {
                     InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc, lense: MockData.sampleLense)
                 }
                 else if self.index == 2{
-                    Color.red.opacity(0.5).edgesIgnoringSafeArea(.all)
-
-                    Text("Courses")
-                        .font(.largeTitle)
+                    CoursesView()
                 }
                 else if self.index == 3{
                     //BooksListView()

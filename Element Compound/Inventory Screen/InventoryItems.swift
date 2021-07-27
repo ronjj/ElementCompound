@@ -79,7 +79,7 @@ struct MiscResponse: Decodable {
 
 struct MockData {
     
-    static let sampleCamera = CameraItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
+    static let sampleCamera = CameraItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fredcubepdx%2F&psig=AOvVaw2nQECAIXzD3gS0iq-AUv5I&ust=1626878032363000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODE0Yrv8fECFQAAAAAdAAAAABAJ", bigImageURL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fredcubepdx%2F&psig=AOvVaw2nQECAIXzD3gS0iq-AUv5I&ust=1626878032363000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODE0Yrv8fECFQAAAAAdAAAAABAJ")
     static let sampleComputer = ComputerItem(name: "iMac Pro", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleAudio = AudioItem(name: "GH5S", shortDescription: "best camera in office", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
     static let sampleMisc = MiscItem(name: "Camera Tripod", shortDescription: "Student Computer", longDescription: "Best camera in the office. This camera is typically reserved for officers", imageURL: "black", bigImageURL: "black")
@@ -137,7 +137,7 @@ struct MockData {
         LenseItem( name: "Sony E-Mount 24mm",
                    shortDescription: "Medium Focal Length Lens for Sony A7s II.",
                    longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
-                   imageURL: "black",
+                   imageURL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2Fredcubepdx%2F&psig=AOvVaw2nQECAIXzD3gS0iq-AUv5I&ust=1626878032363000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCODE0Yrv8fECFQAAAAAdAAAAABAJ",
                    bigImageURL: "LensBaby 56mm B 2"),
         
         LenseItem( name: "Sony E-Mount 85mm",

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct InventoryListCellView: View {
     
@@ -35,6 +36,15 @@ struct InventoryListCellView: View {
                         .frame(width: 120, height: 90)
                         .cornerRadius(8)
                         .padding(.trailing, 5)
+                    
+//                    URLImage(image) { image in
+//                        image
+//                            .resizable()
+//                            .aspectRatio(contentMode: .fit)
+//                            .frame(width: 120, height: 90)
+//                            .cornerRadius(8)
+//                            .padding(.trailing, 5)
+//                    }
                     
 //                    InventoryRemoteImage(urlString: image)
 //                        .resizable()

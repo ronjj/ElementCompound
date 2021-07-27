@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,8 @@
 		543B6646264AC04F00992350 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B6645264AC04F00992350 /* Poppins-Regular.ttf */; };
 		543B664D264AC72200992350 /* Felixti.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 543B664C264AC72200992350 /* Felixti.ttf */; };
 		543B6650264B248500992350 /* CameraDetailView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B664F264B248500992350 /* CameraDetailView2.swift */; };
+		543C4A4726A71B6100D9DF67 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 543C4A4626A71B6100D9DF67 /* URLImageStore */; };
+		543C4A4926A71B6100D9DF67 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 543C4A4826A71B6100D9DF67 /* URLImage */; };
 		543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */; };
 		543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA0262A1766004FDF51 /* CoursesView.swift */; };
 		543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E7BA3262A1773004FDF51 /* ProjectsView.swift */; };
@@ -69,6 +71,9 @@
 		54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B552655999C0073EB35 /* CustomTabBar.swift */; };
 		54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B592655AF1D0073EB35 /* Color+Codable.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
+		54B00A6B26B08353009092CD /* CameraCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6A26B08353009092CD /* CameraCoursesView.swift */; };
+		54B00A6D26B08BAE009092CD /* CourseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */; };
+		54B00A6F26B08E28009092CD /* CourseSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
 		54BBA4CF263216EA0021536D /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4CE263216EA0021536D /* Announcement.swift */; };
 		54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4D1263217C90021536D /* AnnouncementCardView.swift */; };
@@ -150,6 +155,9 @@
 		54AB3B552655999C0073EB35 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		54AB3B592655AF1D0073EB35 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		54B00A6A26B08353009092CD /* CameraCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoursesView.swift; sourceTree = "<group>"; };
+		54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionModel.swift; sourceTree = "<group>"; };
+		54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionCardView.swift; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		54BBA4CE263216EA0021536D /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		54BBA4D1263217C90021536D /* AnnouncementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementCardView.swift; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543C4A4726A71B6100D9DF67 /* URLImageStore in Frameworks */,
+				543C4A4926A71B6100D9DF67 /* URLImage in Frameworks */,
 				DAB328010F53D22C0AF95C45 /* Pods_Element_Compound.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,7 +321,10 @@
 		5487EDF8269C7167009C7E0E /* Courses */ = {
 			isa = PBXGroup;
 			children = (
+				54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */,
+				54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
+				54B00A6A26B08353009092CD /* CameraCoursesView.swift */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -404,6 +417,10 @@
 			dependencies = (
 			);
 			name = "Element Compound";
+			packageProductDependencies = (
+				543C4A4626A71B6100D9DF67 /* URLImageStore */,
+				543C4A4826A71B6100D9DF67 /* URLImage */,
+			);
 			productName = "Element Compound";
 			productReference = 5439CE8D260FF37B00DCC5A6 /* Element Compound.app */;
 			productType = "com.apple.product-type.application";
@@ -431,6 +448,9 @@
 				Base,
 			);
 			mainGroup = 5439CE84260FF37A00DCC5A6;
+			packageReferences = (
+				543C4A4526A71B6100D9DF67 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 5439CE8E260FF37B00DCC5A6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -545,6 +565,7 @@
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
+				54B00A6B26B08353009092CD /* CameraCoursesView.swift in Sources */,
 				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
@@ -552,9 +573,11 @@
 				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
+				54B00A6F26B08E28009092CD /* CourseSectionCardView.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */,
+				54B00A6D26B08BAE009092CD /* CourseSectionModel.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
 				54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */,
@@ -784,6 +807,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		543C4A4526A71B6100D9DF67 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		543C4A4626A71B6100D9DF67 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 543C4A4526A71B6100D9DF67 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		543C4A4826A71B6100D9DF67 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 543C4A4526A71B6100D9DF67 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5439CE85260FF37A00DCC5A6 /* Project object */;
 }
