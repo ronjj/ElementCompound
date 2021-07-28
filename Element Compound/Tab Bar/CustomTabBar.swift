@@ -30,7 +30,7 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                                Image(systemName: "house")
+                                Image(systemName: "house.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .foregroundColor(.bg)
@@ -49,21 +49,17 @@ struct CustomTabBar: View {
                         if self.index != 1{
                             Image(systemName: "list.bullet")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 20, height: 15)
                                 .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
-
-                                
                                 Image(systemName: "list.bullet")
                                     .resizable()
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 20, height: 15)
                                     .foregroundColor(.bg)
                                     .padding()
-                            
                         }
-                        
                     }
                 })
                 
@@ -74,21 +70,18 @@ struct CustomTabBar: View {
                 }, label: {
                     VStack{
                         if self.index != 2{
-                            Image(systemName: "folder")
+                            Image(systemName: "lightbulb")
                                 .resizable()
-                                .frame(width: 20, height: 20)
+                                .frame(width: 15, height: 20)
                                 .foregroundColor(.bg)
                                 .padding()
                         }
                         else{
-
-                                
-                                Image(systemName: "folder")
+                                Image(systemName: "lightbulb.fill")
                                     .resizable()
-                                    .frame(width: 20, height: 20)
+                                    .frame(width: 15, height: 20)
                                     .foregroundColor(.bg)
                                     .padding()
-                            
                         }
                     }
                 })
@@ -113,7 +106,6 @@ struct CustomTabBar: View {
                                     .frame(width: 20, height: 20)
                                     .foregroundColor(.bg)
                                     .padding()
-                            
                         }
                     }
                 })
@@ -132,14 +124,11 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-
-                                
                                 Image(systemName: "gear")
                                     .resizable()
                                     .frame(width: 20, height: 20)
                                     .foregroundColor(.bg)
                                     .padding()
-                            
                         }
                     }
                 })
