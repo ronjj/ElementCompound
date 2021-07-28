@@ -56,6 +56,7 @@ struct ProjectsListView: View {
         NavigationView {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
+                
                 List {
                     ForEach (viewModel.projects) { project in
                        ProjectCardView(project: project)
@@ -70,6 +71,7 @@ struct ProjectsListView: View {
               
                 .navigationViewStyle(StackNavigationViewStyle())
                 .navigationBarTitle("Projects")
+                .navigationBarHidden(true)
                 .navigationBarItems(trailing: addButton)
                 .onAppear() {
                     print("BooksListView appears. Subscribing to data updates.")

@@ -40,6 +40,7 @@ struct ProjectCardView: View {
                         ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                         
                     }
+                    .padding(.leading, 10)
                     .lineLimit(nil)
                     
                     Spacer()
@@ -55,12 +56,12 @@ struct ProjectCardView: View {
                             .padding(.horizontal, 8)
                     }
                 }
-                .padding(20)
             }
         }
         .frame(width: 360, height: 150)
         .cornerRadius(20)
         .shadow(color: .bg, radius: 30, x: 0, y: 15)
+        .padding(5)
     }
 }
 

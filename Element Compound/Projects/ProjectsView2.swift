@@ -7,12 +7,22 @@
 
 import SwiftUI
 
+
+enum ProjectSheets: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    case addProj
+   
+}
 struct ProjectsListView2: View {
     // MARK: - State
     @AppStorage ("role_Status") var role = Bool()
     @StateObject var viewModel = ProjectsViewModel2()
     @ObservedObject var viewModel2 = ProjectViewModel2()
     @State var presentAddProjectSheet = false
+    @State private var activeSheet: ProjectSheets?
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
     
     
@@ -67,6 +77,32 @@ struct ProjectsListView2: View {
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
                 
                 ScrollView{
+                    HStack {
+                        Text("Projects")
+                            .font(.largeTitle)
+                            .foregroundColor(.bginv)
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            activeSheet = .addProj
+                        }) {
+                             ZStack {
+                                Circle()
+                                    .foregroundColor(.bg)
+                                    .frame(width: 25, height: 25)
+                              Image(systemName: "plus")
+                                    .foregroundColor(.bginv)
+                            }
+                        }
+                        
+                        .padding(.trailing, 20)
+                    }
+                    .padding(.top, 30)
+                    .padding(.bottom, 20)
+                    .padding(.leading, 20)
+                    
                     LazyVStack {
                         ForEach (viewModel.projects) { project in
                             ProjectCardView(project: project)
@@ -80,6 +116,7 @@ struct ProjectsListView2: View {
                 }
               
                 .navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarHidden(true)
                 .navigationBarTitle("Projects")
                 .navigationBarItems(trailing: addButton)
                 .onAppear() {
@@ -94,8 +131,14 @@ struct ProjectsListView2: View {
                     print("ProjectsView disappears. Unsubscribing from data updates.")
                     self.viewModel.unsubscribe()
                 }
-                .sheet(isPresented: self.$presentAddProjectSheet) {
-                    ProjectEditView2()
+//                .sheet(isPresented: self.$presentAddProjectSheet) {
+//                    ProjectEditView2()
+//                }
+                .sheet(item: $activeSheet) { item in
+                    switch item {
+                    case .addProj:
+                        ProjectEditView2()
+                    }
                 }
                 
                 if viewModel.projects.isEmpty{

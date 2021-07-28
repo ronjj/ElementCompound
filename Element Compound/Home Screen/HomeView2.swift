@@ -22,20 +22,18 @@ enum Sheets2: Identifiable {
 
 
 struct HomeView2: View {
-    
+    //@ObservedObject var projectViewModel = ProjectViewModel2()
+    // let projects = self.projects
+    // @ObservedObject var favorites = Favorites()
+ //    @State private var presentAddNewAnnouncement = false
+ //    @State private var presentInfoScreen = false
     @AppStorage ("role_Status") var role = Bool()
     
     @ObservedObject var viewModel = AnnouncementsViewModel()
-    //@ObservedObject var projectViewModel = ProjectViewModel2()
     @ObservedObject var userAuth = UsersViewModel()
-    @State private var activeSheet: Sheets2?
-   // @ObservedObject var favorites = Favorites()
-   
-//    @State private var presentAddNewAnnouncement = false
-//    @State private var presentInfoScreen = false
-    @State private var buttonDisabled = true
-   // let projects = self.projects
     
+    @State private var activeSheet: Sheets2?
+    @State private var buttonDisabled = true
     @State private var action: Int? = 0
     
     
