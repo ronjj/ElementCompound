@@ -16,16 +16,10 @@ struct CoursesView: View {
         GeometryReader { g in
             HStack(spacing: 0) {
                 CameraCourseView()
+                EditingCourseView()
+                AudioCourseView()
                 
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: g.size.width, height: g.size.height)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-                Rectangle()
-                    .fill(Color.blue)
-                    .frame(width: g.size.width, height: g.size.height)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+             
 
             }
             .offset(x: -(self.backgroundOffset * g.size.width))
@@ -39,7 +33,7 @@ struct CoursesView: View {
                 
                 HStack{
                     Circle()
-                        .fill(Color.green)
+                        .fill(Color.lightBlue)
                         .frame(width: self.backgroundOffset == 0 ? 30 : 20, height: self.backgroundOffset == 0 ? 30 : 20)
                         .overlay(
                             Circle()
@@ -47,7 +41,7 @@ struct CoursesView: View {
                         )
                     
                     Circle()
-                        .fill(Color.red)
+                        .fill(Color.ruby)
                         .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
                         .overlay(
                             Circle()
@@ -55,7 +49,7 @@ struct CoursesView: View {
                         )
                     
                     Circle()
-                        .fill(Color.blue )
+                        .fill(Color.yellow2 )
                         .frame(width: self.backgroundOffset == 2 ? 30 : 20, height: self.backgroundOffset == 2 ? 30 : 20)
                         .overlay(
                             Circle()
@@ -64,7 +58,7 @@ struct CoursesView: View {
                 }
                 .animation(.default)
             }
-           .position(x:g.size.width/2, y:g.size.height/9)
+           .position(x:g.size.width/2, y:g.size.height/10)
         }
         .edgesIgnoringSafeArea(.all)
 

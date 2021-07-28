@@ -1,16 +1,16 @@
 //
-//  CameraCourseView.swift
+//  EditingCourseView.swift
 //  Element Compound
 //
-//  Created by Ronald Jabouin on 7/27/21.
+//  Created by Ronald Jabouin on 7/28/21.
 //
 
 import SwiftUI
 
-struct CameraCourseView: View {
+struct EditingCourseView: View {
     var body: some View {
         ZStack {
-            Color.lightBlue.edgesIgnoringSafeArea(.all)
+            Color.ruby.edgesIgnoringSafeArea(.all)
             
             Spacer()
             
@@ -21,13 +21,13 @@ struct CameraCourseView: View {
                     .padding(.horizontal,10)
                     .frame(width: 200, height: 200)
                  
-                Text("Cameras")
+                Text("Editing")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
                     .padding()
                  
-                Text(" This is the camera course. Click the button below to learn more")
+                Text(" This is the editing course. Click the button below to learn more")
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal)
@@ -39,11 +39,4 @@ struct CameraCourseView: View {
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
     }
-}
-
-
-extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
 }

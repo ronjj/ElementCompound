@@ -64,6 +64,8 @@
 		54933279263C51C6001C1D24 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54933278263C51C6001C1D24 /* HomeView2.swift */; };
 		5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */; };
 		54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5493327F263C5295001C1D24 /* AnnouncementAddView.swift */; };
+		5499097026B18A4F00C200C1 /* EditingCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499096F26B18A4F00C200C1 /* EditingCourseView.swift */; };
+		5499097226B18AB800C200C1 /* AudioCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5499097126B18AB800C200C1 /* AudioCourseView.swift */; };
 		549D223126A5DDAD00DBED7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 549D223026A5DDAD00DBED7B /* GoogleService-Info.plist */; };
 		54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D2264D6770003B749C /* ButtonStyles.swift */; };
 		54A8B5D6264D6AB4003B749C /* AllAnnouncements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */; };
@@ -71,9 +73,7 @@
 		54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B552655999C0073EB35 /* CustomTabBar.swift */; };
 		54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AB3B592655AF1D0073EB35 /* Color+Codable.swift */; };
 		54AEEB90262BB9930040A559 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AEEB8F262BB9930040A559 /* LoginView.swift */; };
-		54B00A6B26B08353009092CD /* CameraCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6A26B08353009092CD /* CameraCoursesView.swift */; };
 		54B00A6D26B08BAE009092CD /* CourseSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */; };
-		54B00A6F26B08E28009092CD /* CourseSectionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */; };
 		54B00A7126B09BF4009092CD /* CameraCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A7026B09BF4009092CD /* CameraCourseView.swift */; };
 		54B00A7326B09C55009092CD /* UIScreen Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B00A7226B09C55009092CD /* UIScreen Extension.swift */; };
 		54BBA4C926320B300021536D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBA4C826320B300021536D /* SearchBar.swift */; };
@@ -150,6 +150,8 @@
 		54933278263C51C6001C1D24 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
 		5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementViewModel.swift; sourceTree = "<group>"; };
 		5493327F263C5295001C1D24 /* AnnouncementAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementAddView.swift; sourceTree = "<group>"; };
+		5499096F26B18A4F00C200C1 /* EditingCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingCourseView.swift; sourceTree = "<group>"; };
+		5499097126B18AB800C200C1 /* AudioCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCourseView.swift; sourceTree = "<group>"; };
 		549D223026A5DDAD00DBED7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		54A8B5D2264D6770003B749C /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		54A8B5D5264D6AB4003B749C /* AllAnnouncements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnnouncements.swift; sourceTree = "<group>"; };
@@ -157,9 +159,7 @@
 		54AB3B552655999C0073EB35 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		54AB3B592655AF1D0073EB35 /* Color+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Codable.swift"; sourceTree = "<group>"; };
 		54AEEB8F262BB9930040A559 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		54B00A6A26B08353009092CD /* CameraCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoursesView.swift; sourceTree = "<group>"; };
 		54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionModel.swift; sourceTree = "<group>"; };
-		54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSectionCardView.swift; sourceTree = "<group>"; };
 		54B00A7026B09BF4009092CD /* CameraCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCourseView.swift; sourceTree = "<group>"; };
 		54B00A7226B09C55009092CD /* UIScreen Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen Extension.swift"; sourceTree = "<group>"; };
 		54BBA4C826320B300021536D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -327,10 +327,10 @@
 			isa = PBXGroup;
 			children = (
 				54B00A6C26B08BAE009092CD /* CourseSectionModel.swift */,
-				54B00A6E26B08E28009092CD /* CourseSectionCardView.swift */,
 				543E7BA0262A1766004FDF51 /* CoursesView.swift */,
 				54B00A7026B09BF4009092CD /* CameraCourseView.swift */,
-				54B00A6A26B08353009092CD /* CameraCoursesView.swift */,
+				5499096F26B18A4F00C200C1 /* EditingCourseView.swift */,
+				5499097126B18AB800C200C1 /* AudioCourseView.swift */,
 			);
 			path = Courses;
 			sourceTree = "<group>";
@@ -556,6 +556,7 @@
 			files = (
 				548A35EA2649FFC9008B9B4A /* RoleCodeScreen.swift in Sources */,
 				543DC5FF263B3D2100D807C1 /* AnnouncementsViewModel.swift in Sources */,
+				5499097026B18A4F00C200C1 /* EditingCourseView.swift in Sources */,
 				54AB3B562655999C0073EB35 /* CustomTabBar.swift in Sources */,
 				54933280263C5295001C1D24 /* AnnouncementAddView.swift in Sources */,
 				54859AE52695DE200025ECA6 /* CameraDetail5.swift in Sources */,
@@ -564,6 +565,7 @@
 				5454C5232677EB7A00EC84DA /* Project.swift in Sources */,
 				5457018F267CF6B700D93F68 /* ProgressBar.swift in Sources */,
 				54001D56269F4DE100249C4E /* IngredientsPicker.swift in Sources */,
+				5499097226B18AB800C200C1 /* AudioCourseView.swift in Sources */,
 				54BBA4D2263217C90021536D /* AnnouncementCardView.swift in Sources */,
 				5452049F269B1B1B007444F0 /* AnnouncementDetailView.swift in Sources */,
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
@@ -572,7 +574,6 @@
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
-				54B00A6B26B08353009092CD /* CameraCoursesView.swift in Sources */,
 				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
@@ -580,7 +581,6 @@
 				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
-				54B00A6F26B08E28009092CD /* CourseSectionCardView.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */,

@@ -51,6 +51,12 @@ struct ProjectsListView: View {
         }
     }
     
+    init() {
+       UITableView.appearance().separatorStyle = .none
+       UITableViewCell.appearance().backgroundColor = .green
+       UITableView.appearance().backgroundColor = .green
+    }
+    
     var body: some View {
         NavigationView {
             ZStack{
@@ -64,9 +70,8 @@ struct ProjectsListView: View {
                     }
                     //Disbales swipe to delete if user does not have role
                     .deleteDisabled(role ? false : true)
-                
                 }
-                .background(Color.lightBlue.edgesIgnoringSafeArea(.all))
+              
                 .navigationViewStyle(StackNavigationViewStyle())
                 .navigationBarTitle("Projects")
                 .navigationBarItems(trailing: addButton)
@@ -92,7 +97,6 @@ struct ProjectsListView: View {
                     }
                 }
             }
-            .background(Color.lightBlue.edgesIgnoringSafeArea(.all))
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
