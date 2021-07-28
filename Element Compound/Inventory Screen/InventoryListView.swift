@@ -57,7 +57,7 @@ struct InventoryListView: View {
                         
                         ForEach(MockData.cameras.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { camera in
                             NavigationLink(destination: CameraItemDetailedView5(camera: camera)) {
-                                InventoryListCellView(image: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
+                                InventoryListCellView(images: camera.imageURL, title: camera.name, description: camera.shortDescription, color: Color.nyanza)
  
                             }
                             .padding(5)
@@ -76,7 +76,7 @@ struct InventoryListView: View {
                         
                         ForEach(MockData.lenses.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { lense in
                             NavigationLink(destination: LenseItemDetailedView(lense: lense)) {
-                                InventoryListCellView(image: lense.imageURL, title: lense.name, description: lense.shortDescription, color: Color.nyanza)
+                                InventoryListCellView(images: lense.imageURL, title: lense.name, description: lense.shortDescription, color: Color.nyanza)
  
                             }
                             .padding(5)
@@ -94,7 +94,7 @@ struct InventoryListView: View {
                         }
                         ForEach(MockData.computers.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { computer in
                             NavigationLink(destination: ComputerItemDetailedView(computer: computer)) {
-                                InventoryListCellView(image: computer.imageURL, title: computer.name, description: computer.shortDescription, color: Color.ruby)
+                                InventoryListCellView(images: computer.imageURL, title: computer.name, description: computer.shortDescription, color: Color.ruby)
                             }
                         }
                         
@@ -111,9 +111,8 @@ struct InventoryListView: View {
                         }
                         ForEach(MockData.audios.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { audio in
                             NavigationLink(destination: AudioItemDetailedView(audio: audio)) {
-                                InventoryListCellView(image: audio.imageURL, title: audio.name, description: audio.shortDescription, color: Color.yellow2)
-                                  
-                                
+                                InventoryListCellView(images: audio.imageURL, title: audio.name, description: audio.shortDescription, color: Color.yellow2)
+ 
                             }
                             .padding(5)
                         }
@@ -132,21 +131,14 @@ struct InventoryListView: View {
                         }
                         ForEach(MockData.miscs.filter({ searchText.isEmpty ? true : $0.name.range(of: searchText, options: .caseInsensitive) != nil })) { misc in
                             NavigationLink(destination: MiscItemDetailedView(misc: misc)) {
-                                InventoryListCellView(image: misc.imageURL, title: misc.name, description: misc.shortDescription, color: Color.independence)
-    
+                                InventoryListCellView(images: misc.imageURL, title: misc.name, description: misc.shortDescription, color: Color.independence)
                             }
-                            
                             .padding(5)
                         }
-                       
-                        
                     }
-                    
                     .navigationTitle("Equipment List")
                     .navigationBarHidden(true)
-                    
                 }
-                
                 .background(Color.lightBlue)
                 .navigationBarHidden(true)
             }

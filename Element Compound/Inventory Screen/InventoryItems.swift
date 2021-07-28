@@ -15,7 +15,6 @@ struct CameraItem: Decodable, Identifiable{
     let longDescription: String
     let imageURL: String
     let bigImageURL: String
-    let color = Color.red
 }
 
 
@@ -90,47 +89,48 @@ struct MockData {
         CameraItem( name: "Lumix GH4",
                     shortDescription: "Entry-Level Camera for New Student Members.",
                     longDescription: "The go-to camera for new student members, the GH4 is a reliable and durable camera that captures professional-quality video. The GH4 is equipped with 4K and HD capability for video, basic audio recording, and can be used with a variety of entry-level lenses dmd ddm md",
-                    imageURL: "sony 350x200",
-                    bigImageURL: "Mavic Mini 2"),
+                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f92aa4ab-876f-4a7b-8e51-7d17f28d0445",
+                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/2607cfa5-efcc-46fe-8404-c80ed55339e8"),
         
         CameraItem(name: "Lumix GH5",
                    shortDescription: "4K Camera for Mid-Level Projects.",
                    longDescription: "The professional standard DSLR from Lumix, the GH5 captures high quality 4K video with improved settings and features over the GH4. With stronger built in stabilization, and compatibility with our professional suite of lenses, the GH5 is prime for more experienced student members working on Mid-Level Projects. ",
-                   imageURL: "Rode (450x360) Final",
-                   bigImageURL: "black"),
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/c54522c9-6398-4a74-bd8a-4aed17f248cf",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/54b13970-e4fa-4515-8efd-117b6da6ed04"),
         
         CameraItem( name: "Lumix GH5s",
                     shortDescription: "Optimized 4K Camera for High-Level Projects.",
                     longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.",
-                    imageURL: "Mavic Mini 2 (450x360)",
-                    bigImageURL: "Mavic Mini 2"),
+                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/b023fc25-4137-4cad-b20b-f41b8c933966",
+                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/89f44cd4-19c0-4651-be41-b8ef7ebbb0a5"),
         
         CameraItem(name: "Sony A7SII",
                    shortDescription: "High-End 4K Camera for Experienced Students.",
                    longDescription: "As the most elite camera of Element, the Sony A7s Mark II is extremely versatile, and reserved for senior student members working on high-level projects. With its sensitive filter, the A7s II delivers smooth 4K video and dynamic, crisp performance in most lighting conditions. The A7s II shoots in full pixel readouts (RAW), allowing for complete quality control during editing.",
-                   imageURL: "Mavic Pro 2 (450x360)",
-                   bigImageURL: "Mavic Pro 2"),
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/51a10c04-2182-4201-83b3-8a088b704332",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/6288119a-8171-4d52-a6ed-c9a0b84cef59"),
         
         CameraItem(name: "Ricoh Theta 360",
                    shortDescription: "360° Camera for Immersive Photos.",
                    longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos, as seen throughout the Chaminade Virtual Tour. ",
-                   imageURL: "sony 85 - blue hand",
-                   bigImageURL: "black"),
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a3de47cb-7284-4e7d-ad70-0f3deecab808",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/01f64d09-3e6a-4a98-9a9a-2311f049cbee"),
         
-        CameraItem(name: "Osmo Pocket",
-                   shortDescription: "Compact Action Camera for Simple Shoots.",
-                   longDescription: "The Osmo Pocket provides 1080p video in a super-compact form factor, mounted on a three-axis gimbal. The Osmo Pocket is prime for mobile shots, time-lapses, and panoramas. Its simplistic design allows users to store the Osmo easily and record video seamlessly.",
-                   imageURL: "GH5s I",
-                   bigImageURL: "GH5s I"),
+//        CameraItem(name: "Osmo Pocket",
+//                   shortDescription: "Compact Action Camera for Simple Shoots.",
+//                   longDescription: "The Osmo Pocket provides 1080p video in a super-compact form factor, mounted on a three-axis gimbal. The Osmo Pocket is prime for mobile shots, time-lapses, and panoramas. Its simplistic design allows users to store the Osmo easily and record video seamlessly.",
+//                   imageURL: "GH5s I",
+//                   bigImageURL: "GH5s I"),
         
         CameraItem(name: "Osmo Pocket Gen 2",
                    shortDescription: "Versatile Action Camera for Simple Shots.",
                    longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
-                   imageURL: "GH5 I",
-                   bigImageURL: "GH5 B"),
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/64c2de44-4092-4b2c-bbc0-2cbf6bfb302e",
+                   bigImageURL: "ttps://www.chaminade-hs.org/fs/resource-manager/view/997a3274-2447-4327-a9e6-7a3e2ba664f2"),
         
         
     ]
+       
     
     
     static let lenses = [
@@ -158,7 +158,7 @@ struct MockData {
                    imageURL: "black",
                    bigImageURL: "black"),
         
-        LenseItem( name: "Voigtlander Nokton 10mm",
+        LenseItem( name: "Voigtlander Nokton 10.5mm",
                    shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
                    longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
                    imageURL: "black",

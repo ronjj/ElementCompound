@@ -22,13 +22,25 @@ struct CameraItemDetailedView5: View {
                     
     //                Type 2
                     if  reader.frame(in: .global).minY > -480 {
-                    Image(camera.bigImageURL)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .offset(y: -reader.frame(in: .global).minY)
-                        .frame(width: UIScreen.main.bounds.width, height:
-                                reader.frame(in: .global).minY > 0 ?
-                                reader.frame(in: .global).minY + 480 : 480)
+                        
+//                    Image(camera.bigImageURL)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fill)
+//                        .offset(y: -reader.frame(in: .global).minY)
+//                        .frame(width: UIScreen.main.bounds.width, height:
+//                                reader.frame(in: .global).minY > 0 ?
+//                                reader.frame(in: .global).minY + 480 : 480)
+//
+                        
+                        AsyncImage(url: URL(string: "\(camera.bigImageURL)" ) ?? URL(string: "www.apple.com")!,
+                                       placeholder: { Text("Loading ...") },
+                                       image: {
+                                Image(uiImage: $0).resizable() })
+                                    .aspectRatio(contentMode: .fill)
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height:
+                                            reader.frame(in: .global).minY > 0 ?
+                                            reader.frame(in: .global).minY + 480 : 480)
      
                     }
                     HStack {

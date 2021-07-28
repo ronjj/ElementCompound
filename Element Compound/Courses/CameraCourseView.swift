@@ -31,9 +31,14 @@ struct CameraCourseView: View {
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal)
-                
-                largeButtonStyle(title: "Go To Course")
-                    .padding(.top, 30)
+                  
+                Button{
+
+                } label: {
+                    largeButtonStyle(title: "Go To Course")
+                }
+                .padding(.top, 30)
+                   
             }
             Spacer()
         }

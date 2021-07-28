@@ -19,6 +19,7 @@ struct TabViewItem: View {
                 else if self.index == 3{
                     //ProjectsListView()
                     ProjectsListView2()
+                    //AsyncImageView()
                 }
                 else{
                     SettingsView()

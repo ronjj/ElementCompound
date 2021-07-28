@@ -10,12 +10,12 @@ import URLImage
 
 struct InventoryListCellView: View {
     
-    let image: String
+    let images: String
     let title: String
     let description: String
     let color: Color
     let colors = [Color.yellow2,Color.ruby, Color.nyanza, Color.independence]
-    
+            
     
     var body: some View {
         ZStack{
@@ -30,21 +30,29 @@ struct InventoryListCellView: View {
                 }
                 
                 HStack{
-                    Image(image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 120, height: 90)
-                        .cornerRadius(8)
-                        .padding(.trailing, 5)
                     
-//                    URLImage(image) { image in
-//                        image
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                            .frame(width: 120, height: 90)
-//                            .cornerRadius(8)
-//                            .padding(.trailing, 5)
-//                    }
+                    AsyncImage(url: URL(string: "\(images)" ) ?? URL(string: "www.apple.com")!,
+                                   placeholder: { Text("Loading ...") },
+                                   image: {
+                            Image(uiImage: $0).resizable() })
+                            .frame(width: 120, height: 90)
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(8)
+                            .padding(.trailing, 5)
+                    
+//                   Image(images)
+//                        //.resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 120, height: 90)
+//                        .cornerRadius(8)
+//                        .padding(.trailing, 5)
+                    
+                    //                    URLImage(posters,
+                    //                             content: { image in
+                    //                                 image
+                    //                                     .resizable()
+                    //                                     .aspectRatio(contentMode: .fit)
+                    //                             })
                     
 //                    InventoryRemoteImage(urlString: image)
 //                        .resizable()
@@ -52,6 +60,13 @@ struct InventoryListCellView: View {
 //                        .frame(width: 120, height: 90)
 //                        .cornerRadius(8)
 //                        .padding(.trailing, 5)
+                    
+//                    AsyncImage(url: URL(string: images)!, placeholder: {Color.black}, image: { image in
+//                        Image(uiImage: image).resizable()
+//                    })
+//                        .aspectRatio(contentMode: .fit)
+//                        .frame(width: 120, height: 90)
+               
                           
                     VStack(alignment: .leading, spacing: 5) {
                         Text(title)

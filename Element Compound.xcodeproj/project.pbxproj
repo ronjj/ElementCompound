@@ -85,6 +85,11 @@
 		54D636592654526900480CF3 /* AvenirLTStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */; };
 		54D6365A2654526900480CF3 /* AvenirLTStd-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 54D636572654526900480CF3 /* AvenirLTStd-Black.otf */; };
 		54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2442B263F922000D1B693 /* InfoScreen.swift */; };
+		54ECF17526B1A69800534D32 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ECF17026B1A69700534D32 /* AsyncImage.swift */; };
+		54ECF17626B1A69800534D32 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ECF17126B1A69800534D32 /* ImageLoader.swift */; };
+		54ECF17726B1A69800534D32 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ECF17226B1A69800534D32 /* AsyncImageView.swift */; };
+		54ECF17826B1A69800534D32 /* EnvironmentValues+ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ECF17326B1A69800534D32 /* EnvironmentValues+ImageCache.swift */; };
+		54ECF17926B1A69800534D32 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ECF17426B1A69800534D32 /* ImageCache.swift */; };
 		54F5B9BE2628E07C001846E6 /* ComputerItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */; };
 		54F5B9C12628E18B001846E6 /* AudioItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */; };
 		54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */; };
@@ -172,6 +177,11 @@
 		54D636562654526900480CF3 /* AvenirLTStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Roman.otf"; sourceTree = "<group>"; };
 		54D636572654526900480CF3 /* AvenirLTStd-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirLTStd-Black.otf"; sourceTree = "<group>"; };
 		54E2442B263F922000D1B693 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
+		54ECF17026B1A69700534D32 /* AsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
+		54ECF17126B1A69800534D32 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		54ECF17226B1A69800534D32 /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		54ECF17326B1A69800534D32 /* EnvironmentValues+ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+ImageCache.swift"; sourceTree = "<group>"; };
+		54ECF17426B1A69800534D32 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioItemDetailedView.swift; sourceTree = "<group>"; };
 		54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscItemDetailedView.swift; sourceTree = "<group>"; };
@@ -229,10 +239,10 @@
 				54BBA4CD263216AF0021536D /* Home Screen */,
 				54BBA4CC2632168A0021536D /* Announcements */,
 				543E7BEE262A754E004FDF51 /* Inventory Screen */,
+				5487EDF8269C7167009C7E0E /* Courses */,
 				5454C5242677EB8700EC84DA /* Projects */,
 				548A35E82649FFA7008B9B4A /* Settings Screen */,
 				54B455192672A54D00E2F62F /* Tab Bar */,
-				5487EDF8269C7167009C7E0E /* Courses */,
 				54707103268AAB740057FA28 /* Utilities */,
 				54CE4C7126988F5B00D398DC /* Fonts */,
 				543B6638264ABBF300992350 /* Info.plist */,
@@ -270,6 +280,18 @@
 			path = "Inventory Screen";
 			sourceTree = "<group>";
 		};
+		5445F75226B1A6330023E3C6 /* AsyncImage iOS14 */ = {
+			isa = PBXGroup;
+			children = (
+				54ECF17026B1A69700534D32 /* AsyncImage.swift */,
+				54ECF17226B1A69800534D32 /* AsyncImageView.swift */,
+				54ECF17326B1A69800534D32 /* EnvironmentValues+ImageCache.swift */,
+				54ECF17426B1A69800534D32 /* ImageCache.swift */,
+				54ECF17126B1A69800534D32 /* ImageLoader.swift */,
+			);
+			path = "AsyncImage iOS14";
+			sourceTree = "<group>";
+		};
 		5454C5242677EB8700EC84DA /* Projects */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,8 +312,10 @@
 			isa = PBXGroup;
 			children = (
 				54001D55269F4DE100249C4E /* IngredientsPicker.swift */,
+				5445F75226B1A6330023E3C6 /* AsyncImage iOS14 */,
 				54001D51269F3B5E00249C4E /* CustomPlayer.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
+				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
 				54388243269DD03B008529A4 /* EmptyState.swift */,
 				54A8B5D2264D6770003B749C /* ButtonStyles.swift */,
 				54B00A7226B09C55009092CD /* UIScreen Extension.swift */,
@@ -307,7 +331,6 @@
 				54AB3B592655AF1D0073EB35 /* Color+Codable.swift */,
 				54707106268B9DF10057FA28 /* Color+Hexcode.swift */,
 				5457018C267CEEC200D93F68 /* NavAppearanceModifier.swift */,
-				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
 				5462610726509ECF000E4592 /* ErrorMSGs.swift */,
 			);
 			path = Utilities;
@@ -574,16 +597,19 @@
 				543B6650264B248500992350 /* CameraDetailView2.swift in Sources */,
 				5423FEE9267E26620015ACC8 /* ProjectEditView2.swift in Sources */,
 				543E7BA7262A1976004FDF51 /* TabView.swift in Sources */,
+				54ECF17726B1A69800534D32 /* AsyncImageView.swift in Sources */,
 				543E7BAD262A258D004FDF51 /* InventoryListCellView.swift in Sources */,
 				54A8B5DB264DC853003B749C /* CameraDetailView3.swift in Sources */,
 				548C3F8D2630BED600EFD1C0 /* ContentView.swift in Sources */,
 				5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */,
 				54A8B5D3264D6770003B749C /* ButtonStyles.swift in Sources */,
+				54ECF17926B1A69800534D32 /* ImageCache.swift in Sources */,
 				543E7BA4262A1773004FDF51 /* ProjectsView.swift in Sources */,
 				54707105268AABA50057FA28 /* TextBindingManager.swift in Sources */,
 				5457018D267CEEC200D93F68 /* NavAppearanceModifier.swift in Sources */,
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
+				54ECF17526B1A69800534D32 /* AsyncImage.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */,
@@ -599,6 +625,7 @@
 				5499097426B18FD900C200C1 /* ProjectsView2.swift in Sources */,
 				54FD8360268C02D100AB530C /* DataStore.swift in Sources */,
 				5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */,
+				54ECF17826B1A69800534D32 /* EnvironmentValues+ImageCache.swift in Sources */,
 				5439CE93260FF37B00DCC5A6 /* InventoryListView.swift in Sources */,
 				5439CEA1260FF3BF00DCC5A6 /* InventoryItems.swift in Sources */,
 				54437C722679133C0057763F /* ProjectDetailView.swift in Sources */,
@@ -618,6 +645,7 @@
 				54BBA4C926320B300021536D /* SearchBar.swift in Sources */,
 				54E2442C263F922000D1B693 /* InfoScreen.swift in Sources */,
 				543E7BA1262A1766004FDF51 /* CoursesView.swift in Sources */,
+				54ECF17626B1A69800534D32 /* ImageLoader.swift in Sources */,
 				54AB3B5A2655AF1D0073EB35 /* Color+Codable.swift in Sources */,
 				5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */,
 				54388244269DD03B008529A4 /* EmptyState.swift in Sources */,
@@ -758,7 +786,7 @@
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -784,7 +812,7 @@
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
