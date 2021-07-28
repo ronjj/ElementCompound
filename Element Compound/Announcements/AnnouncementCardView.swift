@@ -20,18 +20,14 @@ struct AnnouncementCardView: View {
         ZStack{
             Color.bg.edgesIgnoringSafeArea(.all)
             
-            
             HStack{
                 //Left side
                 VStack(alignment: .leading){
-                    
                     VStack(alignment: .leading){
                         Circle()
                             .frame(width: 10, height: 10)
                             //.foregroundColor(announcement.color)
                             .foregroundColor(colors.randomElement())
-                        
-                       
                     }
                     
                     Text(announcement.title)
@@ -47,6 +43,7 @@ struct AnnouncementCardView: View {
                         .font(.body)
                         .minimumScaleFactor(0.4)
                 }
+                .multilineTextAlignment(.leading)
                 .padding(.leading)
                 
                 Spacer()

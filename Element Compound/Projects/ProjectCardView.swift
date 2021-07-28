@@ -14,72 +14,51 @@ import GoogleSignIn
 struct ProjectCardView: View {
     @ObservedObject private var viewModel = ProjectsViewModel2()
     var project: Project
-    
-    
     let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
        
     var body: some View {
         ZStack{
             Color.bg.edgesIgnoringSafeArea(.all)
 
-            
-            HStack{
-                //Left side
-                VStack(alignment: .leading){
-                    VStack(alignment: .leading){
-                        Rectangle()
-                            .cornerRadius(10)
-                            //.foregroundColor(colors.randomElement())
-                            .foregroundColor(project.color)
-                            .frame(width: 10, height: 10)
+            NavigationLink(destination: ProjectDetailsView(project: project )) {
+                HStack{
+                    VStack(alignment: .leading) {
+                        Text(project.title)
+                            .font(.headline)
+                        HStack{
+                            Text(project.creator)
+                                .font(.subheadline)
+                            
+                            Image(systemName: "calendar.badge.clock")
+                                .font(.body)
+                                .foregroundColor(Color.ruby)
+                            
+                            Text("\(project.pickedDateString2)")
+                                .font(.subheadline)
+                            
+                        }
+                        ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                        
                     }
-                  
-                    Text(project.title)
-                        //.font(Font.custom("Poppins-Regular", size: 18))
-                        .bold()
-                        .font(.title)
-                        .padding(.bottom, 5)
+                    .lineLimit(nil)
                     
-                    Text("\(project.pickedDateString)")
-                        .font(.title3)
-                        .padding(.bottom, 5)
-                        .minimumScaleFactor(1.0)
+                    Spacer()
                     
-                }
-                .padding(.leading)
-                
-                Spacer()
-                
-                //Right side
-                VStack{
-//                    Text(project.creator)
-//                        .font(.body)
-                    
-//                    Text(project.extraInfo)
-//                        .font(.body)
+                    HStack{
+                        Circle()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(project.color)
 
-//                    Text(project.dateString)
-//                        .font(.body)
-//
-//                    Text(project.timeString)
-//                        .font(.body)
-                    
-//                    Text(project.completionLevel)
-//                        .font(.body)
-                    
-                   
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(Color.bginv)
+                            .font(.caption)
+                            .padding(.horizontal, 8)
+                    }
                 }
-                .padding(.trailing)
-                
-                Spacer()
-                
-                Image(systemName: "chevron.right")
-                    .foregroundColor(Color.bginv)
-                    .font(.caption)
-                    .padding(.horizontal, 8)
+                .padding(20)
             }
         }
-        .frame(width: 360, height: 200)
+        .frame(width: 360, height: 150)
         .cornerRadius(20)
         .shadow(color: .bg, radius: 30, x: 0, y: 15)
     }

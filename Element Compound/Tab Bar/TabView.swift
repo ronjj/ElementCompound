@@ -17,9 +17,8 @@ struct TabViewItem: View {
                     CoursesView()
                 }
                 else if self.index == 3{
-                    //BooksListView()
-                    ProjectsListView()
-                    //TaskListView()
+                    //ProjectsListView()
+                    ProjectsListView2()
                 }
                 else{
                     SettingsView()

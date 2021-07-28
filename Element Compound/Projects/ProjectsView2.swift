@@ -1,6 +1,13 @@
+//
+//  ProjectsView2.swift
+//  Element Compound
+//
+//  Created by Ronald Jabouin on 7/28/21.
+//
+
 import SwiftUI
 
-struct ProjectsListView: View {
+struct ProjectsListView2: View {
     // MARK: - State
     @AppStorage ("role_Status") var role = Bool()
     @StateObject var viewModel = ProjectsViewModel2()
@@ -47,25 +54,29 @@ struct ProjectsListView: View {
                     .frame(width: 15, height: 15)
                     .foregroundColor(project.color)
             }
+            //.frame(widith: 300, height: 200)
+            .background(Color.white)
             .padding(20)
         }
     }
-
+    
     
     var body: some View {
         NavigationView {
             ZStack{
                 Color.lightBlue.edgesIgnoringSafeArea(.all)
-                List {
-                    ForEach (viewModel.projects) { project in
-                       ProjectCardView(project: project)
+                
+                ScrollView{
+                    LazyVStack {
+                        ForEach (viewModel.projects) { project in
+                            ProjectCardView(project: project)
+                        }
+                        .onDelete() { indexSet in
+                            viewModel.removeProjects(atOffsets: indexSet)
+                        }
+                        //Disbales swipe to delete if user does not have role
+                        .deleteDisabled(role ? false : true)
                     }
-                    .onDelete() { indexSet in
-                        viewModel.removeProjects(atOffsets: indexSet)
-                    }
-                    //Disbales swipe to delete if user does not have role
-                    .deleteDisabled(role ? false : true)
-                    
                 }
               
                 .navigationViewStyle(StackNavigationViewStyle())
