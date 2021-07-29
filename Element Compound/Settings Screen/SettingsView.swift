@@ -48,13 +48,13 @@ struct SettingsView: View {
     
     let uidevice = UIDevice()
     
+    init(){
+          UITableView.appearance().backgroundColor = .clear
+      }
+    
     var body: some View {
         NavigationView{
-            
-           
-                
-            
-            List{
+            Form{
                 Section(header: Text("Display Name (Based On Google)")){
                     Text("\(Auth.auth().currentUser?.displayName ?? "Not Logged In")")
                 }
@@ -67,9 +67,6 @@ struct SettingsView: View {
                     Text("0.1.0")
                     //Text("\(String(describing: UIDevice.version)")
                 }
-                
-               
-                
                 
                 //Buttons
                 Section{
@@ -140,8 +137,9 @@ struct SettingsView: View {
                     //                    }
                 }
             }
-            
-            
+            .background(Color.lightBlue).edgesIgnoringSafeArea(.all)
+            .foregroundColor(Color.black)
+
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
             
