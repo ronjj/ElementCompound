@@ -59,6 +59,7 @@ struct ProjectDetailsView: View {
   var body: some View {
       GeometryReader { geometry in
           ScrollView(.vertical) {
+              
             HStack {
                 Button(action: { self.presentationMode.wrappedValue.dismiss() },
                        label: {
@@ -70,10 +71,10 @@ struct ProjectDetailsView: View {
                         .foregroundColor(.bg)
                     }
                 })
-                .padding(.horizontal, 5)
+               
                 
                 Text(project.title)
-                    .font(.largeTitle)
+                    .font(.title)
                     .foregroundColor(.bginv)
                     .fontWeight(.bold)
                 
@@ -95,9 +96,9 @@ struct ProjectDetailsView: View {
                     .font(.caption)
                     .foregroundColor(Color.gray)
                     .padding(.bottom, 50)
-                    .padding(.leading, 65)
+                    .padding(.leading, 50)
+                    .padding(.top, -20)
                     
-                
                 Spacer()
             }
         
@@ -140,6 +141,7 @@ struct ProjectDetailsView: View {
                                           .accessibilityLabel(Text("Person"))
                                           .accessibilityValue(Text(assignedStudent))
                                           .font(.body)
+                                          .padding(.trailing, 10)
                               }
                             
                           }

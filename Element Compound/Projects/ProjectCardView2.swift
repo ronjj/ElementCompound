@@ -1,52 +1,52 @@
-
-//  AnnouncementCardView.swift
+//
+//  ProjectCardView2.swift
 //  Element Compound
 //
-//  Created by Ronald Jabouin on 4/22/21.
-
+//  Created by Ronald Jabouin on 7/29/21.
+//
 
 import SwiftUI
-import Firebase
-import GoogleSignIn
 
-
-//need to change announcement stuff
-struct ProjectCardView: View {
+struct ProjectCardView2: View {
     @ObservedObject private var viewModel = ProjectsViewModel2()
     var project: Project
-    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
-       
+    
+    
+    //project.title
+    //project.creator
+    //calendaor icon
+    //project.pickedDateString2
+    //project.color
+    //progressbar
+    //right arrow
+    
     var body: some View {
         ZStack{
             Color.bg.edgesIgnoringSafeArea(.all)
 
             NavigationLink(destination: ProjectDetailsView(project: project )) {
                 HStack{
-                    VStack(alignment: .leading) {
+                    //Left Side
+                    VStack(alignment:.leading) {
                         Text(project.title)
-                            .font(.headline)
-                            .lineLimit(nil)
+                            .bold()
                         
                         HStack{
                             Text(project.creator)
-                                .font(.subheadline)
                             
                             Image(systemName: "calendar.badge.clock")
                                 .font(.body)
                                 .foregroundColor(Color.ruby)
                             
                             Text("\(project.pickedDateString2)")
-                                .font(.subheadline)
-                            
                         }
                         ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
-                        
                     }
-                    .padding(.leading, 10)
-                    .lineLimit(nil)
+                    .padding(.trailing, 5)
                     
-                    Spacer()
+                    //Spacer()
                     
+                    //Right Side
                     HStack{
                         Circle()
                             .frame(width: 15, height: 15)
@@ -66,4 +66,6 @@ struct ProjectCardView: View {
         .padding(5)
     }
 }
+
+
 

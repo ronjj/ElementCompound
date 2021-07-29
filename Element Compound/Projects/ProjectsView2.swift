@@ -105,7 +105,7 @@ struct ProjectsListView2: View {
                     
                     LazyVStack {
                         ForEach (viewModel.projects) { project in
-                            ProjectCardView(project: project)
+                            ProjectCardView2(project: project)
                         }
                         .onDelete() { indexSet in
                             viewModel.removeProjects(atOffsets: indexSet)
