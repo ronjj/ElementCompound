@@ -299,10 +299,10 @@
 				5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */,
 				5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */,
 				543E7BA3262A1773004FDF51 /* ProjectsView.swift */,
+				5499097326B18FD900C200C1 /* ProjectsView2.swift */,
 				5454C5292677ECB400EC84DA /* ProjectCardView.swift */,
 				5423FEE8267E26620015ACC8 /* ProjectEditView2.swift */,
 				54437C712679133C0057763F /* ProjectDetailView.swift */,
-				5499097326B18FD900C200C1 /* ProjectsView2.swift */,
 				5457018E267CF6B700D93F68 /* ProgressBar.swift */,
 			);
 			path = Projects;
@@ -781,7 +781,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
@@ -807,7 +807,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Element Compound/Element Compound.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_ASSET_PATHS = "\"Element Compound/Preview Content\"";
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;

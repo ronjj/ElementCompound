@@ -84,7 +84,7 @@ struct AnnouncementAddView: View {
                    
                 }
                 
-                Section(header: Text("Message")) {
+                Section(header: Text("Title")) {
                     TextEditor(text:$viewModel.announcement.message)
                         .font(.custom("SF Pro", size: 18))
                         .frame(height: 125, alignment: .center)
@@ -93,17 +93,9 @@ struct AnnouncementAddView: View {
                         .onReceive(Just(viewModel.announcement.message)) { _ in limitText2(textLimit2) }
                 }
                 
-                Section{
                   
-                if mode == .edit {
-                    Section {
-                        Button("Delete Announcement") { self.presentActionSheet.toggle() }
-                            .foregroundColor(.red)
-                    }
-                }
                 
-          
-            }
+                
             .navigationTitle(mode == .new ? "New Announcement" : "Edit Announcement")
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
             .navigationBarItems(
@@ -118,6 +110,12 @@ struct AnnouncementAddView: View {
                                 .cancel()
                             ])
             }
+                if mode == .edit {
+                    Section {
+                        Button("Delete Announcement") { self.presentActionSheet.toggle() }
+                            .foregroundColor(.red)
+                    }
+                }
         }
     }
 }

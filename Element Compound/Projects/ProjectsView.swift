@@ -92,6 +92,7 @@ struct ProjectsListView: View {
                 if viewModel.projects.isEmpty{
                     withAnimation(.default) {
                         EmptyState(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+                            .position(x: UIScreen.screenWidth/2 ,  y: UIScreen.screenHeight/2)
                     }
                 }
             }

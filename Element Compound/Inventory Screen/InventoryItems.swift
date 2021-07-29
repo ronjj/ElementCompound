@@ -88,7 +88,7 @@ struct MockData {
     static let cameras = [
         CameraItem( name: "Lumix GH4",
                     shortDescription: "Entry-Level Camera for New Student Members.",
-                    longDescription: "The go-to camera for new student members, the GH4 is a reliable and durable camera that captures professional-quality video. The GH4 is equipped with 4K and HD capability for video, basic audio recording, and can be used with a variety of entry-level lenses dmd ddm md",
+                    longDescription: "The go-to camera for new student members, the GH4 is a reliable and durable camera that captures professional-quality video. The GH4 is equipped with 4K and HD capability for video, basic audio recording, and can be used with a variety of entry-level lenses",
                     imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f92aa4ab-876f-4a7b-8e51-7d17f28d0445",
                     bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/2607cfa5-efcc-46fe-8404-c80ed55339e8"),
         

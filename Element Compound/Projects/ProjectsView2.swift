@@ -14,7 +14,7 @@ enum ProjectSheets: Identifiable {
         self.hashValue
     }
     case addProj
-   
+    
 }
 struct ProjectsListView2: View {
     // MARK: - State
@@ -88,11 +88,11 @@ struct ProjectsListView2: View {
                         Button(action: {
                             activeSheet = .addProj
                         }) {
-                             ZStack {
+                            ZStack {
                                 Circle()
                                     .foregroundColor(.bg)
                                     .frame(width: 25, height: 25)
-                              Image(systemName: "plus")
+                                Image(systemName: "plus")
                                     .foregroundColor(.bginv)
                             }
                         }
@@ -113,37 +113,39 @@ struct ProjectsListView2: View {
                         //Disbales swipe to delete if user does not have role
                         .deleteDisabled(role ? false : true)
                     }
-                }
-              
-                .navigationViewStyle(StackNavigationViewStyle())
-                .navigationBarHidden(true)
-                .navigationBarTitle("Projects")
-                .navigationBarItems(trailing: addButton)
-                .onAppear() {
-                    print("BooksListView appears. Subscribing to data updates.")
-                    self.viewModel.subscribe()
-                }
-                .onDisappear() {
-                    // By unsubscribing from the view model, we prevent updates coming in from
-                    // Firestore to be reflected in the UI. Since we do want to receive updates
-                    // when the user is on any of the child screens, we keep the subscription active!
                     
-                    print("ProjectsView disappears. Unsubscribing from data updates.")
-                    self.viewModel.unsubscribe()
-                }
-//                .sheet(isPresented: self.$presentAddProjectSheet) {
-//                    ProjectEditView2()
-//                }
-                .sheet(item: $activeSheet) { item in
-                    switch item {
-                    case .addProj:
-                        ProjectEditView2()
-                    }
-                }
-                
-                if viewModel.projects.isEmpty{
-                    withAnimation(.default) {
-                        EmptyState(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+                    
+                        .navigationViewStyle(StackNavigationViewStyle())
+                        .navigationBarHidden(true)
+                        .navigationBarTitle("Projects")
+                        .navigationBarItems(trailing: addButton)
+                        .onAppear() {
+                            print("BooksListView appears. Subscribing to data updates.")
+                            self.viewModel.subscribe()
+                        }
+                    
+                        .onDisappear() {
+                            // By unsubscribing from the view model, we prevent updates coming in from
+                            // Firestore to be reflected in the UI. Since we do want to receive updates
+                            // when the user is on any of the child screens, we keep the subscription active!
+                            
+                            print("ProjectsView disappears. Unsubscribing from data updates.")
+                            self.viewModel.unsubscribe()
+                        }
+                    //                .sheet(isPresented: self.$presentAddProjectSheet) {
+                    //                    ProjectEditView2()
+                    //                }
+                    
+                        .sheet(item: $activeSheet) { item in
+                            switch item {
+                            case .addProj:
+                                ProjectEditView2()
+                            }
+                        }
+                    if viewModel.projects.isEmpty{
+                        withAnimation(.default) {
+                            EmptyStateBlue(imageName: "warningSign", message: "No projects at the moment. Stop by the office to see what you can work on.")
+                        }
                     }
                 }
             }
