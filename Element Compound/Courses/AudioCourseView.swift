@@ -8,7 +8,20 @@
 
 import SwiftUI
 
+
+enum AudioCourseSheets: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    case courseInfo
+}
+
+
 struct AudioCourseView: View {
+    
+    @State private var activeSheet: CameraCourseSheets?
+
     var body: some View {
         ZStack {
             Color.yellow2.edgesIgnoringSafeArea(.all)
@@ -34,7 +47,7 @@ struct AudioCourseView: View {
                     .padding(.horizontal)
                 
                 Button{
-
+                    activeSheet = .courseInfo
                 } label: {
                     largeButtonStyle(title: "Go To Course")
                 }
@@ -43,5 +56,11 @@ struct AudioCourseView: View {
             Spacer()
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+        .sheet(item: $activeSheet) { item in
+            switch item {
+            case .courseInfo:
+                AudioCourseSheet()
+            }
+        }
     }
 }

@@ -23,7 +23,7 @@ struct CoursesView: View {
 
             }
             .offset(x: -(self.backgroundOffset * g.size.width))
-            .animation(.default)
+            .animation(.easeIn)
             
             ZStack{
                 Rectangle()
@@ -39,6 +39,9 @@ struct CoursesView: View {
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
                         )
+                        .onTapGesture {
+                            self.backgroundOffset = 0
+                        }
                     
                     Circle()
                         .fill(Color.ruby)
@@ -47,6 +50,9 @@ struct CoursesView: View {
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
                         )
+                        .onTapGesture {
+                            self.backgroundOffset = 1
+                        }
                     
                     Circle()
                         .fill(Color.yellow2 )
@@ -55,8 +61,11 @@ struct CoursesView: View {
                             Circle()
                                 .stroke(Color.white, lineWidth: 5)
                         )
+                        .onTapGesture {
+                            self.backgroundOffset = 2
+                        }
                 }
-                .animation(.default)
+                .animation(.easeIn)
             }
            .position(x:g.size.width/2, y:g.size.height/10)
         }

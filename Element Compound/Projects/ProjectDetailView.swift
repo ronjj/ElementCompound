@@ -143,15 +143,12 @@ struct ProjectDetailsView: View {
                                           .font(.body)
                                           .padding(.trailing, 10)
                               }
-                            
                           }
-                       
                           Spacer()
                       }
                       .padding(.bottom, 25)
                    
                         ProgressBar(width: 300, height: 30, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
-                     
                   }
                   
                   Button{
@@ -162,8 +159,6 @@ struct ProjectDetailsView: View {
                         UIApplication.shared.open(emailUrl)
                     } else {
                         self.alertNoMail.toggle()
-                        
-
                         
                     }
                   } label: {
@@ -218,10 +213,8 @@ struct ProjectDetailsView: View {
 
           }
       }
-    
-    
   }
-    
+
     
     static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
            // let to = "22420rj@chaminade-hs.org"

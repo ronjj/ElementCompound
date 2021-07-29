@@ -7,7 +7,20 @@
 
 import SwiftUI
 
+
+enum EditingCourseSheets: Identifiable {
+    
+    var id: Int {
+        self.hashValue
+    }
+    case courseInfo
+}
+
+
 struct EditingCourseView: View {
+    
+    @State private var activeSheet: CameraCourseSheets?
+    
     var body: some View {
         ZStack {
             Color.ruby.edgesIgnoringSafeArea(.all)
@@ -33,7 +46,7 @@ struct EditingCourseView: View {
                     .padding(.horizontal)
                 
                 Button{
-
+                    activeSheet = .courseInfo
                 } label: {
                     largeButtonStyle(title: "Go To Course")
                 }
@@ -42,5 +55,11 @@ struct EditingCourseView: View {
             Spacer()
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+        .sheet(item: $activeSheet) { item in
+            switch item {
+            case .courseInfo:
+                EditingCourseSheet()
+            }
+        }
     }
 }
