@@ -126,7 +126,7 @@ struct MockData {
                    shortDescription: "Versatile Action Camera for Simple Shots.",
                    longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/64c2de44-4092-4b2c-bbc0-2cbf6bfb302e",
-                   bigImageURL: "ttps://www.chaminade-hs.org/fs/resource-manager/view/997a3274-2447-4327-a9e6-7a3e2ba664f2"),
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/997a3274-2447-4327-a9e6-7a3e2ba664f2"),
         
         
     ]

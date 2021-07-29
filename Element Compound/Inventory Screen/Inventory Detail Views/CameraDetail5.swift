@@ -33,7 +33,9 @@ struct CameraItemDetailedView5: View {
 //
                         
                         AsyncImage(url: URL(string: "\(camera.bigImageURL)" ) ?? URL(string: "www.apple.com")!,
-                                       placeholder: { Text("Loading ...") },
+                                       placeholder: {
+                            LoadingView()
+                        },
                                        image: {
                                 Image(uiImage: $0).resizable() })
                                     .aspectRatio(contentMode: .fill)

@@ -22,13 +22,18 @@ struct AudioItemDetailedView: View {
                     
     //                Type 2
                     if  reader.frame(in: .global).minY > -480 {
-                    Image(audio.bigImageURL)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .offset(y: -reader.frame(in: .global).minY)
-                        .frame(width: UIScreen.main.bounds.width, height:
-                                reader.frame(in: .global).minY > 0 ?
-                                reader.frame(in: .global).minY + 480 : 480)
+                        AsyncImage(url: URL(string: "\(audio.bigImageURL)" ) ?? URL(string: "www.apple.com")!,
+                                       placeholder: {
+                            LoadingView()
+                        },
+                                       image: {
+                                Image(uiImage: $0).resizable() })
+                                    .aspectRatio(contentMode: .fill)
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height:
+                                            reader.frame(in: .global).minY > 0 ?
+                                            reader.frame(in: .global).minY + 480 : 480)
+     
      
                     }
                     HStack {
