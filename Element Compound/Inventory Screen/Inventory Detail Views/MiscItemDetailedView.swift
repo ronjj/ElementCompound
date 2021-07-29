@@ -62,32 +62,10 @@ struct MiscItemDetailedView: View {
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                VStack(alignment: .leading){
-                    Text("YouTube Tutorials")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 10)
-                        
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                    
-                    CustomPlayer(src: "https://bit.ly/swswift")
-                        .frame(width: UIScreen.main.bounds.width, height: 150)
-                }
+                Rectangle()
+                    .frame(width: UIScreen.screenWidth, height: 150 )
+                    .foregroundColor(Color.black)
                 
-                VStack(alignment: .leading) {
-                    Text("Courses")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 10)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                }
                 
             }
             .padding(.top,25)

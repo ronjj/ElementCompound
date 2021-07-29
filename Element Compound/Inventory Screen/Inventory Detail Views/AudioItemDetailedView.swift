@@ -2,9 +2,9 @@
 import SwiftUI
 import AVKit
 
-struct LenseItemDetailedView: View {
+struct AudioItemDetailedView: View {
     
-    let lense: LenseItem
+    let audio: AudioItem
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
         
     var body: some View {
@@ -22,7 +22,7 @@ struct LenseItemDetailedView: View {
                     
     //                Type 2
                     if  reader.frame(in: .global).minY > -480 {
-                    Image(lense.bigImageURL)
+                    Image(audio.bigImageURL)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .offset(y: -reader.frame(in: .global).minY)
@@ -49,12 +49,12 @@ struct LenseItemDetailedView: View {
             }
             
             VStack(alignment: .leading, spacing: 15) {
-                Text(lense.name)
+                Text(audio.name)
                     .font(.system(size: 35, weight: .bold))
                     .padding(10)
                     .foregroundColor(.white)
 
-                Text(lense.longDescription)
+                Text(audio.longDescription)
                     .padding(.top, 10)
                     .padding(.horizontal, 10)
                     .foregroundColor(.white)
@@ -62,32 +62,9 @@ struct LenseItemDetailedView: View {
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 
-                VStack(alignment: .leading){
-                    Text("YouTube Tutorials")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 10)
-                        
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                    
-                    CustomPlayer(src: "https://bit.ly/swswift")
-                        .frame(width: UIScreen.main.bounds.width, height: 150)
-                }
-                
-                VStack(alignment: .leading) {
-                    Text("Courses")
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                        .padding(.horizontal, 10)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                    Rectangle()
-                        .foregroundColor(.white)
-                        .frame(width: 350, height: 75)
-                }
+                Rectangle()
+                    .frame(width: UIScreen.screenWidth, height: 150 )
+                    .foregroundColor(Color.black)
                 
             }
             .padding(.top,25)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		54001D52269F3B5E00249C4E /* CustomPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54001D51269F3B5E00249C4E /* CustomPlayer.swift */; };
 		54001D56269F4DE100249C4E /* IngredientsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54001D55269F4DE100249C4E /* IngredientsPicker.swift */; };
+		540A83A126B2E7A900386660 /* CameraListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A83A026B2E7A900386660 /* CameraListSection.swift */; };
 		5423FEE3267E10D30015ACC8 /* ProjectViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */; };
 		5423FEE5267E12290015ACC8 /* ProjectsViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */; };
 		5423FEE7267E22380015ACC8 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5423FEE6267E22380015ACC8 /* LinkedText.swift */; };
@@ -100,6 +101,7 @@
 /* Begin PBXFileReference section */
 		54001D51269F3B5E00249C4E /* CustomPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayer.swift; sourceTree = "<group>"; };
 		54001D55269F4DE100249C4E /* IngredientsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsPicker.swift; sourceTree = "<group>"; };
+		540A83A026B2E7A900386660 /* CameraListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraListSection.swift; sourceTree = "<group>"; };
 		5423FEE2267E10D30015ACC8 /* ProjectViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE4267E12290015ACC8 /* ProjectsViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel2.swift; sourceTree = "<group>"; };
 		5423FEE6267E22380015ACC8 /* LinkedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
@@ -213,6 +215,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		540A839E26B2E76C00386660 /* Inventory Detail Views */ = {
+			isa = PBXGroup;
+			children = (
+				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
+				543B664F264B248500992350 /* CameraDetailView2.swift */,
+				54A8B5DA264DC853003B749C /* CameraDetailView3.swift */,
+				54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */,
+				54859AE42695DE200025ECA6 /* CameraDetail5.swift */,
+				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
+				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
+				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
+				54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */,
+			);
+			path = "Inventory Detail Views";
+			sourceTree = "<group>";
+		};
+		540A839F26B2E78700386660 /* Inventory List Sections */ = {
+			isa = PBXGroup;
+			children = (
+				540A83A026B2E7A900386660 /* CameraListSection.swift */,
+			);
+			path = "Inventory List Sections";
+			sourceTree = "<group>";
+		};
 		5439CE84260FF37A00DCC5A6 = {
 			isa = PBXGroup;
 			children = (
@@ -267,15 +293,8 @@
 				5439CEA0260FF3BF00DCC5A6 /* InventoryItems.swift */,
 				543E7BAC262A258D004FDF51 /* InventoryListCellView.swift */,
 				5439CE92260FF37B00DCC5A6 /* InventoryListView.swift */,
-				542EAB56261281EB008645CB /* CameraItemDetailedView.swift */,
-				543B664F264B248500992350 /* CameraDetailView2.swift */,
-				54A8B5DA264DC853003B749C /* CameraDetailView3.swift */,
-				54C1BBBC265022CE00C8FF22 /* CameraDetailView4.swift */,
-				54859AE42695DE200025ECA6 /* CameraDetail5.swift */,
-				54F5B9BD2628E07C001846E6 /* ComputerItemDetailedView.swift */,
-				54F5B9C02628E18B001846E6 /* AudioItemDetailedView.swift */,
-				54F5B9C32628E215001846E6 /* MiscItemDetailedView.swift */,
-				54388241269DCCD3008529A4 /* LenseItemDetailedView.swift */,
+				540A839F26B2E78700386660 /* Inventory List Sections */,
+				540A839E26B2E76C00386660 /* Inventory Detail Views */,
 			);
 			path = "Inventory Screen";
 			sourceTree = "<group>";
@@ -311,9 +330,9 @@
 		54707103268AAB740057FA28 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				54001D55269F4DE100249C4E /* IngredientsPicker.swift */,
 				5445F75226B1A6330023E3C6 /* AsyncImage iOS14 */,
 				54001D51269F3B5E00249C4E /* CustomPlayer.swift */,
+				54001D55269F4DE100249C4E /* IngredientsPicker.swift */,
 				5461519D264C6C0500BC2719 /* NetworkManager.swift */,
 				5461519A264C6BE000BC2719 /* RemoteImage.swift */,
 				54388243269DD03B008529A4 /* EmptyState.swift */,
@@ -616,6 +635,7 @@
 				54B00A6D26B08BAE009092CD /* CourseSectionModel.swift in Sources */,
 				54F5B9C42628E215001846E6 /* MiscItemDetailedView.swift in Sources */,
 				5429AF85264628EF00422295 /* MailView.swift in Sources */,
+				540A83A126B2E7A900386660 /* CameraListSection.swift in Sources */,
 				54707107268B9DF10057FA28 /* Color+Hexcode.swift in Sources */,
 				54707102268AA70C0057FA28 /* DisplayNameChangeScreen.swift in Sources */,
 				54B00A7326B09C55009092CD /* UIScreen Extension.swift in Sources */,
