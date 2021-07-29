@@ -30,7 +30,7 @@ struct LenseItemDetailedView: View {
                                 Image(uiImage: $0).resizable() })
                                     .aspectRatio(contentMode: .fill)
                                     .offset(y: -reader.frame(in: .global).minY)
-                                    .frame(width: UIScreen.main.bounds.width, height:
+                                    .frame(width: UIScreen.screenWidth*1.07, height:
                                             reader.frame(in: .global).minY > 0 ?
                                             reader.frame(in: .global).minY + 480 : 480)
      

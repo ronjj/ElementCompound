@@ -125,8 +125,8 @@ struct MockData {
         CameraItem(name: "Osmo Pocket Gen 2",
                    shortDescription: "Versatile Action Camera for Simple Shots.",
                    longDescription: "The Osmo Pocket 2 keeps the same compact design but adds new features and accessories to strengthen usability. The Osmo Pocket 2 comes with multiple bases, such as a standard base, or a mini tripod. The Osmo Pocket 2 adds audio capabilities to its old video modes, making it the perfect camera for mobile interviews.",
-                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/64c2de44-4092-4b2c-bbc0-2cbf6bfb302e",
-                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/997a3274-2447-4327-a9e6-7a3e2ba664f2"),
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/997a3274-2447-4327-a9e6-7a3e2ba664f2",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/64c2de44-4092-4b2c-bbc0-2cbf6bfb302e"),
         
         
     ]
@@ -185,8 +185,8 @@ struct MockData {
         AudioItem(name: "RODE PodMic",
                   shortDescription: "Professional level Podcast microphones",
                   longDescription: "The RODE PodMic is a high quality microphone for podcast recordings. It delivers crisp, clean audio for the highest audio quality.",
-                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/058e882d-7e2a-4046-8a95-7b8790dcfec3",
-                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/d3f42f19-a974-46d8-a225-a133d6bfa031"),
+                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/d3f42f19-a974-46d8-a225-a133d6bfa031",
+                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/058e882d-7e2a-4046-8a95-7b8790dcfec3"),
         
         AudioItem(name: "RODE Lapel Mic",
                   shortDescription: "Personal microphones.",
@@ -227,14 +227,18 @@ struct MockData {
         AudioItem(name: "Headphones",
                   shortDescription: "AudioTechnica brand headphones. ",
                   longDescription: " Our over ear headphones are high quality audio devices. Approved for podcast recording and sound mixing, you won’t miss a beat with these.",
-                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a2342850-aa41-4ca0-b015-7a9f32018c6b",
-                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/352466a4-048a-4ba6-9697-e26b388f276c"),
+                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/352466a4-048a-4ba6-9697-e26b388f276c",
+                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a2342850-aa41-4ca0-b015-7a9f32018c6b"),
+        
+        
         
         AudioItem(name: "MixPre",
                   shortDescription: "Professional audio recorder for filmmaking",
                   longDescription: "The MixPre is a recording device that delivers professional audio quality for filmmaking. With more tracks and easy sound manipulation, the MixPre is the best audio device for filmmaking.",
-                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/3dd086cf-0d1f-4bb9-a5a2-cbaeee8d7cad",
-                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/e326b48c-0b49-43ce-990c-e36a750dc757")
+                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/e326b48c-0b49-43ce-990c-e36a750dc757",
+                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/3dd086cf-0d1f-4bb9-a5a2-cbaeee8d7cad")
+        
+        
     ]
     
     

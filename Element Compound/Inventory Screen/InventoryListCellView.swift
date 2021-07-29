@@ -37,10 +37,10 @@ struct InventoryListCellView: View {
                                image: {
                         Image(uiImage: $0).resizable()
                     })
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 120, height: 90)
-                        .aspectRatio(contentMode: .fit)
                         .cornerRadius(8)
-                        .padding(.trailing, 5)
+                       
                     
                     //                   Image(images)
                     //                        //.resizable()
