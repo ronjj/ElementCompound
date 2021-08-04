@@ -92,13 +92,22 @@ struct AnnouncementAddView: View {
                         .multilineTextAlignment(.leading)
                         .onReceive(Just(viewModel.announcement.message)) { _ in limitText2(textLimit2) }
                 }
+                
+                if mode == .edit {
+                    Section {
+                        Button("Delete Announcement") { self.presentActionSheet.toggle() }
+                            .foregroundColor(.red)
+                    }
+                }
         }
+            
             .navigationTitle(mode == .new ? "New Announcement" : "Edit Announcement")
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
             .navigationBarItems(
                 leading: cancelButton,
                 trailing: saveButton
             )
+            
             .actionSheet(isPresented: $presentActionSheet) {
                 ActionSheet(title: Text("Are you sure?"),
                             buttons: [
@@ -107,13 +116,6 @@ struct AnnouncementAddView: View {
                                 .cancel()
                             ])
             }
-                if mode == .edit {
-                    Section {
-                        Button("Delete Announcement") { self.presentActionSheet.toggle() }
-                            .foregroundColor(.red)
-                    }
-                }
-
     }
 }
     func sendMessageTouser(to token: String, title: String, body: String) {

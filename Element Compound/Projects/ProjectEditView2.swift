@@ -165,7 +165,8 @@ struct ProjectEditView2: View {
                 Section(header: Text("Email of Officer Leading Project")){
                     //TextField("Enter Officer Email", text: $viewModel.project.officerEmail)
                     TextEditor(text: $viewModel.project.officerEmail)
-                        .frame(height: 45, alignment: .center)
+                        .frame(height: 40, alignment: .center)
+                        .font(.body)
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
                 }

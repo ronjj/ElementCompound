@@ -56,10 +56,19 @@ struct Element_CompoundApp: App {
      
         
         func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-          Messaging.messaging().subscribe(toTopic: "announcements"){ error in
-            print("Subscribed to announcements topic")
-          }
+//          Messaging.messaging().subscribe(toTopic: "announcements"){ error in
+//            print("Subscribed to announcements topic")
+//          }
+            
+            Messaging.messaging().subscribe(toTopic: "announcements") { error in
+              print("Subscribed to announcements topic")
+            }
+            
+            Messaging.messaging().subscribe(toTopic: "projects") { error in
+              print("Subscribed to projects topic")
+            }
         }
+        
         
       
         

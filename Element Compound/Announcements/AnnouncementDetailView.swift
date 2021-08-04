@@ -26,73 +26,70 @@ struct AnnouncementDetailView: View {
       
     }
     
-    let colors = [Color.yellow2,Color.ruby, Color.nyanza ]
+
     
     var body: some View {
        
-        
-        HStack {
-            Button(action: { self.presentationMode.wrappedValue.dismiss() },
-                   label: {
-                ZStack {
-                    Circle()
+        ZStack{
+            Color.lightBlue.edgesIgnoringSafeArea(.all)
+            
+            ScrollView{
+                HStack {
+                    Button(action: { self.presentationMode.wrappedValue.dismiss() },
+                           label: {
+                        ZStack {
+                            Circle()
+                                .foregroundColor(.bginv)
+                                .frame(width:30, height: 30)
+                          Image(systemName: "arrow.left")
+                            .foregroundColor(.bg)
+                        }
+                    })
+                    
+                    Text(announcement.title)
+                        .font(.largeTitle)
                         .foregroundColor(.bginv)
-                        .frame(width:30, height: 30)
-                  Image(systemName: "arrow.left")
-                    .foregroundColor(.bg)
+                        .fontWeight(.bold)
+                        .padding(.leading, 5)
+                    
+                    Spacer()
+                    
+                    Button{
+                        self.presentEditAnnouncementSheet.toggle()
+                    } label: {
+                        Text("Edit")
+                    }
+                    .disabled(role == false)
+                    .opacity(role ? 1.0 : 0.0)
                 }
-            })
-            
-            Text(announcement.title)
-                .font(.largeTitle)
-                .foregroundColor(.bginv)
-                .fontWeight(.bold)
-                .padding(.leading, 5)
-            
-            Spacer()
-            
-            Button{
-                self.presentEditAnnouncementSheet.toggle()
-            } label: {
-                Text("Edit")
+                .padding()
+                    
+                VStack(alignment: .leading){
+                    
+                    LinkedText(announcement.message)
+                        //Text(announcement.message)
+                        .padding(.bottom, 10)
+                        .font(.body)
+                        .minimumScaleFactor(0.4)
+                    
+                    
+                    Text(announcement.sender)
+                        .font(.body)
+                    
+                    Text(announcement.dateString)
+                        .font(.body)
+                    
+                    Text(announcement.timeString)
+                        .font(.body)
+                }
+                .padding()
             }
-            .disabled(role == false)
-            .opacity(role ? 1.0 : 0.0)
         }
-        .padding()
-            
-        VStack(alignment: .leading){
-            
-            LinkedText(announcement.message)
-                //Text(announcement.message)
-                .padding(.bottom, 10)
-                .font(.body)
-                .minimumScaleFactor(0.4)
-            
-            
-            Text(announcement.sender)
-                .font(.body)
-            
-            Text(announcement.dateString)
-                .font(.body)
-            
-            Text(announcement.timeString)
-                .font(.body)
-        }
-        .padding()
-        Spacer()
         
-            .navigationBarHidden(true)
-      //  .navigationBarTitle(announcement.title)
-//        .navigationBarItems(trailing: editButton {
-//            self.presentEditAnnouncementSheet.toggle()
-//        })
+        .navigationBarHidden(true)
         .onAppear() {
             print("BookDetailsView.onAppear() for \(self.announcement.title)")
         }
-//        .onDisappear() {
-//            print("BookDetailsView.onDisappear()")
-//        }
         
         .sheet(isPresented: self.$presentEditAnnouncementSheet) {
             AnnouncementAddView(viewModel: AnnoucnementViewModel(announcement: announcement), mode: .edit) { result in
