@@ -84,7 +84,7 @@ struct AnnouncementAddView: View {
                    
                 }
                 
-                Section(header: Text("Title")) {
+                Section(header: Text("Message")) {
                     TextEditor(text:$viewModel.announcement.message)
                         .font(.custom("SF Pro", size: 18))
                         .frame(height: 125, alignment: .center)
@@ -92,10 +92,7 @@ struct AnnouncementAddView: View {
                         .multilineTextAlignment(.leading)
                         .onReceive(Just(viewModel.announcement.message)) { _ in limitText2(textLimit2) }
                 }
-                
-                  
-                
-                
+        }
             .navigationTitle(mode == .new ? "New Announcement" : "Edit Announcement")
             .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
             .navigationBarItems(
@@ -116,7 +113,7 @@ struct AnnouncementAddView: View {
                             .foregroundColor(.red)
                     }
                 }
-        }
+
     }
 }
     func sendMessageTouser(to token: String, title: String, body: String) {

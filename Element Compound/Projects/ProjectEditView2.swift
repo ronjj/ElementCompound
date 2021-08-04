@@ -1,6 +1,4 @@
 
-//
-
 import SwiftUI
 
 enum Mode {
@@ -144,24 +142,32 @@ struct ProjectEditView2: View {
                 
                
                 
+//                Section(header: Text("Email of Officer Leading Project")){
+//                    TextField("Enter Officer Email", text: $viewModel.project.officerEmail, onEditingChanged: { (isChanged) in
+//                        if !isChanged {
+//                            if self.textFieldValidatorEmail(self.viewModel.project.officerEmail) {
+//                                self.isEmailValid = true
+//                            } else {
+//                                self.isEmailValid = false
+//                                self.viewModel.project.officerEmail = ""
+//                            }
+//                        }
+//                    })
+//                    .autocapitalization(.none)
+//
+//                    if !self.isEmailValid {
+//                        Text("Email is Not Valid")
+//                            .font(.callout)
+//                            .foregroundColor(Color.red)
+//                    }
+//                }
+                
                 Section(header: Text("Email of Officer Leading Project")){
-                    TextField("Enter Officer Email", text: $viewModel.project.officerEmail, onEditingChanged: { (isChanged) in
-                        if !isChanged {
-                            if self.textFieldValidatorEmail(self.viewModel.project.officerEmail) {
-                                self.isEmailValid = true
-                            } else {
-                                self.isEmailValid = false
-                                self.viewModel.project.officerEmail = ""
-                            }
-                        }
-                    })
-                    .autocapitalization(.none)
-                    
-                    if !self.isEmailValid {
-                        Text("Email is Not Valid")
-                            .font(.callout)
-                            .foregroundColor(Color.red)
-                    }
+                    //TextField("Enter Officer Email", text: $viewModel.project.officerEmail)
+                    TextEditor(text: $viewModel.project.officerEmail)
+                        .frame(height: 45, alignment: .center)
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
                 }
                 
                 Section(header: Text("Assign Members")) {
@@ -191,10 +197,6 @@ struct ProjectEditView2: View {
 
                     }
                 }
-                
-               
-                
-                
                 
                 
                 Section(header: Text("Percentage Complete")){

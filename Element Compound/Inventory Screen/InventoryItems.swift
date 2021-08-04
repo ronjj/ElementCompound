@@ -114,7 +114,7 @@ struct MockData {
                    shortDescription: "360° Camera for Immersive Photos.",
                    longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos, as seen throughout the Chaminade Virtual Tour. ",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a3de47cb-7284-4e7d-ad70-0f3deecab808",
-                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/01f64d09-3e6a-4a98-9a9a-2311f049cbee"),
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f776887b-5bd9-4f81-8090-66763d042acb"),
         
 //        CameraItem(name: "Osmo Pocket",
 //                   shortDescription: "Compact Action Camera for Simple Shoots.",
@@ -171,11 +171,13 @@ struct MockData {
         ComputerItem(name: "iMac Pro",
                      shortDescription: "The two desktop computers that the club uses",
                      longDescription: "These powerful Apple computers are built for anything you need: animation, video or audio editing, graphic design, and research.",
-                     imageURL: "black",
-                     bigImageURL: "black")    ]
+                     imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9280d899-ccea-4ba8-8126-9ed1d1154358",
+                     bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9280d899-ccea-4ba8-8126-9ed1d1154358")    ]
     
     
     static let audios = [
+        
+        
         AudioItem(name: "RODE CasterPro",
                   shortDescription: "Premium Podcast sound mixer used for recording podcastss.",
                   longDescription: "The RODECaster Pro is the premiere audio device for recording podcast audio. Element members have access to the powerful sound mixer to record multiple audio tracks simultaneously while adding audio effects live.",
@@ -188,11 +190,18 @@ struct MockData {
                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/d3f42f19-a974-46d8-a225-a133d6bfa031",
                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/058e882d-7e2a-4046-8a95-7b8790dcfec3"),
         
-        AudioItem(name: "RODE Lapel Mic",
-                  shortDescription: "Personal microphones.",
-                  longDescription: "RODE lapel mics are the best audio option for capturing audio for a specific subject. Maintaining the",
-                  imageURL: "black",
-                  bigImageURL: "black"),
+//        AudioItem(name: "RODE Lapel Mic",
+//                  shortDescription: "Personal microphones.",
+//                  longDescription: "RODE lapel mics are the best audio option for capturing audio for a specific subject. Maintaining the",
+//                  imageURL: "black",
+//                  bigImageURL: "black"),
+        
+        AudioItem(name: "Lapel Microphone",
+                  shortDescription: "A small microphone that clips to a person’s shirt lapel.",
+                  longDescription: "Also known as ‘lavalier microphones’, lapel mics are often used when we are recording someone speaking. They are small and black so they have a low profile on a person’s shirt.",
+                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/3f6e88e4-7523-4c42-991e-063efe59395a",
+                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/efb11f7e-fb5c-4a30-aeee-6a12dc6adc29"),
+        
         
         AudioItem(name: "Shure MV7",
                   shortDescription: "Standard Podcast Microphone",
@@ -266,6 +275,12 @@ struct MockData {
                  longDescription: "Miscellaneous podcast stands to keep your mics in place. Our stands elevate your podcast experience to be more professional ",
                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9f91ec27-896c-403a-a825-95d460ea20f3",
                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/2b3581ac-0850-4996-b4a3-2ea96fdabc1e"),
+        
+        MiscItem(name: "Adapters, Batteries, Cables, & SD Cards",
+                 shortDescription: "Smaller pieces of equipment that are needed for daily operation.",
+                 longDescription: "Although these items are smaller, they still play an important role in the office. They are often crucial when recording or in post-production. It’s very important to make sure these items are put back where they are found because they are easy to lose and others will need to use them as well.",
+                 imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/d39140bc-3a77-4b35-8d83-3dfdcb30507a",
+                 bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9f9ffa45-4727-4e3f-85b2-e6a002d73986"),
     
         
     ]

@@ -31,6 +31,7 @@ struct ProjectDetailsView: View {
 
     @Environment(\.presentationMode) var presentationMode
     @State var presentEditProjectSheet = false
+    @State var officerBlank = false
     @ObservedObject var viewModel = ProjectViewModel2()
     @ObservedObject var viewModels = ProjectViewModel2()
     let uidevice = UIDevice()
@@ -164,8 +165,8 @@ struct ProjectDetailsView: View {
                   } label: {
                     mediumButtonStyle(title: project.officerEmail.isEmpty ? "No Officer Listed" : "Contact Officer")
                   }
-                  .disabled(project.officerEmail.isEmpty)
-                  .opacity(project.officerEmail.isEmpty ? 0.5 : 1.0)
+                  .disabled(officerBlank)
+                  .opacity(officerBlank ? 0.5 : 1.0)
 
                   .alert(isPresented: self.$alertNoMail) {
                       Alert(title: Text("No Mail Application Found"), message: Text("Mail Application Not Found \n Officers's email is \n \(project.officerEmail)"), dismissButton: .cancel())
@@ -186,6 +187,7 @@ struct ProjectDetailsView: View {
 //    })
     .onAppear() {
       print("BookDetailsView.onAppear() for \(self.project.title)")
+        checkOfficerEmail()
     }
     .onDisappear() {
       print("BookDetailsView.onDisappear()")
@@ -215,6 +217,13 @@ struct ProjectDetailsView: View {
       }
   }
 
+    func checkOfficerEmail(){
+        if project.officerEmail.isEmpty {
+            officerBlank = true
+        } else {
+            officerBlank = false
+        }
+    }
     
     static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
            // let to = "22420rj@chaminade-hs.org"

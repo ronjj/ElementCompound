@@ -138,7 +138,7 @@ struct SettingsView: View {
                 }
             }
             .background(Color.lightBlue).edgesIgnoringSafeArea(.all)
-            .foregroundColor(Color.black)
+            .foregroundColor(Color.bginv)
 
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")

@@ -73,11 +73,11 @@ struct InventoryListCellView: View {
                     VStack(alignment: .leading, spacing: 5) {
                         Text(title)
                             .foregroundColor(Color.bginv)
-                            .font(.title2)
+                            .font(.title3)
                             .fontWeight(.medium)
                             .fixedSize(horizontal: false, vertical: true)
                             .multilineTextAlignment(.leading)
-                            .minimumScaleFactor(0.9)
+                            .minimumScaleFactor(0.6)
                         
                         Text(description)
                             .foregroundColor(Color.darkGrey)

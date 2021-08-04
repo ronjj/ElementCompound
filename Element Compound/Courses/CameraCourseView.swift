@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+
 enum CameraCourseSheets: Identifiable {
     
     var id: Int {
@@ -15,6 +16,7 @@ enum CameraCourseSheets: Identifiable {
     }
     case courseInfo
 }
+
 
 
 struct CameraCourseView: View {
@@ -44,6 +46,7 @@ struct CameraCourseView: View {
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal)
+                    .multilineTextAlignment(.center)
                   
                 Button{
                     activeSheet = .courseInfo

@@ -25,7 +25,7 @@ struct InfoScreen: View {
                     Link("Club Roles, Rules, and Credit",
                           destination: URL(string: "https://www.element.chaminade-hs.org/club-roles")!)
                     
-                    Link("App Information and CHangelog",
+                    Link("App Information and Changelog",
                           destination: URL(string: "https://www.element.chaminade-hs.org")!)
                         .disabled(true)
                 }

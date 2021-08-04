@@ -45,6 +45,7 @@ struct AudioCourseView: View {
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal)
+                    .multilineTextAlignment(.center)
                 
                 Button{
                     activeSheet = .courseInfo
