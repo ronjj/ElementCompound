@@ -29,30 +29,23 @@ struct AudioCourseView: View {
             Spacer()
             
             VStack {
-                Image("black")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.horizontal,10)
-                    .frame(width: 200, height: 200)
-                 
-                Text("Audio")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .padding()
-                 
-                Text(" This is the audio course. Click the button below to learn more")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
-                    .multilineTextAlignment(.center)
+                Spacer()
                 
-                Button{
-                    activeSheet = .courseInfo
-                } label: {
-                    largeButtonStyle(title: "Go To Course")
-                }
-                .padding(.top, 30)
+                Image("audioCourse4")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .padding(.horizontal,10)
+                    .padding(.bottom, 60)
+                    .frame(width: UIScreen.screenWidth, height: 400)
+                
+                
+              Button{
+                  activeSheet = .courseInfo
+              } label: {
+                  mediumButtonStyle(title: "Go To Course")
+              }
+              .padding(.top, 30)
+                Spacer()
             }
             Spacer()
         }

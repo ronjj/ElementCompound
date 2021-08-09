@@ -172,7 +172,7 @@ struct MockData {
                      shortDescription: "The two desktop computers that the club uses",
                      longDescription: "These powerful Apple computers are built for anything you need: animation, video or audio editing, graphic design, and research.",
                      imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9280d899-ccea-4ba8-8126-9ed1d1154358",
-                     bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/9280d899-ccea-4ba8-8126-9ed1d1154358")    ]
+                     bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/0f078a5c-f282-4caa-bb62-688982bcfd50")    ]
     
     
     static let audios = [

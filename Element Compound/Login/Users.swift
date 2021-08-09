@@ -45,25 +45,37 @@ class UsersViewModel: ObservableObject{
         //Brother Thomas Terrill
         else if user?.email == "tterrill@chaminade-hs.org" {
             loginStatus = true
-             role = true
+            role = true
         }
         
         //Jack Muscatello
         else if user?.email == "drummerjackmusk@gmail.com" {
             loginStatus = true
-             role = true
+            role = true
+        }
+        
+        //Anthony Tast
+        else if user?.email == "24399at@chaminade-hs.org" {
+            loginStatus = true
+            role = false
+        }
+        
+        //Matt Klimek
+        else if user?.email == "24225mk@chaminade-hs.org" {
+            loginStatus = true
+            role = false
         }
         
         //Thomas Breslin
         else if user?.email == "22102tb@chaminade-hs.org" {
             loginStatus = true
-             role = true
+            role = true
         }
         
         //Alexander Dircks
         else if user?.email == "24129ad@chaminade-hs.org" {
             loginStatus = true
-             role = true
+            role = true
         }
         
 //        //Element Account
@@ -72,13 +84,13 @@ class UsersViewModel: ObservableObject{
 //             role = true
 //        }
         
-        else if ((user?.email?.hasSuffix("@chaminade-hs.org")) != false) {
+        //Non Officers
+        else if ((user?.email?.contains("@chaminade-hs.org")) == true) {
             loginStatus = true
-             role = false
+            role = false
         }
         
-
-        //Non Officers
+        // Not Allowed In App
         else {
             status = false
             role = false

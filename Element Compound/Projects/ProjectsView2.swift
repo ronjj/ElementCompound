@@ -107,17 +107,26 @@ struct ProjectsListView2: View {
                         ForEach (viewModel.projects) { project in
                             ProjectCardView2(project: project)
                         }
-                        .onDelete() { indexSet in
-                            viewModel.removeProjects(atOffsets: indexSet)
-                        }
-                        //Disbales swipe to delete if user does not have role
-                        .deleteDisabled(role ? false : true)
+                        
+                        /*
+                         Code I'll Need if i go back to uaing a list instead of a LazyVStack
+                         
+                         .onDelete() { indexSet in
+                             viewModel.removeProjects(atOffsets: indexSet)
+                         }
+                         //Disbales swipe to delete if user does not have role
+                         .deleteDisabled(role ? false : true)
+                         
+                         
+                         */
+                     
                     }
                     
                     
                         .navigationViewStyle(StackNavigationViewStyle())
                         .navigationBarHidden(true)
                         .navigationBarTitle("Projects")
+                        .padding(.bottom, 130)
                         .navigationBarItems(trailing: addButton)
                         .onAppear() {
                             print("BooksListView appears. Subscribing to data updates.")

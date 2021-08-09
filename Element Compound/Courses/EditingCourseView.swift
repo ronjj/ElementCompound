@@ -25,35 +25,28 @@ struct EditingCourseView: View {
         ZStack {
             Color.ruby.edgesIgnoringSafeArea(.all)
             
-            Spacer()
-            
-            VStack {
-                Image("black")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(.horizontal,10)
-                    .frame(width: 200, height: 200)
-                 
-                Text("Editing")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .padding()
-                 
-                Text(" This is the editing course. Click the button below to learn more")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
-                    .multilineTextAlignment(.center)
+                Spacer()
                 
-                Button{
-                    activeSheet = .courseInfo
-                } label: {
-                    largeButtonStyle(title: "Go To Course")
+                VStack{
+                    Spacer()
+                    
+                    Image("editingCourse6")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .padding(.horizontal,10)
+                        .padding(.bottom, 12)
+                        .frame(width: UIScreen.screenWidth, height: 400)
+                    
+                    
+                  Button{
+                      activeSheet = .courseInfo
+                  } label: {
+                      mediumButtonStyle(title: "Go To Course")
+                  }
+                  .padding(.top, 30)
+                    Spacer()
                 }
-                .padding(.top, 30)
-            }
-            Spacer()
+                Spacer()
         }
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
         .sheet(item: $activeSheet) { item in

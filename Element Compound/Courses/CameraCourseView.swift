@@ -25,36 +25,25 @@ struct CameraCourseView: View {
     
     var body: some View {
         ZStack {
-            Color.lightBlue.edgesIgnoringSafeArea(.all)
-            
-            Spacer()
-            
+            Color.courseGreen.edgesIgnoringSafeArea(.all)
+
             VStack {
-                Image("black")
+                Spacer()
+                
+                Image("cameraCourse3")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .padding(.horizontal,10)
-                    .frame(width: 200, height: 200)
-                 
-                Text("Cameras")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-                    .foregroundColor(.white)
-                    .padding()
-                 
-                Text(" This is the camera course. Click the button below to learn more")
-                    .font(.system(size: 16, weight: .bold))
-                    .foregroundColor(.white)
-                    .padding(.horizontal)
-                    .multilineTextAlignment(.center)
+                  //  .padding(.bottom, 12)
+                    .frame(width: UIScreen.screenWidth, height: 400)
                   
                 Button{
                     activeSheet = .courseInfo
                 } label: {
-                    largeButtonStyle(title: "Go To Course")
+                    mediumButtonStyle(title: "Go To Course")
                 }
                 .padding(.top, 30)
-                   
+                Spacer()
             }
             Spacer()
         }

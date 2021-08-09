@@ -124,11 +124,11 @@ struct CustomTabBar: View {
                                 .padding()
                         }
                         else{
-                                Image(systemName: "gear")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .foregroundColor(.bg)
-                                    .padding()
+                            Image(systemName: "gear")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(.bg)
+                                .padding()
                         }
                     }
                 })
@@ -140,6 +140,7 @@ struct CustomTabBar: View {
           //  .background(.regularMaterial)
             .cornerRadius(20)
             .shadow(radius: 30)
+            .frame(width: UIScreen.screenWidth-50, alignment: .center)
             
         }
     }

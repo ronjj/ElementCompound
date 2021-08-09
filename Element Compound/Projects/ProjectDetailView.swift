@@ -11,6 +11,7 @@
 import SwiftUI
 import UIKit
 import MessageUI
+import Firebase
 
 
 enum Sheets4: Identifiable {
@@ -46,7 +47,7 @@ struct ProjectDetailsView: View {
     @State var alertNoMail = false
    
 
-
+ 
   // MARK: - UI Components
 
   private func editButton(action: @escaping () -> Void) -> some View {
@@ -73,7 +74,6 @@ struct ProjectDetailsView: View {
                     }
                 })
                
-                
                 Text(project.title)
                     .font(.title)
                     .foregroundColor(.bginv)
@@ -156,7 +156,7 @@ struct ProjectDetailsView: View {
                     if MFMailComposeViewController.canSendMail() {
 //                            self.isShowingMailView.toggle()
                         activeSheet = .mail
-                    } else if let emailUrl = ProjectDetailsView.createEmailUrl(to: "\(project.officerEmail)"  ,subject: "Officer Message", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
+                    } else if let emailUrl = ProjectDetailsView.createEmailUrl(to: project.officerEmail ,subject: "Officer Message", body: "\n\n\n\n\n——————————————\nDevice: \(UIDevice.modelName) (\(uidevice.model))\niOS Version: \(uidevice.systemVersion)\nApp Version: \(String(describing: UIDevice.version))") {
                         UIApplication.shared.open(emailUrl)
                     } else {
                         self.alertNoMail.toggle()
@@ -212,7 +212,6 @@ struct ProjectDetailsView: View {
                  self.presentationMode.wrappedValue.dismiss()
                }
              }
-
           }
       }
   }
@@ -226,7 +225,6 @@ struct ProjectDetailsView: View {
     }
     
     static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
-           // let to = "22420rj@chaminade-hs.org"
         // let to = ("\project.officerEmail)")
             let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
             let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

@@ -33,7 +33,7 @@ struct CoursesView: View {
                 
                 HStack{
                     Circle()
-                        .fill(Color.lightBlue)
+                        .fill(Color.courseGreen)
                         .frame(width: self.backgroundOffset == 0 ? 30 : 20, height: self.backgroundOffset == 0 ? 30 : 20)
                         .overlay(
                             Circle()

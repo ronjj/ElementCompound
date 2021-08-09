@@ -18,6 +18,7 @@ struct MailView: UIViewControllerRepresentable {
     var recipients = [String]()
     var messageBody = ""
     let uidevice = UIDevice()
+   
 
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         @Binding var presentation: PresentationMode
@@ -85,6 +86,8 @@ struct MailView2: UIViewControllerRepresentable {
     var recipients = [String]()
     var messageBody = ""
     let uidevice = UIDevice()
+    @ObservedObject var viewModel = ProjectViewModel2()
+   
     
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
         @Binding var presentation: PresentationMode
@@ -129,7 +132,9 @@ struct MailView2: UIViewControllerRepresentable {
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView2>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
-        let mailto = "22420rj@chaminade-hs.org"
+      //  let mailto = "22420rj@chaminade-hs.org"
+        let mailto = viewModel.project.officerEmail
+        
         vc.setToRecipients([mailto])
         vc.setSubject("Officer Message")
        // vc.setMessageBody(messageBody, isHTML: false)

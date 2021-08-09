@@ -47,19 +47,15 @@ struct Project: Identifiable, Codable, Equatable{
             return formatter.string(from: dueDate)
         }
     
-  //  var completionLevel: String
     var assignedStudents: [String]
-   // var priority: String
     var notes: String
     var percentComplete: Double
     var helpToggle: Bool
     var officerEmail: String
-   
+    // var priority: String
+    //  var completionLevel: String
 
   
-
-    
-// 
 //    init(id: UUID = UUID(), title: String, creator: String, color: Color, /*dateEvent: Date,*/ dueDate: Date, /*completionLevel: String,*/ assignedStudents: [String], /*priority: String,*/ notes: String)
 //    {
 //     // self.id = id
@@ -80,19 +76,16 @@ struct Project: Identifiable, Codable, Equatable{
         case id
         case title
         case creator
-      //  case dateEvent
         case dueDate
-      //  case completionLevel
         case assignedStudents
-     //   case priority
         case notes
         case color
         case percentComplete
         case helpToggle
         case officerEmail
-      
-   
-        
+        //  case dateEvent
+        //  case completionLevel
+        //   case priority
     }
 }
 

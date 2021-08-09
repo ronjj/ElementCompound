@@ -17,7 +17,6 @@ struct Announcement: Identifiable, Codable, Equatable{
     @DocumentID var id: String?
     var message: String
     var title: String
- //   var color: Color
     var photoURL: URL = (Auth.auth().currentUser?.photoURL)!
     var sender: String = Auth.auth().currentUser?.displayName ?? "N/A"
     var dateEvent: Date
@@ -52,7 +51,7 @@ struct Announcement: Identifiable, Codable, Equatable{
         case dateEvent
         case title
         case photoURL
-      //  case color
+     
     }
 }
 

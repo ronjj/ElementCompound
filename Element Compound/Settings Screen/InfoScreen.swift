@@ -30,6 +30,29 @@ struct InfoScreen: View {
                         .disabled(true)
                 }
                 
+                Section(header: Text("The Team")) {
+                    Text("Ronald Jabouin - Developer")
+                        .font(.caption)
+                    
+                    Text("Brother Tom Terrill - Beta Tester")
+                        .font(.caption)
+                    
+                    Text("Mr. Luo - UI Designer, Photographer, Graphic Designer")
+                        .font(.caption)
+                    
+                    Text("Luke DeBono - Photographer and Additional Illustrator")
+                        .font(.caption)
+                
+                    Text("Jack Muscatello - Content Writer")
+                        .font(.caption)
+                    
+                    Text("Thomas Breslin - Content Writer")
+                        .font(.caption)
+                    
+                    Text("Gaby DeBono  - Additional Illustrator")
+                        .font(.caption)
+                }
+                
 //                Section(header: Text("Credit")) {
 //                        Text("Brother Thomas Terrill - Beta Tester")
 //                        Text("Chao S. Luo - Advisor and Designer")

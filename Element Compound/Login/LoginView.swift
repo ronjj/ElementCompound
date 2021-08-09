@@ -15,11 +15,11 @@ struct LoginView: View {
         VStack{
             Text("Element")
                 .font(Font.custom("Poppins-Regular", size: 35))
-                .offset(y: 250)
+                .offset(y: 200)
             
             Text("Compound")
                 .font(Font.custom("Poppins-Regular", size: 25))
-                .offset(y: 270)
+                .offset(y: 220)
             
             VStack{
                 Text(loginStatus == false ? "Please login with a Chaminade High School. Non Chaminade High School students and faculty are not allowed in the application." :   "Log in with school email")
@@ -28,7 +28,7 @@ struct LoginView: View {
                     .background(Color.red)
                     .cornerRadius(10)
                     .padding(10)
-                    .offset(y: 290)
+                    .offset(y: 240)
                     .multilineTextAlignment(.center)
             }
 

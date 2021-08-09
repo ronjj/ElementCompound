@@ -45,7 +45,6 @@ class ProjectViewModel2: ObservableObject {
   }
   
   // MARK: - Firestore
-  
   private var db = Firestore.firestore()
   
   private func addProject(_ project: Project) {
@@ -73,7 +72,7 @@ class ProjectViewModel2: ObservableObject {
       self.updateProject(self.project)
     }
     else {
-      addProject(project)
+        addProject(project)
     }
   }
   
@@ -98,3 +97,6 @@ class ProjectViewModel2: ObservableObject {
   }
   
 }
+
+
+

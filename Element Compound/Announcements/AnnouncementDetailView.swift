@@ -23,10 +23,7 @@ struct AnnouncementDetailView: View {
         Button(action: { action() }) {
             Text("Edit")
         }
-      
     }
-    
-
     
     var body: some View {
        
@@ -71,7 +68,6 @@ struct AnnouncementDetailView: View {
                         .padding(.bottom, 10)
                         .font(.body)
                         .minimumScaleFactor(0.4)
-                    
                     
                     Text(announcement.sender)
                         .font(.body)

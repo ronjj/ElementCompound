@@ -159,7 +159,7 @@ struct SettingsView: View {
         
         
     }
-    static func createEmailUrl(subject: String, body: String) -> URL? {
+   static func createEmailUrl(subject: String, body: String) -> URL? {
         let to = "ronaldjabouin2004@gmail.com"
         let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
         let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
