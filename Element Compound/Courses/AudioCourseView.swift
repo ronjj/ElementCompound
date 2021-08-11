@@ -32,7 +32,7 @@ struct AudioCourseView: View {
                 VStack{
                     Spacer()
                     
-                    Image("audioCourse8")
+                    Image("audioCourse9")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .padding(.horizontal,10)
@@ -43,7 +43,7 @@ struct AudioCourseView: View {
                   Button{
                       isShowingAudioDetail = true
                   } label: {
-                      smallButtonStyle(title: "More Info")
+                      smallButtonStyle(title: "Info")
                   }
                   .padding(.top, 30)
                     Spacer()

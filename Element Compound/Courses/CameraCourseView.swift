@@ -23,43 +23,54 @@ struct CameraCourseView: View {
     
    
     @Binding var isShowingCameraDetail: Bool
+    @Binding var backgroundOffset: CGFloat
     
     var body: some View {
        
         ZStack {
             Color.courseGreen.edgesIgnoringSafeArea(.all)
             
-                Spacer()
-                
-                VStack{
-                    Spacer()
-                    
-                    Image("cameraCourse4")
+            Group {
+                    Image("cameraCourse5")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .padding(.horizontal,10)
                         .padding(.bottom, 12)
                         .frame(width: UIScreen.screenWidth, height: 400)
+                       
                     
-                    
-                  Button{
-                      isShowingCameraDetail = true
-                  } label: {
-                      smallButtonStyle(title: "More Info")
-                  }
-                  .padding(.top, 30)
-                    Spacer()
-                }
-                .blur(radius: isShowingCameraDetail ? 20 : 0)
-                Spacer()
+                    VStack{
+                        Spacer()
+                        
+                        Button{
+                            isShowingCameraDetail = true
+                        } label: {
+                            circularButtonStyle(title: "Info")
+                        }
+                        .shadow(color: .black, radius: 3)
+                      
+                        Spacer()
+                        
+                        Button{
+                            backgroundOffset = 1
+                        } label: {
+                            circularButtonStyle(title: "Sign Up")
+                        }
+                        .shadow(color: .black, radius: 3)
+                        
+                        
+                        Spacer()
+                    }
+            }
+            .blur(radius: isShowingCameraDetail ? 20 : 0)
             
             if isShowingCameraDetail{
                 CameraCourseSheet(isShowingCameraDetail: $isShowingCameraDetail)
             }
+            
         }
-
+        
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
-
 //        .sheet(item: $activeSheet) { item in
 //            switch item {
 //            case .courseInfo:

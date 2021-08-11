@@ -36,6 +36,19 @@ struct smallButtonStyle: View {
 }
 
 
+struct circularButtonStyle: View {
+    let title: LocalizedStringKey
+    var body: some View {
+        Text(title)
+            .font(.title3)
+            .fontWeight(.semibold)
+            .frame(width: 100, height: 100)
+            .foregroundColor(.bg)
+            .background(Color.bginv)
+            .clipShape(Circle())
+    }
+}
+
 struct mediumButtonStyle: View {
     let title: LocalizedStringKey
     var body: some View {

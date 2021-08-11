@@ -31,7 +31,7 @@ struct EditingCourseView: View {
                 VStack{
                     Spacer()
                     
-                    Image("editingCourse7")
+                    Image("editingCourse9")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .padding(.horizontal,10)
@@ -42,7 +42,7 @@ struct EditingCourseView: View {
                   Button{
                       isShowingEditDetail = true
                   } label: {
-                      smallButtonStyle(title: "More Info")
+                      smallButtonStyle(title: "Info")
                   }
                   .padding(.top, 30)
                     Spacer()

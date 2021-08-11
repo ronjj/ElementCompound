@@ -11,7 +11,19 @@ import UIKit
 import WebKit
 
 
+struct WebView: UIViewRepresentable {
 
+    func makeUIView(context: Context) -> WKWebView {
+        WKWebView(frame: .zero)
+    }
+
+    func updateUIView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
+
+        let request = URLRequest(url: URL(string: "https://www.picktime.com/elementchs")!)
+
+        view.load(request)
+    }
+}
 
 
 struct iFrameCourseView: View {

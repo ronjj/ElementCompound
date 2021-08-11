@@ -14,13 +14,15 @@ struct CoursesView: View {
     @State var isShowingCameraDetail = false
     @State var isShowingAudioDetail = false
     
+    
+   
     var body: some View {
         
         GeometryReader { g in
             HStack(spacing: 0) {
-                CameraCourseView(isShowingCameraDetail: $isShowingCameraDetail)
-                EditingCourseView(isShowingEditDetail:  $isShowingEditDetail)
-                AudioCourseView(isShowingAudioDetail: $isShowingAudioDetail)
+                CameraCourseView(isShowingCameraDetail: $isShowingCameraDetail, backgroundOffset: $backgroundOffset)
+               // EditingCourseView(isShowingEditDetail:  $isShowingEditDetail)
+               // AudioCourseView(isShowingAudioDetail: $isShowingAudioDetail)
                 iFrameCourseView()
             }
             .offset(x: -(self.backgroundOffset * g.size.width))
@@ -29,7 +31,10 @@ struct CoursesView: View {
             ZStack{
                 Rectangle()
                     .fill(Color.white.opacity(3.0))
+                /*all four
                     .frame(width: 115, height: 25)
+                 */
+                    .frame(width: 50, height: 25)
                     .cornerRadius(10)
                 
                 HStack{
@@ -44,8 +49,30 @@ struct CoursesView: View {
                             self.backgroundOffset = 0
                         }
                     
+//                    Circle()
+//                        .fill(Color.ruby)
+//                        .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
+//                        .overlay(
+//                            Circle()
+//                                .stroke(Color.white, lineWidth: 5)
+//                        )
+//                        .onTapGesture {
+//                            self.backgroundOffset = 1
+//                        }
+//
+//                    Circle()
+//                        .fill(Color.yellow2 )
+//                        .frame(width: self.backgroundOffset == 2 ? 30 : 20, height: self.backgroundOffset == 2 ? 30 : 20)
+//                        .overlay(
+//                            Circle()
+//                                .stroke(Color.white, lineWidth: 5)
+//                        )
+//                        .onTapGesture {
+//                            self.backgroundOffset = 2
+//                        }
+//
                     Circle()
-                        .fill(Color.ruby)
+                        .fill(Color.gray )
                         .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
                         .overlay(
                             Circle()
@@ -53,28 +80,6 @@ struct CoursesView: View {
                         )
                         .onTapGesture {
                             self.backgroundOffset = 1
-                        }
-                    
-                    Circle()
-                        .fill(Color.yellow2 )
-                        .frame(width: self.backgroundOffset == 2 ? 30 : 20, height: self.backgroundOffset == 2 ? 30 : 20)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 5)
-                        )
-                        .onTapGesture {
-                            self.backgroundOffset = 2
-                        }
-                    
-                    Circle()
-                        .fill(Color.gray )
-                        .frame(width: self.backgroundOffset == 3 ? 30 : 20, height: self.backgroundOffset == 3 ? 30 : 20)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 5)
-                        )
-                        .onTapGesture {
-                            self.backgroundOffset = 3
                         }
                 }
                 .animation(.easeIn)
@@ -93,7 +98,7 @@ struct CoursesView: View {
                     }
                 } else if value.translation.width < -10 {
                     
-                    if self.backgroundOffset < 2 {
+                    if self.backgroundOffset < 1 {
                         self.backgroundOffset += 1
                     }
                    
