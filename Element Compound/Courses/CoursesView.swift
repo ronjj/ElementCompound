@@ -10,17 +10,18 @@ import SwiftUI
 struct CoursesView: View {
      
     @State var backgroundOffset: CGFloat = 0
+    @State var isShowingEditDetail = false
+    @State var isShowingCameraDetail = false
+    @State var isShowingAudioDetail = false
     
     var body: some View {
         
         GeometryReader { g in
             HStack(spacing: 0) {
-                CameraCourseView()
-                EditingCourseView()
-                AudioCourseView()
-                
-             
-
+                CameraCourseView(isShowingCameraDetail: $isShowingCameraDetail)
+                EditingCourseView(isShowingEditDetail:  $isShowingEditDetail)
+                AudioCourseView(isShowingAudioDetail: $isShowingAudioDetail)
+                iFrameCourseView()
             }
             .offset(x: -(self.backgroundOffset * g.size.width))
             .animation(.easeIn)
@@ -28,7 +29,7 @@ struct CoursesView: View {
             ZStack{
                 Rectangle()
                     .fill(Color.white.opacity(3.0))
-                    .frame(width: 85, height: 25)
+                    .frame(width: 115, height: 25)
                     .cornerRadius(10)
                 
                 HStack{
@@ -63,6 +64,17 @@ struct CoursesView: View {
                         )
                         .onTapGesture {
                             self.backgroundOffset = 2
+                        }
+                    
+                    Circle()
+                        .fill(Color.gray )
+                        .frame(width: self.backgroundOffset == 3 ? 30 : 20, height: self.backgroundOffset == 3 ? 30 : 20)
+                        .overlay(
+                            Circle()
+                                .stroke(Color.white, lineWidth: 5)
+                        )
+                        .onTapGesture {
+                            self.backgroundOffset = 3
                         }
                 }
                 .animation(.easeIn)

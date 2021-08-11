@@ -134,36 +134,69 @@ struct MockData {
     
     
     static let lenses = [
-        LenseItem( name: "Sony E-Mount 24mm",
+        
+        // E - Mount / Sony Lenses
+        
+        LenseItem( name: "Voigtlander 10mm Fisheye ",
+                   shortDescription: "Hyper-Wide Focal Length Lens for Sony A7s II",
+                   longDescription: "Full name: Voigtlander Nokton Aspherical “Hyper-Wide” F/5.6 10mm Fisheye Lens. The only E-Mount Voigtlander Nokton Lens in our collection, this 10mm variant captures extremely wide shots (130 degree angle of view), courtesy of its “Fisheye” construction. With the same structure as all of our Voigtlander lenses, the 10mm Fisheye Lens is best used for stylized wide shots with a tripod.",
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/b3635aa6-0576-4a66-aab9-be0fc74a8ccf",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a4f5a247-cb19-4ae2-a757-2b5d51432159"),
+        
+        LenseItem( name: "Sony 24mm",
                    shortDescription: "Medium Focal Length Lens for Sony A7s II.",
                    longDescription: "Full Name: Sony E-Mount 24mm FE 1.4 Full Frame Lens. The E-Mount 24mm Lens is one of two “G” brand lenses in our Sony lineup. The 24mm Lens is prime for handheld shots with a wider field of view, as it creates a large depth of field and fantastic bokeh with its low aperture of 1.4, and features a precise focus ring.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/50005e56-6f37-42b1-ae96-9283f1c9e1f9",
                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/24d5a2bf-9fb1-49db-834f-2308d10a882d"),
         
-        LenseItem( name: "Sony E-Mount 85mm",
+        LenseItem( name: "Carl Zeiss 35mm ",
+                   shortDescription: "Medium Focal Length Lens for Sony A7s II",
+                   longDescription: "Full Name: Carl Zeiss Sonnar F/2.8 FE 35mm Lens. The E-Mount 35mm Lens from Carl Zeiss is a compact option for the A7s II. With an aperture of 2.8, its depth of field capability is not as large as other lenses in our collection, but its small form factor and large focus ring provide a general ease of use, and its sharp quality is great for interview shots and simple handheld setups",
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/914e1b99-4927-4ac3-a09a-b44385f8e3d0",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f8cdc8ae-61ea-4c70-afc7-5102dfa3ae04"),
+        
+        LenseItem( name: "Lensbaby 56mm ",
+                   shortDescription: "High Focal Length Lens for Sony A7s II",
+                   longDescription: "Full Name: Lensbaby Velvet 56mm F/1.6 Lens. The 56mm Lens from Lensbaby is highly stylized, as its unique construction captures soft and dream-like images and videos. The low aperture of 1.6 creates a large depth of field, which is amplified by the soft image quality. The 56mm Lens is best for specific shots, and is better suited for photography.",
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/82060fad-3d3e-4279-bc0f-b66257eb4093",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/44ddf083-b644-482a-9707-2cfc9c3c0858"),
+        
+        LenseItem( name: "Sony 85mm",
                    shortDescription: "High Focal Length Lens for Sony A7s II.",
                    longDescription: "Full Name: Sony E-Mount 85mm FE 1.4 Full Frame Lens. The E-Mount 85mm Lens is one of two “G” brand lenses in our Sony lineup. The 85mm Lens features the highest focal length of any lens in our lineup and is great for handheld shots and formal interview setups that require a tight “zoomed in” field of view. With the same high-quality focus ring and low aperture capability as the E-Mount 24mm Lens, the 85mm Lens captures fantastic images and videos.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f0f622a8-02c0-4f37-a2c1-0cc1273ec912",
                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/d50f8aa5-633c-4031-bab1-c0c8c85256c6"),
         
-        LenseItem( name: "Voigtlander Nokton 17.5mm",
+       
+        
+        //M43 / Lumix Lenses
+        
+        LenseItem( name: "Voigtlander 10.5mm",
+                   shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
+                   longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/31b5aaa6-cea8-481d-a300-d7fa91e4eded",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/06fc7dd8-e526-4187-968a-af5dcf51dfc0"),
+        
+        LenseItem( name: "Voigtlander 17.5mm",
                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
                    longDescription: "Full Name: Voigtlander Nokton Aspherical 17.5mm F/ 0.95 LensThe Aspherical 17.5mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in a medium field of view. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 17.5mm is great for use on our Ronin gimbal and even for handheld shots.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/1b9a3f66-8ed8-4c0b-8e4d-3c1984a19040",
                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/abdf6bf2-e765-42a4-97ea-29921d61b88a"),
         
-        LenseItem( name: "Voigtlander Nokton 25mm",
+        LenseItem( name: "Voigtlander 25mm",
                    shortDescription: "Medium Focal Length Lens for Lumix GH5 and GH5s.",
                    longDescription: "Full Name: Voigtlander Nokton Aspherical 25mm F/0.95 Lens. The Aspherical 25mm Lens is one of a collection of Voigtlander Lenses in our lineup and offers crisp quality in a medium field of view, but slightly tighter than the 17.5mm. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 25mm is great for use on our Ronin gimbal and even for handheld shots.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/c74a2b25-a099-4321-aee5-28c6dbb5de56",
                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/ab45689a-75c6-4c72-8f87-03cc5e2b3aa4"),
         
-        LenseItem( name: "Voigtlander Nokton 10.5mm",
-                   shortDescription: "Low Focal Length Lens for Lumix GH5 and GH5s.",
-                   longDescription: "Full Name: Voigtlander Nokton Aspherical 10mm F/0.95 Lens for Lumix GH5 and GH5s. The Aspherical 10mm Lens is one of a collection of Voigtlander Lenses in our lineup, and offers crisp quality in the widest field of view out of all of our lenses. With a precise focus ring and a large depth of field, courtesy of its low aperture of 0.95, the 10mm is prime for use with our Lumix GH5s atop our Ronin gimbal.",
-                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/31b5aaa6-cea8-481d-a300-d7fa91e4eded",
-                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/06fc7dd8-e526-4187-968a-af5dcf51dfc0")
+    
+        LenseItem( name: "Rokinon 50mm",
+                   shortDescription: "Medium Focal Length Lens for Sony A7s II",
+                   longDescription: "Full Name:Rokinon AF F/1.4 FE 50mm Lens. The E-Mount Rokinon 50mm Lens provides a nice focal midpoint between our two “G” brand lenses. The low aperture of 1.4 creates a large depth of field, and though not as drastic as both “G” lenses. The large focus ring allows for smooth and finite focus adjustments, and makes this 50mm lens prime for handheld shots of fast moving subjects.",
+                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/b0c0f052-1688-438a-a66e-8863ff26e076",
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/e0544e67-0d18-4b79-838e-8e3cd12ee299"),
         
+ 
     ]
     
     
@@ -238,8 +271,6 @@ struct MockData {
                   longDescription: " Our over ear headphones are high quality audio devices. Approved for podcast recording and sound mixing, you won’t miss a beat with these.",
                   imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/352466a4-048a-4ba6-9697-e26b388f276c",
                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a2342850-aa41-4ca0-b015-7a9f32018c6b"),
-        
-        
         
         AudioItem(name: "MixPre",
                   shortDescription: "Professional audio recorder for filmmaking",

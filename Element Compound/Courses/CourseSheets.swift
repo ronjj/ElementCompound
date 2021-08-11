@@ -27,98 +27,81 @@ struct WebView: UIViewRepresentable {
 
 struct CameraCourseSheet: View {
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isShowingCameraDetail: Bool
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                
-                Button{
-                    self.dismiss()
-                } label: {
-                     Text("Cancel")
-                            .foregroundColor(.bginv)
-                }
-                .padding()
-            }
+            Text("Element Members are expected to attend course to better their skills and obtain club credit.")
+                .font(.body)
+                .padding(.bottom, 10)
             
-            Text("Camera Course")
-                .padding()
-                .font(.title)
-            
-            Text("Book An Appoitment Below")
-                .font(.subheadline)
-            
-            WebView().edgesIgnoringSafeArea(.all)
+            Text("In the camera course, students will learn...")
+                .font(.body)
         }
-    }
-    func dismiss() {
-        self.presentationMode.wrappedValue.dismiss()
-    }
+        .padding()
+        .frame(width: 300, height: 300)
+        .background(Color.bg)
+        .cornerRadius(12)
+        .shadow(radius: 40)
+        .overlay(Button{
+            isShowingCameraDetail = false
+        } label: {
+           XDismissButton()
+        }, alignment: .topTrailing)
+        }
 }
 
 struct EditingCourseSheet: View {
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isShowingEditDetail: Bool
     
     var body: some View {
+      
         VStack{
-            HStack{
-                Spacer()
-                
-                Button{
-                    self.dismiss()
-                } label: {
-                     Text("Cancel")
-                            .foregroundColor(.bginv)
-                }
-                .padding()
-            }
+            Text("Element Members are expected to attend course to better their skills and obtain club credit.")
+                .font(.body)
+                .padding(.bottom, 10)
             
-            Text("Editing Course")
-                .padding()
-                .font(.title)
-            
-            Text("Book An Appoitment Below")
-                .padding()
-                .font(.subheadline)
-            
-            WebView().edgesIgnoringSafeArea(.all)
+            Text("In the editing course, students will learn...")
+                .font(.body)
         }
-    }
-    func dismiss() {
-        self.presentationMode.wrappedValue.dismiss()
+        .padding()
+        .frame(width: 300, height: 300)
+        .background(Color.bg)
+        .cornerRadius(12)
+        .shadow(radius: 40)
+        .overlay(Button{
+            isShowingEditDetail = false
+        } label: {
+           XDismissButton()
+        }, alignment: .topTrailing)
+    
     }
 }
 
 
 struct AudioCourseSheet: View {
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isShowingAudioDetail: Bool
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Button{
-                    self.dismiss()
-                } label: {
-                     Text("Cancel")
-                            .foregroundColor(.bginv)
-                }
-                .padding()
-            }
+            Text("Element Members are expected to attend course to better their skills and obtain club credit.")
+                .font(.body)
+                .padding(.bottom, 10)
             
-            Text("Audio Course")
-                .padding()
-                .font(.title)
-            
-            Text("Book An Appoitment Below")
-                .padding()
-                .font(.subheadline)
-            
-            WebView().edgesIgnoringSafeArea(.all)
+            Text("In the audio course, students will learn...")
+                .font(.body)
         }
-    }
-    func dismiss() {
-        self.presentationMode.wrappedValue.dismiss()
+        .padding()
+        .frame(width: 300, height: 300)
+        .background(Color.bg)
+        .cornerRadius(12)
+        .shadow(radius: 40)
+        .overlay(Button{
+            isShowingAudioDetail = false
+        } label: {
+           XDismissButton()
+        }, alignment: .topTrailing)
     }
 }

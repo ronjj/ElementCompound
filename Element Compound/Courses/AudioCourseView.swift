@@ -20,41 +20,50 @@ enum AudioCourseSheets: Identifiable {
 
 struct AudioCourseView: View {
     
-    @State private var activeSheet: CameraCourseSheets?
+   
+    @Binding var isShowingAudioDetail: Bool
 
     var body: some View {
         ZStack {
             Color.yellow2.edgesIgnoringSafeArea(.all)
             
-            Spacer()
+                Spacer()
+                
+                VStack{
+                    Spacer()
+                    
+                    Image("audioCourse8")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .padding(.horizontal,10)
+                        .padding(.bottom, 12)
+                        .frame(width: UIScreen.screenWidth, height: 400)
+                    
+                    
+                  Button{
+                      isShowingAudioDetail = true
+                  } label: {
+                      smallButtonStyle(title: "More Info")
+                  }
+                  .padding(.top, 30)
+                    Spacer()
+                }
+                .blur(radius: isShowingAudioDetail ? 20 : 0)
+                Spacer()
             
-            VStack {
-                Spacer()
-                
-                Image("audioCourse4")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .padding(.horizontal,10)
-                    .padding(.bottom, 60)
-                    .frame(width: UIScreen.screenWidth, height: 400)
-                
-                
-              Button{
-                  activeSheet = .courseInfo
-              } label: {
-                  mediumButtonStyle(title: "Go To Course")
-              }
-              .padding(.top, 30)
-                Spacer()
+            if isShowingAudioDetail{
+                AudioCourseSheet(isShowingAudioDetail: $isShowingAudioDetail)
             }
-            Spacer()
         }
+
         .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
-        .sheet(item: $activeSheet) { item in
-            switch item {
-            case .courseInfo:
-                AudioCourseSheet()
-            }
-        }
+
+//        .sheet(item: $activeSheet) { item in
+//            switch item {
+//            case .courseInfo:
+//                AudioCourseSheet()
+//            }
+//        }
     }
 }
+

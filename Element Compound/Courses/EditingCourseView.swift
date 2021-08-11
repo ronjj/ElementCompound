@@ -19,7 +19,8 @@ enum EditingCourseSheets: Identifiable {
 
 struct EditingCourseView: View {
     
-    @State private var activeSheet: CameraCourseSheets?
+   
+    @Binding var isShowingEditDetail: Bool
     
     var body: some View {
         ZStack {
@@ -30,7 +31,7 @@ struct EditingCourseView: View {
                 VStack{
                     Spacer()
                     
-                    Image("editingCourse6")
+                    Image("editingCourse7")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .padding(.horizontal,10)
@@ -39,21 +40,27 @@ struct EditingCourseView: View {
                     
                     
                   Button{
-                      activeSheet = .courseInfo
+                      isShowingEditDetail = true
                   } label: {
-                      mediumButtonStyle(title: "Go To Course")
+                      smallButtonStyle(title: "More Info")
                   }
                   .padding(.top, 30)
                     Spacer()
                 }
+                .blur(radius: isShowingEditDetail ? 20 : 0)
                 Spacer()
-        }
-        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
-        .sheet(item: $activeSheet) { item in
-            switch item {
-            case .courseInfo:
-                EditingCourseSheet()
+            
+            if isShowingEditDetail{
+                EditingCourseSheet(isShowingEditDetail: $isShowingEditDetail)
             }
         }
+        
+        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+//        .sheet(item: $activeSheet) { item in
+//            switch item {
+//            case .courseInfo:
+//                EditingCourseSheet()
+//            }
+//        }
     }
 }

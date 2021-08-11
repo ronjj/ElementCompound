@@ -96,6 +96,8 @@ struct ProjectsListView2: View {
                                     .foregroundColor(.bginv)
                             }
                         }
+                        .disabled(role == false)
+                        .opacity(role == false ? 0.0 : 1.0)
                         
                         .padding(.trailing, 20)
                     }
