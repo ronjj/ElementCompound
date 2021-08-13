@@ -29,7 +29,7 @@ struct ProjectEditView2: View {
     var completionHandler: ((Result<Action, Error>) -> Void)?
     @State private var newAssigned = ""
     @State private var isEditing = false
-    @State var redSelected = true
+    @State var redSelected = false
     @State var blueSelected = false
     
     
