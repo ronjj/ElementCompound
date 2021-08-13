@@ -23,13 +23,19 @@ struct InventoryListView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.lightBlue.edgesIgnoringSafeArea(.all)
+                Color.ruby.edgesIgnoringSafeArea(.all)
                 ScrollView{
                     HStack {
                         Text("Equipment List")
                             .font(.largeTitle)
                             .foregroundColor(.bginv)
                             .fontWeight(.bold)
+                        
+                        Image("spaceMan")
+                            .resizable()
+                            .aspectRatio( contentMode: .fit)
+                            .frame(width: 64, height: 64)
+                            
                         
                         Spacer()
                     }
@@ -154,7 +160,7 @@ struct InventoryListView: View {
                     .navigationTitle("Equipment List")
                     .navigationBarHidden(true)
                 }
-                .background(Color.lightBlue)
+                .background(Color.ruby)
                 .navigationBarHidden(true)
             }
             .navigationBarHidden(true)

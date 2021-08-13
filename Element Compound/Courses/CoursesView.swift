@@ -7,12 +7,13 @@
  
 import SwiftUI
  
-struct CoursesView: View {
+struct CoursesView1: View {
      
     @State var backgroundOffset: CGFloat = 0
     @State var isShowingEditDetail = false
     @State var isShowingCameraDetail = false
     @State var isShowingAudioDetail = false
+    @State var isShowingiFrameDetail = false
     
     
    
@@ -20,7 +21,7 @@ struct CoursesView: View {
         
         GeometryReader { g in
             HStack(spacing: 0) {
-                CameraCourseView(isShowingCameraDetail: $isShowingCameraDetail, backgroundOffset: $backgroundOffset)
+                //CameraCourseView(isShowingCameraDetail: $isShowingCameraDetail, backgroundOffset: $backgroundOffset)
                // EditingCourseView(isShowingEditDetail:  $isShowingEditDetail)
                // AudioCourseView(isShowingAudioDetail: $isShowingAudioDetail)
                 iFrameCourseView()
@@ -29,25 +30,40 @@ struct CoursesView: View {
             .animation(.easeIn)
             
             ZStack{
-                Rectangle()
-                    .fill(Color.white.opacity(3.0))
-                /*all four
-                    .frame(width: 115, height: 25)
-                 */
-                    .frame(width: 50, height: 25)
-                    .cornerRadius(10)
+                HStack{
+                    Button{
+                        isShowingiFrameDetail = true
+                    } label: {
+                        Image("dinoInfo")
+                            .resizable()
+                            .frame(width: 60, height: 60)
+                            .aspectRatio( contentMode: .fit)
+                            .padding()
+                    }
+                    
+                    Spacer()
+                }
+                .blur(radius: isShowingiFrameDetail ? 20 : 0)
+                
+//                Rectangle()
+//                    .fill(Color.white.opacity(3.0))
+//                /*all four
+//                    .frame(width: 115, height: 25)
+//                 */
+//                    .frame(width: 50, height: 25)
+//                    .cornerRadius(10)
                 
                 HStack{
-                    Circle()
-                        .fill(Color.courseGreen)
-                        .frame(width: self.backgroundOffset == 0 ? 30 : 20, height: self.backgroundOffset == 0 ? 30 : 20)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 5)
-                        )
-                        .onTapGesture {
-                            self.backgroundOffset = 0
-                        }
+//                    Circle()
+//                        .fill(Color.courseGreen)
+//                        .frame(width: self.backgroundOffset == 0 ? 30 : 20, height: self.backgroundOffset == 0 ? 30 : 20)
+//                        .overlay(
+//                            Circle()
+//                                .stroke(Color.white, lineWidth: 5)
+//                        )
+//                        .onTapGesture {
+//                            self.backgroundOffset = 0
+//                        }
                     
 //                    Circle()
 //                        .fill(Color.ruby)
@@ -71,20 +87,27 @@ struct CoursesView: View {
 //                            self.backgroundOffset = 2
 //                        }
 //
-                    Circle()
-                        .fill(Color.gray )
-                        .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
-                        .overlay(
-                            Circle()
-                                .stroke(Color.white, lineWidth: 5)
-                        )
-                        .onTapGesture {
-                            self.backgroundOffset = 1
-                        }
+//                    Circle()
+//                        .fill(Color.gray )
+//                        .frame(width: self.backgroundOffset == 1 ? 30 : 20, height: self.backgroundOffset == 1 ? 30 : 20)
+//                        .overlay(
+//                            Circle()
+//                                .stroke(Color.white, lineWidth: 5)
+//                        )
+//                        .onTapGesture {
+//                            self.backgroundOffset = 1
+//                        }
                 }
                 .animation(.easeIn)
+               
+                
+                if isShowingiFrameDetail{
+                    iFrameCourseSheet(isShowingiFrameDetail: $isShowingiFrameDetail)
+                        
+                }
             }
-           .position(x:g.size.width/2, y:g.size.height/10)
+            
+           //.position(x:g.size.width/2, y:g.size.height/10)
         }
         .edgesIgnoringSafeArea(.all)
 

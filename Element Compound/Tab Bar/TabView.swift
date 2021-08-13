@@ -14,7 +14,7 @@ struct TabViewItem: View {
                     InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc, lense: MockData.sampleLense)
                 }
                 else if self.index == 2{
-                    CoursesView()
+                    CoursesView2()
                 }
                 else if self.index == 3{
                     //ProjectsListView()

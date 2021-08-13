@@ -137,7 +137,7 @@ struct SettingsView: View {
                     //                    }
                 }
             }
-            .background(Color.lightBlue).edgesIgnoringSafeArea(.all)
+            .background(Color.yellow2).edgesIgnoringSafeArea(.all)
             .foregroundColor(Color.bginv)
 
             .listStyle(InsetGroupedListStyle())

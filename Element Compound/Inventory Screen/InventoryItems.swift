@@ -239,8 +239,10 @@ struct MockData {
         AudioItem(name: "Shure MV7",
                   shortDescription: "Standard Podcast Microphone",
                   longDescription: "The Shure MV7 is our standard podcast microphone, delivering high quality audio. The  MV7 performs the regular tasks required to maintain a successful podcast",
-                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/1714452b-af76-4a36-aaed-82dc0b9f59c4",
-                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/aae9ea30-2eb1-41b4-ba77-123d10ed1a54"),
+                  imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/aae9ea30-2eb1-41b4-ba77-123d10ed1a54",
+                  bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/1714452b-af76-4a36-aaed-82dc0b9f59c4"),
+        
+        
         
         AudioItem(name: "Shure SM7b",
                   shortDescription: "Premium Podcast Microphone",

@@ -39,6 +39,32 @@ struct CameraCourseSheet: View {
         }
 }
 
+struct iFrameCourseSheet: View {
+    @Environment(\.presentationMode) var presentationMode
+    @Binding var isShowingiFrameDetail: Bool
+    
+    var body: some View {
+        VStack{
+            Text("Element Members are expected to attend course to better their skills and obtain club credit.")
+                .font(.body)
+                .padding(.bottom, 10)
+            
+            Text("In the camera course, students will learn...")
+                .font(.body)
+        }
+        .padding()
+        .frame(width: 300, height: 300)
+        .background(Color.bg)
+        .cornerRadius(12)
+        .shadow(radius: 40)
+        .overlay(Button{
+            isShowingiFrameDetail = false
+        } label: {
+           XDismissButton()
+        }, alignment: .topTrailing)
+        }
+}
+
 struct EditingCourseSheet: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var isShowingEditDetail: Bool

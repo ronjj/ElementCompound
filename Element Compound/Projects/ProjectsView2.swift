@@ -74,7 +74,7 @@ struct ProjectsListView2: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.lightBlue.edgesIgnoringSafeArea(.all)
+                Color.courseGreen.edgesIgnoringSafeArea(.all)
                 
                 ScrollView{
                     HStack {
@@ -82,6 +82,13 @@ struct ProjectsListView2: View {
                             .font(.largeTitle)
                             .foregroundColor(.bginv)
                             .fontWeight(.bold)
+                            
+                        
+                        Image("spaceDoggo")
+                            .resizable()
+                            .aspectRatio( contentMode: .fit)
+                            .frame(width: 70, height: 70)
+                            .padding(2)
                         
                         Spacer()
                         

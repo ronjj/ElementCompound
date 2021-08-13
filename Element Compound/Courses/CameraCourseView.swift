@@ -28,15 +28,15 @@ struct CameraCourseView: View {
     var body: some View {
        
         ZStack {
-            Color.courseGreen.edgesIgnoringSafeArea(.all)
+            Color.ruby.edgesIgnoringSafeArea(.all)
             
             Group {
-                    Image("cameraCourse5")
+                    Image("Courses2")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .padding(.horizontal,10)
                         .padding(.bottom, 12)
-                        .frame(width: UIScreen.screenWidth, height: 400)
+                        .frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight-300)
                        
                     
                     VStack{
@@ -45,11 +45,11 @@ struct CameraCourseView: View {
                         Button{
                             isShowingCameraDetail = true
                         } label: {
-                            circularButtonStyle(title: "Info")
+                            circularButtonStyle(title: "Course Info")
                         }
                         .shadow(color: .black, radius: 3)
+                        .padding(.bottom, 160)
                       
-                        Spacer()
                         
                         Button{
                             backgroundOffset = 1
