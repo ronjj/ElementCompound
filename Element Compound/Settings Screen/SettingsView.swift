@@ -121,6 +121,7 @@ struct SettingsView: View {
                         Text("Update Display Name")
                     }
                     .disabled(role == false)
+                    .opacity(role ? 1 : 0.5)
                     
                     Button(action: {
                         signOut()

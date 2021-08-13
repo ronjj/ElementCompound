@@ -149,7 +149,11 @@ struct ProjectDetailsView: View {
                       }
                       .padding(.bottom, 25)
                    
-                        ProgressBar(width: 300, height: 30, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                VStack(alignment: .center){
+                    Text("Percent Complete:")
+                    ProgressBar(width: 300, height: 30, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                }
+                       
                   }
                   
                   Button{

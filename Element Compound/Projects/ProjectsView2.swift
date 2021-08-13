@@ -75,38 +75,45 @@ struct ProjectsListView2: View {
         NavigationView {
             ZStack{
                 Color.courseGreen.edgesIgnoringSafeArea(.all)
-                
+    
                 ScrollView{
-                    HStack {
-                        Text("Projects")
-                            .font(.largeTitle)
-                            .foregroundColor(.bginv)
-                            .fontWeight(.bold)
+                    VStack{
+                        HStack {
                             
-                        
-                        Image("spaceDoggo")
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .frame(width: 70, height: 70)
-                            .padding(2)
-                        
-                        Spacer()
-                        
-                        Button(action: {
-                            activeSheet = .addProj
-                        }) {
-                            ZStack {
-                                Circle()
-                                    .foregroundColor(.bg)
-                                    .frame(width: 25, height: 25)
-                                Image(systemName: "plus")
+                                Text("Projects")
+                                    .font(.largeTitle)
                                     .foregroundColor(.bginv)
+                                    .fontWeight(.bold)
+                            
+                            Image("spaceDoggo")
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 70, height: 70)
+                                .padding(2)
+                            
+                            Spacer()
+                            
+                            Button(action: {
+                                activeSheet = .addProj
+                            }) {
+                                ZStack {
+                                    Circle()
+                                        .foregroundColor(.bg)
+                                        .frame(width: 25, height: 25)
+                                    Image(systemName: "plus")
+                                        .foregroundColor(.bginv)
+                                }
                             }
+                            .disabled(role == false)
+                            .opacity(role == false ? 0.0 : 1.0)
+                            .padding(.trailing, 20)
+                            
                         }
-                        .disabled(role == false)
-                        .opacity(role == false ? 0.0 : 1.0)
-                        
-                        .padding(.trailing, 20)
+                        HStack{
+                            Text("Current Number of Projects: \(viewModel.projects.count)")
+                            
+                            Spacer()
+                        }
                     }
                     .padding(.top, 30)
                     .padding(.bottom, 20)

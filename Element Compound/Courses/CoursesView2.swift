@@ -10,34 +10,41 @@ import SwiftUI
 struct CoursesView2: View {
     @State var isShowingiFrameDetail = false
     var body: some View {
-        ZStack{
-            WebView().edgesIgnoringSafeArea(.all)
-                .blur(radius: isShowingiFrameDetail ? 20 : 0)
-            
-            HStack{
-                Button{
-                    isShowingiFrameDetail = true
-                } label: {
-                    Image("dinoInfo")
-                        .resizable()
-                       // .imageScale(.small)
-                        .frame(width: 50, height: 50)
-                        //.aspectRatio( contentMode: .fill)
-                        .padding(.leading, 40)
-                        .position(y: UIScreen.screenHeight/9)
+            ZStack{
+                VStack{
+                    WebView().edgesIgnoringSafeArea(.all)
+                        .blur(radius: isShowingiFrameDetail ? 20 : 0)
+                }
+                
+                HStack{
+                    Spacer()
+                    
+                    Button{
+                        isShowingiFrameDetail = true
+                    } label: {
+                        ZStack {
+                            Circle()
+                                .foregroundColor(.bg)
+                                .frame(width: 60, height: 60)
+                            Image("dinoInfo")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                                .aspectRatio( contentMode: .fill)
+                            //.position(y: UIScreen.screenHeight/9)
+    //                            .padding(.leading, 40)
+                            // .imageScale(.small)
+                        }
+                    }
+                    .blur(radius: isShowingiFrameDetail ? 20 : 0)
                 }
                 .padding()
-                
-                .blur(radius: isShowingiFrameDetail ? 20 : 0)
-                
-                Spacer()
-            }
+               
+                            
+                if isShowingiFrameDetail{
+                    iFrameCourseSheet(isShowingiFrameDetail: $isShowingiFrameDetail)
                         
-            if isShowingiFrameDetail{
-                iFrameCourseSheet(isShowingiFrameDetail: $isShowingiFrameDetail)
-                    
+                }
             }
-        }
     }
 }
 
