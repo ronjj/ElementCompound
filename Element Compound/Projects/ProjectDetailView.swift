@@ -150,7 +150,7 @@ struct ProjectDetailsView: View {
                       .padding(.bottom, 25)
                    
                 VStack(alignment: .center){
-                    Text(" About \(project.percentComplete, specifier: "%.2f")% Complete ")
+                    Text(" About \(project.percentComplete, specifier: "%.0f")% Complete ")
                     ProgressBar(width: 300, height: 30, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                 }
                        

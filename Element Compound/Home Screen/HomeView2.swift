@@ -122,6 +122,7 @@ struct HomeView2: View {
                             EmptyView()
                         }
                     }
+                    .padding(.bottom, 130)
                     .padding(10)
                     
 //                    HStack{
@@ -143,6 +144,7 @@ struct HomeView2: View {
 //
 //                                            }
                     }
+               
                 }
 //            .toolbar {
 //                ToolbarItemGroup(placement: .navigationBarTrailing) {

@@ -24,7 +24,7 @@ struct CoursesView2: View {
                     } label: {
                         ZStack {
                             Circle()
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .frame(width: 60, height: 60)
                             Image("dinoInfo")
                                 .resizable()

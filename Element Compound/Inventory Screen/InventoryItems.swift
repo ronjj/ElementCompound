@@ -114,7 +114,7 @@ struct MockData {
                    shortDescription: "360° Camera for Immersive Photos.",
                    longDescription: "The THETA 360° camera stitches two images from its dual lenses to create completely immersive 360° environments. THETA captures still images, panoramas, and videos, as seen throughout the Chaminade Virtual Tour. ",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/a3de47cb-7284-4e7d-ad70-0f3deecab808",
-                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/f776887b-5bd9-4f81-8090-66763d042acb"),
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/01f64d09-3e6a-4a98-9a9a-2311f049cbee"),
         
 //        CameraItem(name: "Osmo Pocket",
 //                   shortDescription: "Compact Action Camera for Simple Shoots.",
@@ -159,7 +159,7 @@ struct MockData {
                    shortDescription: "High Focal Length Lens for Sony A7s II",
                    longDescription: "Full Name: Lensbaby Velvet 56mm F/1.6 Lens. The 56mm Lens from Lensbaby is highly stylized, as its unique construction captures soft and dream-like images and videos. The low aperture of 1.6 creates a large depth of field, which is amplified by the soft image quality. The 56mm Lens is best for specific shots, and is better suited for photography.",
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/82060fad-3d3e-4279-bc0f-b66257eb4093",
-                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/44ddf083-b644-482a-9707-2cfc9c3c0858"),
+                   bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/8dc3e052-3999-4282-8e75-e4d9a10e91ba"),
         
         LenseItem( name: "Sony 85mm",
                    shortDescription: "High Focal Length Lens for Sony A7s II.",
