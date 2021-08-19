@@ -30,7 +30,7 @@ class ProjectsViewModel2: ObservableObject {
   
   func subscribe() {
     if listenerRegistration == nil {
-      listenerRegistration = db.collection("projects").addSnapshotListener { (querySnapshot, error) in
+      listenerRegistration = db.collection("projects").order(by: "dueDate", descending: false).addSnapshotListener { (querySnapshot, error) in
         guard let documents = querySnapshot?.documents else {
           print("No documents")
           return
