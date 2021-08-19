@@ -57,6 +57,14 @@ struct HomeView2: View {
                 Image("elementicontrans2")
                     .font(.title)
                 
+                if viewModel.announcements.isEmpty{
+                    withAnimation(.default) {
+                        EmptyStateBlue(imageName: "warningSign", message: "No announcements at the moment. ")
+                    }
+                    .padding(.top, 75)
+                }
+                   
+                
                 ScrollView{
                     HStack {
                         Text("Element Compound")
@@ -125,6 +133,8 @@ struct HomeView2: View {
                     .padding(.bottom, 130)
                     .padding(10)
                     
+                  
+                    
 //                    HStack{
 //                        Text("My Projects")
 //                            .padding()
@@ -146,6 +156,7 @@ struct HomeView2: View {
                     }
                
                 }
+            
 //            .toolbar {
 //                ToolbarItemGroup(placement: .navigationBarTrailing) {
 //                    Button(action: {
@@ -172,6 +183,7 @@ struct HomeView2: View {
                 self.userAuth.checkUserAuth()
                 
                 }
+          
             //Causes the screen to shift down then up when reappearing in ios 14. Can add back in ios 15
 //            .onDisappear() {
 //              // By unsubscribing from the view model, we prevent updates coming in from

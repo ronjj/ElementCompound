@@ -26,8 +26,8 @@ struct InfoScreen: View {
                           destination: URL(string: "https://www.element.chaminade-hs.org/club-roles")!)
                     
                     Link("App Information and Changelog",
-                          destination: URL(string: "https://www.element.chaminade-hs.org")!)
-                        .disabled(true)
+                          destination: URL(string: "https://www.element.chaminade-hs.org/app")!)
+                        
                 }
                 
                 Section(header: Text("The Team")) {
