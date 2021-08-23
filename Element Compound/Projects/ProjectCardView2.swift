@@ -31,23 +31,29 @@ struct ProjectCardView2: View {
                     VStack(alignment: .leading) {
                         Text(project.title)
                             .bold()
+                            .minimumScaleFactor(1.0)
                         
                         HStack{
                             Text(project.creator)
+                                .minimumScaleFactor(1.0)
                             
                             Image(systemName: "calendar.badge.clock")
                                 .font(.body)
                                 .foregroundColor(Color.ruby)
+                                .minimumScaleFactor(1.0)
                             
                             Text("\(project.pickedDateString2)")
+                                .minimumScaleFactor(1.0)
+                                .font(.system(size: 13.5))
                             
                             Circle()
                                 .frame(width: 15, height: 15)
                                 .foregroundColor(project.color)
+                                .minimumScaleFactor(1.0)
                                 //.padding(.horizontal, 7)
                              
                         }
-                        .frame(width: 220)
+                        //.frame(width: 220)
 
                         ProgressBar(width: 210, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                     }
