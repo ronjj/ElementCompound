@@ -27,7 +27,8 @@ struct ProjectCardView2: View {
             NavigationLink(destination: ProjectDetailsView(project: project )) {
                 HStack{
                     //Left Side
-                    VStack(alignment:.leading) {
+    
+                    VStack(alignment: .leading) {
                         Text(project.title)
                             .bold()
                         
@@ -39,28 +40,33 @@ struct ProjectCardView2: View {
                                 .foregroundColor(Color.ruby)
                             
                             Text("\(project.pickedDateString2)")
+                            
+                            Circle()
+                                .frame(width: 15, height: 15)
+                                .foregroundColor(project.color)
+                                //.padding(.horizontal, 7)
+                             
                         }
-                        ProgressBar(width: 220, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
+                        .frame(width: 220)
+
+                        ProgressBar(width: 210, height: 10, percent: project.percentComplete, color1: Color.red, color2: Color.blue)
                     }
                     .padding(.trailing, 5)
+                    .padding(.leading, 15)
                     
-                    //Spacer()
+                    Spacer()
                     
-                    //Right Side
-                    HStack{
-                        Circle()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(project.color)
-
-                        Image(systemName: "chevron.right")
-                            .foregroundColor(Color.bginv)
-                            .font(.caption)
-                            .padding(.horizontal, 8)
-                    }
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.bginv)
+                        .font(.caption)
+                        .padding(.horizontal, 8)
+                    
+                   
                 }
             }
         }
-        .frame(width: 360, height: 150)
+        //.frame(width: 360, height: 150)
+        .frame(minWidth: 360, maxWidth: 720, minHeight: 150, maxHeight: 300)
         .cornerRadius(20)
         .shadow(color: .bg, radius: 30, x: 0, y: 15)
         .padding(5)

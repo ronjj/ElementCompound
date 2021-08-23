@@ -39,6 +39,7 @@ struct InventoryListCellView: View {
                     })
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 120, height: 90)
+                        //.frame(minWidth: 120,  maxWidth: 90, minHeight: 240,  maxHeight: 180)
                         .cornerRadius(8)
                        
                     
@@ -96,7 +97,8 @@ struct InventoryListCellView: View {
                 }
             }
         }
-        .frame(width: 360, height: 140)
+        //.frame(width: 360, height: 140)
+        .frame(minWidth: 360, maxWidth: 720, minHeight: 140, maxHeight: 280)
         .cornerRadius(20)
         .shadow(color: .bg, radius: 30, x: 0, y: 15)
     }

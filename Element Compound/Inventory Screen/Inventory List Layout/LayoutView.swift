@@ -107,15 +107,20 @@ struct LayoutView: View {
                 })
                 .animation(.default)
                 .navigationBarHidden(true)
+                .navigationViewStyle(StackNavigationViewStyle())
             }
             .navigationBarHidden(true)
+           
                 
                 }
         .navigationBarHidden(true)
+      
             }
             .navigationBarHidden(true)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
         .navigationBarHidden(true)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
