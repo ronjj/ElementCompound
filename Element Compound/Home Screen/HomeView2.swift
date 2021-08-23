@@ -63,8 +63,7 @@ struct HomeView2: View {
                     }
                     .padding(.top, 75)
                 }
-                   
-                
+              
                 ScrollView{
                     HStack {
                         Text("Element Compound")
@@ -117,6 +116,8 @@ struct HomeView2: View {
                         
                     }
                     .padding(.bottom, -10)
+                    
+                    
                     
                     LazyVStack{
                         ForEach(viewModel.announcements.prefix(2)) { announcement in

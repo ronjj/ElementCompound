@@ -11,7 +11,9 @@ struct TabViewItem: View {
                     HomeView2()
                 }
                 else if self.index == 1{
-                    InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc, lense: MockData.sampleLense)
+                   // InventoryListView(camera: MockData.sampleCamera, computer: MockData.sampleComputer, audio: MockData.sampleAudio, misc: MockData.sampleMisc, lense: MockData.sampleLense)
+                    LayoutView()
+
                 }
                 else if self.index == 2{
                     CoursesView2()
@@ -22,8 +24,8 @@ struct TabViewItem: View {
                     //AsyncImageView()
                 }
                 else{
-                    SettingsView()
-                }
+                   SettingsView()
+                                    }
                 CustomTabBar(index: $index)
             }
            // .animation(.easeOut(duration: 0.5))
