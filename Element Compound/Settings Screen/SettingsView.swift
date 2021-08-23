@@ -118,7 +118,11 @@ struct SettingsView: View {
                     Button(action: {
                         activeSheet = .displayNameChange
                     }) {
-                        Text("Update Display Name")
+                        HStack{
+                            Image(systemName: "person.crop.square.fill")
+                            Text("Update Display Name")
+                        }
+                        
                     }
                     .disabled(role == false)
                     .opacity(role ? 1 : 0.5)
@@ -127,7 +131,11 @@ struct SettingsView: View {
                         signOut()
                         self.status = false
                     }) {
-                        Text("Sign Out")
+                        HStack{
+                            Image(systemName: "arrow.left.square")
+                            Text("Sign Out")
+                        }
+                        
                     }
                     
                     //                    Button(action: {
