@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InventoryLazyVStackView: View {
     
-    @State var searchText = ""
+    @Binding var searchText: String
     
     var body: some View {
         LazyVStack{

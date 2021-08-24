@@ -46,14 +46,16 @@ struct LayoutView: View {
             .padding(.all, 10)
             
            
-            
+            SearchBar(text: $searchText)
+                .padding(.top, 15)
+                .padding(.bottom, 5)
            
             ScrollView {
                 LazyVGrid(columns: selectedLayout.columns, spacing: 1, content: {
                     switch selectedLayout {
                     case .single:
                         
-                        InventoryLazyVStackView()
+                        InventoryLazyVStackView(searchText: $searchText)
 
 
                     default:

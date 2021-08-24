@@ -84,6 +84,7 @@ struct SettingsView: View {
                         Image(systemName: "envelope.circle").imageScale(.large)
                         Text("Contact Developer")
                     }
+                    .frame(height: 45)
                    
                     .onTapGesture {
                         //                        MFMailComposeViewController.canSendMail() ? self.isShowingMailView.toggle() : self.alertNoMail.toggle()
@@ -122,10 +123,12 @@ struct SettingsView: View {
                             Image(systemName: "person.crop.square.fill")
                             Text("Update Display Name")
                         }
+                    
                         
                     }
                     .disabled(role == false)
                     .opacity(role ? 1 : 0.5)
+                    .frame(height: 45)
                     
                     Button(action: {
                         signOut()
@@ -137,6 +140,7 @@ struct SettingsView: View {
                         }
                         
                     }
+                    .frame(height: 45)
                     
                     //                    Button(action: {
                     ////                        self.presentRoleScreen = true

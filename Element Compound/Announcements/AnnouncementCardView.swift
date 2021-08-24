@@ -82,6 +82,7 @@ struct AnnouncementCardView: View {
         .frame(minWidth: 360, maxWidth: 720, minHeight: 200, maxHeight: 400)
         .cornerRadius(20)
         .shadow(color: .bg, radius: 30, x: 0, y: 15)
+        .padding(5)
     }
 }
 
