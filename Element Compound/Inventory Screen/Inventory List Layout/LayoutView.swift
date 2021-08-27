@@ -111,12 +111,8 @@ struct LayoutView: View {
                 .navigationBarHidden(true)
                 .navigationViewStyle(StackNavigationViewStyle())
             }
-            .navigationBarHidden(true)
-           
-                
+            .padding(.top, 1)
                 }
-        .navigationBarHidden(true)
-      
             }
             .navigationBarHidden(true)
             .navigationViewStyle(StackNavigationViewStyle())

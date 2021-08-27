@@ -26,8 +26,8 @@ struct InventoryIconCellView: View {
                 Image(uiImage: $0).resizable()
             })
                 .aspectRatio(contentMode: .fill)
-                //.frame(width: 180, height: 180)
-                .frame(minWidth: 180, maxWidth: 540, minHeight: 180, maxHeight: 540)
+//                .frame(width: 180, height: 180)
+                .frame(width: UIScreen.screenWidth/2.5, height: UIScreen.screenHeight/2.5)
                 .cornerRadius(8)
             
        
