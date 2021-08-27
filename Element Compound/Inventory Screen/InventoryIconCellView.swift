@@ -10,6 +10,8 @@ import URLImage
 
 struct InventoryIconCellView: View {
     
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     let images: String
     let title: String
     let description: String
@@ -18,6 +20,8 @@ struct InventoryIconCellView: View {
     
     
     var body: some View {
+        
+        if horizontalSizeClass == .compact {
             AsyncImage(url: URL(string: "\(images)" ) ?? URL(string: "www.apple.com")!,
                        placeholder: {
                 LoadingView()
@@ -26,10 +30,22 @@ struct InventoryIconCellView: View {
                 Image(uiImage: $0).resizable()
             })
                 .aspectRatio(contentMode: .fill)
-//                .frame(width: 180, height: 180)
-                .frame(width: UIScreen.screenWidth/2.5, height: UIScreen.screenHeight/2.5)
+                .frame(width: 180, height: 180)
                 .cornerRadius(8)
             
-       
+               } else {
+                   
+                   AsyncImage(url: URL(string: "\(images)" ) ?? URL(string: "www.apple.com")!,
+                              placeholder: {
+                       LoadingView()
+                   },
+                              image: {
+                       Image(uiImage: $0).resizable()
+                   })
+                       .aspectRatio(contentMode: .fill)
+                       .frame(width: 520, height: 480)
+                       .cornerRadius(8)
+               }
+
     }
 }
