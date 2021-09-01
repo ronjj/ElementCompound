@@ -14,6 +14,7 @@ enum ProjectSheets: Identifiable {
         self.hashValue
     }
     case addProj
+    case spreadsheet
     
 }
 struct ProjectsListView2: View {
@@ -99,13 +100,26 @@ struct ProjectsListView2: View {
                                 ZStack {
                                     Circle()
                                         .foregroundColor(.bg)
-                                        .frame(width: 25, height: 25)
+                                        .frame(width: 35, height: 35)
                                     Image(systemName: "plus")
                                         .foregroundColor(.bginv)
                                 }
                             }
                             .disabled(role == false)
                             .opacity(role == false ? 0.0 : 1.0)
+                           
+                            
+                            Button(action: {
+                                activeSheet = .spreadsheet
+                            }) {
+                                ZStack {
+                                    Circle()
+                                        .foregroundColor(.bg)
+                                        .frame(width: 35, height: 35)
+                                    Image(systemName: "newspaper")
+                                        .foregroundColor(.bginv)
+                                }
+                            }
                             .padding(.trailing, 20)
                             
                         }
@@ -165,6 +179,8 @@ struct ProjectsListView2: View {
                             switch item {
                             case .addProj:
                                 ProjectEditView2()
+                            case .spreadsheet:
+                                ProjectsViewInfoScreen()
                             }
                         }
                     if viewModel.projects.isEmpty{

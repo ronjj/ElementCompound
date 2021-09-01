@@ -156,17 +156,17 @@ struct SettingsView: View {
             .listStyle(InsetGroupedListStyle())
             .navigationBarTitle("Settings")
             
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        //                        presentInfoScreen = true
-                        activeSheet = .info
-                        
-                    }) {
-                        Image(systemName: "info.circle")
-                    }
-                }
-            }
+//            .toolbar {
+//                ToolbarItemGroup(placement: .navigationBarTrailing) {
+//                    Button(action: {
+//                        //                        presentInfoScreen = true
+//                        activeSheet = .info
+//                        
+//                    }) {
+//                        Image(systemName: "info.circle")
+//                    }
+//                }
+//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         
