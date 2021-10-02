@@ -98,7 +98,7 @@ struct MockData {
                    imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/c54522c9-6398-4a74-bd8a-4aed17f248cf",
                    bigImageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/54b13970-e4fa-4515-8efd-117b6da6ed04"),
         
-        CameraItem( name: "Lumix GH5s",
+        CameraItem (name: "Lumix GH5s",
                     shortDescription: "Optimized 4K Camera for High-Level Projects.",
                     longDescription: "The GH5s is one of the most powerful cameras in our equipment inventory. Optimized for low light conditions, the GH5s is a go-to camera for high-end projects. The camera has super-basic audio capabilities and can be customized with an assortment of lenses and gimbals.",
                     imageURL: "https://www.chaminade-hs.org/fs/resource-manager/view/b023fc25-4137-4cad-b20b-f41b8c933966",

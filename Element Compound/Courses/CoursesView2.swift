@@ -47,9 +47,3 @@ struct CoursesView2: View {
             }
     }
 }
-
-struct CoursesView2_Previews: PreviewProvider {
-    static var previews: some View {
-        CoursesView2()
-    }
-}

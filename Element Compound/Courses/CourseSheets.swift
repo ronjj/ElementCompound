@@ -23,7 +23,7 @@ struct CameraCourseSheet: View {
                 .font(.body)
                 .padding(.bottom, 10)
             
-            Text("In the camera course, students will learn...")
+            Text("In the live courses, students will learn a variety of different skills such as camera basics, audio basics, editing basics, and many more skills. Check this tab to see when new course sessions become available.")
                 .font(.body)
         }
         .padding()
@@ -49,7 +49,7 @@ struct iFrameCourseSheet: View {
                 .font(.body)
                 .padding(.bottom, 10)
             
-            Text("In the camera course, students will learn...")
+            Text("In the live courses, students will learn a variety of different skills such as camera basics, audio basics, editing basics, and many more skills. Check this tab to see when new course sessions become available.")
                 .font(.body)
         }
         .padding()
