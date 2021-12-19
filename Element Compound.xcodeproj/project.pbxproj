@@ -12,6 +12,7 @@
 		540042D526DFABDE008CD59F /* ProjectsViewInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540042D426DFABDE008CD59F /* ProjectsViewInfoScreen.swift */; };
 		54026F1E26C2CB7900D297A3 /* iFrameCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54026F1D26C2CB7900D297A3 /* iFrameCourseView.swift */; };
 		54026F2026C2D1C400D297A3 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54026F1F26C2D1C400D297A3 /* XDismissButton.swift */; };
+		5403506C2746ED81006EA3E4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403506B2746ED81006EA3E4 /* NotificationService.swift */; };
 		540A83A326B2EA5900386660 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A83A226B2EA5900386660 /* LoadingView.swift */; };
 		540A83A526B2F75300386660 /* ProjectCardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A83A426B2F75300386660 /* ProjectCardView2.swift */; };
 		540A83A726B316C200386660 /* CourseSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540A83A626B316C200386660 /* CourseSheets.swift */; };
@@ -117,6 +118,7 @@
 		540042D426DFABDE008CD59F /* ProjectsViewInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewInfoScreen.swift; sourceTree = "<group>"; };
 		54026F1D26C2CB7900D297A3 /* iFrameCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iFrameCourseView.swift; sourceTree = "<group>"; };
 		54026F1F26C2D1C400D297A3 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		5403506B2746ED81006EA3E4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		540A83A226B2EA5900386660 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		540A83A426B2F75300386660 /* ProjectCardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView2.swift; sourceTree = "<group>"; };
 		540A83A626B316C200386660 /* CourseSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSheets.swift; sourceTree = "<group>"; };
@@ -445,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				54BBA4CE263216EA0021536D /* Announcement.swift */,
+				5403506B2746ED81006EA3E4 /* NotificationService.swift */,
 				543DC5FE263B3D2100D807C1 /* AnnouncementsViewModel.swift */,
 				5493327C263C5214001C1D24 /* AnnouncementViewModel.swift */,
 				5493327F263C5295001C1D24 /* AnnouncementAddView.swift */,
@@ -678,6 +681,7 @@
 				54933279263C51C6001C1D24 /* HomeView2.swift in Sources */,
 				5493327D263C5214001C1D24 /* AnnouncementViewModel.swift in Sources */,
 				54ECF17526B1A69800534D32 /* AsyncImage.swift in Sources */,
+				5403506C2746ED81006EA3E4 /* NotificationService.swift in Sources */,
 				5462610826509ECF000E4592 /* ErrorMSGs.swift in Sources */,
 				54AEEB90262BB9930040A559 /* LoginView.swift in Sources */,
 				5487EDFD269C8A11009C7E0E /* PushNotificationManager.swift in Sources */,
@@ -858,7 +862,7 @@
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,7 +888,7 @@
 				DEVELOPMENT_TEAM = Y72HF9FX59;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Element Compound/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

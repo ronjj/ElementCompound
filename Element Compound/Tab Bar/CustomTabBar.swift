@@ -26,14 +26,14 @@ struct CustomTabBar: View {
                             Image(systemName: "house")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                         else{
                                 Image(systemName: "house.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(.bg)
+                                    .foregroundColor(.white)
                                     .padding()
                             
                         }
@@ -50,14 +50,14 @@ struct CustomTabBar: View {
                             Image(systemName: "list.bullet")
                                 .resizable()
                                 .frame(width: 20, height: 15)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                         else{
                                 Image(systemName: "list.bullet")
                                     .resizable()
                                     .frame(width: 20, height: 15)
-                                    .foregroundColor(.bg)
+                                    .foregroundColor(.white)
                                     .padding()
                         }
                     }
@@ -73,14 +73,14 @@ struct CustomTabBar: View {
                             Image(systemName: "lightbulb")
                                 .resizable()
                                 .frame(width: 15, height: 20)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                         else{
                                 Image(systemName: "lightbulb.fill")
                                     .resizable()
                                     .frame(width: 15, height: 20)
-                                    .foregroundColor(.bg)
+                                    .foregroundColor(.white)
                                     .padding()
                         }
                     }
@@ -96,7 +96,7 @@ struct CustomTabBar: View {
                             Image(systemName: "note.text")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                         else{
@@ -104,7 +104,7 @@ struct CustomTabBar: View {
                                 Image(systemName: "note.text")
                                     .resizable()
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(.bg)
+                                    .foregroundColor(.white)
                                     .padding()
                         }
                     }
@@ -120,14 +120,14 @@ struct CustomTabBar: View {
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                         else{
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.bg)
+                                .foregroundColor(.white)
                                 .padding()
                         }
                     }
@@ -135,9 +135,9 @@ struct CustomTabBar: View {
                 
             }
             .padding()
-            .background(Color.bginv)
+           // .background(Color.bginv)
             //For iOS 15 
-          //  .background(.regularMaterial)
+            .background(.regularMaterial)
             .cornerRadius(20)
             .shadow(radius: 30)
             .frame(width: UIScreen.screenWidth-50, alignment: .center)

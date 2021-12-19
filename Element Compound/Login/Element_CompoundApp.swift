@@ -122,5 +122,3 @@ struct Element_CompoundApp: App {
         }
     }
 }
-
-
