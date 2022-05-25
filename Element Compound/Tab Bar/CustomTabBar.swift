@@ -24,16 +24,19 @@ struct CustomTabBar: View {
                     VStack{
                         if self.index != 0{
                             Image(systemName: "house")
+                                
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
+                                .font(.system(size: 35, weight: .bold))
                                 .padding()
+                               
                         }
                         else{
                                 Image(systemName: "house.fill")
                                     .resizable()
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.bginv)
                                     .padding()
                             
                         }
@@ -50,14 +53,15 @@ struct CustomTabBar: View {
                             Image(systemName: "list.bullet")
                                 .resizable()
                                 .frame(width: 20, height: 15)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
+                                .font(.system(size: 35, weight: .bold))
                                 .padding()
                         }
                         else{
                                 Image(systemName: "list.bullet")
                                     .resizable()
                                     .frame(width: 20, height: 15)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.bginv)
                                     .padding()
                         }
                     }
@@ -73,14 +77,16 @@ struct CustomTabBar: View {
                             Image(systemName: "lightbulb")
                                 .resizable()
                                 .frame(width: 15, height: 20)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
+                                .font(.system(size: 35, weight: .bold))
                                 .padding()
                         }
                         else{
                                 Image(systemName: "lightbulb.fill")
                                     .resizable()
                                     .frame(width: 15, height: 20)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.bginv)
+                                    .font(.system(size: 35, weight: .bold))
                                     .padding()
                         }
                     }
@@ -96,7 +102,8 @@ struct CustomTabBar: View {
                             Image(systemName: "note.text")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
+                                .font(.system(size: 35, weight: .bold))
                                 .padding()
                         }
                         else{
@@ -104,7 +111,7 @@ struct CustomTabBar: View {
                                 Image(systemName: "note.text")
                                     .resizable()
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.bginv)
                                     .padding()
                         }
                     }
@@ -120,14 +127,15 @@ struct CustomTabBar: View {
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
+                                .font(.system(size: 35, weight: .bold))
                                 .padding()
                         }
                         else{
                             Image(systemName: "gear")
                                 .resizable()
                                 .frame(width: 20, height: 20)
-                                .foregroundColor(.white)
+                                .foregroundColor(.bginv)
                                 .padding()
                         }
                     }
