@@ -62,14 +62,14 @@ struct CameraItemDetailedView5: View {
                 .frame(height:480)
             }
             
-            VStack(alignment: .leading, spacing: 15) {
+            VStack {
                 Text(camera.name)
                     .font(.system(size: 35, weight: .bold))
                     .padding(10)
                     .foregroundColor(.white)
 
                 Text(camera.longDescription)
-                    .padding(.top, 10)
+                    .padding(10)
                     .padding(.horizontal, 10)
                     .foregroundColor(.white)
                     .font(.body)
@@ -83,7 +83,7 @@ struct CameraItemDetailedView5: View {
                                 .bold()
                         },
                               icon: {
-                            Image(systemName: "star")
+                            Image(systemName: "square.and.arrow.up")
                                 .font(.system(size: 22, weight: .bold, design: .default))
                         })
                             .frame(width: 250,
@@ -95,14 +95,13 @@ struct CameraItemDetailedView5: View {
                     
                     })
                 }
-              
                 
                 Rectangle()
                     .frame(width: UIScreen.screenWidth, height: 150 )
                     .foregroundColor(Color.black)
             }
             .padding(.top,25)
-            .padding(.horizontal)
+           // .padding(.horizontal)
             .background(Color.black)
             .cornerRadius(30)
             .frame(maxWidth: .infinity)
