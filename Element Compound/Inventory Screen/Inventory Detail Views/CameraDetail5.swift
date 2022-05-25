@@ -76,6 +76,27 @@ struct CameraItemDetailedView5: View {
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
                 
+                VStack(alignment: .center){
+                    Link(destination: URL(string: "https://www.google.com")!, label: {
+                        Label(title: {
+                            Text("Rent on Reftab")
+                                .bold()
+                        },
+                              icon: {
+                            Image(systemName: "star")
+                                .font(.system(size: 22, weight: .bold, design: .default))
+                        })
+                            .frame(width: 250,
+                                   height: 50,
+                                   alignment: .center)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    
+                    })
+                }
+              
+                
                 Rectangle()
                     .frame(width: UIScreen.screenWidth, height: 150 )
                     .foregroundColor(Color.black)
