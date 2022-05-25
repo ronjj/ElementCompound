@@ -11,18 +11,7 @@ struct ComputerItemDetailedView: View {
         ScrollView(.vertical, showsIndicators: false, content: {
             ZStack{
                 GeometryReader{ reader in
-                    
-                    //Type 1
-    //                Image(camera.bigImageURL)
-    //                    .resizable()
-    //                    .aspectRatio(contentMode: .fill)
-    //                    .offset(y: -reader.frame(in: .global).minY)
-    //                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 480)
-                    
-                    
-    //                Type 2
                     if  reader.frame(in: .global).minY > -480 {
-                        
                         AsyncImage(url: URL(string: "\(computer.bigImageURL)" ) ?? URL(string: "www.apple.com")!,
                                        placeholder: {
                             LoadingView()
@@ -34,7 +23,6 @@ struct ComputerItemDetailedView: View {
                                     .frame(width: UIScreen.screenWidth*1.07, height:
                                             reader.frame(in: .global).minY > 0 ?
                                             reader.frame(in: .global).minY + 480 : 480)
-     
      
                     }
                     HStack {
@@ -54,27 +42,45 @@ struct ComputerItemDetailedView: View {
                 .frame(height:480)
             }
             
-            VStack(alignment: .leading, spacing: 15) {
+            VStack {
                 Text(computer.name)
                     .font(.system(size: 35, weight: .bold))
                     .padding(10)
                     .foregroundColor(.white)
 
                 Text(computer.longDescription)
-                    .padding(.top, 10)
+                    .padding(10)
                     .padding(.horizontal, 10)
                     .foregroundColor(.white)
                     .font(.body)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
-
+                
+                VStack(alignment: .center){
+                    Link(destination: URL(string: "https://www.google.com")!, label: {
+                        Label(title: {
+                            Text("Rent on Reftab")
+                                .bold()
+                        },
+                              icon: {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(.system(size: 22, weight: .bold, design: .default))
+                        })
+                            .frame(width: 250,
+                                   height: 50,
+                                   alignment: .center)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    
+                    })
+                }
+                
                 Rectangle()
                     .frame(width: UIScreen.screenWidth, height: 150 )
                     .foregroundColor(Color.black)
-                
             }
             .padding(.top,25)
-            .padding(.horizontal)
             .background(Color.black)
             .cornerRadius(30)
             .frame(maxWidth: .infinity)
@@ -86,7 +92,6 @@ struct ComputerItemDetailedView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-    
     }
 }
 
