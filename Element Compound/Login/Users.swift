@@ -57,13 +57,13 @@ class UsersViewModel: ObservableObject{
         //Anthony Tast
         else if user?.email == "24399at@chaminade-hs.org" {
             loginStatus = true
-            role = false
+            role = true
         }
         
         //Matt Klimek
         else if user?.email == "24225mk@chaminade-hs.org" {
             loginStatus = true
-            role = false
+            role = true
         }
         
         //Thomas Breslin

@@ -19,7 +19,7 @@ struct WebView: UIViewRepresentable {
 
     func updateUIView(_ view: WKWebView, context: UIViewRepresentableContext<WebView>) {
 
-        let request = URLRequest(url: URL(string: "https://www.picktime.com/elementchs")!)
+        let request = URLRequest(url: URL(string: "https://docs.google.com/spreadsheets/d/1YiBMGX-fBW1lBv2TWrh-X78ctk-IczH9rUM4Anv38_M/edit#gid=1400782156")!)
 
         view.load(request)
     }
